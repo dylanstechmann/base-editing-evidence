@@ -4,7 +4,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from baseevidence.audit import coverage, load, study_report, substitution, validate_studies
+from baseevidence.audit import (
+    coverage,
+    load,
+    study_report,
+    substitution,
+    validate_studies,
+)
 from baseevidence.cli import main
 
 ROOT = Path(__file__).resolve().parents[1]

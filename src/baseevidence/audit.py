@@ -87,7 +87,7 @@ def load(path):
     raw = Path(path).read_bytes()
     document = json.loads(raw.decode("utf-8-sig"), object_pairs_hook=_unique)
     if not isinstance(document, dict):
-        raise ValueError("Input must be an object")
+        raise ValueError("Input must be an object")  # noqa: TRY004 -- malformed external data is a CLI validation error
     return document, hashlib.sha256(raw).hexdigest()
 
 
