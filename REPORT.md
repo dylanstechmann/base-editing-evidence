@@ -14,3 +14,17 @@ count validity, source scopes, duplicate JSON keys and preserved existing output
 No biological editing experiment, new editor, patient-specific design, tissue
 repair or age reversal is produced. No private patient data are used. The
 research desk, organoid solver and this repo retain independent Git histories.
+
+# Outcome inventory follow-up — 2026-10-09
+
+Added a source-linked outcome audit with three scoped observations, explicit
+comparison design, endpoint hierarchy, independent units and follow-up. The
+ten-domain inventory reports catalog gaps without inferring missing source
+assays, clinical rescue or an efficacy score. The original single-patient case
+cannot gain independent patients from repeated visits.
+
+All 14 unit tests passed in Docker `dev`. The CLI generated
+[the example report](examples/outcome-audit/report.json) from the committed
+source cards and outcome records, retaining both input hashes. New module,
+CLI and tests passed Ruff. This is software/source-scope validation; no
+editing experiment or new clinical follow-up was performed.

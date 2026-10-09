@@ -59,6 +59,8 @@ def validate_studies(document):
         raise ValueError("Nonempty study list required")
     ids = set()
     for study in studies:
+        if not isinstance(study, dict):
+            raise ValueError("Study must be an object")  # noqa: TRY004 -- malformed external data is a CLI validation error
         key = study.get("id")
         if not isinstance(key, str) or not key.strip() or key in ids:
             raise ValueError("Unique nonempty study IDs required")

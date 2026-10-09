@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from baseevidence.audit import coverage, load, study_report, substitution
+from baseevidence.outcomes import outcome_report
 
 
 def main(argv=None):
@@ -18,6 +19,10 @@ def main(argv=None):
         action = actions.add_parser(command)
         action.add_argument("input")
         action.add_argument("--out", required=True)
+    outcomes = actions.add_parser("audit-outcomes", help="Source-linked outcome inventory; no rescue inference")
+    outcomes.add_argument("input")
+    outcomes.add_argument("--studies", required=True)
+    outcomes.add_argument("--out", required=True)
     args = parser.parse_args(argv)
     try:
         if args.command == "change-class":
@@ -25,6 +30,8 @@ def main(argv=None):
             return 0
         if args.command == "audit-studies":
             report = study_report(args.input)
+        elif args.command == "audit-outcomes":
+            report = outcome_report(args.input, args.studies)
         else:
             document, digest = load(args.input)
             if document.get("origin") != "synthetic_example":

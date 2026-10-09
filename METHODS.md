@@ -32,3 +32,16 @@ The tools validate schema and arithmetic, not source acquisition, causal variant
 classification, cell-level assay truth or clinical benefit. No genomic coordinate
 normalizer, ClinVar pathogenicity inference, off-target predictor, lineage
 tracker or allele-to-cell deconvolution is implemented.
+
+`audit-outcomes` binds declared observations to the validated study catalog,
+retaining hashes of both inputs. Stage, model, source URL and access level come
+from that catalog; observation records cannot override them. The original CPS1
+abstract supports separate clinical-response and serious-adverse-event rows.
+The RNA study supplies an assay-domain precedent, with independent replication
+counts left unknown here. This tranche reuses those reviewed source scopes;
+it makes no new claim of source acquisition or current clinical follow-up.
+
+Endpoint hierarchy and comparisons are explicit declarations requiring human
+source review. Unknown replication counts remain null. Missing or explicitly
+not-assessed domains are catalog gaps, not zero effects, unperformed assays,
+or failed biology. No benefit or safety score combines these different domains.

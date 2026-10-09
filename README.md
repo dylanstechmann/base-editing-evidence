@@ -39,6 +39,7 @@ python -m pip install -e .
 baseevidence change-class A G --coordinate-system reference_forward_strand
 baseevidence audit-studies data/studies.json --out artifacts/source-audit
 baseevidence audit-coverage examples/coverage.json --out artifacts/count-demo
+baseevidence audit-outcomes data/outcomes.json --studies data/studies.json --out artifacts/outcome-audit
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
@@ -46,6 +47,14 @@ Each output directory must be new. Reports retain the exact input-byte SHA-256.
 Duplicate JSON keys, inappropriate denominators, non-nested counts, ambiguous
 bases and unstated coordinate conventions fail. Unknown stages remain `null`;
 an undefined zero-denominator conditional rate is not reported as zero.
+
+The [outcome inventory](data/outcomes.json) links each observation to an existing
+source card and retains comparator design, endpoint hierarchy, independent unit,
+follow-up and access scope. Its ten domains distinguish sequence products, RNA,
+organ function, clinical response, adverse events and durability. A clinical
+case cannot gain independent patients from repeated visits. Missing domains
+mean undocumented in this catalog; the tool does not conclude that the paper
+omitted them, calculate an efficacy score or infer functional rescue.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

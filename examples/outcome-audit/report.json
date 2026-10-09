@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "status": "source_linked_outcome_inventory",
+  "observations": [
+    {
+      "id": "cps1-clinical-response",
+      "study_id": "cps1-case-2025",
+      "domain": "clinical_function",
+      "status": "source_reports_signal",
+      "outcome": "Improved protein tolerance and reduced nitrogen-scavenger medication reported during the original follow-up.",
+      "source_locator": "Original indexed abstract: Results",
+      "comparison_design": "uncontrolled_case",
+      "comparison": "Patient's earlier clinical management; no randomized comparator",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "patient",
+      "n_independent_units": 1,
+      "follow_up": "Seven weeks in the original report; not a current patient-status update",
+      "limits": "Cointerventions and single-case design prevent a comparative effect estimate. Clinical response is not a measured whole-liver intended-only cell fraction.",
+      "stage": "human_case",
+      "model": "One infant with severe CPS1 deficiency",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40373211/",
+      "access_level": "Official PubMed abstract and Europe PMC core metadata; NEJM page retrieval failed"
+    },
+    {
+      "id": "cps1-original-adverse-events",
+      "study_id": "cps1-case-2025",
+      "domain": "adverse_events",
+      "status": "source_reports_no_signal",
+      "outcome": "No serious adverse events reported during the original follow-up.",
+      "source_locator": "Original indexed abstract: Results",
+      "comparison_design": "uncontrolled_case",
+      "comparison": "No randomized comparator",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "patient",
+      "n_independent_units": 1,
+      "follow_up": "Seven weeks in the original report",
+      "limits": "Not absence of all adverse events, zero risk or long-term safety. This row does not establish genomic, RNA or clonal safety.",
+      "stage": "human_case",
+      "model": "One infant with severe CPS1 deficiency",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40373211/",
+      "access_level": "Official PubMed abstract and Europe PMC core metadata; NEJM page retrieval failed"
+    },
+    {
+      "id": "rna-assay-domain",
+      "study_id": "rna-offtargets-2019",
+      "domain": "rna_outcomes",
+      "status": "source_reports_signal",
+      "outcome": "RNA editing outside intended DNA targets reported with the tested DNA-editor platforms.",
+      "source_locator": "Primary article abstract and RNA-analysis results",
+      "comparison_design": "between_groups",
+      "comparison": "Tested editors and study controls; construct-specific assay contrasts",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Independent experimental replicate; not audited in this catalog",
+      "n_independent_units": null,
+      "follow_up": "Cell-assay intervals; not longitudinal human follow-up",
+      "limits": "Signal is an adverse assay outcome, not a beneficial tissue response. No pooled rate or assumption about every modern editor.",
+      "stage": "human_cells",
+      "model": "Human cell-line experiments",
+      "source_url": "https://www.nature.com/articles/s41586-019-1161-z",
+      "access_level": "Primary PMC article and publisher summary"
+    }
+  ],
+  "documented_domains_by_study": {
+    "cbe-2016": [],
+    "abe-2017": [],
+    "rna-offtargets-2019": [
+      "rna_outcomes"
+    ],
+    "prime-2019": [],
+    "cps1-case-2025": [
+      "adverse_events",
+      "clinical_function"
+    ]
+  },
+  "undocumented_domains_in_catalog": {
+    "cbe-2016": [
+      "adverse_events",
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "rna_outcomes",
+      "structural_dna",
+      "tissue_function"
+    ],
+    "abe-2017": [
+      "adverse_events",
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "rna_outcomes",
+      "structural_dna",
+      "tissue_function"
+    ],
+    "rna-offtargets-2019": [
+      "adverse_events",
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "structural_dna",
+      "tissue_function"
+    ],
+    "prime-2019": [
+      "adverse_events",
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "rna_outcomes",
+      "structural_dna",
+      "tissue_function"
+    ],
+    "cps1-case-2025": [
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "rna_outcomes",
+      "structural_dna",
+      "tissue_function"
+    ]
+  },
+  "functional_rescue_inferred": false,
+  "causal_effect_estimated": false,
+  "limits": [
+    "Observation text and declared hierarchy are not authenticated by schema validation.",
+    "Undocumented domains are gaps in this catalog, not proof the source omitted an assay.",
+    "No combined efficacy, safety or evidence-quality score is calculated.",
+    "Molecular changes, organ function, clinical response and durable clonal outcomes stay distinct."
+  ],
+  "outcomes_sha256": "0eb9ebafae1a011712516f31d83be13c03f96a50f473a53ae36902a42e794314",
+  "study_catalog_sha256": "7480587d55c78f8abe4a17c6d03a1367c65ffafb794e044d423df3f1d08cf0c2"
+}
