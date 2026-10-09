@@ -63,6 +63,13 @@ includes progeria-model molecular, vascular and survival observations. They
 remain mouse genetic-disease evidence, separate from ordinary-aging repair.
 [Primary progeria report](https://pubmed.ncbi.nlm.nih.gov/33408413/).
 
+The [focused full-text follow-up](PROGERIA_REVIEW.md) now retains separate
+longevity cohorts, selected postmortem tumor findings and vector integration.
+The [current audit snapshot](examples/outcome-audit-fulltext/report.json) includes
+those observations and explicit disjoint cohort counts. Earlier snapshots
+preserve their historical source scope. No pooled survival or causal tumor-risk
+estimate is generated.
+
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.
 

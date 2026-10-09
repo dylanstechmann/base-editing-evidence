@@ -42,3 +42,18 @@ passed Ruff. The [new CLI snapshot](examples/outcome-audit-progeria/report.json)
 retains exact hashes of both current inputs. The earlier example report remains
 the historical snapshot from the five-card catalog. No new biological experiment,
 clinical follow-up or source-review signoff by the owner is implied.
+
+## Full-text cohort and adverse-outcome follow-up — 2026-10-09
+
+The focused progeria review now includes ten catalog observations in total.
+Separate longevity rows retain 11/12 and 10/12 treated/control mouse counts;
+selected necropsies, vector integration and the negative relative-mutation-
+composition assay keep their own denominators and interpretation limits.
+The paper's unresolved tumor causation and analysis-specific mouse counts
+remain visible. Source survival statistics were recorded, not recalculated.
+
+Optional disjoint `cohort_counts` declarations must sum to a known independent-
+unit count. They do not authorize pooling assays, repeated visits or overlapping
+groups. All 19 tests passed in Docker `dev`; the changed module and tests passed
+Ruff. The [current CLI report](examples/outcome-audit-fulltext/report.json)
+retains the updated input hashes. Earlier reports remain historical snapshots.

@@ -1,0 +1,9 @@
+{
+  "scope": "Exact primary full-text retrieval, not a systematic review",
+  "pmcid": "PMC7872200",
+  "doi": "10.1038/s41586-020-03086-7",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7872200/fullTextXML",
+  "retrieved_utc": "2026-10-09T22:04:50.471141+00:00",
+  "response_sha256": "6ff32231706da7a2244e9705a2e0fd2194a8291fbc75ea039d7a435f01dc5733",
+  "local_provenance_receipt": "1791583490468455232_base-editing-progeria-fulltext.json"
+}

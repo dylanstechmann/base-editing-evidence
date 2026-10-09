@@ -70,14 +70,35 @@ class OutcomeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             audit_outcomes(self.document, self.studies)
 
-    def test_progeria_survival_retains_mouse_stage_and_unknown_replication(self):
+    def test_progeria_survival_retains_mouse_stage_and_disjoint_source_cohorts(self):
         report = audit_outcomes(self.document, self.studies)
         row = next(r for r in report["observations"] if r["id"] == "progeria-survival")
         self.assertEqual(row["stage"], "animal")
         self.assertEqual(row["domain"], "survival")
-        self.assertIsNone(row["n_independent_units"])
-        self.assertIn("ordinary aging", row["limits"])
+        self.assertEqual(row["n_independent_units"], 22)
+        self.assertEqual(row["cohort_counts"], {"treated": 10, "saline": 12})
+        self.assertIn("ordinary-aging", row["limits"])
         self.assertNotIn("clinical_function", report["documented_domains_by_study"][row["study_id"]])
+
+    def test_cohort_counts_reject_missing_totals_nonintegers_and_double_counting(self):
+        for patch in ({"cohort_counts": {"treated": 2}},
+                      {"cohort_counts": {}}, {"cohort_counts": [1]},
+                      {"cohort_counts": {"patient": True}},
+                      {"cohort_counts": {"patient": 1}, "n_independent_units": None},
+                      {"cohort_counts": {"treated": 1, "control": 1}}):
+            document = copy.deepcopy(self.document)
+            document["observations"][0].update(patch)
+            with self.subTest(patch=patch), self.assertRaises(ValueError):
+                audit_outcomes(document, self.studies)
+
+    def test_necropsy_is_a_selected_denominator_and_harm_not_benefit(self):
+        report = audit_outcomes(self.document, self.studies)
+        row = next(r for r in report["observations"] if r["id"] == "progeria-necropsy-liver-tumors")
+        self.assertEqual(row["n_independent_units"], 9)
+        self.assertEqual(row["comparison_design"], "no_comparator")
+        self.assertEqual(row["signal_role"], "harm")
+        self.assertFalse(report["causal_effect_estimated"])
+        self.assertIn(row["id"], report["observation_ids_by_role_and_status"]["harm"]["source_reports_signal"])
 
     def test_invalid_cli_input_leaves_no_report_directory(self):
         with tempfile.TemporaryDirectory() as directory:

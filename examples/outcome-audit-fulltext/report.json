@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "status": "source_linked_outcome_inventory",
+  "observations": [
+    {
+      "id": "cps1-clinical-response",
+      "study_id": "cps1-case-2025",
+      "domain": "clinical_function",
+      "status": "source_reports_signal",
+      "outcome": "Improved protein tolerance and reduced nitrogen-scavenger medication reported during the original follow-up.",
+      "source_locator": "Original indexed abstract: Results",
+      "comparison_design": "uncontrolled_case",
+      "comparison": "Patient's earlier clinical management; no randomized comparator",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "patient",
+      "n_independent_units": 1,
+      "follow_up": "Seven weeks in the original report; not a current patient-status update",
+      "limits": "Cointerventions and single-case design prevent a comparative effect estimate. Clinical response is not a measured whole-liver intended-only cell fraction.",
+      "signal_role": "benefit",
+      "stage": "human_case",
+      "model": "One infant with severe CPS1 deficiency",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40373211/",
+      "access_level": "Official PubMed abstract and Europe PMC core metadata; NEJM page retrieval failed"
+    },
+    {
+      "id": "cps1-original-adverse-events",
+      "study_id": "cps1-case-2025",
+      "domain": "adverse_events",
+      "status": "source_reports_no_signal",
+      "outcome": "No serious adverse events reported during the original follow-up.",
+      "source_locator": "Original indexed abstract: Results",
+      "comparison_design": "uncontrolled_case",
+      "comparison": "No randomized comparator",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "patient",
+      "n_independent_units": 1,
+      "follow_up": "Seven weeks in the original report",
+      "limits": "Not absence of all adverse events, zero risk or long-term safety. This row does not establish genomic, RNA or clonal safety.",
+      "signal_role": "harm",
+      "stage": "human_case",
+      "model": "One infant with severe CPS1 deficiency",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40373211/",
+      "access_level": "Official PubMed abstract and Europe PMC core metadata; NEJM page retrieval failed"
+    },
+    {
+      "id": "rna-assay-domain",
+      "study_id": "rna-offtargets-2019",
+      "domain": "rna_outcomes",
+      "status": "source_reports_signal",
+      "outcome": "RNA editing outside intended DNA targets reported with the tested DNA-editor platforms.",
+      "source_locator": "Primary article abstract and RNA-analysis results",
+      "comparison_design": "between_groups",
+      "comparison": "Tested editors and study controls; construct-specific assay contrasts",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Independent experimental replicate; not audited in this catalog",
+      "n_independent_units": null,
+      "follow_up": "Cell-assay intervals; not longitudinal human follow-up",
+      "limits": "Signal is an adverse assay outcome, not a beneficial tissue response. No pooled rate or assumption about every modern editor.",
+      "signal_role": "harm",
+      "stage": "human_cells",
+      "model": "Human cell-line experiments",
+      "source_url": "https://www.nature.com/articles/s41586-019-1161-z",
+      "access_level": "Primary PMC article and publisher summary"
+    },
+    {
+      "study_id": "progeria-mice-2021",
+      "status": "source_reports_signal",
+      "source_locator": "Full text: six-month molecular Results and Fig. 3b; Extended Data Fig. 3d\u2013f",
+      "comparison_design": "between_groups",
+      "comparison": "Treated progeria-model cohorts; organ- and cohort-specific molecular measurements",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "mouse; organ assays are nested observations",
+      "n_independent_units": null,
+      "id": "progeria-molecular-correction",
+      "domain": "dna_product",
+      "signal_role": "context",
+      "outcome": "Pathogenic-allele correction reported across organs.",
+      "follow_up": "Six-month molecular assessment in the abstract",
+      "limits": "Allele correction varies by organ: aorta and other organs differ from kidney/spleen. Whole-organ allele fractions do not certify cell coverage. Increasing fractions can reflect continued editing or selection of corrected cells; this review does not distinguish them.",
+      "stage": "animal",
+      "model": "Transgenic mice carrying the human progeria-causing LMNA allele",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33408413/",
+      "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
+    },
+    {
+      "study_id": "progeria-mice-2021",
+      "status": "source_reports_signal",
+      "source_locator": "Full text: Fig. 4a\u2013c and Extended Data Figs. 6\u20138",
+      "comparison_design": "between_groups",
+      "comparison": "Treated versus saline progeria-model cohorts, with wild-type references",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "mouse; organ assays are nested observations",
+      "n_independent_units": null,
+      "id": "progeria-vascular-response",
+      "domain": "tissue_function",
+      "signal_role": "benefit",
+      "outcome": "Vascular smooth-muscle preservation and reduced adventitial fibrosis reported.",
+      "follow_up": "Six-month aortic histopathology",
+      "limits": "Histopathology and cell-nuclei counts do not directly measure hemodynamic function or native periodontal function. Independent mouse counts for this outcome remain unaudited here; histology replication is distinct from longevity cohorts.",
+      "stage": "animal",
+      "model": "Transgenic mice carrying the human progeria-causing LMNA allele",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33408413/",
+      "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
+    },
+    {
+      "study_id": "progeria-mice-2021",
+      "status": "source_reports_signal",
+      "source_locator": "Full text: longevity Results and Fig. 4e",
+      "comparison_design": "between_groups",
+      "comparison": "Later-start cohort: 10 treated versus 12 saline progeria-model mice",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "mouse",
+      "n_independent_units": 22,
+      "id": "progeria-survival",
+      "domain": "survival",
+      "signal_role": "benefit",
+      "outcome": "Median survival reported as 510 days in the treated cohort versus 215 days in controls.",
+      "follow_up": "Longevity follow-up; one treated mouse still alive at the source report",
+      "limits": "Source medians 510 versus 215 days; source Mantel\u2013Cox p<0.0001. No individual survival data or censoring times reanalyzed, hazard ratio computed, or human/ordinary-aging lifespan estimate inferred. Treatment-start cohort is retained as source context, not a regimen.",
+      "cohort_counts": {
+        "treated": 10,
+        "saline": 12
+      },
+      "stage": "animal",
+      "model": "Transgenic mice carrying the human progeria-causing LMNA allele",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33408413/",
+      "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
+    },
+    {
+      "id": "progeria-earlier-cohort-survival",
+      "study_id": "progeria-mice-2021",
+      "domain": "survival",
+      "status": "source_reports_signal",
+      "signal_role": "benefit",
+      "outcome": "Earlier-start cohort median survival reported as 337 days treated versus 189 days saline.",
+      "source_locator": "Full text: longevity Results and Fig. 4d",
+      "comparison_design": "between_groups",
+      "comparison": "Earlier-start cohort: 11 treated versus 12 saline progeria-model mice",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "mouse",
+      "n_independent_units": 23,
+      "cohort_counts": {
+        "treated": 11,
+        "saline": 12
+      },
+      "follow_up": "Longevity follow-up, separate from the later-start cohort",
+      "limits": "Source Mantel\u2013Cox p<0.0001; no raw survival reanalysis. Cohort timing and exposure differ: this is not a randomized timing-only comparison or a human regimen. Cohorts are not pooled into a single lifespan estimate.",
+      "stage": "animal",
+      "model": "Transgenic mice carrying the human progeria-causing LMNA allele",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33408413/",
+      "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
+    },
+    {
+      "id": "progeria-necropsy-liver-tumors",
+      "study_id": "progeria-mice-2021",
+      "domain": "adverse_events",
+      "status": "source_reports_signal",
+      "signal_role": "harm",
+      "outcome": "Liver tumors reported in five of nine deceased later-start treated mice examined at necropsy; one other had gastrointestinal necrosis and three had no apparent abnormalities.",
+      "source_locator": "Full text: necropsy Results; Supplementary Table 1 referenced, not independently retrieved",
+      "comparison_design": "no_comparator",
+      "comparison": "Selected deceased treated mice; no matched-age control risk estimate in this row",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "deceased mouse assessed at necropsy",
+      "n_independent_units": 9,
+      "cohort_counts": {
+        "deceased treated mice assessed": 9
+      },
+      "follow_up": "At death; nine deceased of ten treated mice, one still alive at source report",
+      "limits": "Five of nine is a selected necropsy count, not five of ten with complete follow-up, cumulative incidence, or a causal editor-specific risk. Lifespan extension and age at death complicate comparisons. The source discusses vector integration, transgenic RAB25 and other unresolved contributions.",
+      "stage": "animal",
+      "model": "Transgenic mice carrying the human progeria-causing LMNA allele",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33408413/",
+      "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
+    },
+    {
+      "id": "progeria-vector-integration",
+      "study_id": "progeria-mice-2021",
+      "domain": "structural_dna",
+      "status": "source_reports_signal",
+      "signal_role": "harm",
+      "outcome": "Rare vector integration detected at mouse genomic regions previously associated with liver tumors in tested treated liver/tumor tissues.",
+      "source_locator": "Full text: liver-tumor and integration Results; Supplementary Data 1 referenced, not independently retrieved",
+      "comparison_design": "between_groups",
+      "comparison": "Selected treated liver/tumor tissues versus saline liver tissues; nested tissue samples are not independent mice",
+      "endpoint_hierarchy": "exploratory",
+      "independent_unit": "mouse; tissue sections nested within mouse",
+      "n_independent_units": null,
+      "follow_up": "Postmortem liver sampling",
+      "limits": "Integration is a structural finding, not proof it caused the tumors. Results describe three tumor-bearing treated mice and two saline mice; the variant-analysis Methods also mention four independent mice in one analysis. This review leaves the analysis-specific denominator unresolved rather than using section counts.",
+      "stage": "animal",
+      "model": "Transgenic mice carrying the human progeria-causing LMNA allele",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33408413/",
+      "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
+    },
+    {
+      "id": "progeria-liver-snv-composition",
+      "study_id": "progeria-mice-2021",
+      "domain": "dna_product",
+      "status": "source_reports_no_signal",
+      "signal_role": "context",
+      "outcome": "No significant between-sample-type difference in the relative fraction of A\u2022T-to-G\u2022C mutations among detected point mutations in the reported liver analyses.",
+      "source_locator": "Full text: liver genome analysis Results; Extended Data Fig. 12a\u2013c and genome-analysis Methods",
+      "comparison_design": "between_groups",
+      "comparison": "Selected saline liver, treated non-tumor liver and treated tumor tissue samples",
+      "endpoint_hierarchy": "exploratory",
+      "independent_unit": "mouse; genome samples nested within mouse",
+      "n_independent_units": null,
+      "follow_up": "Postmortem liver sampling",
+      "limits": "Source FDR-adjusted p=0.28\u20130.50 concerns relative mutation composition; it is not absence of every off-target event, vector integration, RNA outcome or clonal selection. Analysis-specific independent-mouse denominator remains unresolved here. Nonsignificance is not equivalence or a safety guarantee.",
+      "stage": "animal",
+      "model": "Transgenic mice carrying the human progeria-causing LMNA allele",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33408413/",
+      "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
+    }
+  ],
+  "documented_domains_by_study": {
+    "cbe-2016": [],
+    "abe-2017": [],
+    "rna-offtargets-2019": [
+      "rna_outcomes"
+    ],
+    "prime-2019": [],
+    "cps1-case-2025": [
+      "adverse_events",
+      "clinical_function"
+    ],
+    "progeria-mice-2021": [
+      "adverse_events",
+      "dna_product",
+      "structural_dna",
+      "survival",
+      "tissue_function"
+    ]
+  },
+  "undocumented_domains_in_catalog": {
+    "cbe-2016": [
+      "adverse_events",
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "rna_outcomes",
+      "structural_dna",
+      "survival",
+      "tissue_function"
+    ],
+    "abe-2017": [
+      "adverse_events",
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "rna_outcomes",
+      "structural_dna",
+      "survival",
+      "tissue_function"
+    ],
+    "rna-offtargets-2019": [
+      "adverse_events",
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "structural_dna",
+      "survival",
+      "tissue_function"
+    ],
+    "prime-2019": [
+      "adverse_events",
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "rna_outcomes",
+      "structural_dna",
+      "survival",
+      "tissue_function"
+    ],
+    "cps1-case-2025": [
+      "clonal_behavior",
+      "delivery",
+      "dna_product",
+      "durability",
+      "molecular_function",
+      "rna_outcomes",
+      "structural_dna",
+      "survival",
+      "tissue_function"
+    ],
+    "progeria-mice-2021": [
+      "clinical_function",
+      "clonal_behavior",
+      "delivery",
+      "durability",
+      "molecular_function",
+      "rna_outcomes"
+    ]
+  },
+  "observation_ids_by_role_and_status": {
+    "benefit": {
+      "not_assessed_in_review": [],
+      "source_reports_mixed": [],
+      "source_reports_no_signal": [],
+      "source_reports_signal": [
+        "cps1-clinical-response",
+        "progeria-vascular-response",
+        "progeria-survival",
+        "progeria-earlier-cohort-survival"
+      ]
+    },
+    "context": {
+      "not_assessed_in_review": [],
+      "source_reports_mixed": [],
+      "source_reports_no_signal": [
+        "progeria-liver-snv-composition"
+      ],
+      "source_reports_signal": [
+        "progeria-molecular-correction"
+      ]
+    },
+    "harm": {
+      "not_assessed_in_review": [],
+      "source_reports_mixed": [],
+      "source_reports_no_signal": [
+        "cps1-original-adverse-events"
+      ],
+      "source_reports_signal": [
+        "rna-assay-domain",
+        "progeria-necropsy-liver-tumors",
+        "progeria-vector-integration"
+      ]
+    },
+    "unclear": {
+      "not_assessed_in_review": [],
+      "source_reports_mixed": [],
+      "source_reports_no_signal": [],
+      "source_reports_signal": []
+    }
+  },
+  "functional_rescue_inferred": false,
+  "causal_effect_estimated": false,
+  "limits": [
+    "Observation text and declared hierarchy are not authenticated by schema validation.",
+    "Undocumented domains are gaps in this catalog, not proof the source omitted an assay.",
+    "No combined efficacy, safety or evidence-quality score is calculated.",
+    "Signal role describes the declared outcome meaning, not confirmation of benefit or absence of risk. A detected harm signal is not a benefit; no detected serious adverse events is not zero risk.",
+    "Molecular changes, organ function, clinical response and durable clonal outcomes stay distinct."
+  ],
+  "outcomes_sha256": "3e61352d1ab0a93a95e0efc564482383e88d8672189b291fbd4c72f09ecbb0ea",
+  "study_catalog_sha256": "7d42d58b4122496a7400904b8fefe4fa9b924446d2c39d15086f3dcb703c0c25"
+}

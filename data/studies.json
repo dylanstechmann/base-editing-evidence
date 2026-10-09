@@ -74,10 +74,10 @@
       "target_tissue": "Multiple organs and vascular pathology in a genetic-disease mouse model",
       "intervention_class": "In vivo adenine base editing",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/33408413/",
-      "source_report": "The source reports pathogenic-allele correction, improved vascular pathology and median survival of 510 versus 215 days.",
+      "source_report": "Two source timing cohorts showed molecular correction, vascular histopathology responses and survival differences. Selected deceased treated mice also had liver tumors and rare vector-integration findings.",
       "functional_scope": "A causal genetic-disease rescue precedent; vascular, molecular and survival outcomes remain separate.",
-      "limits": "Not ordinary-aging repair, a human trial or a tooth-regeneration result. Organs' editing fractions are not whole-body intended-only cell coverage. Sample sizes are not audited in this abstract-scoped catalog.",
-      "access_level": "Official PubMed indexed abstract and exact-DOI Europe PMC core metadata; publisher retrieval failed"
+      "limits": "Not ordinary-aging repair, a human trial or a tooth-regeneration result. Organ allele fractions are not intended-only cell coverage. Survival, necropsy selection and genomic assay denominators remain separate; tumor causation and some assay-specific counts remain unresolved.",
+      "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
     }
   ]
 }

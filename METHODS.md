@@ -9,8 +9,11 @@ A subsequent sixth card adds the 2021 primary progeria-model study. The assistan
 accessed its official indexed abstract and retrieved exact-DOI Europe PMC core
 metadata through Regen Workbench. [The new receipt](data/progeria_metadata_receipt.json)
 identifies that real retrieval. Its molecular, vascular and survival rows retain
-animal scope; independent-unit counts and endpoint hierarchy remain unaudited
-in this abstract-limited catalog. No delivery regimen or editing design is supplied.
+animal scope. A subsequent [full-text review](PROGERIA_REVIEW.md) qualifies
+the separate longevity and selected-necropsy cohort counts and adds structural
+integration and adverse findings. Assay-specific genomic denominators and
+endpoint hierarchy remain unresolved where stated. No delivery regimen or
+editing design is supplied.
 
 On 2026-10-09, the AI assistant accessed the primary publisher/PMC/PubMed
 pages stated in each case and a bounded Europe PMC core metadata response
@@ -58,3 +61,8 @@ unclear. Reports index observation IDs by role and reported status without
 combining them into a score. “No signal” on an adverse-event row cannot become
 zero risk or a positive efficacy result. Survival is a separate eleventh domain,
 and an animal survival row does not inherit human clinical validation.
+
+Optional `cohort_counts` are declared disjoint groups of the same independent
+unit, with positive integer counts summing to the known `n_independent_units`.
+They are not numerator/denominator pairs, overlapping assays or repeated visits.
+Validation checks declared arithmetic; it cannot authenticate independence.

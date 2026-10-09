@@ -39,6 +39,15 @@ def audit_outcomes(document, studies):
         count = row.get("n_independent_units")
         if count is not None and (type(count) is not int or count < 1):
             raise ValueError("n_independent_units must be a positive integer or null")
+        if "cohort_counts" in row:
+            cohorts = row["cohort_counts"]
+            if not isinstance(cohorts, dict) or not cohorts:
+                raise ValueError("cohort_counts must be a nonempty object")
+            if any(not isinstance(name, str) or not name.strip() or type(n) is not int or n < 1
+                   for name, n in cohorts.items()):
+                raise ValueError("Cohort names need positive independent-unit counts")
+            if count is None or sum(cohorts.values()) != count:
+                raise ValueError("Disjoint cohort counts must sum to n_independent_units")
         source = sources[row["study_id"]]
         if source["stage"] == "human_case" and count not in (None, 1):
             raise ValueError("A single-patient case cannot acquire independent units from visits or assays")
