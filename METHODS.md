@@ -5,6 +5,13 @@ ABE chemistry, an RNA adverse-outcome assay, prime editing and an original
 single-patient base-editing report. This is a focused selection, not a systematic
 review or a claim of the latest complete clinical evidence.
 
+A subsequent sixth card adds the 2021 primary progeria-model study. The assistant
+accessed its official indexed abstract and retrieved exact-DOI Europe PMC core
+metadata through Regen Workbench. [The new receipt](data/progeria_metadata_receipt.json)
+identifies that real retrieval. Its molecular, vascular and survival rows retain
+animal scope; independent-unit counts and endpoint hierarchy remain unaudited
+in this abstract-limited catalog. No delivery regimen or editing design is supplied.
+
 On 2026-10-09, the AI assistant accessed the primary publisher/PMC/PubMed
 pages stated in each case and a bounded Europe PMC core metadata response
 through Regen Workbench. The [metadata receipt](data/metadata_receipt.json)
@@ -45,3 +52,9 @@ Endpoint hierarchy and comparisons are explicit declarations requiring human
 source review. Unknown replication counts remain null. Missing or explicitly
 not-assessed domains are catalog gaps, not zero effects, unperformed assays,
 or failed biology. No benefit or safety score combines these different domains.
+
+The optional `signal_role` is benefit, harm, context or unclear; omission remains
+unclear. Reports index observation IDs by role and reported status without
+combining them into a score. “No signal” on an adverse-event row cannot become
+zero risk or a positive efficacy result. Survival is a separate eleventh domain,
+and an animal survival row does not inherit human clinical validation.

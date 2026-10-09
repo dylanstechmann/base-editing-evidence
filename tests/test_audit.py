@@ -51,7 +51,8 @@ class AuditChecks(unittest.TestCase):
 
     def test_curated_sources_have_scopes_and_no_inherited_human_validation(self):
         report = study_report(ROOT / "data/studies.json")
-        self.assertEqual(len(report["studies"]), 5)
+        self.assertEqual(len(report["studies"]), 6)
+        self.assertEqual(report["counts_by_stage"]["animal"], 1)
         self.assertEqual(report["counts_by_stage"]["human_case"], 1)
         studies = copy.deepcopy(report["studies"])
         studies[0]["functional_scope"] = ""

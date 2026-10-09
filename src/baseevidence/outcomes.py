@@ -3,7 +3,8 @@
 from baseevidence.audit import load, validate_studies
 
 DOMAINS = {"dna_product", "rna_outcomes", "structural_dna", "delivery", "molecular_function",
-           "tissue_function", "clinical_function", "adverse_events", "durability", "clonal_behavior"}
+           "tissue_function", "clinical_function", "adverse_events", "durability", "clonal_behavior", "survival"}
+SIGNAL_ROLES = {"benefit", "harm", "context", "unclear"}
 STATUSES = {"source_reports_signal", "source_reports_no_signal", "source_reports_mixed", "not_assessed_in_review"}
 DESIGNS = {"between_groups", "within_subject", "uncontrolled_case", "no_comparator", "not_stated"}
 HIERARCHIES = {"primary", "secondary", "post_hoc", "exploratory", "not_stated"}
@@ -43,7 +44,10 @@ def audit_outcomes(document, studies):
             raise ValueError("A single-patient case cannot acquire independent units from visits or assays")
         if any(key in row for key in ("stage", "model", "source_url")):
             raise ValueError("Stage, model and URL come from the source catalog, not outcome overrides")
-        qualified.append({**row, "stage": source["stage"], "model": source["model"],
+        signal_role = row.get("signal_role", "unclear")
+        if signal_role not in SIGNAL_ROLES:
+            raise ValueError("signal_role must be benefit, harm, context or unclear")
+        qualified.append({**row, "signal_role": signal_role, "stage": source["stage"], "model": source["model"],
                           "source_url": source["source_url"], "access_level": source["access_level"]})
     documented = {key: sorted({row["domain"] for row in qualified if row["study_id"] == key
                               and row["status"] != "not_assessed_in_review"}) for key in sources}
@@ -51,10 +55,14 @@ def audit_outcomes(document, studies):
             "observations": qualified,
             "documented_domains_by_study": documented,
             "undocumented_domains_in_catalog": {key: sorted(DOMAINS - set(domains)) for key, domains in documented.items()},
+            "observation_ids_by_role_and_status": {
+                role: {status: [r["id"] for r in qualified if r["signal_role"] == role and r["status"] == status]
+                       for status in sorted(STATUSES)} for role in sorted(SIGNAL_ROLES)},
             "functional_rescue_inferred": False, "causal_effect_estimated": False,
             "limits": ["Observation text and declared hierarchy are not authenticated by schema validation.",
                        "Undocumented domains are gaps in this catalog, not proof the source omitted an assay.",
                        "No combined efficacy, safety or evidence-quality score is calculated.",
+                       "Signal role describes the declared outcome meaning, not confirmation of benefit or absence of risk. A detected harm signal is not a benefit; no detected serious adverse events is not zero risk.",
                        "Molecular changes, organ function, clinical response and durable clonal outcomes stay distinct."]}
 
 

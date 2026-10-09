@@ -1,0 +1,16 @@
+{
+  "retrieved_utc": "2026-10-09T21:35:40.375048+00:00",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41586-020-03086-7&format=json&resultType=core",
+  "response_sha256": "282289057bb0bc2f357be391d0e10a3a76b99f9a4d32baded290aa86d4c72c49",
+  "local_provenance_receipt": "1791581740373867100_base-editing-progeria-metadata.json",
+  "records": [
+    {
+      "id": "33408413",
+      "pmcid": "PMC7872200",
+      "doi": "10.1038/s41586-020-03086-7",
+      "title": "In vivo base editing rescues Hutchinson-Gilford progeria syndrome in mice.",
+      "firstPublicationDate": "2021-01-06"
+    }
+  ],
+  "scope": "Exact-DOI indexed abstract, not a new experiment or systematic search"
+}

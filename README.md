@@ -4,10 +4,10 @@ Inspect the gap between changing a DNA base and restoring tissue function.
 This is a personal hobby and learning project, developed with substantial AI
 coding assistance. No owner laboratory work or source review is implied.
 
-The first release provides an executable evidence-scope audit, a classical
+The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[five source cards](data/studies.json) distinguish cell experiments from an
-initial single-patient clinical report. It is a starting point for research on
+[six source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+mouse model and an initial single-patient clinical report. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
 ## Three questions that stay separate
@@ -50,11 +50,18 @@ an undefined zero-denominator conditional rate is not reported as zero.
 
 The [outcome inventory](data/outcomes.json) links each observation to an existing
 source card and retains comparator design, endpoint hierarchy, independent unit,
-follow-up and access scope. Its ten domains distinguish sequence products, RNA,
+follow-up and access scope. Its eleven domains distinguish sequence products, RNA,
 organ function, clinical response, adverse events and durability. A clinical
 case cannot gain independent patients from repeated visits. Missing domains
 mean undocumented in this catalog; the tool does not conclude that the paper
 omitted them, calculate an efficacy score or infer functional rescue.
+
+Signal roles now distinguish benefit, harm, context and unclear observations.
+A detected RNA off-target signal is not a benefit, and no detected serious
+adverse events is not zero risk. The [new comparison snapshot](examples/outcome-audit-progeria/report.json)
+includes progeria-model molecular, vascular and survival observations. They
+remain mouse genetic-disease evidence, separate from ordinary-aging repair.
+[Primary progeria report](https://pubmed.ncbi.nlm.nih.gov/33408413/).
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

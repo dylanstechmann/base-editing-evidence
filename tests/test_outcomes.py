@@ -51,6 +51,29 @@ class OutcomeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Study must be an object"):
             validate_studies({"schema_version": 1, "studies": [None]})
 
+    def test_harm_signal_and_absence_of_detected_serious_events_are_not_benefit(self):
+        report = audit_outcomes(self.document, self.studies)
+        roles = report["observation_ids_by_role_and_status"]
+        self.assertIn("rna-assay-domain", roles["harm"]["source_reports_signal"])
+        self.assertIn("cps1-original-adverse-events", roles["harm"]["source_reports_no_signal"])
+        self.assertNotIn("rna-assay-domain", roles["benefit"]["source_reports_signal"])
+
+    def test_missing_polarity_stays_unclear_and_unknown_polarity_fails(self):
+        del self.document["observations"][0]["signal_role"]
+        self.assertEqual(audit_outcomes(self.document, self.studies)["observations"][0]["signal_role"], "unclear")
+        self.document["observations"][0]["signal_role"] = "safe"
+        with self.assertRaises(ValueError):
+            audit_outcomes(self.document, self.studies)
+
+    def test_progeria_survival_retains_mouse_stage_and_unknown_replication(self):
+        report = audit_outcomes(self.document, self.studies)
+        row = next(r for r in report["observations"] if r["id"] == "progeria-survival")
+        self.assertEqual(row["stage"], "animal")
+        self.assertEqual(row["domain"], "survival")
+        self.assertIsNone(row["n_independent_units"])
+        self.assertIn("ordinary aging", row["limits"])
+        self.assertNotIn("clinical_function", report["documented_domains_by_study"][row["study_id"]])
+
     def test_invalid_cli_input_leaves_no_report_directory(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "invalid.json"
