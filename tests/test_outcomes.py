@@ -61,7 +61,12 @@ class OutcomeTests(unittest.TestCase):
     def test_missing_polarity_stays_unclear_and_unknown_polarity_fails(self):
         del self.document["observations"][0]["signal_role"]
         self.assertEqual(audit_outcomes(self.document, self.studies)["observations"][0]["signal_role"], "unclear")
-        self.document["observations"][0]["signal_role"] = "safe"
+        for value in ("safe", None, ["benefit"], {"benefit": True}):
+            self.document["observations"][0]["signal_role"] = value
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                audit_outcomes(self.document, self.studies)
+        self.document["observations"][0]["signal_role"] = "unclear"
+        self.document["observations"][0]["domain"] = ["dna_product"]
         with self.assertRaises(ValueError):
             audit_outcomes(self.document, self.studies)
 

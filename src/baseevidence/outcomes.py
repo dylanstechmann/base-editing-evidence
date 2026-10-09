@@ -34,7 +34,7 @@ def audit_outcomes(document, studies):
         ids.add(row["id"])
         for field, allowed in (("domain", DOMAINS), ("status", STATUSES),
                                ("comparison_design", DESIGNS), ("endpoint_hierarchy", HIERARCHIES)):
-            if row.get(field) not in allowed:
+            if not isinstance(row.get(field), str) or row[field] not in allowed:
                 raise ValueError(f"Outcome observation needs known {field}")
         count = row.get("n_independent_units")
         if count is not None and (type(count) is not int or count < 1):
@@ -45,7 +45,7 @@ def audit_outcomes(document, studies):
         if any(key in row for key in ("stage", "model", "source_url")):
             raise ValueError("Stage, model and URL come from the source catalog, not outcome overrides")
         signal_role = row.get("signal_role", "unclear")
-        if signal_role not in SIGNAL_ROLES:
+        if not isinstance(signal_role, str) or signal_role not in SIGNAL_ROLES:
             raise ValueError("signal_role must be benefit, harm, context or unclear")
         qualified.append({**row, "signal_role": signal_role, "stage": source["stage"], "model": source["model"],
                           "source_url": source["source_url"], "access_level": source["access_level"]})
