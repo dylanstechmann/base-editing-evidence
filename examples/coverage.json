@@ -1,0 +1,9 @@
+{
+  "origin": "synthetic_example",
+  "count_unit": "cells",
+  "population_binding": "same_target_population",
+  "target_cells": 1000,
+  "reached_cells": 500,
+  "intended_edited_cells": 300,
+  "intended_only_cells": 250
+}

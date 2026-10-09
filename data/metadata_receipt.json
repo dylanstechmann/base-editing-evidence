@@ -1,0 +1,59 @@
+{
+  "retrieved_utc": "2026-10-09T16:24:09.361722-04:00",
+  "scope": "Exact-ID/DOI metadata retrieval, not a systematic search or independent validation",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19666587+OR+EXT_ID%3A33579703+OR+EXT_ID%3A28620633+OR+EXT_ID%3A41624073+OR+DOI%3A10.1186%2Fs13287-016-0288-1+OR+DOI%3A10.1038%2Fs41368-026-00429-4+OR+DOI%3A10.1038%2Fs41392-025-02320-w+OR+EXT_ID%3A40373211+OR+EXT_ID%3A27096365+OR+EXT_ID%3A29160308+OR+DOI%3A10.1038%2Fs41586-019-1161-z+OR+DOI%3A10.1038%2Fs41586-019-1711-4&format=json&resultType=core&pageSize=20",
+  "response_sha256": "a367d5b7b9b9fc9d5bb581baa89b2cabc5f31df21de333ef330090dafb6e286f",
+  "local_provenance_receipt": "1791577449359909149_dental-genome-metadata.json",
+  "records": [
+    {
+      "id": "40373211",
+      "source": "MED",
+      "pmid": "40373211",
+      "pmcid": "PMC12713542",
+      "doi": "10.1056/nejmoa2504747",
+      "title": "Patient-Specific In Vivo Gene Editing to Treat a Rare Genetic Disease.",
+      "firstPublicationDate": "2025-05-15",
+      "isOpenAccess": "N"
+    },
+    {
+      "id": "31634902",
+      "source": "MED",
+      "pmid": "31634902",
+      "pmcid": "PMC6907074",
+      "doi": "10.1038/s41586-019-1711-4",
+      "title": "Search-and-replace genome editing without double-strand breaks or donor DNA.",
+      "firstPublicationDate": "2019-10-21",
+      "isOpenAccess": "Y"
+    },
+    {
+      "id": "30995674",
+      "source": "MED",
+      "pmid": "30995674",
+      "pmcid": "PMC6657343",
+      "doi": "10.1038/s41586-019-1161-z",
+      "title": "Transcriptome-wide off-target RNA editing induced by CRISPR-guided DNA base editors.",
+      "firstPublicationDate": "2019-04-17",
+      "isOpenAccess": "N"
+    },
+    {
+      "id": "29160308",
+      "source": "MED",
+      "pmid": "29160308",
+      "pmcid": "PMC5726555",
+      "doi": "10.1038/nature24644",
+      "title": "Programmable base editing of A•T to G•C in genomic DNA without DNA cleavage.",
+      "firstPublicationDate": "2017-10-25",
+      "isOpenAccess": "Y"
+    },
+    {
+      "id": "27096365",
+      "source": "MED",
+      "pmid": "27096365",
+      "pmcid": "PMC4873371",
+      "doi": "10.1038/nature17946",
+      "title": "Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage.",
+      "firstPublicationDate": "2016-04-20",
+      "isOpenAccess": "Y"
+    }
+  ]
+}
