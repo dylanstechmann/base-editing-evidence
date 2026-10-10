@@ -6,7 +6,7 @@ coding assistance. No owner laboratory work or source review is implied.
 
 The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[six source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+[ten source cards](data/studies.json) distinguish cell experiments, a genetic-disease
 mouse model and an initial single-patient clinical report. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
@@ -69,6 +69,19 @@ The [current audit snapshot](examples/outcome-audit-fulltext/report.json) includ
 those observations and explicit disjoint cohort counts. Earlier snapshots
 preserve their historical source scope. No pooled survival or causal tumor-risk
 estimate is generated.
+
+The [editor precision/function comparison](EDITOR_PRECISION_FUNCTION_COMPARISON.md)
+adds primary CBE fidelity, RDEB skin-equivalent, KCNJ13 retinal, and ABE8e-Y149V
+evidence. The new [precision outcome snapshot](examples/outcome-audit-precision/report.json)
+keeps allele/read fractions, off-target DNA findings, engineered-tissue protein
+restoration and animal function as separate records. For example, the 2026
+ABE8e-Y149V study narrows the editing window and reports fewer off-target edits
+in its tested models; its mouse HTI result comes from disrupting an upstream
+bypass gene, not correcting the causal mutation. The KCNJ13 and RDEB studies
+measure disease-specific cell or tissue-model function, not aging reversal.
+These papers do not identify one universally best editor or establish ordinary-
+aging repair. Their source models and measurement limits are described in the
+comparison; no guide or therapeutic protocol is provided.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

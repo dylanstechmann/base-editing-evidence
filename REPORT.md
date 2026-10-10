@@ -57,3 +57,26 @@ unit count. They do not authorize pooling assays, repeated visits or overlapping
 groups. All 19 tests passed in Docker `dev`; the changed module and tests passed
 Ruff. The [current CLI report](examples/outcome-audit-fulltext/report.json)
 retains the updated input hashes. Earlier reports remain historical snapshots.
+
+## Editor precision and function comparison — 2026-10-09
+
+Four primary-source cards now cover engineered CBE off-target reduction,
+COL7A1 correction in RDEB patient cells and a skin-equivalent construct,
+KCNJ13 correction with retinal function measurements in an engineered disease
+model, and the ABE8e-Y149V precision and HTI mouse study. Seven outcome records
+keep sequence products, protein restoration, retinal function, embryo SNVs and
+mouse disease-model response separate. Exact independent-unit counts remain
+unknown where the reviewed source details did not support a clean count.
+
+The review emphasizes that allele/read fractions do not establish edited-cell
+coverage, engineered tissue protein deposition is not patient-level healing,
+and a short-term disease-model rescue is not ordinary-aging repair. The HTI
+mouse experiment disrupted Hpd to bypass the Fah defect; it did not repair the
+causal mutation. The selected primary articles and access limits are documented
+in [METHODS.md](METHODS.md) and the
+[comparison](EDITOR_PRECISION_FUNCTION_COMPARISON.md).
+
+All 19 unit tests passed locally after updating the source-count assertion for
+the expanded catalog. The [precision outcome snapshot](examples/outcome-audit-precision/report.json)
+retains exact SHA-256 hashes of the outcome and study inputs. This tranche adds
+no guide design or clinical protocol.

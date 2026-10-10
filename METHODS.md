@@ -66,3 +66,25 @@ Optional `cohort_counts` are declared disjoint groups of the same independent
 unit, with positive integer counts summing to the known `n_independent_units`.
 They are not numerator/denominator pairs, overlapping assays or repeated visits.
 Validation checks declared arithmetic; it cannot authenticate independence.
+
+On 2026-10-09, this catalog added four focused primary-source comparisons:
+engineered CBE off-target assays, ABE8e correction in COL7A1/RDEB patient cells
+and a 3D skin-equivalent model, KCNJ13 editing in patient-derived retinal cells
+and a targeted mouse model, and the ABE8e-Y149V study spanning cell, embryo and
+hereditary-tyrosinemia mouse assays. The assistant accessed the primary PMC or
+JCI article pages online. Supplementary material was not independently
+reviewed or retained in this repository, and source percentages/statistics were
+transcribed rather than recalculated. The new
+[comparison](EDITOR_PRECISION_FUNCTION_COMPARISON.md) and
+[precision audit snapshot](examples/outcome-audit-precision/report.json)
+preserve model and endpoint boundaries. Counts remain null where the
+source-specific independent-unit denominator was not audited here; a read or
+allele fraction is not converted into edited-cell coverage.
+
+This is a small, question-driven sample, not a systematic review. The 2026
+ABE8e-Y149V paper's mouse result edits Hpd to bypass the Fah-associated disease
+pathway; it does not correct the causal Fah mutation. RDEB and KCNJ13 findings
+remain disease-specific cell, engineered-tissue and animal-model evidence.
+The progeria mouse model and the original one-patient CPS1 report remain
+separate from ordinary-aging or rejuvenation evidence. No editor is ranked and
+no clinical or molecular intervention is proposed.

@@ -78,6 +78,58 @@
       "functional_scope": "A causal genetic-disease rescue precedent; vascular, molecular and survival outcomes remain separate.",
       "limits": "Not ordinary-aging repair, a human trial or a tooth-regeneration result. Organ allele fractions are not intended-only cell coverage. Survival, necropsy selection and genomic assay denominators remain separate; tumor causation and some assay-specific counts remain unresolved.",
       "access_level": "Exact Europe PMC full-text XML retrieved and focused Results/figure-caption review; supplementary tables/data referenced but not independently retrieved"
+    },
+    {
+      "id": "cbe-fidelity-2020",
+      "title": "Evaluation and Minimization of Cas9-Independent Off-Target DNA Editing by Cytosine Base Editors",
+      "stage": "human_cells",
+      "model": "Bacterial screens, human-cell assays and whole-genome-sequencing validation",
+      "target_tissue": "No repaired tissue or organ established by this entry",
+      "intervention_class": "Engineered cytosine base editors with narrowed or sequence-dependent activity",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7335424/",
+      "source_report": "The source reports several engineered CBE variants with lower guide-independent DNA deamination and reduced guide-dependent off-target editing in tested assays while retaining a fraction of BE4max on-target activity.",
+      "functional_scope": "Compares molecular editing outcomes and assay performance; it does not establish tissue repair or therapeutic benefit.",
+      "limits": "Reported reductions are variant-, target- and assay-dependent. Lower measured off-target activity is not proof of zero risk or universal superiority, and narrowed activity can affect target availability.",
+      "access_level": "Primary PMC full-text article page accessed; supplementary materials not independently reviewed"
+    },
+    {
+      "id": "col7a1-rdeb-2022",
+      "title": "ABE8e adenine base editor precisely and efficiently corrects a recurrent COL7A1 nonsense mutation",
+      "stage": "human_cells",
+      "model": "Primary fibroblasts from one person with recessive dystrophic epidermolysis bullosa and engineered human skin equivalents",
+      "target_tissue": "Cell culture and a three-dimensional skin-equivalent construct",
+      "intervention_class": "Adenine base editing of a disease-associated COL7A1 allele",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9666996/",
+      "source_report": "The paper reports 94.6% correction of the tested pathogenic allele in bulk patient-derived fibroblasts, restored COL7A1 RNA and type VII collagen protein, and collagen deposition at the dermal-epidermal junction in a skin-equivalent model.",
+      "functional_scope": "Molecular restoration and matrix localization were measured in cell and engineered-tissue models; the study did not measure healing or function in a treated person.",
+      "limits": "Read/allele correction is not a fraction of corrected cells. This is one patient-derived cell source and an engineered skin construct; selected off-target assays do not establish genome-wide, long-term or clinical safety.",
+      "access_level": "Primary PMC abstract and full-text results accessed online; supplementary materials not independently reviewed"
+    },
+    {
+      "id": "kcnj13-retina-2023",
+      "title": "Nonviral base editing of KCNJ13 mutation preserves vision in a model of inherited retinal channelopathy",
+      "stage": "animal",
+      "model": "Patient-derived fibroblasts and iPSC-derived retinal pigment epithelium, plus a knock-in mouse model of LCA16 with targeted RPE editing",
+      "target_tissue": "Retinal pigment epithelium in a localized inherited-disease model",
+      "intervention_class": "ABE8e correction delivered with nonviral silica nanocapsules",
+      "source_url": "https://www.jci.org/articles/view/171356",
+      "source_report": "The source reports Kir7.1 channel-function restoration in edited patient iPSC-RPE and recovery of electroretinogram c-wave amplitudes with preserved retinal structure in an RPE-targeted mouse model.",
+      "functional_scope": "Includes cell-level channel measurements and mouse retinal electrophysiology and imaging; it is a monogenic retinal-disease proof of concept, not a human treatment result.",
+      "limits": "The in vivo mouse model is engineered and locally targeted. On-target bystanders/indels were detected in some cell settings; targeted off-target panels cannot exclude all unintended edits. The paper notes that clonal allele combinations were not resolved.",
+      "access_level": "Primary JCI full-text article page accessed; supplemental files not independently reviewed"
+    },
+    {
+      "id": "abe8e-y149v-2026",
+      "title": "Therapeutic adenine base editor with minimized off-target effects",
+      "stage": "animal",
+      "model": "HEK293T target-library and disease-variant assays, mouse-embryo GOTI whole-genome sequencing, and hereditary tyrosinemia type I mice",
+      "target_tissue": "Liver in an engineered mouse metabolic-disease model; other assays are cell or embryo models",
+      "intervention_class": "Comparison of ABE8e with engineered high-precision adenine base editor variants including ABE8e-Y149V",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13225742/",
+      "source_report": "The study reports lower bystander and genome-wide off-target editing for ABE8e-Y149V than ABE8e in specified assays, plus functional rescue in hereditary tyrosinemia type I mice through disruption of Hpd.",
+      "functional_scope": "Combines sequence-product assays with short-term disease-model liver biomarkers and weight outcomes; it does not test ordinary aging or repair of the causal Fah mutation.",
+      "limits": "GOTI is an embryo assay and cannot quantify human somatic-tissue risk. Disease-associated variants inserted into HEK cells are not patient cells. Hpd disruption is a disease bypass strategy in this model, and positive selection may affect liver allele fractions.",
+      "access_level": "Primary PMC full-text article page accessed; supplementary data not independently reviewed"
     }
   ]
 }
