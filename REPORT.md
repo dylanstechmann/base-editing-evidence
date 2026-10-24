@@ -80,3 +80,18 @@ All 19 unit tests passed locally after updating the source-count assertion for
 the expanded catalog. The [precision outcome snapshot](examples/outcome-audit-precision/report.json)
 retains exact SHA-256 hashes of the outcome and study inputs. This tranche adds
 no guide design or clinical protocol.
+
+## Correction-direction classifier and human-use scope — 2026-10-24
+
+Added `correction-class`, a direction-only classification of a declared
+pathogenic-to-corrected single-base change against the classical ABE/CBE
+conversion classes, with seven unit tests covering both classical
+directions, every transversion, identical bases, ambiguous input, CLI
+output and unstated coordinate conventions. A new
+[correction-direction scope note](CORRECTION_SCOPE.md) maps the three most
+requested goals — cancer-driver lesions, aging and appearance traits in
+healthy adults — onto the evidence stages this catalog documents, citing
+two pigmentation reviews verified through Europe PMC indexed metadata
+only. No guide design, editor ranking, delivery protocol, dose or clinical
+recommendation is produced, and the note records that healthy-adult
+enhancement use is not established by any catalog card.

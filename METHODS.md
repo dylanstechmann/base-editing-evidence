@@ -29,6 +29,19 @@ strand. It labels complementary transitions with the same classical chemistry
 class. It does not implement editor targeting or sequence optimization, and
 does not evaluate mitochondrial or RNA editing platforms.
 
+`correction-class` maps a declared pathogenic-to-corrected single-base
+direction onto the same classical ABE/CBE conversion classes. Complementary
+corrections share a direction; transversions are reported outside both
+classes without selecting or designing alternative machinery; identical
+bases declare no correction. Direction membership establishes no PAM,
+window, bystander, efficiency, delivery or safety property.
+
+On 2026-10-24 the [correction-direction scope note](CORRECTION_SCOPE.md)
+cited two pigmentation-genetics reviews verified through Europe PMC indexed
+metadata only (Manga & Loftus 2025, Ann Hum Genet; Bose et al. 2026,
+Front Genet). The full texts were not reviewed, and no claims from their
+contents are transcribed here.
+
 `audit-coverage` demonstrates a declared nested count chain in the same target
 cell population. Whole-population fractions share `target_cells`; conditional
 fractions use the immediately preceding known stage. Counts are integers,

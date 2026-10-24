@@ -37,6 +37,7 @@ Python 3.11+, standard library only for the research tools:
 ```sh
 python -m pip install -e .
 baseevidence change-class A G --coordinate-system reference_forward_strand
+baseevidence correction-class --pathogenic G --corrected A --coordinate-system reference_forward_strand
 baseevidence audit-studies data/studies.json --out artifacts/source-audit
 baseevidence audit-coverage examples/coverage.json --out artifacts/count-demo
 baseevidence audit-outcomes data/outcomes.json --studies data/studies.json --out artifacts/outcome-audit
@@ -82,6 +83,14 @@ measure disease-specific cell or tissue-model function, not aging reversal.
 These papers do not identify one universally best editor or establish ordinary-
 aging repair. Their source models and measurement limits are described in the
 comparison; no guide or therapeutic protocol is provided.
+
+The [correction-direction scope note](CORRECTION_SCOPE.md) maps the three
+most requested goals — cancer-driver lesions, aging and appearance traits —
+onto the evidence stages this catalog actually documents. The
+`correction-class` command classifies a declared pathogenic-to-corrected
+single-base direction against the classical ABE/CBE conversion classes;
+transversions stay outside both classes, and no targetability, guide,
+protocol or clinical claim is produced.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

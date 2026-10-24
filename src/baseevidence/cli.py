@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from baseevidence.audit import coverage, load, study_report, substitution
+from baseevidence.correction import correction
 from baseevidence.outcomes import outcome_report
 
 
@@ -15,6 +16,10 @@ def main(argv=None):
     change.add_argument("ref")
     change.add_argument("alt")
     change.add_argument("--coordinate-system", required=True)
+    fix = actions.add_parser("correction-class", help="Declared-correction chemistry direction only, not targetability or protocol")
+    fix.add_argument("--pathogenic", required=True)
+    fix.add_argument("--corrected", required=True)
+    fix.add_argument("--coordinate-system", required=True)
     for command in ("audit-studies", "audit-coverage"):
         action = actions.add_parser(command)
         action.add_argument("input")
@@ -27,6 +32,10 @@ def main(argv=None):
     try:
         if args.command == "change-class":
             print(substitution(args.ref, args.alt, coordinate_system=args.coordinate_system))
+            return 0
+        if args.command == "correction-class":
+            print(json.dumps(correction(args.pathogenic, args.corrected,
+                                        coordinate_system=args.coordinate_system), indent=2, allow_nan=False))
             return 0
         if args.command == "audit-studies":
             report = study_report(args.input)
