@@ -44,6 +44,13 @@ class ReceiptChecks(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             good = Path(directory) / "good.json"
             good.write_text(json.dumps(receipt), encoding="utf-8")
+            # A retained-bytes receipt needs its referenced raw response beside it
+            # for the local hash re-check; copy the committed bytes into the fixture.
+            response_path = receipt.get("response_path")
+            if response_path is not None:
+                retained = Path(directory) / response_path
+                retained.parent.mkdir(parents=True, exist_ok=True)
+                retained.write_bytes((ROOT / "data" / response_path).read_bytes())
             bad = Path(directory) / "bad.json"
             bad.write_text(json.dumps({**receipt, "scope": " "}), encoding="utf-8")
             report = verify_receipts([good, bad])
