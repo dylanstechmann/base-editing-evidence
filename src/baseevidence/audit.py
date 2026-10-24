@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-STAGES = {"human_cells", "animal", "plant", "human_case", "human_trial", "synthetic"}
+STAGES = {"human_cells", "animal", "plant", "human_case", "human_cohort", "human_trial", "synthetic"}
 
 
 def substitution(ref, alt, *, coordinate_system):

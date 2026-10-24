@@ -1,0 +1,31 @@
+{
+  "retrieved_utc": "2026-10-24T21:23:38.513801+00:00",
+  "retrieval_method": "Europe PMC REST search API exact-EXT_ID queries accessed online on 2026-10-24; indexed metadata transcribed from the API responses",
+  "scope": "Exact-ID indexed metadata retrieval, not a systematic search or independent validation",
+  "queries": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A25426837&format=json&resultType=core&pageSize=1",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27698416&format=json&resultType=core&pageSize=1"
+  ],
+  "records": [
+    {
+      "id": "25426837",
+      "source": "MED",
+      "pmid": "25426837",
+      "pmcid": "PMC4306669",
+      "doi": "10.1056/nejmoa1408617",
+      "title": "Age-related clonal hematopoiesis associated with adverse outcomes.",
+      "firstPublicationDate": "2014-11-26"
+    },
+    {
+      "id": "27698416",
+      "source": "MED",
+      "pmid": "27698416",
+      "pmcid": "PMC5536223",
+      "doi": "10.1038/nature19768",
+      "title": "Tissue-specific mutation accumulation in human adult stem cells during life.",
+      "firstPublicationDate": "2016-10-03"
+    }
+  ],
+  "records_sha256": "b50d18ea55fc4f281e649536aac6886f997f45ccfd27fc36cea1464053ed7b76",
+  "limits": "Raw response bytes were not retained by the retrieval tooling; records_sha256 binds the committed record block, not an unretained response. Fields were transcribed from indexed API responses and not verified against publisher pages."
+}

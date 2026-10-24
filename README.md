@@ -6,8 +6,8 @@ coding assistance. No owner laboratory work or source review is implied.
 
 The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[fourteen source cards](data/studies.json) distinguish cell experiments, a genetic-disease
-mouse model, an initial single-patient clinical report and crop-plant editing studies. It is a starting point for research on
+[sixteen source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
 ## Three questions that stay separate
@@ -120,6 +120,17 @@ classical ABE/CBE directions, transversions and no-change rows. Only
 personal-genome origins and any targetability, guide, delivery or dose
 fields are rejected outright. No pathogenicity inference, efficiency
 estimate or protocol is produced.
+
+Two `human_cohort` cards now document distributed age-acquired damage
+observationally: age-related clonal hematopoiesis (17,182-person cohort;
+age-band prevalence 9.5–18.4%; DNMT3A/TET2/ASXL1; source-reported hazard
+ratios for hematologic cancer, mortality, coronary heart disease and
+stroke) and tissue-specific adult-stem-cell mutation accumulation of about
+40 novel mutations per year across donors aged 3 to 87. Both are context
+for what ordinary aging produces; neither is an editing precedent, a
+targetable lesion list or a rejuvenation result. The
+[aging snapshot](examples/outcome-audit-aging/report.json) is the current
+outcome snapshot; earlier snapshots stay historical.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

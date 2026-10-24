@@ -182,6 +182,32 @@
       "functional_scope": "Ex vivo T-cell engineering with preclinical in vivo efficacy readouts; not a patient treatment or an approved-therapy claim.",
       "limits": "Base editing is used here to deliberately reprogram a signaling allele in engineered immune cells, not to correct a tumor-driver lesion. Results are CAR-construct- and context-specific preclinical findings; no human dosing, safety or clinical protocol follows.",
       "access_level": "Official indexed abstract via Europe PMC; open-access full text not separately reviewed"
+    },
+    {
+      "id": "clonal-hematopoiesis-2014",
+      "title": "Age-related clonal hematopoiesis associated with adverse outcomes",
+      "stage": "human_cohort",
+      "model": "Whole-exome sequencing of peripheral-blood DNA from 17,182 persons unselected for hematologic phenotypes, analyzing 160 genes recurrently mutated in hematologic cancers",
+      "target_tissue": "Peripheral-blood DNA in an observational cohort; no edited or treated tissue",
+      "intervention_class": "No editing intervention; observational somatic-mutation detection in human blood",
+      "source_url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1408617",
+      "source_report": "The source reports that detectable blood somatic mutations were rare under 40 years of age and rose with age, observed in 9.5% (219 of 2,300 persons) at 70-79, 11.7% (37 of 317) at 80-89 and 18.4% (19 of 103) at 90-108 years, mostly in DNMT3A, TET2 and ASXL1, with source-reported associations including hematologic cancer (hazard ratio 11.1), all-cause mortality (1.4), coronary heart disease (2.0) and ischemic stroke (2.6).",
+      "functional_scope": "Population prevalence and adverse-outcome associations of detectable clonal blood mutations; this entry makes no editing, treatment or causal claim.",
+      "limits": "Detectable age-associated clonal mutations are an observational finding, not a correction target list. Hazard ratios are source statistics, not recalculated here, and associations do not establish that editing any listed gene would improve outcomes. Distributed mosaic age-acquired change is distinct from monogenic disease.",
+      "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
+    },
+    {
+      "id": "stemcell-mutation-accumulation-2016",
+      "title": "Tissue-specific mutation accumulation in human adult stem cells during life",
+      "stage": "human_cohort",
+      "model": "Genome-wide sequencing of clonal organoid cultures derived from primary adult stem cells of the small intestine, colon and liver, from human donors aged 3 to 87 years",
+      "target_tissue": "Human adult stem cells of small intestine, colon and liver in an observational donor series; no edited or treated tissue",
+      "intervention_class": "No editing intervention; observational mutation-landscape measurement in human stem cells",
+      "source_url": "https://www.nature.com/articles/nature19768",
+      "source_report": "The source reports that mutations accumulate steadily with age in all assessed tissue types at approximately 40 novel mutations per year, with liver spectra differing from colon and small intestine, signature differences attributed to spontaneous deamination of methylated cytosines in the gut tissues, low inter-individual variation, and similarity between tissue-specific stem-cell spectra and cancer driver-gene spectra.",
+      "functional_scope": "Descriptive mutation-rate and spectra measurements in normal human adult stem cells; no editing, treatment or lifespan claim.",
+      "limits": "Mutation accumulation rates describe distributed age-acquired damage; they are not a targetable lesion list and imply no editing strategy. Donor counts and per-tissue denominators are not stated in the accessed abstract. No reversal, repair or rejuvenation result appears in this source.",
+      "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
     }
   ]
 }

@@ -155,3 +155,24 @@ transversions and no-change rows without pathogenicity, efficiency,
 off-target or protocol inference. Four new unit tests cover counts, origin
 and field rejection, duplicate/malformed rows and CLI directory behavior.
 All 34 unit tests and Ruff pass.
+
+## Aging-damage context cards — 2026-10-24
+
+Added a `human_cohort` evidence stage and two abstract-level observational
+aging cards: the 2014 age-related clonal hematopoiesis study (17,182-person
+cohort; detectable blood mutations rising from 9.5% at 70-79 to 18.4% at
+90-108 years; mostly DNMT3A/TET2/ASXL1; source-reported hazard ratios for
+hematologic cancer, all-cause mortality, coronary heart disease and ischemic
+stroke) and the 2016 tissue-specific adult-stem-cell mutation accumulation
+study (approximately 40 novel mutations per year across donors aged 3 to 87;
+tissue-specific spectra; low inter-individual variation). Metadata was
+retrieved through exact-EXT_ID Europe PMC queries and is bound by a
+records-hash [receipt](data/aging_metadata_receipt.json); full texts were
+not accessed. Four outcome rows keep clone prevalence (context), adverse
+associations (harm), mortality association (harm) and stem-cell mutation
+rates (context) in separate domains, with person denominators stated only
+where the accessed abstract states them. These cards quantify distributed
+age-acquired damage; they are not editing precedents, targetable lesion
+lists or rejuvenation results. The current outcome snapshot is
+`examples/outcome-audit-aging/report.json`; earlier snapshots remain
+historical. All 34 unit tests and Ruff pass.

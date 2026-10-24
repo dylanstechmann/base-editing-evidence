@@ -47,10 +47,16 @@ bypass-strategy models.
 
 The progeria card in this catalog is a monogenic laminopathy model; this
 repository already records that it is not a model of the distributed, mosaic
-age-acquired change of ordinary aging. No single-base correction direction
-addresses "aging" as a whole, and no card here claims aging reversal in any
-species. Treating progeria-model results as ordinary-aging evidence would be
-the scope error this tooling is built to prevent.
+age-acquired change of ordinary aging. Two `human_cohort` cards now document
+that distributed damage directly and observationally: age-related clonal
+hematopoiesis with adverse-outcome associations (Jaiswal et al. 2014) and
+tissue-specific mutation accumulation of about 40 novel mutations per year
+in normal adult stem cells (Blokzijl et al. 2016). Both quantify mosaic
+age-acquired mutation in humans; neither provides a targetable lesion list,
+an editing strategy or any reversal result. No single-base correction
+direction addresses "aging" as a whole, and no card here claims aging
+reversal in any species. Treating progeria-model results as ordinary-aging
+evidence would be the scope error this tooling is built to prevent.
 
 ## Appearance traits: hair, eye and skin color
 
@@ -86,6 +92,7 @@ established by any card in this repository.
 | Cultured human cells | CBE 2016, ABE 2017, RNA off-target 2019, prime editing 2019, CBE fidelity 2020, COL7A1 2022 | Tissue function in a person; whole-genome safety |
 | Animal models | Progeria 2021, KCNJ13 2023, ABE8e-Y149V 2026, cancer BE screens 2026, CAR-T PIK3CD 2026 | Ordinary aging; human clinical validation; tumor-lesion correction in a person |
 | Single human case | CPS1 2025 | Comparative safety, durability, enhancement |
+| Observational human cohorts | Clonal hematopoiesis 2014; stem-cell mutation accumulation 2016 | Any editing intervention; causal outcome change; a targetable lesion list |
 | Plants | Zong 2017 CBE crops; Jin 2019 rice off-targets | Human editing; agronomic or ecological outcomes; long-term field behavior |
 
 The cell-culture and animal work the proposal anticipates is exactly the

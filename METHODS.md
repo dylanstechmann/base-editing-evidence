@@ -132,3 +132,15 @@ personal-genome rows and any targetability, guide, delivery, dose or
 scope-override fields are rejected. Reports tally directions and change
 types; no pathogenicity inference, efficiency or off-target estimate, and
 no guide design is performed.
+
+On 2026-10-24, the catalog added a `human_cohort` evidence stage with two
+abstract-level observational aging cards: the 2014 age-related clonal
+hematopoiesis cohort study and the 2016 tissue-specific adult-stem-cell
+mutation accumulation study. The assistant accessed exact EXT_ID Europe
+PMC REST responses online and transcribed indexed metadata; raw response
+bytes were not retained, so the [receipt](data/aging_metadata_receipt.json)
+binds the committed record block with a records SHA-256. Full texts were
+not accessed, and abstract-level statements are not extended. Hazard ratios
+and prevalence percentages are source statistics, not recalculated here.
+These cards describe distributed age-acquired damage; they provide no
+editing intervention, targetable lesion list or rejuvenation claim.
