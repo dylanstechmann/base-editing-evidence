@@ -194,15 +194,15 @@
       "domain": "dna_product",
       "status": "source_reports_signal",
       "signal_role": "context",
-      "outcome": "ABE8e treatment produced 94.6% correction of the targeted pathogenic allele in bulk patient-derived fibroblasts.",
-      "source_locator": "Primary article abstract and Results: COL7A1 correction",
+      "outcome": "ABE8e treatment produced 94.6% correction of the targeted pathogenic allele in bulk patient-derived fibroblasts by NGS, while Sanger peak analysis estimated near-complete reversal at the target base together with a silent bystander edit.",
+      "source_locator": "Primary open-access full text: Results and Fig. 2c, 3a",
       "comparison_design": "between_groups",
-      "comparison": "Treated versus untreated patient-derived fibroblast culture; allele-read correction, not a cell-count assay",
+      "comparison": "Treated versus untreated patient-derived fibroblast culture; NGS allele-read correction with a Sanger peak-analysis comparison in the source",
       "endpoint_hierarchy": "primary",
       "independent_unit": "Patient-derived fibroblast culture; one patient source, with experiment-level denominator not audited here",
       "n_independent_units": null,
       "follow_up": "Cell-culture interval; not patient follow-up",
-      "limits": "The 94.6% value is an allele/read fraction and cannot be interpreted as the fraction of corrected cells, a whole-skin correction rate or a clinical effect."
+      "limits": "The 94.6% value is an allele/read fraction and cannot be interpreted as the fraction of corrected cells, a whole-skin correction rate or a clinical effect. The Sanger-based near-complete estimate and the NGS value differ in method and are both retained as source statistics; dose-series values are omitted per charter."
     },
     {
       "id": "col7a1-rdeb-collagen-restoration",
@@ -210,15 +210,31 @@
       "domain": "molecular_function",
       "status": "source_reports_signal",
       "signal_role": "benefit",
-      "outcome": "Corrected fibroblasts showed restored COL7A1 RNA and type VII collagen protein; a 3D skin-equivalent construct showed collagen VII deposition at the dermal-epidermal junction after 20 days of maturation.",
-      "source_locator": "Primary article Results and Fig. 5: collagen VII in human skin equivalents",
+      "outcome": "Corrected fibroblasts showed restored COL7A1 mRNA and type VII collagen protein (western blots stated as n = 1 biological replicate); 3D skin equivalents matured for 20 days showed collagen VII deposition at the dermal-epidermal junction, with C7 intensity significantly increased versus untreated equivalents and not significantly different from wild-type equivalents.",
+      "source_locator": "Primary open-access full text: Results and Fig. 5",
       "comparison_design": "between_groups",
       "comparison": "Skin equivalents containing untreated patient fibroblasts versus ABE8e-treated patient fibroblasts and healthy-control references",
       "endpoint_hierarchy": "secondary",
-      "independent_unit": "Patient-derived fibroblast culture and engineered skin construct; independent construct count not audited here",
+      "independent_unit": "Patient-derived fibroblast culture and engineered skin construct; independent construct counts per condition are not stated in the accessed text",
       "n_independent_units": null,
       "follow_up": "20-day engineered skin-equivalent maturation; no treated-person follow-up",
-      "limits": "Protein expression and localization do not establish restored skin mechanics, wound healing or clinical benefit. The construct contains healthy keratinocytes, and no in vivo treatment was tested."
+      "limits": "Protein expression and localization do not establish restored skin mechanics, wound healing or clinical benefit. The construct contains healthy keratinocytes, no in vivo treatment was tested, and the blots carry n = 1 biological replicate."
+    },
+    {
+      "id": "col7a1-rdeb-rna-outcomes",
+      "study_id": "col7a1-rdeb-2022",
+      "domain": "rna_outcomes",
+      "status": "source_reports_mixed",
+      "outcome": "Treated fibroblasts showed 0.5% of COL7A1 transcripts carrying the c.5047 mutation versus 36% without treatment (the source attributes the untreated sub-50% value to nonsense-mediated decay), and transcriptome-wide RNA sequencing showed no significant increase in A-to-I changes, with 443 differentially expressed genes and no cancer- or metabolic-pathway discrepancies.",
+      "source_locator": "Primary open-access full text: Results and Fig. 3c,d",
+      "comparison_design": "between_groups",
+      "comparison": "ABE8e-treated versus untreated patient fibroblast cultures; transcriptome-wide A-to-I assessment",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Patient-derived fibroblast culture; replicate counts not stated in the accessed full text",
+      "n_independent_units": null,
+      "follow_up": "Culture-level RNA assessment after treatment; not longitudinal follow-up",
+      "limits": "Restored transcripts and a no-detected-increase transcriptome result are distinct from whole-transcriptome absence of RNA effects; the source itself allows that differential expression may have been induced by cell culture.",
+      "signal_role": "harm"
     },
     {
       "id": "kcnj13-mouse-rpe-editing",
@@ -226,15 +242,19 @@
       "domain": "dna_product",
       "status": "source_reports_signal",
       "signal_role": "context",
-      "outcome": "The source reports mean target editing of 9.5% ± 5.0% and 16.8% ± 7.9% in mouse RPE tissue at two tested delivery conditions, with four eyes per condition.",
-      "source_locator": "Primary JCI article Results: in vivo subretinal editing of Kcnj13; Fig. 6D",
+      "outcome": "Mean target editing of 9.5% ± 5.0% and 16.8% ± 7.9% in mouse RPE tissue at two tested subretinal delivery amounts, with four eyes per amount; no other A>G substitutions were reported at or around the protospacer and indels were not significantly increased over placebo-treated mice.",
+      "source_locator": "Primary open-access full text: Results and Fig. 6C-E",
       "comparison_design": "between_groups",
       "comparison": "Two delivery-condition groups in a localized RPE-targeted mouse model",
       "endpoint_hierarchy": "primary",
-      "independent_unit": "Eye as reported by the source; whether eyes are clustered within animals is not audited here",
-      "n_independent_units": null,
+      "independent_unit": "Eye as reported by the source, four eyes per tested delivery amount; whether eyes cluster within animals is not stated in the accessed text",
+      "n_independent_units": 8,
       "follow_up": "Early post-delivery sequencing; separate functional follow-up extended to 10 weeks",
-      "limits": "RPE tissue allele/read percentages are not fractions of corrected RPE cells. The eye-level denominator is small and does not establish whole-retina or human delivery coverage."
+      "limits": "RPE tissue allele/read percentages are not fractions of corrected RPE cells. Four eyes per amount with unreported eye-to-animal clustering is a small denominator that does not establish whole-retina or human delivery coverage.",
+      "cohort_counts": {
+        "higher delivery amount": 4,
+        "lower delivery amount": 4
+      }
     },
     {
       "id": "kcnj13-retinal-functional-rescue",
@@ -242,15 +262,36 @@
       "domain": "tissue_function",
       "status": "source_reports_signal",
       "signal_role": "benefit",
-      "outcome": "In an engineered mouse LCA16 model, the authors report recovery of retinal-pigment-epithelium-associated ERG c-wave amplitudes after targeted editing and no further retinal degeneration over the reported follow-up; OCT showed preserved retinal structure.",
-      "source_locator": "Primary JCI article Results and Fig. 6F onward: ERG and OCT follow-up",
+      "outcome": "In the engineered Kcnj13W53X/+ΔR mouse, normalized ERG c-wave amplitudes were indistinguishable between targeted- and nontargeting-guide eyes at week 2 (0.9 ± 0.2 versus 0.8 ± 0.1, P = 0.9), while at week 10 the targeted-guide eyes showed 1.6 ± 0.1 versus 0.7 ± 0.1 (P = 0.01), an about-55% amplitude increase; OCT showed preserved retinal structure and multifocal ERG waveforms were localized near injection sites.",
+      "source_locator": "Primary open-access full text: Results and Fig. 6F-K",
       "comparison_design": "between_groups",
       "comparison": "Targeted-editing versus nontargeting-guide or reference conditions in an engineered Kcnj13 mouse model",
       "endpoint_hierarchy": "primary",
-      "independent_unit": "Mouse; eye-level measurements may be nested, and the endpoint-specific animal denominator was not audited here",
+      "independent_unit": "Mouse eye per ERG measurement; group sizes per condition are not stated in the accessed text",
       "n_independent_units": null,
-      "follow_up": "ERG at weeks 2, 6 and 10; structural follow-up reported through week 10",
-      "limits": "This is a localized monogenic retinal-disease model, not a human vision outcome or an aging intervention. The authors note that per-cell allele combinations were not resolved; selected off-target panels cannot exclude all unintended edits."
+      "follow_up": "Full-field ERG at weeks 2, 6 and 10; multifocal ERG and OCT at week 10",
+      "limits": "This is a localized monogenic retinal-disease model, not a human vision outcome or an aging intervention. Group sizes per condition are not stated in the accessed text, localized delivery with localized recovery is not whole-retina coverage, the authors note that per-cell allele combinations were not resolved, and selected off-target panels cannot exclude all unintended edits."
+    },
+    {
+      "id": "kcnj13-ipsc-rpe-channel-rescue",
+      "study_id": "kcnj13-retina-2023",
+      "domain": "molecular_function",
+      "status": "source_reports_signal",
+      "outcome": "In the base-edited patient iPSC-RPE pool (17.8% ± 1.5% editing of the mutant nucleotide), manual patch clamping of 13 cells showed rescued Kir7.1 currents in 5, no recovery in 4 and intermediate responses in 4.",
+      "source_locator": "Primary open-access full text: Results and Fig. 4B-E",
+      "comparison_design": "between_groups",
+      "comparison": "Clamped cells from the edited pool versus untreated iPSC-RPE and wild-type reference profiles",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Patch-clamped cell from the base-edited patient iPSC-RPE pool",
+      "n_independent_units": 13,
+      "cohort_counts": {
+        "rescued Kir7.1 currents": 5,
+        "no recovery (mutant-like profile)": 4,
+        "intermediate response": 4
+      },
+      "follow_up": "Pool-level clamp after editing; not longitudinal follow-up",
+      "limits": "A 13-cell denominator from one edited pool; the source's per-cell genotype explanations are hypotheses and per-cell allele combinations were not resolved. Allele editing (17.8%) is not the fraction of functionally rescued cells.",
+      "signal_role": "benefit"
     },
     {
       "id": "abe8e-genomewide-snv-signal",

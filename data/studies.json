@@ -102,8 +102,8 @@
       "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9666996/",
       "source_report": "The paper reports 94.6% correction of the tested pathogenic allele in bulk patient-derived fibroblasts, restored COL7A1 RNA and type VII collagen protein, and collagen deposition at the dermal-epidermal junction in a skin-equivalent model.",
       "functional_scope": "Molecular restoration and matrix localization were measured in cell and engineered-tissue models; the study did not measure healing or function in a treated person.",
-      "limits": "Read/allele correction is not a fraction of corrected cells. This is one patient-derived cell source and an engineered skin construct; selected off-target assays do not establish genome-wide, long-term or clinical safety.",
-      "access_level": "Primary PMC abstract and full-text results accessed online; supplementary materials not independently reviewed"
+      "limits": "Read/allele correction is not a fraction of corrected cells. This is one patient-derived cell source and an engineered skin construct; the reviewed full text states n = 1 for the western blots, does not state independent skin-equivalent construct counts, and its top-ten off-target screen tested nine loci (one untestable), which is not genome-wide, long-term or clinical safety. The Discussion's ABE7.10 percentage differs from the Results' and both are retained as source statistics.",
+      "access_level": "Primary open-access full text (CC BY) retrieved via Europe PMC fullTextXML and reviewed in COL7A1_REVIEW.md; supplementary figures and materials not independently acquired"
     },
     {
       "id": "kcnj13-retina-2023",
@@ -115,8 +115,8 @@
       "source_url": "https://www.jci.org/articles/view/171356",
       "source_report": "The source reports Kir7.1 channel-function restoration in edited patient iPSC-RPE and recovery of electroretinogram c-wave amplitudes with preserved retinal structure in an RPE-targeted mouse model.",
       "functional_scope": "Includes cell-level channel measurements and mouse retinal electrophysiology and imaging; it is a monogenic retinal-disease proof of concept, not a human treatment result.",
-      "limits": "The in vivo mouse model is engineered and locally targeted. On-target bystanders/indels were detected in some cell settings; targeted off-target panels cannot exclude all unintended edits. The paper notes that clonal allele combinations were not resolved.",
-      "access_level": "Primary JCI full-text article page accessed; supplemental files not independently reviewed"
+      "limits": "The in vivo mouse model is engineered and locally targeted. The reviewed full text states four eyes per tested delivery amount (eye-to-animal clustering not stated), a 13-cell patch-clamp denominator for iPSC-RPE rescue, and a detected change at one intergenic off-target locus alongside no-significant findings at the other tested sites; selected panels cannot exclude all unintended edits. The abstract's 47% fibroblast editing differs from the Results' 52.3% ± 0.1% and both are retained as source statistics. Per-cell allele combinations were not resolved.",
+      "access_level": "Primary open-access full text (CC BY as indexed by Europe PMC) retrieved via Europe PMC fullTextXML and reviewed in KCNJ13_REVIEW.md; supplemental data not independently acquired"
     },
     {
       "id": "abe8e-y149v-2026",

@@ -80,7 +80,11 @@ The [editor precision/function comparison](EDITOR_PRECISION_FUNCTION_COMPARISON.
 adds primary CBE fidelity, RDEB skin-equivalent, KCNJ13 retinal, and ABE8e-Y149V
 evidence. The new [precision outcome snapshot](examples/outcome-audit-precision/report.json)
 keeps allele/read fractions, off-target DNA findings, engineered-tissue protein
-restoration and animal function as separate records. For example, the 2026
+restoration and animal function as separate records. The [RDEB
+review](COL7A1_REVIEW.md) and [retina review](KCNJ13_REVIEW.md) now retain
+those papers' reviewed open-access full-text denominators, and the [RDEB/retina
+snapshot](examples/outcome-audit-rdeb-retina/report.json) is the current
+outcome snapshot; earlier snapshots stay historical. For example, the 2026
 ABE8e-Y149V study narrows the editing window and reports fewer off-target edits
 in its tested models; its mouse HTI result comes from disrupting an upstream
 bypass gene, not correcting the causal mutation. The KCNJ13 and RDEB studies
@@ -158,8 +162,8 @@ review](MACAQUE_REVIEW.md) retains the source's per-animal denominators
 (12 macaques in four groups of three, six liver biopsies per animal), the
 spleen-editing biodistribution finding and the repeat-dosing immune
 observation from the accessed open-access full text. The [macaque-review
-snapshot](examples/outcome-audit-macaque-review/report.json) is the current
-outcome snapshot; earlier snapshots stay historical. These are liver
+snapshot](examples/outcome-audit-macaque-review/report.json) remains a
+historical record of the catalog at that point. These are liver
 results for one route and disease
 context in nonhuman animals — not whole-body adult delivery, human
 safety or a dosing protocol. The [delivery

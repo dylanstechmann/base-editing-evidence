@@ -328,3 +328,27 @@ HTTP 500, so those full texts are not accessible to this catalog's
 tooling. This tranche rotates the current outcome snapshot to
 `examples/outcome-audit-macaque-review/report.json`; earlier snapshots
 stay historical. All 41 unit tests and Ruff pass.
+
+## RDEB and retina full-text reviews — 2026-10-24
+
+Upgraded two more cards from article-page or abstract access to reviewed
+open-access full texts: col7a1-rdeb-2022 and kcnj13-retina-2023, each
+retrieved live via the Europe PMC fullTextXML endpoint with raw JATS bytes
+retained under `data/raw/` and bound by `response_sha256` in new receipts
+that `verify-receipts` re-checks locally (14 receipts, all passing). The
+[RDEB review](COL7A1_REVIEW.md) retains the Sanger-versus-NGS method
+difference around the 94.6% allele correction, the source's n = 1 western
+blot statement, the nine-of-ten predicted off-target loci actually tested,
+the 0.5%-versus-36% transcript numbers and the Discussion-versus-Results
+ABE7.10 percentage difference. The [retina review](KCNJ13_REVIEW.md)
+retains the 13-cell patch-clamp denominator with its 5/4/4 split, the four
+eyes per delivery amount, the 5-of-6 founder and homozygous-lethality
+model facts, the week-2-versus-week-10 ERG values with their source P
+values, the detected intergenic off-target change and the
+abstract-versus-Results 47%/52.3% fibroblast difference — all unreconciled
+source statistics. Two new outcome rows were added (COL7A1 RNA outcomes
+and the 13-cell iPSC-RPE channel rescue) and four rows gained stated
+denominators or full-text locators; dose amounts and guide sequences are
+omitted per charter. This tranche rotates the current outcome snapshot
+to `examples/outcome-audit-rdeb-retina/report.json`; earlier snapshots
+stay historical. All 41 unit tests and Ruff pass.

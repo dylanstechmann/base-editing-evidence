@@ -249,3 +249,20 @@ response_sha256 in
 which `verify-receipts` re-checks locally. The focused review lives in
 [MACAQUE_REVIEW.md](MACAQUE_REVIEW.md). Dose-level values are omitted per
 charter; supplementary files were not independently acquired.
+
+## RDEB and retina full-text retrieval — 2026-10-24
+
+Two further open-access full texts were retrieved live via the Europe PMC
+fullTextXML endpoint with retained raw bytes: PMC9666996 (COL7A1/RDEB,
+10.1038/s41598-022-24184-8) at
+[data/raw/PMC9666996.xml](data/raw/PMC9666996.xml) and PMC10541187
+(KCNJ13/LCA16, 10.1172/JCI171356) at
+[data/raw/PMC10541187.xml](data/raw/PMC10541187.xml), bound by
+`response_sha256` in
+[data/col7a1_fulltext_receipt.json](data/col7a1_fulltext_receipt.json) and
+[data/kcnj13_fulltext_receipt.json](data/kcnj13_fulltext_receipt.json).
+The focused reviews live in [COL7A1_REVIEW.md](COL7A1_REVIEW.md) and
+[KCNJ13_REVIEW.md](KCNJ13_REVIEW.md). Editor and guide dose amounts and
+guide sequences are omitted per charter; supplementary data were not
+independently acquired. The prime-2019 PMCID in NEXT.md was corrected
+to PMC6907074 against a live record check.
