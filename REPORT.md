@@ -113,3 +113,14 @@ current outcome snapshot is `examples/outcome-audit-plants/report.json`;
 the precision snapshot remains the historical record of the earlier
 catalog. All 29 unit tests and Ruff pass. No guide design, agronomic,
 ecological or deployment claim is added.
+
+## Vocabulary export — 2026-10-24
+
+Added `baseevidence schema`, which prints the controlled vocabularies
+(`study_stages`, outcome `domains`, `signal_roles`, observation `statuses`,
+`comparison_designs` and `endpoint_hierarchies`) plus a schema version and
+a `vocabulary_export_not_validation` status marker, so external intake
+tooling can pre-validate declared fields before submission. The export
+declares accepted values; it validates no document and interprets nothing.
+One new unit test asserts the export matches the module constants. All 30
+unit tests and Ruff pass.

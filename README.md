@@ -38,6 +38,7 @@ Python 3.11+, standard library only for the research tools:
 python -m pip install -e .
 baseevidence change-class A G --coordinate-system reference_forward_strand
 baseevidence correction-class --pathogenic G --corrected A --coordinate-system reference_forward_strand
+baseevidence schema
 baseevidence audit-studies data/studies.json --out artifacts/source-audit
 baseevidence audit-coverage examples/coverage.json --out artifacts/count-demo
 baseevidence audit-outcomes data/outcomes.json --studies data/studies.json --out artifacts/outcome-audit
