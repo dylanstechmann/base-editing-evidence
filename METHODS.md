@@ -280,3 +280,15 @@ The focused reviews live in [CBE_FIDELITY_REVIEW.md](CBE_FIDELITY_REVIEW.md)
 and [ABE8E_Y149V_REVIEW.md](ABE8E_Y149V_REVIEW.md). Guide sequences and
 dose values are omitted per charter; supplementary data were not
 independently acquired.
+
+## CAR-adapted PIK3CD full-text retrieval — 2026-10-24
+
+One further open-access full text was retrieved live via the Europe PMC
+fullTextXML endpoint with retained raw bytes: PMC12948676
+(10.1038/s43018-025-01099-7) at
+[data/raw/PMC12948676.xml](data/raw/PMC12948676.xml), bound by
+`response_sha256` in
+[data/cart_pik3cd_fulltext_receipt.json](data/cart_pik3cd_fulltext_receipt.json).
+The focused review lives in [CART_PIK3CD_REVIEW.md](CART_PIK3CD_REVIEW.md).
+Guide sequences, effector-to-target ratios and cell-dose values are
+omitted per charter; supplementary data were not independently acquired.

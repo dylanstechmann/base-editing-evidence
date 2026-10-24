@@ -377,3 +377,24 @@ and three rows gained full-text locators; no editor is ranked or selected.
 This tranche rotates the current outcome snapshot to
 `examples/outcome-audit-fidelity-abe8e/report.json`; earlier snapshots stay
 historical. All 41 unit tests and Ruff pass.
+
+## CAR-adapted PIK3CD full-text review — 2026-10-24
+
+Upgraded the car-t-pik3cd-2026 card from abstract-only access to a
+reviewed open-access full text (10.1038/s43018-025-01099-7), retrieved
+live via the Europe PMC fullTextXML endpoint with raw JATS bytes
+retained under `data/raw/` and bound by `response_sha256` in a new
+receipt (17 receipts, all passing). The [review](CART_PIK3CD_REVIEW.md)
+retains the 34-sgRNA screen design on T cells of two donors per CAR
+design, the explicit xenograft group sizes (Nalm6 18/19/3 from four
+donors; Sh-Sy5y 11/11/4; B7H3-28z 9/9/4), the TRBC co-knockout, the
+safety panels (150-day weight n = 19 per group, 66-day necropsies n = 4,
+liver enzymes n = 4, cytokines n = 5) with no-detected-signal framing,
+and the opposite-direction L32P result — all as unreconciled source
+statistics without guide sequences, effector-to-target ratios or cell
+doses. Two new outcome rows were added (Nalm6 survival with disjoint
+cohort counts summing to 40 mice, and the safety panels as a
+no-detected-signal row) and the aggregate row gained explicit
+denominators. This tranche rotates the current outcome snapshot to
+`examples/outcome-audit-cart-pik3cd/report.json`; earlier snapshots stay
+historical. All 41 unit tests and Ruff pass.

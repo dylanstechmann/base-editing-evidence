@@ -180,8 +180,8 @@
       "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12948676/",
       "source_report": "The source reports a CAR-adapted base-editing screen of PIK3CD identifying context-dependent point mutations: the activating E81K substitution enhanced proliferation, metabolic fitness, effector function and long-term functional persistence of 4-1BBz CAR T cells with enhanced in vivo efficacy, while the attenuating L32P substitution improved memory formation and function of 28z CAR T cells.",
       "functional_scope": "Ex vivo T-cell engineering with preclinical in vivo efficacy readouts; not a patient treatment or an approved-therapy claim.",
-      "limits": "Base editing is used here to deliberately reprogram a signaling allele in engineered immune cells, not to correct a tumor-driver lesion. Results are CAR-construct- and context-specific preclinical findings; no human dosing, safety or clinical protocol follows.",
-      "access_level": "Official indexed abstract via Europe PMC; open-access full text not separately reviewed"
+      "limits": "Base editing is used here to deliberately reprogram a signaling allele in engineered immune cells, not to correct a tumor-driver lesion. The reviewed full text states a 34-sgRNA screen on T cells of two healthy donors per CAR design, in-vivo group sizes of 18/19/3 (Nalm6), 11/11/4 (B7H3-BBz) and 9/9/4 (B7H3-28z) mice from 2-4 donors, TRBC co-knockout, and safety panels with no detected lymphomagenesis or side-effect signals — no-detected is not zero risk. Results are CAR-construct- and context-specific preclinical findings; no human dosing, safety or clinical protocol follows.",
+      "access_level": "Official indexed abstract plus primary open-access full text (open access as indexed by Europe PMC) retrieved via Europe PMC fullTextXML and reviewed in CART_PIK3CD_REVIEW.md; supplementary data not independently acquired"
     },
     {
       "id": "clonal-hematopoiesis-2014",

@@ -10,28 +10,27 @@ EVIDENCE_INTAKE.md; this file records what remains open, not how to work.
   human_cohort 2, human_case 1, human_trial 3.
 - All 11 outcome domains have at least one source-reported observation,
   including delivery and durability (PCSK9 nonhuman-primate cards).
-- 41 unit tests, Ruff clean, 16 provenance receipts all passing
+- 41 unit tests, Ruff clean, 17 provenance receipts all passing
   `baseevidence verify-receipts`. Current snapshot:
-  examples/outcome-audit-fidelity-abe8e/report.json.
+  examples/outcome-audit-cart-pik3cd/report.json.
 
 ## Open tranches, in rough value order
 
 1. Full-text deep reviews of the remaining open-access cards (the
    PROGERIA_REVIEW.md and MACAQUE_REVIEW.md pattern). The 2026-10-24
    accessibility probe (exact identifier queries, title-verified) found
-   open PMC full texts for: car-t-pik3cd-2026 (PMC12948676),
-   cbe-2016 (PMC4873371), abe-2017 (PMC5726555) and prime-2019
-   (PMC6907074).
+   open PMC full texts for: cbe-2016 (PMC4873371), abe-2017
+   (PMC5726555) and prime-2019 (PMC6907074).
 
 ## Standing access limits (not gaps in diligence)
 
 - Every card added on 2026-10-24 is abstract-level: full texts were not
   accessed and cards say so in their access_level field.
 - Exceptions: pcsk9-macaques-2021, col7a1-rdeb-2022, kcnj13-retina-2023,
-  cbe-fidelity-2020 and abe8e-y149v-2026 are full-text reviewed
-  (2026-10-24; MACAQUE_REVIEW.md, COL7A1_REVIEW.md, KCNJ13_REVIEW.md,
-  CBE_FIDELITY_REVIEW.md and ABE8E_Y149V_REVIEW.md); their stated
-  denominators are source-stated.
+  cbe-fidelity-2020, abe8e-y149v-2026 and car-t-pik3cd-2026 are full-text
+  reviewed (2026-10-24; MACAQUE_REVIEW.md, COL7A1_REVIEW.md,
+  KCNJ13_REVIEW.md, CBE_FIDELITY_REVIEW.md, ABE8E_Y149V_REVIEW.md and
+  CART_PIK3CD_REVIEW.md); their stated denominators are source-stated.
 - The NEJM re-review tranche closed 2026-10-24 by live test: both NEJM
   records (cps1-case-2025, clonal-hematopoiesis-2014) are present in
   Europe PMC but non-open, and fullTextXML requests return HTTP 500.

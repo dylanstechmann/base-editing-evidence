@@ -85,8 +85,8 @@ review](COL7A1_REVIEW.md), [retina review](KCNJ13_REVIEW.md), [CBE fidelity
 review](CBE_FIDELITY_REVIEW.md) and [ABE8e-Y149V review](ABE8E_Y149V_REVIEW.md)
 retain those papers' reviewed open-access full-text denominators, and the
 [fidelity/ABE8e snapshot](examples/outcome-audit-fidelity-abe8e/report.json)
-is the current outcome snapshot; earlier snapshots stay historical. For
-example, the 2026
+remains a historical record of the catalog at that point. For example, the
+2026
 ABE8e-Y149V study narrows the editing window and reports fewer off-target edits
 in its tested models; its mouse HTI result comes from disrupting an upstream
 bypass gene, not correcting the causal mutation. The KCNJ13 and RDEB studies
@@ -119,7 +119,11 @@ cellular toxicity, and CAR-adapted PIK3CD allelic reprogramming of
 engineered T cells with preclinical in vivo efficacy. Both remain
 preclinical models that deliberately mutate or reprogram alleles; neither
 establishes tumor-lesion correction, tumor-selective delivery or durable
-safety in a person. The [cancer snapshot](examples/outcome-audit-cancer/report.json)
+safety in a person. The [CAR-adapted PIK3CD review](CART_PIK3CD_REVIEW.md)
+retains the screen design and the explicit xenograft group sizes from the
+accessed open-access full text, and the [CAR-T
+snapshot](examples/outcome-audit-cart-pik3cd/report.json) is the current
+outcome snapshot. The [cancer snapshot](examples/outcome-audit-cancer/report.json)
 remains a historical record of the catalog at that point.
 
 The `audit-variant-batch` command classifies a declared batch of
