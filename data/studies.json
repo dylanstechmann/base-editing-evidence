@@ -130,6 +130,32 @@
       "functional_scope": "Combines sequence-product assays with short-term disease-model liver biomarkers and weight outcomes; it does not test ordinary aging or repair of the causal Fah mutation.",
       "limits": "GOTI is an embryo assay and cannot quantify human somatic-tissue risk. Disease-associated variants inserted into HEK cells are not patient cells. Hpd disruption is a disease bypass strategy in this model, and positive selection may affect liver allele fractions.",
       "access_level": "Primary PMC full-text article page accessed; supplementary data not independently reviewed"
+    },
+    {
+      "id": "plant-cbe-2017",
+      "title": "Precise base editing in rice, wheat and maize with a Cas9-cytidine deaminase fusion",
+      "stage": "plant",
+      "model": "Rice and wheat protoplasts and regenerated rice, wheat and maize plants",
+      "target_tissue": "Whole regenerated crop plants; no human or animal tissue",
+      "intervention_class": "Cytosine base editing in crop plants",
+      "source_url": "https://www.nature.com/articles/nbt.3811",
+      "source_report": "The source reports targeted cytosine-to-thymine conversion within the protospacer (positions 3 to 9) in protoplasts and regenerated rice, wheat and maize plants, with reported frequencies up to 43.48% in the accessed abstract.",
+      "functional_scope": "Reports targeted sequence conversion in plants; this entry makes no agronomic, yield, ecological or human-health claim.",
+      "limits": "Crop-plant editing frequencies are species-, construct- and target-specific. This is agricultural-model evidence, not human editing, and no guide design or deployment protocol is provided here.",
+      "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
+    },
+    {
+      "id": "plant-cbe-offtargets-2019",
+      "title": "Cytosine, but not adenine, base editors induce genome-wide off-target mutations in rice",
+      "stage": "plant",
+      "model": "Whole-genome-sequenced rice plants treated with BE3, HF1-BE3 or ABE",
+      "target_tissue": "Whole rice plants in an agricultural model; no human or animal tissue",
+      "intervention_class": "Whole-genome off-target assessment of CBE and ABE platforms in plants",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/30819931/",
+      "source_report": "The source reports that BE3 and HF1-BE3, but not ABE, induced substantial genome-wide off-target mutations, mostly of the C-to-T type and enriched in genic regions, including in plants treated without single-guide RNA, in whole-genome-sequenced rice plants.",
+      "functional_scope": "A DNA off-target outcome assessment in plants; no agronomic yield, ecological or human-safety measurement.",
+      "limits": "Editor- and condition-specific plant findings; not a human somatic-tissue risk estimate and not a claim about every modern editor. The accessed abstract does not state per-group plant counts.",
+      "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
     }
   ]
 }

@@ -6,8 +6,8 @@ coding assistance. No owner laboratory work or source review is implied.
 
 The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[ten source cards](data/studies.json) distinguish cell experiments, a genetic-disease
-mouse model and an initial single-patient clinical report. It is a starting point for research on
+[twelve source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+mouse model, an initial single-patient clinical report and crop-plant editing studies. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
 ## Three questions that stay separate
@@ -91,6 +91,17 @@ onto the evidence stages this catalog actually documents. The
 single-base direction against the classical ABE/CBE conversion classes;
 transversions stay outside both classes, and no targetability, guide,
 protocol or clinical claim is produced.
+
+The [plant-stage cards](data/plant_metadata_receipt.json) add crop-plant
+cytosine-base-editing conversion evidence and rice whole-genome off-target
+findings at the new `plant` stage. The 2017 study reports targeted C-to-T
+conversion in protoplasts and regenerated rice, wheat and maize plants; the
+2019 study reports genome-wide C-to-T-enriched off-target variants for BE3
+and HF1-BE3, but not ABE, in whole-genome-sequenced rice, also without
+single-guide RNA. These are agricultural models; they transfer neither to
+human editing nor to agronomic performance. The [plants snapshot](examples/outcome-audit-plants/report.json)
+is the current outcome snapshot; the precision snapshot remains a historical
+record of the earlier catalog.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

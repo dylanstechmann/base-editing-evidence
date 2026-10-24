@@ -101,3 +101,15 @@ remain disease-specific cell, engineered-tissue and animal-model evidence.
 The progeria mouse model and the original one-patient CPS1 report remain
 separate from ordinary-aging or rejuvenation evidence. No editor is ranked and
 no clinical or molecular intervention is proposed.
+
+On 2026-10-24, the catalog added a `plant` evidence stage with two
+crop-plant cards: the 2017 rice/wheat/maize cytosine-base-editor study and
+the 2019 rice whole-genome off-target study. The assistant accessed exact
+EXT_ID Europe PMC REST responses online and transcribed indexed metadata;
+raw response bytes were not retained by the retrieval tooling, so the
+[receipt](data/plant_metadata_receipt.json) binds the committed record
+block with a records SHA-256 rather than an unretained response. Full texts
+and supplementary materials were not accessed, and abstract-level statements
+are not extended beyond the accessed text. Plant on-target conversion and
+genome-wide off-target findings remain separate outcome domains, and no
+agronomic, ecological or human claim is derived.

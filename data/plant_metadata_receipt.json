@@ -1,0 +1,29 @@
+{
+  "retrieved_utc": "2026-10-24T21:07:52.346989+00:00",
+  "retrieval_method": "Europe PMC REST search API exact-EXT_ID queries accessed online on 2026-10-24; indexed metadata transcribed from the API responses",
+  "scope": "Exact-ID indexed metadata retrieval, not a systematic search or independent validation",
+  "queries": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28244994&format=json&resultType=core&pageSize=1",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A30819931&format=json&resultType=core&pageSize=1"
+  ],
+  "records": [
+    {
+      "id": "28244994",
+      "source": "MED",
+      "pmid": "28244994",
+      "doi": "10.1038/nbt.3811",
+      "title": "Precise base editing in rice, wheat and maize with a Cas9-cytidine deaminase fusion.",
+      "firstPublicationDate": "2017-02-27"
+    },
+    {
+      "id": "30819931",
+      "source": "MED",
+      "pmid": "30819931",
+      "doi": "10.1126/science.aaw7166",
+      "title": "Cytosine, but not adenine, base editors induce genome-wide off-target mutations in rice.",
+      "firstPublicationDate": "2019-04-01"
+    }
+  ],
+  "records_sha256": "b2097e0fb54d2c4b7db92ba370b8ce8e1d95f228b26a27053230bd2f05c75e08",
+  "limits": "Raw response bytes were not retained by the retrieval tooling; records_sha256 binds the committed record block, not an unretained response. Fields were transcribed from indexed API responses and not verified against publisher pages."
+}

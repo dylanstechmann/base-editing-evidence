@@ -283,6 +283,38 @@
       "n_independent_units": null,
       "follow_up": "Approximately 30 days for liver sequencing and serum biomarkers",
       "limits": "The intervention disables Hpd to bypass the metabolic defect; it does not correct the causal Fah mutation. Liver allele fractions can reflect selective survival of edited hepatocytes and do not equal initial cell coverage. This is a short-term disease model, not ordinary-aging repair."
+    },
+    {
+      "id": "plant-cbe-on-target-conversion",
+      "study_id": "plant-cbe-2017",
+      "domain": "dna_product",
+      "status": "source_reports_signal",
+      "outcome": "Targeted C-to-T conversion within protospacer positions 3 to 9 was reported in protoplasts and regenerated rice, wheat and maize plants, with reported frequencies up to 43.48%.",
+      "source_locator": "Official indexed abstract: reported-conversion statement",
+      "comparison_design": "no_comparator",
+      "comparison": "Per-target reported conversion frequencies; no randomized comparator in the accessed abstract",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Plant or protoplast assay; assay-specific denominators are not stated in the accessed abstract",
+      "n_independent_units": null,
+      "follow_up": "Regenerated plants reported in the original study; no longitudinal field follow-up in the accessed abstract",
+      "limits": "A conversion frequency is a target-specific sequence measurement in crop plants, not a cell-coverage estimate, human editing result or agronomic performance claim.",
+      "signal_role": "context"
+    },
+    {
+      "id": "plant-cbe-genomewide-offtargets",
+      "study_id": "plant-cbe-offtargets-2019",
+      "domain": "structural_dna",
+      "status": "source_reports_signal",
+      "outcome": "Genome-wide off-target single-nucleotide variants, mostly of the C-to-T type and enriched in genic regions, were reported in whole-genome-sequenced rice plants treated with BE3 or HF1-BE3, but not ABE, including in plants treated without single-guide RNA.",
+      "source_locator": "Official indexed abstract: whole-genome sequencing results statement",
+      "comparison_design": "between_groups",
+      "comparison": "BE3, HF1-BE3 and ABE treated rice plants compared in whole-genome sequencing",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Rice plant; per-group counts are not stated in the accessed abstract",
+      "n_independent_units": null,
+      "follow_up": "Sequencing of treated plants in the original study; not longitudinal follow-up",
+      "limits": "Plant whole-genome findings are not a human somatic-tissue mutation estimate. The platform contrast is condition-specific to this rice study and does not extend to every editor, species or delivery context.",
+      "signal_role": "harm"
     }
   ]
 }

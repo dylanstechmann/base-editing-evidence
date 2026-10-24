@@ -95,3 +95,21 @@ two pigmentation reviews verified through Europe PMC indexed metadata
 only. No guide design, editor ranking, delivery protocol, dose or clinical
 recommendation is produced, and the note records that healthy-adult
 enhancement use is not established by any catalog card.
+
+## Plant-stage source cards — 2026-10-24
+
+Added a `plant` evidence stage and two abstract-level crop-plant cards: the
+2017 Cas9-cytidine-deaminase fusion study reporting targeted C-to-T
+conversion in rice, wheat and maize protoplasts and regenerated plants, and
+the 2019 rice whole-genome study reporting genome-wide C-to-T-enriched
+off-target variants for BE3 and HF1-BE3, but not ABE, including without
+single-guide RNA. Metadata was retrieved through exact-EXT_ID Europe PMC
+queries and is bound by a records-hash
+[receipt](data/plant_metadata_receipt.json); full texts were not accessed.
+Two outcome rows keep on-target conversion (context) and genome-wide
+off-target findings (harm) in separate domains, and independent-unit
+counts stay unknown where the accessed abstracts do not state them. The
+current outcome snapshot is `examples/outcome-audit-plants/report.json`;
+the precision snapshot remains the historical record of the earlier
+catalog. All 29 unit tests and Ruff pass. No guide design, agronomic,
+ecological or deployment claim is added.
