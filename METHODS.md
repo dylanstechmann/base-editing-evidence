@@ -133,6 +133,15 @@ scope-override fields are rejected. Reports tally directions and change
 types; no pathogenicity inference, efficiency or off-target estimate, and
 no guide design is performed.
 
+`verify-receipts` runs the structural provenance-receipt checks shared with
+the test suite against given receipt files, defaulting to
+`data/*receipt*.json`. It verifies declared HTTPS Europe PMC REST retrieval
+URLs, 64-hex digests, ISO timestamps, record identifiers and records-hash
+binding, and reports per-file pass or fail without re-retrieving anything.
+It does not authenticate record-to-card binding or source truth. Declared
+`published_source` batch rows now require an HTTPS, DOI or PMID
+`source_reference`; free-text citations are rejected as not locatable.
+
 On 2026-10-24, the catalog added a `human_cohort` evidence stage with two
 abstract-level observational aging cards: the 2014 age-related clonal
 hematopoiesis cohort study and the 2016 tissue-specific adult-stem-cell

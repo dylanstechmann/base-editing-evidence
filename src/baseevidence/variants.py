@@ -1,9 +1,12 @@
 """Classify declared single-base variant batches without guide design or clinical use."""
 
+import re
+
 from baseevidence.audit import load
 from baseevidence.correction import correction
 
 ORIGINS = {"published_source", "synthetic_example"}
+PUBLISHED_REFERENCE = re.compile(r"^(https://\S+|10\.\d{4,9}/\S+|PMID[: ]*\d+)$")
 UNACCEPTABLE_KEYS = {"guide_sequence", "guide_rna", "pam", "protospacer", "editing_window",
                      "target_sequence", "genome_position", "chromosome", "position",
                      "delivery", "dose", "efficiency", "off_target", "stage", "model"}
@@ -34,6 +37,8 @@ def variant_batch(document):
         origin = row.get("origin")
         if origin not in ORIGINS:
             raise ValueError("origin must declare published_source or synthetic_example; personal or private genomes are not accepted")
+        if origin == "published_source" and not PUBLISHED_REFERENCE.match(row["source_reference"]):
+            raise ValueError("published_source needs an HTTPS, DOI or PMID source_reference; free text is not a verifiable citation")
         unacceptable = sorted(UNACCEPTABLE_KEYS & set(row))
         if unacceptable:
             raise ValueError(f"Targetability, delivery or scope fields are not accepted: {', '.join(unacceptable)}")
@@ -52,6 +57,7 @@ def variant_batch(document):
             "counts_by_direction": dict(sorted(by_direction.items())),
             "guide_design_provided": False, "clinical_protocol_provided": False,
             "limits": ["Each row is a declared direction, not a designed target, and origin declarations are not authenticated.",
+                       "A published_source reference is a citation-location pattern, not source authentication.",
                        "No pathogenicity inference, efficiency estimate, off-target assessment or delivery claim is performed.",
                        "A transversion row is classified outside both classical classes; it is not asserted uneditable.",
                        "No dose, protocol, personal-genome or self-treatment guidance is or can be derived from this audit."]}

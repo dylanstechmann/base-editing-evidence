@@ -1,65 +1,63 @@
-import hashlib
+import io
 import json
-import re
+import tempfile
 import unittest
-from datetime import datetime
+from contextlib import redirect_stdout
 from pathlib import Path
-from urllib.parse import urlparse
+
+from baseevidence.cli import main
+from baseevidence.receipts import validate_receipt, verify_receipts
 
 ROOT = Path(__file__).resolve().parents[1]
-HEX64 = re.compile(r"^[0-9a-f]{64}$")
 
 
 class ReceiptChecks(unittest.TestCase):
     """Structural provenance-receipt validation, not re-retrieval.
 
     Response bodies and full texts stay in ignored workbench provenance storage
-    and cannot be re-fetched offline, so a response hash proves which response
-    was retrieved, never that an interpretation of it is correct. Receipt records
-    use Europe PMC identifiers while study cards cite publisher or PMC pages, so
-    record-to-card binding is not mechanically asserted here.
+    and cannot be re-fetched offline, so a hash proves which response was
+    retrieved, never that an interpretation of it is correct. Receipt records
+    use Europe PMC identifiers while study cards cite publisher or PMC pages,
+    so record-to-card binding is not mechanically asserted here.
     """
 
     def receipts(self):
         paths = sorted((ROOT / "data").glob("*receipt*.json"))
         self.assertTrue(paths, "data/ must keep at least one provenance receipt")
-        return {path.name: json.loads(path.read_text(encoding="utf-8-sig")) for path in paths}
+        return {path.name: json.loads(path.read_bytes().decode("utf-8-sig")) for path in paths}
 
-    @staticmethod
-    def urls(receipt):
-        listed = receipt.get("queries") or receipt.get("urls") or []
-        return ([receipt["url"]] if isinstance(receipt.get("url"), str) else []) + [u for u in listed if isinstance(u, str)]
-
-    def test_every_receipt_cites_a_verifiable_europepmc_retrieval(self):
+    def test_every_committed_receipt_passes_structural_validation(self):
         for name, receipt in self.receipts().items():
-            urls = self.urls(receipt)
-            self.assertTrue(urls, f"{name} needs a retrieval URL")
-            for url in urls:
-                parsed = urlparse(url)
-                self.assertEqual(parsed.scheme, "https", name)
-                self.assertEqual(parsed.netloc, "www.ebi.ac.uk", name)
-                self.assertIn("/europepmc/webservices/rest/", parsed.path, name)
-            digest = receipt.get("response_sha256") or receipt.get("records_sha256")
-            self.assertIsInstance(digest, str, name)
-            self.assertRegex(digest, HEX64, name)
-            self.assertIsInstance(receipt.get("scope"), str)
-            self.assertTrue(receipt["scope"].strip(), name)
-            self.assertIn("retrieved_utc", receipt, name)
-            datetime.fromisoformat(receipt["retrieved_utc"])
+            validate_receipt(receipt, name)
 
-    def test_recorded_metadata_keeps_identifiers_and_committed_integrity(self):
-        for name, receipt in self.receipts().items():
-            records = receipt.get("records")
-            if records is None:
-                continue
-            self.assertIsInstance(records, list)
-            self.assertTrue(records, name)
-            for record in records:
-                self.assertTrue(str(record.get("id", "")).strip(), name)
-                self.assertTrue(str(record.get("title", "")).strip(), name)
-            if "records_sha256" in receipt:
-                encoded = json.dumps(records, indent=2, allow_nan=False) + "\n"
-                self.assertEqual(hashlib.sha256(encoded.encode("utf-8")).hexdigest(), receipt["records_sha256"], name)
+    def test_malformed_receipts_fail_structural_validation(self):
+        receipt = next(iter(self.receipts().values()))
+        for patch in ({"scope": ""}, {"records_sha256": "nothex"}, {"retrieved_utc": "yesterday"},
+                      {"queries": []}, {"records": [{"id": "", "title": ""}]}):
+            with self.assertRaises(ValueError):
+                validate_receipt({**receipt, **patch}, "broken.json")
+
+    def test_verify_receipts_reports_failures_without_raising(self):
+        receipt = next(iter(self.receipts().values()))
+        with tempfile.TemporaryDirectory() as directory:
+            good = Path(directory) / "good.json"
+            good.write_text(json.dumps(receipt), encoding="utf-8")
+            bad = Path(directory) / "bad.json"
+            bad.write_text(json.dumps({**receipt, "scope": " "}), encoding="utf-8")
+            report = verify_receipts([good, bad])
+            self.assertEqual(report["receipts"]["good.json"], "verified")
+            self.assertEqual(report["failures"], ["bad.json"])
+            self.assertIn("scope", report["receipts"]["bad.json"])
+            self.assertEqual(report["status"], "receipt_integrity_reported_not_retrieved")
+
+    def test_cli_verifies_default_receipts_and_failing_paths_exit_nonzero(self):
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(main(["verify-receipts"]), 0)
+        with tempfile.TemporaryDirectory() as directory:
+            bad = Path(directory) / "bad.json"
+            bad.write_text("{}", encoding="utf-8")
+            with redirect_stdout(io.StringIO()):
+                self.assertEqual(main(["verify-receipts", str(bad)]), 1)
 
 
 if __name__ == "__main__":

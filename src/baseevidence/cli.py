@@ -7,6 +7,7 @@ from pathlib import Path
 from baseevidence.audit import STAGES, coverage, load, study_report, substitution
 from baseevidence.correction import correction
 from baseevidence.outcomes import DESIGNS, DOMAINS, HIERARCHIES, SIGNAL_ROLES, STATUSES, outcome_report
+from baseevidence.receipts import verify_receipts
 from baseevidence.variants import variant_batch_report
 
 
@@ -25,6 +26,8 @@ def main(argv=None):
     variants = actions.add_parser("audit-variant-batch", help="Classify declared variant corrections; no guide design or protocol")
     variants.add_argument("input")
     variants.add_argument("--out", required=True)
+    receipts = actions.add_parser("verify-receipts", help="Structural receipt integrity, not re-retrieval or authentication")
+    receipts.add_argument("paths", nargs="*", help="Receipt files; defaults to data/*receipt*.json")
     for command in ("audit-studies", "audit-coverage"):
         action = actions.add_parser(command)
         action.add_argument("input")
@@ -49,6 +52,13 @@ def main(argv=None):
                               "comparison_designs": sorted(DESIGNS),
                               "endpoint_hierarchies": sorted(HIERARCHIES)}, indent=2, allow_nan=False))
             return 0
+        if args.command == "verify-receipts":
+            paths = args.paths or sorted((Path(__file__).resolve().parents[2] / "data").glob("*receipt*.json"))
+            if not paths:
+                raise ValueError("No receipt paths given and none found under data/")
+            report = verify_receipts(paths)
+            print(json.dumps(report, indent=2, allow_nan=False))
+            return 0 if not report["failures"] else 1
         if args.command == "audit-studies":
             report = study_report(args.input)
         elif args.command == "audit-outcomes":

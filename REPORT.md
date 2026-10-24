@@ -199,3 +199,15 @@ Neither card supports appearance modification in a healthy adult; the
 catalog is now eighteen source cards. The current outcome snapshot is
 `examples/outcome-audit-pigmentation/report.json`; earlier snapshots
 remain historical. All 34 unit tests and Ruff pass.
+
+## Receipt-integrity CLI and published-reference validation — 2026-10-24
+
+Moved the structural provenance-receipt checks into
+`src/baseevidence/receipts.py`, shared by the CLI and the tests, and added
+`baseevidence verify-receipts`, which validates given receipt files
+(default `data/*receipt*.json`) and reports per-file pass or fail with a
+nonzero exit on failures, without re-retrieving anything. Declared
+`published_source` variant-batch rows now require an HTTPS URL, DOI or
+PMID `source_reference`; free text is rejected as not a locatable citation.
+Tests cover malformed-receipt rejection, failure reporting and the CLI exit
+behavior. All unit tests and Ruff pass.

@@ -49,6 +49,13 @@ class VariantBatchChecks(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "not accepted"):
                 variant_batch({**document, "declared_variants": [{**self.row, key: "value"}]})
 
+    def test_published_rows_need_locatable_references(self):
+        for reference in ("a paper I remember", "example.org/x", "10.1/short", "PMID: twelve"):
+            with self.assertRaisesRegex(ValueError, "verifiable citation"):
+                variant_batch({**self.document, "declared_variants": [{**self.row, "source_reference": reference}]})
+        for reference in ("https://example.org/catalog", "10.1038/s41586-019-1161-z", "PMID: 30995674", "PMID30995674"):
+            self.assertEqual(variant_batch({**self.document, "declared_variants": [{**self.row, "source_reference": reference}]})["counts"]["variants"], 1)
+
     def test_duplicate_ids_malformed_rows_and_bad_schema_fail(self):
         document = {**self.document, "declared_variants": [self.row, {**self.row, "pathogenic_base": "A"}]}
         with self.assertRaisesRegex(ValueError, "unique"):
