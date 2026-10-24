@@ -2,13 +2,10 @@ import io
 import json
 import unittest
 from contextlib import redirect_stdout
-from pathlib import Path
 
 from baseevidence.audit import substitution
-from baseevidence.correction import correction
 from baseevidence.cli import main
-
-ROOT = Path(__file__).resolve().parents[1]
+from baseevidence.correction import correction
 
 
 class CorrectionChecks(unittest.TestCase):
