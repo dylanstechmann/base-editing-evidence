@@ -263,3 +263,28 @@ exact-EXT_ID Europe PMC queries and bound by a records-hash
 not accessed. The current outcome snapshot is
 `examples/outcome-audit-trials/report.json`; earlier snapshots remain
 historical. All 37 unit tests and Ruff pass.
+
+## Ex vivo HBG1/HBG2 sickle-cell trial card — 2026-10-24
+
+Added the first ex vivo `human_trial` card: the 2026 New England Journal
+of Medicine phase 1-2 BEACON report of ristoglogene autogetemcel
+(autologous CD34+ hematopoietic stem and progenitor cells base-edited at
+the HBG1/HBG2 promoters to inhibit BCL11A binding) in 31 patients 12 to
+35 years of age with sickle cell disease and at least four severe
+vaso-occlusive crises in the previous two years. Five outcome rows keep
+on-target edited alleles (67.4% mean at 6 months among 13 patients), the
+hemoglobin switch (fetal hemoglobin above 60%, sickle hemoglobin below
+40% of total hemoglobin), engraftment kinetics (neutrophils median 17.5
+days, platelets 19 days), the absence of investigator-reported severe
+crises after 60 days post-transfusion, and adverse-event reporting (all
+31 with events, 87% grade 3 or higher, 39% serious, one death from
+idiopathic pneumonia syndrome) in separate domains with explicit
+denominators. Cell-dose values are omitted to avoid a dosing protocol.
+Metadata and abstract text were retrieved through an exact-EXT_ID Europe
+PMC query and bound by a records-hash
+[receipt](data/beacon_metadata_receipt.json); the subscription full text
+was not accessed. An unplanned open-label interim analysis with mean
+6.6-month follow-up is not a 12-month primary-end-point, curative or
+long-term-safety demonstration. The current outcome snapshot is
+`examples/outcome-audit-beacon/report.json`; earlier snapshots remain
+historical. All 37 unit tests and Ruff pass.

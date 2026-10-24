@@ -286,6 +286,19 @@
       "functional_scope": "Human in vivo base-editing biomarker and interim safety evidence in a treated patient population; not a clinical-outcome, multi-year-safety or healthy-adult demonstration.",
       "limits": "Small open-label interim phase 1 analysis with 6 dosed participants and 3 participants in the highest-dose biomarker cohort; no randomized comparator; trial registration NCT06458010. Durable biomarker reductions at 24 weeks are not cardiovascular-outcome evidence, and no dosing protocol, healthy-adult use or whole-body delivery is established here.",
       "access_level": "Official indexed abstract via Europe PMC; subscription full text not accessed"
+    },
+    {
+      "id": "sickle-beacon-risto-2026",
+      "title": "Base Editing of HBG1 and HBG2 Promoters for Sickle Cell Disease",
+      "stage": "human_trial",
+      "model": "Phase 1-2 multicenter study of ex vivo base-edited autologous CD34+ hematopoietic stem and progenitor cells (ristoglogene autogetemcel) targeting the HBG1 and HBG2 promoters in patients 12 to 35 years of age with sickle cell disease and at least four severe vaso-occlusive crises in the previous two years",
+      "target_tissue": "Hematopoietic system in treated patients after myeloablative conditioning; no in vivo editing and no non-blood application",
+      "intervention_class": "Ex vivo base editing of autologous CD34+ hematopoietic stem and progenitor cells at the HBG1/HBG2 promoters",
+      "source_url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2504835",
+      "source_report": "The source reports interim phase 1-2 results: 31 patients received a single infusion of risto-cel after myeloablative conditioning with pharmacokinetically guided busulfan and were followed for a mean of 6.6 months (range 0.3 to 20.4); a median of one stem-cell collection cycle was required; neutrophil engraftment occurred at a median of 17.5 days and platelet engraftment at a median of 19 days; at 6 months the mean on-target edited allele fraction in peripheral blood was 67.4%, mean fetal hemoglobin exceeded 60% and sickle hemoglobin fell below 40% of total hemoglobin among 13 patients, maintained throughout follow-up; no investigator-reported severe vaso-occlusive crises occurred later than 60 days after the last red-cell transfusion; all 31 patients had at least one adverse event, 27 (87%) had a grade 3 or higher event, 12 (39%) had a serious adverse event, and one patient died from idiopathic pneumonia syndrome.",
+      "functional_scope": "Human ex vivo base-editing engraftment, hemoglobin-switch and interim safety evidence in treated patients; not in vivo delivery evidence, a 12-month primary-end-point result, curative-outcome or multi-year-safety evidence.",
+      "limits": "Unplanned open-label interim analysis with short mean follow-up and no randomized comparator; the 6-month hemoglobin figures are among 13 patients. Myeloablative conditioning is part of the source's treatment context and is described qualitatively only; cell-dose values are omitted to avoid reproducing a dosing protocol. The one death and the high serious-adverse-event fraction are part of the source's safety reporting and are preserved here. No investigator-reported severe crises after 60 days post-transfusion is not freedom from all crises, a cure claim or long-term safety.",
+      "access_level": "Official indexed abstract via Europe PMC; subscription full text not accessed"
     }
   ]
 }

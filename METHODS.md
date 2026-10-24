@@ -199,3 +199,21 @@ to avoid reproducing a dosing protocol; cohort descriptors stay
 qualitative. Open-label phase 1 biomarker and interim safety results in
 patients are not cardiovascular-outcome evidence, multi-year safety or
 healthy-adult validation.
+
+On 2026-10-24, the catalog added one ex vivo `human_trial` card: the 2026
+New England Journal of Medicine phase 1-2 BEACON report of
+ristoglogene autogetemcel (autologous CD34+ cells base-edited at the
+HBG1/HBG2 promoters) in 31 patients 12 to 35 years of age with sickle cell
+disease (mean on-target edited alleles 67.4% and fetal hemoglobin above
+60% of total hemoglobin at 6 months among 13 patients; no
+investigator-reported severe vaso-occlusive crises later than 60 days
+after the last transfusion; one death from idiopathic pneumonia syndrome
+among adverse events in all patients). The assistant accessed an exact
+EXT_ID Europe PMC REST response online and transcribed indexed metadata
+and abstract text; raw response bytes were not retained, so the
+[receipt](data/beacon_metadata_receipt.json) binds the committed record
+block with a records SHA-256. The subscription full text was not accessed.
+Cell-dose values are omitted to avoid reproducing a dosing protocol, and
+myeloablative conditioning is described qualitatively only. An unplanned
+interim analysis with mean 6.6-month follow-up is not a 12-month
+primary-end-point, curative or long-term-safety demonstration.

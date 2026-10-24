@@ -1,0 +1,20 @@
+{
+  "retrieved_utc": "2026-10-24T22:22:49.070838+00:00",
+  "retrieval_method": "Europe PMC REST search API exact-EXT_ID query accessed online on 2026-10-24; indexed metadata and abstract text transcribed from the API response",
+  "scope": "Exact-ID indexed metadata and abstract retrieval, not a systematic search or independent validation",
+  "queries": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41931046&format=json&resultType=core&pageSize=1"
+  ],
+  "records": [
+    {
+      "id": "41931046",
+      "source": "MED",
+      "pmid": "41931046",
+      "doi": "10.1056/nejmoa2504835",
+      "title": "Base Editing of HBG1 and HBG2 Promoters for Sickle Cell Disease.",
+      "firstPublicationDate": "2026-04-01"
+    }
+  ],
+  "records_sha256": "bc59ed1b97f2aaf9ae05c668414f7c166d243c51641e2e6778a12bd6854c6420",
+  "limits": "Raw response bytes were not retained by the retrieval tooling; records_sha256 binds the committed record block, not an unretained response. Fields and abstract text were transcribed from the indexed API response and not verified against publisher pages. The subscription full text was not accessed."
+}

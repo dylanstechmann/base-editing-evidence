@@ -6,8 +6,8 @@ coding assistance. No owner laboratory work or source review is implied.
 
 The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[twenty-two source cards](data/studies.json) distinguish cell experiments, a genetic-disease
-mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts, appearance-trait editing precedents, nonhuman-primate liver delivery and first-in-human PCSK9 base-editing trials. It is a starting point for research on
+[twenty-three source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts, appearance-trait editing precedents, nonhuman-primate liver delivery and three human base-editing trials. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
 ## Three questions that stay separate
@@ -171,7 +171,25 @@ the highest-dose cohort of 3; no grade 3 or higher adverse events).
 These are open-label biomarker and interim safety results in patients
 — not cardiovascular-outcome evidence, multi-year safety,
 healthy-adult use or a dosing protocol. The [trials
-snapshot](examples/outcome-audit-trials/report.json) is the current
+snapshot](examples/outcome-audit-trials/report.json) remains a
+historical record of the catalog at that point.
+
+An ex vivo `human_trial` card completes the 2026 human-trial tranche:
+the New England Journal of Medicine phase 1-2 BEACON report of
+ristoglogene autogetemcel — autologous CD34+ cells base-edited at the
+HBG1 and HBG2 promoters — in 31 patients 12 to 35 years old with sickle
+cell disease (mean on-target edited alleles 67.4% at 6 months among 13
+patients, fetal hemoglobin above 60% and sickle hemoglobin below 40% of
+total hemoglobin; median neutrophil engraftment 17.5 days; no
+investigator-reported severe vaso-occlusive crises later than 60 days
+after the last transfusion; all 31 patients had adverse events, 87%
+grade 3 or higher, 39% serious, and one death from idiopathic pneumonia
+syndrome). Ex vivo autologous-cell editing after myeloablative
+conditioning is a different modality from in vivo lipid-nanoparticle
+liver editing, and an unplanned interim analysis with mean 6.6-month
+follow-up is not a 12-month primary-end-point, curative or long-term
+safety demonstration. The [BEACON
+snapshot](examples/outcome-audit-beacon/report.json) is the current
 outcome snapshot; earlier snapshots stay historical.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
