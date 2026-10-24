@@ -7,6 +7,7 @@ from pathlib import Path
 from baseevidence.audit import STAGES, coverage, load, study_report, substitution
 from baseevidence.correction import correction
 from baseevidence.outcomes import DESIGNS, DOMAINS, HIERARCHIES, SIGNAL_ROLES, STATUSES, outcome_report
+from baseevidence.variants import variant_batch_report
 
 
 def main(argv=None):
@@ -21,6 +22,9 @@ def main(argv=None):
     fix.add_argument("--corrected", required=True)
     fix.add_argument("--coordinate-system", required=True)
     actions.add_parser("schema", help="Controlled vocabularies only, not validation or interpretation")
+    variants = actions.add_parser("audit-variant-batch", help="Classify declared variant corrections; no guide design or protocol")
+    variants.add_argument("input")
+    variants.add_argument("--out", required=True)
     for command in ("audit-studies", "audit-coverage"):
         action = actions.add_parser(command)
         action.add_argument("input")
@@ -49,6 +53,8 @@ def main(argv=None):
             report = study_report(args.input)
         elif args.command == "audit-outcomes":
             report = outcome_report(args.input, args.studies)
+        elif args.command == "audit-variant-batch":
+            report = variant_batch_report(args.input)
         else:
             document, digest = load(args.input)
             if document.get("origin") != "synthetic_example":

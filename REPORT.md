@@ -142,3 +142,16 @@ do not state them. The current outcome snapshot is
 `examples/outcome-audit-cancer/report.json`; earlier snapshots remain
 historical. All 30 unit tests and Ruff pass. No tumor-lesion-correction,
 dosing or clinical claim is added.
+
+## Declared-variant batch intake — 2026-10-24
+
+Added `audit-variant-batch`, an in-silico batch classifier for declared
+pathogenic-to-corrected single-base directions, with a synthetic example
+input (`examples/variant_batch.json`). Rows must declare `published_source`
+or `synthetic_example` origin plus a source reference; personal-genome rows
+and targetability, guide, delivery, dose or scope fields are rejected with
+explicit errors. Reports tally classical chemistry directions,
+transversions and no-change rows without pathogenicity, efficiency,
+off-target or protocol inference. Four new unit tests cover counts, origin
+and field rejection, duplicate/malformed rows and CLI directory behavior.
+All 34 unit tests and Ruff pass.

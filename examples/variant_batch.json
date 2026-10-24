@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "declared_variants": [
+    {
+      "id": "demo-cbe-direction",
+      "origin": "synthetic_example",
+      "pathogenic_base": "C",
+      "corrected_base": "T",
+      "coordinate_system": "reference_forward_strand",
+      "source_reference": "Constructed demonstration row for the classical CBE direction"
+    },
+    {
+      "id": "demo-abe-direction",
+      "origin": "synthetic_example",
+      "pathogenic_base": "A",
+      "corrected_base": "G",
+      "coordinate_system": "reference_forward_strand",
+      "source_reference": "Constructed demonstration row for the classical ABE direction"
+    },
+    {
+      "id": "demo-transversion",
+      "origin": "synthetic_example",
+      "pathogenic_base": "A",
+      "corrected_base": "T",
+      "coordinate_system": "reference_forward_strand",
+      "source_reference": "Constructed demonstration row outside both classical classes"
+    },
+    {
+      "id": "demo-no-change",
+      "origin": "synthetic_example",
+      "pathogenic_base": "G",
+      "corrected_base": "G",
+      "coordinate_system": "reference_forward_strand",
+      "source_reference": "Constructed demonstration row declaring no sequence change"
+    }
+  ]
+}

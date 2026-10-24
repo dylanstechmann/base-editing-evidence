@@ -39,6 +39,7 @@ python -m pip install -e .
 baseevidence change-class A G --coordinate-system reference_forward_strand
 baseevidence correction-class --pathogenic G --corrected A --coordinate-system reference_forward_strand
 baseevidence schema
+baseevidence audit-variant-batch examples/variant_batch.json --out artifacts/variant-demo
 baseevidence audit-studies data/studies.json --out artifacts/source-audit
 baseevidence audit-coverage examples/coverage.json --out artifacts/count-demo
 baseevidence audit-outcomes data/outcomes.json --studies data/studies.json --out artifacts/outcome-audit
@@ -111,6 +112,14 @@ preclinical models that deliberately mutate or reprogram alleles; neither
 establishes tumor-lesion correction, tumor-selective delivery or durable
 safety in a person. The [cancer snapshot](examples/outcome-audit-cancer/report.json)
 is the current outcome snapshot; earlier snapshots stay historical.
+
+The `audit-variant-batch` command classifies a declared batch of
+pathogenic-to-corrected single-base directions in silico, tallying
+classical ABE/CBE directions, transversions and no-change rows. Only
+`published_source` or `synthetic_example` origins are accepted;
+personal-genome origins and any targetability, guide, delivery or dose
+fields are rejected outright. No pathogenicity inference, efficiency
+estimate or protocol is produced.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

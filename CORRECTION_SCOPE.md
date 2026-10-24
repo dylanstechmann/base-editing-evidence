@@ -96,7 +96,10 @@ healthy-adult human use, which no current card crosses.
 
 It classifies declared directions, audits explicit count denominators,
 keeps source scope, signal roles and negative findings separate, and
-leaves unknowns as `null`. It does not design guides, rank editors for a
+leaves unknowns as `null`. Declared batches of variants can be classified
+in silico with `audit-variant-batch`, but only with `published_source` or
+`synthetic_example` origins; personal genomes are rejected. It does not
+design guides, rank editors for a
 person, estimate off-target or efficiency values, or provide protocol,
 dose or self-treatment instructions. Anyone presenting this tooling as
 readiness for human enhancement use is misreading the audit.

@@ -124,3 +124,11 @@ block with a records SHA-256. Full texts were not accessed, and
 abstract-level statements are not extended. Both cards record base editors
 used as research tools on tumor models or engineered immune cells; neither
 supports a tumor-lesion-correction, dosing or clinical claim.
+
+`audit-variant-batch` classifies declared single-base correction
+directions for in-silico intake only. Each row must declare its origin as
+`published_source` or `synthetic_example` with a source reference;
+personal-genome rows and any targetability, guide, delivery, dose or
+scope-override fields are rejected. Reports tally directions and change
+types; no pathogenicity inference, efficiency or off-target estimate, and
+no guide design is performed.
