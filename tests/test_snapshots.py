@@ -16,7 +16,7 @@ class SnapshotChecks(unittest.TestCase):
     examples directory and update CURRENT_SNAPSHOT in the same commit.
     """
 
-    CURRENT_SNAPSHOT = ROOT / "examples/outcome-audit-rdeb-retina/report.json"
+    CURRENT_SNAPSHOT = ROOT / "examples/outcome-audit-fidelity-abe8e/report.json"
 
     def test_current_snapshot_reproduces_from_committed_inputs(self):
         generated = json.dumps(outcome_report(ROOT / "data/outcomes.json", ROOT / "data/studies.json"),

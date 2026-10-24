@@ -1,0 +1,11 @@
+{
+  "scope": "Exact primary full-text retrieval and focused review, not a systematic review",
+  "pmcid": "PMC13225742",
+  "pmid": "41645451",
+  "doi": "10.1093/procel/pwag006",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13225742/fullTextXML",
+  "retrieved_utc": "2026-10-24T23:00:11.178964+00:00",
+  "response_sha256": "a995b60248c9115e340950edd052bc893bc13b0086002cf7fe2ffce51123d811",
+  "response_path": "raw/PMC13225742.xml",
+  "limits": "Retained JATS XML response bytes are committed at raw/PMC13225742.xml and bound by response_sha256. The article is open access as indexed by Europe PMC. Supplementary data referenced in the manuscript were not independently acquired. Figures were read from the retrieved XML text; no image files were independently acquired. Nothing here authenticates the publisher's version of record or the review's interpretation of it."
+}

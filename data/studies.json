@@ -89,8 +89,8 @@
       "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7335424/",
       "source_report": "The source reports several engineered CBE variants with lower guide-independent DNA deamination and reduced guide-dependent off-target editing in tested assays while retaining a fraction of BE4max on-target activity.",
       "functional_scope": "Compares molecular editing outcomes and assay performance; it does not establish tissue repair or therapeutic benefit.",
-      "limits": "Reported reductions are variant-, target- and assay-dependent. Lower measured off-target activity is not proof of zero risk or universal superiority, and narrowed activity can affect target availability.",
-      "access_level": "Primary PMC full-text article page accessed; supplementary materials not independently reviewed"
+      "limits": "Reported reductions are variant-, target- and assay-dependent. The reviewed full text states clonal WGS rates for BE4 (8.0×10⁻⁶ per bp) above two prior reports, with clone counts per group not stated; a significant on-target decrease for the lowest-off-target variants across six tested sites; and a computed 65%-of-ClinVar targeting-scope estimate that is not measured accessibility. Lower measured off-target activity is not proof of zero risk or universal superiority, and narrowed activity can affect target availability.",
+      "access_level": "Primary open-access full text (CC BY) retrieved via Europe PMC fullTextXML and reviewed in CBE_FIDELITY_REVIEW.md; supplementary figures not independently acquired"
     },
     {
       "id": "col7a1-rdeb-2022",
@@ -128,8 +128,8 @@
       "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13225742/",
       "source_report": "The study reports lower bystander and genome-wide off-target editing for ABE8e-Y149V than ABE8e in specified assays, plus functional rescue in hereditary tyrosinemia type I mice through disruption of Hpd.",
       "functional_scope": "Combines sequence-product assays with short-term disease-model liver biomarkers and weight outcomes; it does not test ordinary aging or repair of the causal Fah mutation.",
-      "limits": "GOTI is an embryo assay and cannot quantify human somatic-tissue risk. Disease-associated variants inserted into HEK cells are not patient cells. Hpd disruption is a disease bypass strategy in this model, and positive selection may affect liver allele fractions.",
-      "access_level": "Primary PMC full-text article page accessed; supplementary data not independently reviewed"
+      "limits": "GOTI is an embryo assay and cannot quantify human somatic-tissue risk. The reviewed full text states n ≥ 3 embryos per group with the non-edited blastomere as reference, ABE8e SNVs of 371 per embryo (Tyr) versus 13 in Cre controls (the abstract rounds this to ~30-fold while the Results state more than 28-fold), ABE8e-Y149V at 24 SNVs per embryo and Cre-control background in a replication, no significant RNA-SNV increase for Y149V versus 8,795 for ABE8e, and HTI mouse groups whose animal counts are not stated. Disease-associated variants inserted into HEK cells are not patient cells. Hpd disruption is a disease bypass strategy in this model, positive selection may affect liver allele fractions, and mouse disease rescue is not evidence of ordinary-aging benefit.",
+      "access_level": "Primary open-access full text (open access as indexed by Europe PMC) retrieved via Europe PMC fullTextXML and reviewed in ABE8E_Y149V_REVIEW.md; supplementary data not independently acquired"
     },
     {
       "id": "plant-cbe-2017",

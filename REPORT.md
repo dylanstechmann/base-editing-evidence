@@ -352,3 +352,28 @@ denominators or full-text locators; dose amounts and guide sequences are
 omitted per charter. This tranche rotates the current outcome snapshot
 to `examples/outcome-audit-rdeb-retina/report.json`; earlier snapshots
 stay historical. All 41 unit tests and Ruff pass.
+
+## CBE fidelity and ABE8e-Y149V full-text reviews — 2026-10-24
+
+Upgraded two more cards to reviewed open-access full texts:
+cbe-fidelity-2020 (10.1038/s41587-020-0414-6) and abe8e-y149v-2026
+(10.1093/procel/pwag006), each retrieved live via the Europe PMC fullTextXML
+endpoint with raw JATS bytes retained under `data/raw/` and bound by
+`response_sha256` in new receipts (16 receipts, all passing). The [CBE
+fidelity review](CBE_FIDELITY_REVIEW.md) retains the multi-assay structure
+(rifampin and HSV-TK bacterial screens, in-vitro kinetics with a 69-fold
+ssDNA kcat/Km difference, the 1.7- to 4.4-fold ssDNA-assay comparisons and
+the clonal WGS design with its 8.0×10⁻⁶-per-bp BE4 rate and
+clone counts not stated), the on-target tradeoff across six sites and the
+computed 65%-of-ClinVar scope estimate. The [ABE8e-Y149V
+review](ABE8E_Y149V_REVIEW.md) retains the GOTI denominators (n ≥ 3
+embryos per group, 371-versus-13 SNVs with the abstract's ~30-fold rounding
+preserved unreconciled), the 152-variant screen, the Y149V 24-SNV GOTI and
+8,795-versus-1,463 RNA-SNV comparisons, the disease-locus perfect-read
+fractions, and the HTI cohorts including the 20%-weight-loss saline control
+endpoint with unstated animal counts. Three new outcome rows were added
+(clonal WGS validation, Y149V GOTI background, ABE8e RNA off-target signal)
+and three rows gained full-text locators; no editor is ranked or selected.
+This tranche rotates the current outcome snapshot to
+`examples/outcome-audit-fidelity-abe8e/report.json`; earlier snapshots stay
+historical. All 41 unit tests and Ruff pass.

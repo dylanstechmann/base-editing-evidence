@@ -266,3 +266,17 @@ The focused reviews live in [COL7A1_REVIEW.md](COL7A1_REVIEW.md) and
 guide sequences are omitted per charter; supplementary data were not
 independently acquired. The prime-2019 PMCID in NEXT.md was corrected
 to PMC6907074 against a live record check.
+
+## CBE fidelity and ABE8e-Y149V full-text retrieval — 2026-10-24
+
+Two further open-access full texts were retrieved live via the Europe PMC
+fullTextXML endpoint with retained raw bytes: PMC7335424 (10.1038/
+s41587-020-0414-6) at [data/raw/PMC7335424.xml](data/raw/PMC7335424.xml)
+and PMC13225742 (10.1093/procel/pwag006) at
+[data/raw/PMC13225742.xml](data/raw/PMC13225742.xml), bound by
+`response_sha256` in [data/cbe_fidelity_fulltext_receipt.json](data/cbe_fidelity_fulltext_receipt.json)
+and [data/abe8e_fulltext_receipt.json](data/abe8e_fulltext_receipt.json).
+The focused reviews live in [CBE_FIDELITY_REVIEW.md](CBE_FIDELITY_REVIEW.md)
+and [ABE8E_Y149V_REVIEW.md](ABE8E_Y149V_REVIEW.md). Guide sequences and
+dose values are omitted per charter; supplementary data were not
+independently acquired.

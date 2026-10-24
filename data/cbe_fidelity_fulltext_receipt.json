@@ -1,0 +1,11 @@
+{
+  "scope": "Exact primary full-text retrieval and focused review, not a systematic review",
+  "pmcid": "PMC7335424",
+  "pmid": "32042165",
+  "doi": "10.1038/s41587-020-0414-6",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7335424/fullTextXML",
+  "retrieved_utc": "2026-10-24T23:00:09.961915+00:00",
+  "response_sha256": "cf1a059a8736d87346ea802671308488953211772b1ffe378644c2a4054314db",
+  "response_path": "raw/PMC7335424.xml",
+  "limits": "Retained JATS XML response bytes are committed at raw/PMC7335424.xml and bound by response_sha256. The article is open access (CC BY). Supplementary figures were referenced in the manuscript but not independently acquired. Figures were read from the retrieved XML text; no image files were independently acquired. Nothing here authenticates the publisher's version of record or the review's interpretation of it."
+}
