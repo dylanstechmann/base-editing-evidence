@@ -1,0 +1,29 @@
+{
+  "retrieved_utc": "2026-10-24T22:08:23.719668+00:00",
+  "retrieval_method": "Europe PMC REST search API exact-EXT_ID queries accessed online on 2026-10-24; indexed metadata and abstract text transcribed from the API responses",
+  "scope": "Exact-ID indexed metadata and abstract retrieval, not a systematic search or independent validation",
+  "queries": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A42187087&format=json&resultType=core&pageSize=1",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41776075&format=json&resultType=core&pageSize=1"
+  ],
+  "records": [
+    {
+      "id": "42187087",
+      "source": "MED",
+      "pmid": "42187087",
+      "doi": "10.1056/NEJMoa2601283",
+      "title": "In Vivo Base Editing of PCSK9 with VERVE-102 for Hypercholesterolemia.",
+      "firstPublicationDate": "2026-05-25"
+    },
+    {
+      "id": "41776075",
+      "source": "MED",
+      "pmid": "41776075",
+      "doi": "10.1038/s41591-026-04254-4",
+      "title": "In vivo base editing gene therapy for heterozygous familial hypercholesterolemia: a phase 1 trial.",
+      "firstPublicationDate": "2026-03-03"
+    }
+  ],
+  "records_sha256": "6c4aaab885df42ed8a614c6693081efe70f63ef5e1733c30453753447e66cb21",
+  "limits": "Raw response bytes were not retained by the retrieval tooling; records_sha256 binds the committed record block, not an unretained response. Fields and abstract text were transcribed from indexed API responses and not verified against publisher pages. Subscription full texts were not accessed."
+}

@@ -95,13 +95,16 @@ The claim that "much of the technology is ready" holds only at the level this
 catalog documents: editor chemistry performs in cultured cells, engineered
 tissue constructs and localized animal disease models (see
 [EDITOR_PRECISION_FUNCTION_COMPARISON.md](EDITOR_PRECISION_FUNCTION_COMPARISON.md)).
-The strongest delivery and durability precedent here is liver-targeted
-lipid-nanoparticle base editing of PCSK9 in nonhuman primates, with blood
-biomarker reductions stable for at least eight months after a single dose —
-still one organ, one route and one disease context in nonhuman animals.
-Whole-body somatic delivery to arbitrary adult tissues, durable multi-year
-safety data in healthy humans, and enhancement applications are not
-established by any card in this repository.
+The strongest delivery and durability precedent here has now reached
+humans: phase 1 liver-targeted lipid-nanoparticle base editing of PCSK9 in
+adults with heterozygous familial hypercholesterolemia or premature
+coronary artery disease, with dose-dependent blood-biomarker reductions
+sustained through follow-up reaching at least one year — still one organ,
+one route and one disease context, in patients, open-label, without
+cardiovascular-outcome evidence. Whole-body somatic delivery to arbitrary
+adult tissues, durable multi-year safety data, use in healthy humans, and
+enhancement applications are not established by any card in this
+repository.
 
 ## Where the catalog's evidence actually lives
 
@@ -110,6 +113,7 @@ established by any card in this repository.
 | Cultured human cells | CBE 2016, ABE 2017, RNA off-target 2019, prime editing 2019, CBE fidelity 2020, COL7A1 2022, TYR iPSC 2025 | Tissue function in a person; whole-genome safety; appearance modification in a healthy adult |
 | Animal models | Progeria 2021, KCNJ13 2023, ABE8e-Y149V 2026, cancer BE screens 2026, CAR-T PIK3CD 2026, PCSK9 primate delivery 2021 ×2 | Ordinary aging; human clinical validation; tumor-lesion correction in a person; whole-body delivery to arbitrary tissues |
 | Single human case | CPS1 2025 | Comparative safety, durability, enhancement |
+| Human trials | VERVE-102 PCSK9 phase 1 2026; YOLT-101 PCSK9 phase 1 2026 | Cardiovascular outcomes; multi-year safety; healthy-adult or enhancement use; whole-body delivery |
 | Observational human cohorts | Clonal hematopoiesis 2014; stem-cell mutation accumulation 2016 | Any editing intervention; causal outcome change; a targetable lesion list |
 | Plants | Zong 2017 CBE crops; Jin 2019 rice off-targets; Tra 2021 seed-coat color | Human editing; agronomic or ecological outcomes; long-term field behavior |
 

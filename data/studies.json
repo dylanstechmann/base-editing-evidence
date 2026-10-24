@@ -260,6 +260,32 @@
       "functional_scope": "In vivo editing magnitude, blood biomarkers and selected safety readouts in animal livers; not a patient treatment.",
       "limits": "Editing percentages and biomarker reductions are species- and condition-specific source statistics, not universal editor properties. No detected off-target mutations reflects the source's genomic-DNA testing, not whole-genome absence across all conditions. The detected humoral immune response to re-dosing limits repeat-dosing durability generalization. Per-animal denominators are not stated in the accessed abstract.",
       "access_level": "Official indexed abstract via Europe PMC; open-access full text not separately reviewed"
+    },
+    {
+      "id": "pcsk9-vereve102-humans-2026",
+      "title": "In Vivo Base Editing of PCSK9 with VERVE-102 for Hypercholesterolemia",
+      "stage": "human_trial",
+      "model": "Phase 1 open-label single-ascending-dose trial of one intravenous lipid-nanoparticle infusion of an adenine base-editor mRNA and a PCSK9 guide RNA in adults with heterozygous familial hypercholesterolemia or premature coronary artery disease",
+      "target_tissue": "Liver in treated adults; no healthy-adult or non-liver application",
+      "intervention_class": "In vivo adenine base editing of PCSK9 delivered in GalNAc-targeted lipid nanoparticles",
+      "source_url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2601283",
+      "source_report": "The source reports interim phase 1 results: 35 participants across six ascending-dose cohorts with at least 28 days of follow-up, no dose-limiting toxic effects, mild-to-moderate infusion-related reactions, transient alanine-aminotransferase elevations, one aspiration-pneumonitis event in a participant with gastroesophageal reflux disease, dose-dependent mean blood PCSK9 reductions from 51% in the lowest-dose cohort to 88% in the highest-dose cohort, corresponding LDL cholesterol reductions from 9% to 62% with an absolute reduction of 78 mg per deciliter in the highest-dose cohort, and reductions reported as sustained through follow-up reaching at least one year in 15 participants.",
+      "functional_scope": "First-in-human in vivo base-editing biomarker and safety evidence in a treated patient population; not a clinical-outcome, multi-year-safety or healthy-adult demonstration.",
+      "limits": "Open-label phase 1 biomarker study in patients; no randomized comparator. Dose-level values are deliberately omitted here to avoid reproducing a dosing protocol. Sustained blood-biomarker reductions through at least one year in 15 participants are not cardiovascular-outcome evidence or multi-year safety, and no card here establishes whole-body delivery or use in healthy adults.",
+      "access_level": "Official indexed abstract via Europe PMC; subscription full text not accessed"
+    },
+    {
+      "id": "pcsk9-yolt101-humans-2026",
+      "title": "In vivo base editing gene therapy for heterozygous familial hypercholesterolemia: a phase 1 trial",
+      "stage": "human_trial",
+      "model": "Phase 1 interim report of a single intravenous dose of an investigational in vivo adenine base-editing gene therapy in adults with heterozygous familial hypercholesterolemia and uncontrolled LDL cholesterol",
+      "target_tissue": "Liver in treated adults; no healthy-adult or non-liver application",
+      "intervention_class": "In vivo adenine base editing of PCSK9 delivered in GalNAc-modified lipid nanoparticles",
+      "source_url": "https://www.nature.com/articles/s41591-026-04254-4",
+      "source_report": "The source reports interim results from an ongoing trial: six participants received escalating single doses, no grade 3 or higher adverse events occurred, transient self-limited infusion-related reactions and liver-enzyme elevations were the most common adverse events, and a single infusion produced dose-dependent and durable reductions in circulating PCSK9 and LDL cholesterol, sustained at 74.4% and 52.3% respectively at 24 weeks in the highest-dose cohort of 3 participants.",
+      "functional_scope": "Human in vivo base-editing biomarker and interim safety evidence in a treated patient population; not a clinical-outcome, multi-year-safety or healthy-adult demonstration.",
+      "limits": "Small open-label interim phase 1 analysis with 6 dosed participants and 3 participants in the highest-dose biomarker cohort; no randomized comparator; trial registration NCT06458010. Durable biomarker reductions at 24 weeks are not cardiovascular-outcome evidence, and no dosing protocol, healthy-adult use or whole-body delivery is established here.",
+      "access_level": "Official indexed abstract via Europe PMC; subscription full text not accessed"
     }
   ]
 }

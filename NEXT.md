@@ -6,20 +6,21 @@ EVIDENCE_INTAKE.md; this file records what remains open, not how to work.
 
 ## Current state (2026-10-24, tag v0.2.0)
 
-- 20 source cards across 6 stages: human_cells 7, animal 7, plant 3,
-  human_cohort 2, human_case 1.
+- 22 source cards across 7 stages: human_cells 7, animal 7, plant 3,
+  human_cohort 2, human_case 1, human_trial 2.
 - All 11 outcome domains have at least one source-reported observation,
   including delivery and durability (PCSK9 nonhuman-primate cards).
-- 37 unit tests, Ruff clean, 8 provenance receipts all passing
+- 37 unit tests, Ruff clean, 9 provenance receipts all passing
   `baseevidence verify-receipts`. Current snapshot:
-  examples/outcome-audit-delivery/report.json.
+  examples/outcome-audit-trials/report.json.
 
 ## Open tranches, in rough value order
 
-1. Full-text deep reviews of existing cards (the PROGERIA_REVIEW.md
+1. An ex vivo `human_trial` card for the 2026 NEJM BEACON HBG1/HBG2
+   promoter sickle-cell trial (PMID 41931046), a different modality from
+   the two in vivo PCSK9 cards.
+2. Full-text deep reviews of existing cards (the PROGERIA_REVIEW.md
    pattern): access primary full texts, refine limits and denominators.
-2. A `human_trial` stage card when a verified base-editing trial source
-   is retrieved; the stage already exists in STAGES and is unused.
 3. Receipt tooling that retains raw response bytes, so future receipts
    can carry true response SHA-256 hashes instead of records_sha256.
 4. Re-review of the two NEJM/abstract-limited cards (CPS1, clonal
@@ -35,3 +36,6 @@ EVIDENCE_INTAKE.md; this file records what remains open, not how to work.
   nonhuman primates: one organ, one route, one disease context. No card
   establishes whole-body adult delivery, durable human safety, or
   enhancement use.
+- The two 2026 human PCSK9 trial cards are open-label phase 1 biomarker
+  and interim safety results in patients; no card here establishes
+  cardiovascular outcomes, multi-year safety or healthy-adult use.

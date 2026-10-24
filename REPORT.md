@@ -233,3 +233,33 @@ separate domains. These are one-organ, one-route nonhuman results, not
 whole-body adult delivery, human safety or a dosing protocol. The current
 outcome snapshot is `examples/outcome-audit-delivery/report.json`; earlier
 snapshots remain historical. All unit tests and Ruff pass.
+
+## First-in-human PCSK9 base-editing trial cards — 2026-10-24
+
+Added the first two `human_trial` stage cards: the 2026 New England
+Journal of Medicine phase 1 report of VERVE-102 (single ascending-dose
+lipid-nanoparticle adenine base editing of PCSK9 in 35 adults with
+heterozygous familial hypercholesterolemia or premature coronary artery
+disease; no dose-limiting toxic effects; mild-to-moderate
+infusion-related reactions, transient alanine-aminotransferase
+elevations and one aspiration-pneumonitis event; dose-dependent mean
+PCSK9 reductions from 51% to 88% and LDL cholesterol reductions from 9%
+to 62%, with an absolute 78 mg per deciliter LDL reduction in the
+highest-dose cohort; sustained through follow-up reaching at least one
+year in 15 participants) and the 2026 Nature Medicine interim phase 1
+report of YOLT-101 (6 adults; no grade 3 or higher adverse events;
+transient self-limited infusion reactions and liver-enzyme elevations
+most common; sustained PCSK9 and LDL cholesterol reductions of 74.4%
+and 52.3% at 24 weeks in the highest-dose cohort of 3). Five outcome
+rows separate biomarker reductions, one-year durability and each trial's
+adverse-event reporting into distinct domains, with explicit participant
+denominators where the abstracts state them. Dose-level values are
+omitted to avoid reproducing a dosing protocol. Open-label phase 1
+biomarker and interim safety data in patients do not establish
+cardiovascular outcomes, multi-year safety, healthy-adult use or
+whole-body delivery. Metadata and abstract text were retrieved through
+exact-EXT_ID Europe PMC queries and bound by a records-hash
+[receipt](data/human_trials_metadata_receipt.json); full texts were
+not accessed. The current outcome snapshot is
+`examples/outcome-audit-trials/report.json`; earlier snapshots remain
+historical. All 37 unit tests and Ruff pass.

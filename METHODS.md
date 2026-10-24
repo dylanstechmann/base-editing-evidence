@@ -180,3 +180,22 @@ records SHA-256. Full texts were not accessed. The TYR source used
 CRISPR-Cas9 rather than a base editor, and its abstract reports no editing
 efficiency or pigment-phenotype outcome in a person. Neither card supports
 appearance modification in a healthy adult.
+
+On 2026-10-24, the catalog added two `human_trial` cards: the 2026 New
+England Journal of Medicine phase 1 report of VERVE-102 (35 adults with
+heterozygous familial hypercholesterolemia or premature coronary artery
+disease; dose-dependent PCSK9 and LDL cholesterol reductions across
+ascending-dose cohorts; reductions sustained through follow-up reaching
+at least one year in 15 participants) and the 2026 Nature Medicine
+interim phase 1 report of YOLT-101 (6 adults; sustained PCSK9 and LDL
+cholesterol reductions of 74.4% and 52.3% at 24 weeks in the
+highest-dose cohort of 3 participants). The assistant accessed exact
+EXT_ID Europe PMC REST responses online and transcribed indexed metadata
+and abstract text; raw response bytes were not retained, so the
+[receipt](data/human_trials_metadata_receipt.json) binds the committed
+record block with a records SHA-256. Subscription full texts were not
+accessed. Dose-level values are deliberately omitted from cards and rows
+to avoid reproducing a dosing protocol; cohort descriptors stay
+qualitative. Open-label phase 1 biomarker and interim safety results in
+patients are not cardiovascular-outcome evidence, multi-year safety or
+healthy-adult validation.

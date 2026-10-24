@@ -6,8 +6,8 @@ coding assistance. No owner laboratory work or source review is implied.
 
 The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[twenty source cards](data/studies.json) distinguish cell experiments, a genetic-disease
-mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts, appearance-trait editing precedents and nonhuman-primate liver delivery. It is a starting point for research on
+[twenty-two source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts, appearance-trait editing precedents, nonhuman-primate liver delivery and first-in-human PCSK9 base-editing trials. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
 ## Three questions that stay separate
@@ -154,7 +154,24 @@ off-target mutations in the source's testing, and a re-dosing humoral
 immune observation). These are liver results for one route and disease
 context in nonhuman animals — not whole-body adult delivery, human
 safety or a dosing protocol. The [delivery
-snapshot](examples/outcome-audit-delivery/report.json) is the current
+snapshot](examples/outcome-audit-delivery/report.json) remains a
+historical record of the catalog at that point.
+
+Two `human_trial` cards record the first in vivo base-editing trials
+catalogued here: the 2026 New England Journal of Medicine phase 1
+report of VERVE-102 in 35 adults with heterozygous familial
+hypercholesterolemia or premature coronary artery disease
+(dose-dependent mean PCSK9 reductions from 51% to 88% and LDL
+cholesterol reductions from 9% to 62% across ascending-dose cohorts,
+sustained through follow-up reaching at least one year in 15
+participants; no dose-limiting toxic effects) and the 2026 Nature
+Medicine interim phase 1 report of YOLT-101 in 6 adults (sustained
+PCSK9 and LDL cholesterol reductions of 74.4% and 52.3% at 24 weeks in
+the highest-dose cohort of 3; no grade 3 or higher adverse events).
+These are open-label biomarker and interim safety results in patients
+— not cardiovascular-outcome evidence, multi-year safety,
+healthy-adult use or a dosing protocol. The [trials
+snapshot](examples/outcome-audit-trials/report.json) is the current
 outcome snapshot; earlier snapshots stay historical.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
