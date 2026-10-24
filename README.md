@@ -112,7 +112,7 @@ engineered T cells with preclinical in vivo efficacy. Both remain
 preclinical models that deliberately mutate or reprogram alleles; neither
 establishes tumor-lesion correction, tumor-selective delivery or durable
 safety in a person. The [cancer snapshot](examples/outcome-audit-cancer/report.json)
-is the current outcome snapshot; earlier snapshots stay historical.
+remains a historical record of the catalog at that point.
 
 The `audit-variant-batch` command classifies a declared batch of
 pathogenic-to-corrected single-base directions in silico, tallying
