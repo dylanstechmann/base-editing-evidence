@@ -861,6 +861,54 @@
       "follow_up": "Adverse events over the reported interim follow-up",
       "limits": "Open-label uncontrolled safety reporting: the death and the grade-3-or-higher fraction are source statistics and this catalog does not attribute them causally to editing, conditioning or infusion. High-grade events in most patients and one death are preserved as negative findings; this is not a comparative safety estimate.",
       "signal_role": "harm"
+    },
+    {
+      "id": "cbe2016-target-conversion",
+      "study_id": "cbe-2016",
+      "domain": "dna_product",
+      "status": "source_reports_signal",
+      "outcome": "Second- and third-generation cytidine base editors achieved permanent correction of about 15-75% of total cellular DNA across four transformed human and murine cell lines with indels typically at or below 1% (below 0.1% for the second generation); in disease-model settings, an APOE4-mimic astrocyte locus exceeded 50% correction (4.6-6.1% indels) and a TP53 Tyr163Cys cancer-line locus reached 3.3-7.6% correction (at most 0.7% indels), versus far lower correction and far higher indels in the Cas9-plus-donor comparisons.",
+      "source_locator": "Primary open-access full text (author manuscript): Results, Table 1 and Extended Data Fig. 7",
+      "comparison_design": "between_groups",
+      "comparison": "Base-editor versus Cas9-plus-donor-template editing at disease-model loci across transformed cell lines",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Cell-line transfection experiment; replicate counts not stated in the accessed text",
+      "n_independent_units": null,
+      "follow_up": "Cell-culture assessments days after transfection; no tissue or clinical follow-up",
+      "limits": "Cell-line disease-model corrections and product profiles of the tested constructs; the off-target profile covers 2,500 cytosines/guanines around 40 loci, not genome-wide sequencing, and no-detected is not zero risk.",
+      "signal_role": "context"
+    },
+    {
+      "id": "abe2017-target-conversion",
+      "study_id": "abe-2017",
+      "domain": "dna_product",
+      "status": "source_reports_signal",
+      "outcome": "Seventh-generation adenine base editors converted target A•T to G•C at about 50% average efficiency in human cells (abstract) with product purity typically at or above 99.9% and indels typically at or below 0.1%; the evolution ladder reports six-locus averages of 11±2.9%, 14±2.4% and 29±2.6% (mean±SD of three biological replicates) with a stated YAC sequence-context preference, and the HDR comparison reports 10-35% (48 h) and 55-68% (120 h) target-mutation frequencies.",
+      "source_locator": "Primary open-access full text: Results, Figs. 3-5",
+      "comparison_design": "between_groups",
+      "comparison": "Adenine-base-editor generations, and ABE7.10 versus a Cas9-nuclease-mediated HDR method, at matched loci in human cells",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Cell-culture transfection; three biological replicates per reported efficiency",
+      "n_independent_units": null,
+      "follow_up": "Efficiencies measured 5 days post-transfection (HDR comparison also at 48 and 120 hours); no tissue follow-up",
+      "limits": "Target- and context-dependent cell-culture statistics; the GUIDE-seq-anchored off-target comparison (9 of 12 loci modified by Cas9 versus 4 of 12 by ABE variants at lower levels) rests on the source's stated assumption, and no comprehensive ABE off-target profiling method existed at the time.",
+      "signal_role": "context"
+    },
+    {
+      "id": "prime2019-search-replace",
+      "study_id": "prime-2019",
+      "domain": "dna_product",
+      "status": "source_reports_signal",
+      "outcome": "Prime editing (a Cas9 H840A nickase fused to an engineered reverse transcriptase, programmed by a prime-editing guide RNA) installed more than 175 edits in human cells including all 12 point-mutation types and targeted insertions and deletions; the PE2 pentamutant improved point-mutation efficiency 1.6- to 5.1-fold over PE1; disease-model corrections included HBB (sickle cell), HEXA (Tay-Sachs) and PRNP edits in human cells.",
+      "source_locator": "Primary open-access full text: Results and Figs. 1-6",
+      "comparison_design": "between_groups",
+      "comparison": "Prime-editing variants (PE1, PE2, PE3) and HDR comparisons at matched loci in human cells and mouse neurons",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Cell-culture editing experiment; replicate counts not stated in the accessed text",
+      "n_independent_units": null,
+      "follow_up": "Cell-culture assessments; no tissue or clinical follow-up",
+      "limits": "A cell-level capability survey in four human cell lines and primary mouse cortical neurons; off-target comparisons are at known Cas9 off-target sites, not genome-wide profiling, and the up-to-89%-correctable figure is a computed estimate. Prime editing is recorded separately from base editing.",
+      "signal_role": "context"
     }
   ]
 }

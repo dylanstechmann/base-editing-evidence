@@ -398,3 +398,26 @@ no-detected-signal row) and the aggregate row gained explicit
 denominators. This tranche rotates the current outcome snapshot to
 `examples/outcome-audit-cart-pik3cd/report.json`; earlier snapshots stay
 historical. All 41 unit tests and Ruff pass.
+
+## Foundational methods papers full-text review — 2026-10-24
+
+Completed the open-access review tranche by upgrading the three
+foundational methods cards (cbe-2016, abe-2017, prime-2019) to reviewed
+open-access full texts, retrieved live via the Europe PMC fullTextXML
+endpoint with raw JATS bytes retained under `data/raw/` and bound by
+`response_sha256` in three new receipts (20 receipts, all passing; the
+cbe-2016 record is the PMC author manuscript and its receipt says so).
+The [combined review](FOUNDATIONAL_METHODS_REVIEW.md) retains the 2016
+paper's 15-75% correction range across four transformed cell lines with
+its indel tradeoffs and its 2,500-cytosine/guanine off-target readout
+(14.7 million reads, 40 loci), the 2017 paper's evolution ladder with
+mean±SD of three biological replicates, its YAC context preference
+and its assumption-dependent GUIDE-seq-anchored off-target comparison
+(9 of 12 loci modified by Cas9 versus 4 of 12 by ABE variants at lower
+levels), and the 2019 paper's more-than-175-edit survey, 1.6- to
+5.1-fold PE2 improvements and known-site off-target comparisons. Each
+card gained its first outcome row (dna_product) with explicit
+honest limits; prime editing stays recorded separately from base
+editing. This tranche rotates the current outcome snapshot to
+`examples/outcome-audit-methods-papers/report.json`; earlier snapshots
+stay historical. All 41 unit tests and Ruff pass.

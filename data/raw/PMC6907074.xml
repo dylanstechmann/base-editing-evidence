@@ -1,0 +1,1389 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article xml:lang="en" article-type="research-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Nature</journal-id><journal-id journal-id-type="iso-abbrev">Nature</journal-id><journal-id journal-id-type="pmc-domain-id">319</journal-id><journal-id journal-id-type="pmc-domain">nihpa</journal-id><journal-id journal-id-type="nlm-id">0410462</journal-id><journal-title-group><journal-title>Nature</journal-title></journal-title-group><issn pub-type="ppub">0028-0836</issn><issn pub-type="epub">1476-4687</issn><?publisher_abbrev nih?><custom-meta-group><custom-meta><meta-name>pmc-is-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-collection-title</meta-name><meta-value>NIHPA Author Manuscripts</meta-value></custom-meta></custom-meta-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC6907074</article-id><article-id pub-id-type="pmcid-ver">PMC6907074.1</article-id><article-id pub-id-type="pmcaid">6907074</article-id><article-id pub-id-type="pmcaiid">6907074</article-id><article-id pub-id-type="manuscript-id">NIHMS1541141</article-id><article-id pub-id-type="pmid">31634902</article-id><article-id pub-id-type="doi">10.1038/s41586-019-1711-4</article-id><article-id pub-id-type="manuscript-id-alternative">NIHMS1541141</article-id><article-id pub-id-type="manuscript-id-alternative">NIHPA1541141</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>Search-and-replace genome editing without double-strand breaks or
+donor DNA</article-title></title-group><contrib-group><contrib contrib-type="author"><name name-style="western"><surname>Anzalone</surname><given-names initials="AV">Andrew V.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Randolph</surname><given-names initials="PB">Peyton B.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Davis</surname><given-names initials="JR">Jessie R.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Sousa</surname><given-names initials="AA">Alexander A.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Koblan</surname><given-names initials="LW">Luke W.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Levy</surname><given-names initials="JM">Jonathan M.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Chen</surname><given-names initials="PJ">Peter J.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Wilson</surname><given-names initials="C">Christopher</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Newby</surname><given-names initials="GA">Gregory A.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Raguram</surname><given-names initials="A">Aditya</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Liu</surname><given-names initials="DR">David R.</given-names></name><xref rid="A1" ref-type="aff">1</xref><xref rid="A2" ref-type="aff">2</xref><xref rid="A3" ref-type="aff">3</xref><xref rid="CR1" ref-type="corresp">*</xref></contrib></contrib-group><aff id="A1"><label>1</label>Merkin Institute of Transformative Technologies in
+Healthcare, Broad Institute of Harvard and MIT, Cambridge, Massachusetts, USA</aff><aff id="A2"><label>2</label>Department of Chemistry and Chemical Biology, Harvard
+University, Cambridge, Massachusetts, USA</aff><aff id="A3"><label>3</label>Howard Hughes Medical Institute, Harvard University,
+Cambridge, Massachusetts, USA</aff><author-notes><corresp id="CR1"><label>*</label>Correspondence should be addressed to David R.
+Liu: <email>drliu@fas.harvard.edu</email></corresp><fn fn-type="con" id="FN1"><p id="P1">Author contributions</p><p id="P2">A.V.A. designed the research, performed experiments, analyzed data,
+and wrote the manuscript. P.B.R., J.R.D., A.A.S., and G.A.N. performed human
+cell experiments and analyzed data. L.W.K. and J.M.L. performed neuron
+experiments. P.J.C. and C.W. performed and analyzed RNA-seq experiments.
+A.R. analyzed ClinVar. D.R.L designed and supervised the research and wrote
+the manuscript.</p></fn></author-notes><pub-date pub-type="ppub"><month>12</month><year>2019</year></pub-date><pub-date pub-type="epub"><day>21</day><month>10</month><year>2019</year></pub-date><volume>576</volume><issue>7785</issue><issue-id pub-id-type="pmc-issue-id">347560</issue-id><fpage>149</fpage><lpage>157</lpage><pub-history><event event-type="nihms-submitted"><date><day>19</day><month>10</month><year>2019</year></date></event><event event-type="pmc-release"><date><day>21</day><month>04</month><year>2020</year></date></event><event event-type="pmc-live"><date><day>21</day><month>04</month><year>2020</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2024-08-28 02:25:42.280"><day>28</day><month>08</month><year>2024</year></date></event></pub-history><permissions><license><license-p>Users may view, print, copy, and download text and data-mine the
+content in such documents, for the purposes of academic research, subject
+always to the full Conditions of use:<uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.nature.com/authors/editorial_policies/license.html#terms">http://www.nature.com/authors/editorial_policies/license.html#terms</uri></license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="nihms-1541141.pdf"><?pdf-name nihms-1541141.pdf?><?pdf-size 4683786?><?pdf-md5 d999a4b4078db8f1d5cec88fcec1da74?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:f6c6/6907074/d999a4b4078d/nihms-1541141.pdf?></self-uri><abstract id="ABS1"><title>Summary</title><p id="P3">Most genetic variants that contribute to disease<sup><xref rid="R1" ref-type="bibr">1</xref></sup> are challenging to correct efficiently
+and without excess byproducts<sup><xref rid="R2" ref-type="bibr">2</xref>–<xref rid="R5" ref-type="bibr">5</xref></sup>. Here we
+describe prime editing, a versatile and precise genome editing method that
+directly writes new genetic information into a specified DNA site using a
+catalytically impaired Cas9 fused to an engineered reverse transcriptase,
+programmed with a prime editing guide RNA (pegRNA) that both specifies the
+target site and encodes the desired edit. We performed &gt;175 edits in
+human cells including targeted insertions, deletions, and all 12 types of point
+mutations without requiring double-strand breaks or donor DNA templates. We
+applied prime editing in human cells to correct efficiently and with few
+byproducts the primary genetic causes of sickle cell disease (requiring a
+transversion in <italic toggle="yes">HBB</italic>) and Tay-Sachs disease (requiring a
+deletion in <italic toggle="yes">HEXA</italic>), to install a protective transversion in
+<italic toggle="yes">PRNP</italic>, and to precisely insert various tags and epitopes
+into target loci. Four human cell lines and primary post-mitotic mouse cortical
+neurons support prime editing with varying efficiencies. Prime editing shows
+higher or similar efficiency and fewer byproducts than homology-directed repair,
+complementary strengths and weaknesses compared to base editing, and much lower
+off-target editing than Cas9 nuclease at known Cas9 off-target sites. Prime
+editing substantially expands the scope and capabilities of genome editing, and
+in principle can correct up to 89% of known genetic variants associated with
+human diseases.</p></abstract><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-manuscript</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta></custom-meta-group></article-meta></front><body><p id="P4">The ability to make virtually any targeted change in the genome of any living
+cell or organism is a longstanding aspiration of the life sciences. Despite rapid
+advances in genome editing technologies, the majority of the &gt;75,000 known human
+genetic variants associated with diseases<sup><xref rid="R1" ref-type="bibr">1</xref></sup> remain difficult to correct or install in most therapeutically
+relevant cell types (<xref rid="F1" ref-type="fig">Fig. 1a</xref>). Programmable
+nucleases such as CRISPR-Cas9 make double-strand DNA breaks (DSBs) that can disrupt
+genes by inducing mixtures of insertions and deletions (indels) at target
+sites<sup><xref rid="R2" ref-type="bibr">2</xref>–<xref rid="R4" ref-type="bibr">4</xref></sup>. DSBs, however, are associated with undesired
+outcomes including complex mixtures of products, translocations<sup><xref rid="R5" ref-type="bibr">5</xref></sup>, and p53 activation<sup><xref rid="R6" ref-type="bibr">6</xref>,<xref rid="R7" ref-type="bibr">7</xref></sup>.
+Moreover, the vast majority of pathogenic alleles arise from specific insertions,
+deletions, or base substitutions that require more precise editing technologies to
+correct (<xref rid="F1" ref-type="fig">Fig. 1a</xref>, <xref rid="SD2" ref-type="supplementary-material">Supplementary Discussion</xref>).
+Homology-directed repair (HDR) stimulated by DSBs<sup><xref rid="R8" ref-type="bibr">8</xref></sup> has been widely used to install precise DNA changes. HDR,
+however, relies on exogenous donor DNA repair templates, typically generates an excess
+of indels from end-joining repair of DSBs, and is inefficient in most therapeutically
+relevant cell types (T cells and some types of stem cells being important
+exceptions)<sup><xref rid="R9" ref-type="bibr">9</xref>,<xref rid="R10" ref-type="bibr">10</xref></sup>. While enhancing the efficiency and precision of
+DSB-mediated editing remains the focus of promising efforts<sup><xref rid="R11" ref-type="bibr">11</xref>–<xref rid="R15" ref-type="bibr">15</xref></sup>, these challenges motivate the exploration of alternative precision
+genome editing strategies.</p><p id="P5">Base editing can efficiently install the four transition mutations (C→T,
+G→A, A→G, and T→C) without requiring DSBs in many cell types and
+organisms, including mammals<sup><xref rid="R16" ref-type="bibr">16</xref>–<xref rid="R19" ref-type="bibr">19</xref></sup>, but cannot currently perform the
+eight transversion mutations (C→A, C→G, G→C, G→T,
+A→C, A→T, T→A, and T→G), such as the
+T•A-to-A•T mutation needed to directly correct the most common cause of
+sickle cell disease (<italic toggle="yes">HBB</italic> E6V). In addition, no DSB-free method has been
+reported to perform targeted deletions, such as the removal of the 4-base duplication
+that causes Tay-Sachs disease (<italic toggle="yes">HEXA</italic> 1278+TATC), or targeted insertions,
+such as the 3-base insertion required to directly correct the most common cause of
+cystic fibrosis (<italic toggle="yes">CFTR</italic> ΔF508). Targeted transversions,
+insertions, and deletions thus are difficult to install or correct efficiently and
+without excess byproducts in most cell types, even though they collectively account for
+most known pathogenic alleles (<xref rid="F1" ref-type="fig">Fig. 1a</xref>).</p><p id="P6">Here we describe the development of prime editing, a
+“search-and-replace” genome editing technology that mediates targeted
+insertions, deletions, all 12 possible base-to-base conversions, and combinations
+thereof in human cells without requiring DSBs or donor DNA templates. Prime editors
+(PEs), initially exemplified by PE1, use a reverse transcriptase (RT) fused to an
+RNA-programmable nickase and a prime editing guide RNA (pegRNA) to directly copy genetic
+information from an extension on the pegRNA into the target genomic locus. PE2 uses an
+engineered RT to increase editing efficiencies, while PE3 nicks the non-edited strand to
+induce its replacement and further increase editing efficiency, typically to 20-50% with
+1-10% indel formation in human HEK293T cells. Prime editing offers much lower off-target
+activity than Cas9 at known Cas9 off-target loci, far fewer byproducts and higher or
+similar efficiency compared to Cas9-initiated HDR, and complementary strengths and
+weaknesses compared to base editors. By enabling precise targeted insertions, deletions,
+and all 12 possible classes of point mutations without requiring DSBs or donor DNA
+templates, prime editing has the potential to advance the study and correction of the
+vast majority of pathogenic alleles.</p><sec id="S1"><title>Results</title><sec id="S2"><title>Prime editing strategy</title><p id="P7">Cas9 targets DNA using a guide RNA containing a spacer sequence that
+hybridizes to the target DNA site<sup><xref rid="R2" ref-type="bibr">2</xref>–<xref rid="R4" ref-type="bibr">4</xref>,<xref rid="R20" ref-type="bibr">20</xref>,<xref rid="R21" ref-type="bibr">21</xref></sup>. We envisioned engineering guide RNAs that both specify the
+DNA target and contain new genetic information that replaces target DNA
+nucleotides. To transfer information from these engineered guide RNAs to target
+DNA, we proposed that genomic DNA, nicked at the target site to expose a
+3’-hydroxyl group, could be used to prime the reverse transcription of an
+edit-encoding extension on the engineered guide RNA (hereafter referred to as
+the prime editing guide RNA, or pegRNA) directly into the target site (<xref rid="F1" ref-type="fig">Fig. 1b</xref>,<xref rid="F1" ref-type="fig">c</xref>, <xref rid="SD2" ref-type="supplementary-material">Supplementary
+Discussion</xref>).</p><p id="P8">These initial steps result in a branched intermediate with two redundant
+single-stranded DNA flaps: a 5’ flap that contains the unedited DNA
+sequence, and a 3’ flap that contains the edited sequence copied from the
+pegRNA (<xref rid="F1" ref-type="fig">Fig. 1c</xref>). While hybridization of
+the perfectly complementary 5’ flap to the unedited strand is likely to
+be thermodynamically favored, 5’ flaps are the preferred substrate for
+structure-specific endonucleases such as FEN1<sup><xref rid="R22" ref-type="bibr">22</xref></sup>, which excises 5’ flaps generated
+during lagging-strand DNA synthesis and long-patch base excision repair.
+Alternatively, the redundant unedited DNA may be removed by 5’
+exonucleases such as EXO1<sup><xref rid="R23" ref-type="bibr">23</xref></sup>.
+We reasoned that preferential 5’ flap excision and 3’ flap
+ligation could drive the incorporation of the edited DNA strand, creating
+heteroduplex DNA containing one edited strand and one unedited strand (<xref rid="F1" ref-type="fig">Fig. 1c</xref>). DNA repair to resolve the
+heteroduplex by copying the information in the edited strand to the
+complementary strand would permanently install the edit (<xref rid="F1" ref-type="fig">Fig. 1c</xref>). Based on a similar strategy we developed to
+favorably resolve heteroduplex DNA during base editing<sup><xref rid="R16" ref-type="bibr">16</xref>–<xref rid="R18" ref-type="bibr">18</xref></sup>, we hypothesized that nicking the non-edited DNA strand
+might bias DNA repair to preferentially replace the non-edited strand.</p></sec><sec id="S3"><title>Validation in vitro and in yeast</title><p id="P9">First, we tested if the 3’ end of the PAM-containing DNA strand
+cleaved by Cas9’s RuvC nuclease domain is sufficiently accessible to
+prime reverse transcription. We designed pegRNAs by adding to sgRNAs a primer
+binding site (PBS) that allows the 3’ end of the nicked DNA strand to
+hybridize to the pegRNA, and a RT template containing the desired edit (<xref rid="F1" ref-type="fig">Fig. 1c</xref>). We constructed candidate pegRNAs by
+extending sgRNAs on either end with a PBS sequence (5-6 nucleotides, nt) and an
+RT template (7-22 nt), and confirmed that 5’-extended pegRNAs support
+Cas9 binding to target DNA <italic toggle="yes">in vitro</italic>, and that both
+5’-extended and 3’-extended pegRNAs support Cas9-mediated DNA
+nicking <italic toggle="yes">in vitro</italic> and DNA cleavage in mammalian cells (<xref rid="F6" ref-type="fig">Extended Data Fig. 1a</xref>–<xref rid="F6" ref-type="fig">c</xref>). Next, we tested the compatibility of these
+candidate pegRNAs with reverse transcription using pre-nicked
+5’-Cy5-labeled dsDNA substrates, catalytically dead Cas9 (dCas9), and a
+commercial Moloney murine leukemia virus (M-MLV) RT variant (<xref rid="F6" ref-type="fig">Extended Data Fig. 1d</xref>). When all components were
+present, the labeled DNA strand was efficiently converted into longer DNA
+products with gel mobilities consistent with reverse transcription along the RT
+template (<xref rid="F1" ref-type="fig">Fig. 1d</xref>, <xref rid="F6" ref-type="fig">Extended Data Fig. 1d</xref>–<xref rid="F6" ref-type="fig">e</xref>). Omission of dCas9 led to nick translation products
+from RT-mediated DNA polymerization on the DNA template, with no pegRNA
+information transfer. No DNA polymerization products were observed when the
+pegRNA was replaced by a conventional sgRNA (<xref rid="F1" ref-type="fig">Fig.
+1d</xref>). These results demonstrate that nicked DNA exposed by dCas9 is
+competent to prime reverse transcription from a pegRNA.</p><p id="P10">Next, we tested non-nicked dsDNA substrates with a Cas9 H840A nickase
+that nicks the PAM-containing strand<sup><xref rid="R2" ref-type="bibr">2</xref></sup>. In these reactions, 5’-extended pegRNAs generated
+reverse transcription products inefficiently (<xref rid="F6" ref-type="fig">Extended Data Fig. 1f</xref>), but 3’-extended pegRNAs enabled
+efficient Cas9 nicking and reverse transcription (<xref rid="F1" ref-type="fig">Fig. 1e</xref>). The use of 3’-extended pegRNAs generated only a
+single apparent product, despite the theoretical possibility that reverse
+transcription could terminate anywhere within the pegRNA. DNA sequencing of
+reactions with Cas9 nickase, RT, and 3’-extended pegRNAs revealed that
+the complete RT template sequence was reverse transcribed into the DNA substrate
+(<xref rid="F6" ref-type="fig">Extended Data Fig. 1g</xref>). These
+experiments establish that 3’-extended pegRNAs can direct Cas9 nickase
+and template reverse transcription <italic toggle="yes">in vitro</italic>.</p><p id="P11">To evaluate eukaryotic cell DNA repair outcomes of 3’ flaps
+produced by pegRNA-programmed reverse transcription <italic toggle="yes">in vitro</italic>,
+we performed <italic toggle="yes">in vitro</italic> prime editing on reporter plasmids, then
+transformed the reaction products into yeast cells (<xref rid="F7" ref-type="fig">Extended Data Fig. 2</xref>). We constructed reporter
+plasmids encoding EGFP and mCherry separated by a linker containing an in-frame
+stop codon, +1 frameshift, or −1 frameshift. When plasmids were edited
+<italic toggle="yes">in vitro</italic> with Cas9 nickase, RT, and 3’-extended
+pegRNAs encoding a transversion that corrects the premature stop codon, 37% of
+yeast transformants expressed both GFP and mCherry (<xref rid="F1" ref-type="fig">Fig. 1f</xref>, <xref rid="F7" ref-type="fig">Extended Data
+Fig. 2</xref>). Editing reactions with 5’-extended pegRNAs yielded
+fewer GFP and mCherry double-positive colonies (9%). Productive editing was also
+observed using 3’-extended pegRNAs that insert a single nucleotide (15%)
+or delete a single nucleotide (29%) to correct frameshift mutations (<xref rid="F1" ref-type="fig">Fig. 1f</xref>, <xref rid="F7" ref-type="fig">Extended Data Fig. 2</xref>). These results demonstrate that DNA repair in
+eukaryotic cells can resolve 3’ DNA flaps from prime editing to
+incorporate precise transversions, insertions, and deletions.</p></sec><sec id="S4"><title>Prime editor 1 (PE1)</title><p id="P12">Encouraged by these observations, we sought to develop a prime editing
+system with a minimum number of components capable of editing genomic DNA in
+mammalian cells. We transfected HEK293T cells with one plasmid encoding a fusion
+of wild-type M-MLV RT through a flexible linker to either terminus of Cas9 H840A
+nickase, and a second plasmid encoding a pegRNA (<xref rid="F8" ref-type="fig">Extended Data Fig. 3a</xref>). Initial attempts led to no detectable
+editing.</p><p id="P13">Extension of the PBS in the pegRNA to 8-15 bases, however, led to
+detectable installation of a transversion at the HEK293 site 3 (hereafter
+referred to as <italic toggle="yes">HEK3</italic>) target site, with higher efficiencies when
+the RT was fused to the C-terminus of Cas9 nickase compared to N-terminal
+RT–Cas9 nickase fusions (<xref rid="F8" ref-type="fig">Extended Data Fig.
+3b</xref>). These results suggest that wild-type M-MLV RT fused to Cas9
+requires longer PBS sequences for genome editing in human cells compared to what
+is required <italic toggle="yes">in vitro</italic> using the commercial variant of M-MLV RT
+supplied <italic toggle="yes">in trans</italic>. We designated this M-MLV RT fused to the
+C-terminus of Cas9 H840A nickase as PE1.</p><p id="P14">We tested the ability of PE1 to introduce transversion point mutations
+at four additional genomic sites specified by the pegRNA (<xref rid="F2" ref-type="fig">Fig. 2a</xref>). Editing efficiency at these sites was
+dependent on PBS length, with maximal editing efficiencies reaching 0.7-5.5%
+(<xref rid="F2" ref-type="fig">Fig. 2a</xref>). Indels from PE1 were
+minimal, averaging 0.2±0.1% for the five sites under conditions that
+maximized each site’s editing efficiency (<xref rid="F8" ref-type="fig">Extended Data Fig. 3a</xref>–<xref rid="F8" ref-type="fig">f</xref>). PE1 also mediated targeted insertions and deletions with 4-17%
+efficiency at the <italic toggle="yes">HEK3</italic> locus (<xref rid="F2" ref-type="fig">Fig. 2a</xref>). These findings establish the ability of PE1 to directly
+install targeted transversions, insertions, and deletions without requiring DSBs
+or DNA templates.</p></sec><sec id="S5"><title>Prime editor 2 (PE2)</title><p id="P15">We hypothesized that engineering the RT in PE1 might improve the
+efficiency of DNA synthesis during prime editing. M-MLV RT mutations that
+increase thermostability<sup><xref rid="R24" ref-type="bibr">24</xref>,<xref rid="R25" ref-type="bibr">25</xref></sup>, processivity<sup><xref rid="R24" ref-type="bibr">24</xref></sup>, and DNA:RNA substrate
+affinity<sup><xref rid="R26" ref-type="bibr">26</xref></sup>, and that
+inactivate RNaseH activity<sup><xref rid="R27" ref-type="bibr">27</xref></sup>
+have been reported. We constructed 19 PE1 variants containing a variety of RT
+mutations to evaluate their editing efficiency in human cells.</p><p id="P16">First, we investigated M-MLV RT variants that support reverse
+transcription at elevated temperatures<sup><xref rid="R24" ref-type="bibr">24</xref></sup>. Introduction of D200N+L603W+T330P into M-MLV RT,
+hereafter referred to as M3, led to a 6.8-fold average increase in transversion
+and insertion editing efficiency across five genomic loci in HEK293T cells
+compared to PE1 (<xref rid="F9" ref-type="fig">Extended Data Fig. 4</xref>).</p><p id="P17">We tested additional RT mutations that were previously shown to enhance
+binding to template:PBS complex, enzyme processivity, and
+thermostability<sup><xref rid="R26" ref-type="bibr">26</xref></sup>.
+Among the 14 additional mutants analyzed, adding T306K and W313F to M3 improved
+editing efficiency an additional 1.3-fold to 3.0-fold for six transversion or
+insertion edits across five genomic sites (<xref rid="F9" ref-type="fig">Extended Data Fig. 4</xref>). This pentamutant RT incorporated into PE1
+(Cas9 H840A–M-MLV RT D200N+L603W+T330P+T306K+W313F) is hereafter referred
+to as PE2.</p><p id="P18">PE2 installs single-nucleotide transversion, insertion, and deletion
+mutations with substantially higher efficiency than PE1, and is compatible with
+shorter PBS sequences, consistent with enhanced engagement of transient genomic
+DNA:PBS complexes (<xref rid="F2" ref-type="fig">Fig. 2a</xref>). On average,
+PE2 led to a 1.6- to 5.1-fold improvement in prime editing point mutation
+efficiency over PE1. PE2 also performed targeted insertions and deletions more
+efficiently than PE1 (<xref rid="F2" ref-type="fig">Fig. 2a</xref>, <xref rid="F9" ref-type="fig">Extended Data Fig. 4d</xref>).</p></sec><sec id="S6"><title>Optimization of pegRNAs</title><p id="P19">We systematically probed the relationship between pegRNA structure and
+PE2 editing efficiency. Priming regions with lower G/C content generally
+required longer PBS sequences, consistent with the energetic requirements of
+hybridization of the nicked DNA strand to the pegRNA PBS (<xref rid="F2" ref-type="fig">Fig. 2a</xref>). No PBS length or G/C content level was
+strictly predictive of editing efficiency, suggesting that other factors such as
+DNA primer or RT template secondary structure also influence editing activity.
+We recommend starting with a PBS length of ~13 nt, and testing different
+PBS lengths if the priming region deviates from ~40-60% G/C.</p><p id="P20">Next, we systematically evaluated pegRNAs with RT templates 10-20 nt at
+five genomic target sites using PE2 (<xref rid="F2" ref-type="fig">Fig.
+2b</xref>), and with RT templates up to 31 nt at three genomic sites (<xref rid="F10" ref-type="fig">Extended Data Fig. 5a</xref>–<xref rid="F10" ref-type="fig">c</xref>). As with PBS length, RT template length also could
+be varied to maximize prime editing efficiency, although many RT template
+lengths ≥10 nt perform comparably. Since some target sites preferred
+longer RT templates (&gt;15 nt) (<italic toggle="yes">FANCF</italic>,
+<italic toggle="yes">EMX1</italic>), while other loci preferred shorter RT templates
+(<italic toggle="yes">HEK3</italic>, <italic toggle="yes">HEK4</italic> (HEK293 site 4)) (<xref rid="F2" ref-type="fig">Fig. 2b</xref>), we recommend starting with
+~10-16 nt and testing shorter and longer RT templates during pegRNA
+optimization.</p><p id="P21">Importantly, RT templates that place a C adjacent to the 3’
+hairpin of the sgRNA scaffold generally resulted in lower editing efficiency
+(<xref rid="F10" ref-type="fig">Extended Data Fig. 5a</xref>–<xref rid="F10" ref-type="fig">c</xref>). We speculate that a C as the first
+nucleotide of the 3’ extension can disrupt guide RNA structure by pairing
+with G81, which normally forms a pi stack with Y1356 in Cas9 and a non-canonical
+base pair with sgRNA A68<sup><xref rid="R28" ref-type="bibr">28</xref></sup>.
+Since many RT template lengths support prime editing, we recommend designing
+pegRNAs such that the first base of the 3’ extension is not C.</p></sec><sec id="S7"><title>Prime editor 3 systems (PE3, PE3b)</title><p id="P22">Resolution of heteroduplex DNA from PE2 containing one edited and one
+non-edited strand determines long-term editing outcomes. Previously, to optimize
+base editing we used Cas9 nickase to nick the non-edited strand, directing DNA
+repair to that strand using the edited strand as a template<sup><xref rid="R16" ref-type="bibr">16</xref>–<xref rid="R18" ref-type="bibr">18</xref></sup>. To apply this strategy to enhance prime editing, we
+tested nicking the non-edited strand using the Cas9 H840A nickase already
+present in PE2 and a simple sgRNA (<xref rid="F3" ref-type="fig">Fig.
+3a</xref>). Since the edited DNA strand is also nicked to initiate prime
+editing, we tested a variety of non-edited strand nick locations to minimize
+DSBs that lead to indels.</p><p id="P23">We first tested this strategy, designated PE3, at five genomic sites in
+HEK293T cells using sgRNAs that induce nicks 14-116 nt away from the site of the
+pegRNA-induced nick. In four of the five sites tested, nicking the non-edited
+strand increased editing efficiency by 1.5- to 4.2-fold compared to PE2, to as
+high as 55% (<xref rid="F3" ref-type="fig">Fig. 3b</xref>). While the optimal
+nicking position varied depending on the genomic site (<xref rid="SD2" ref-type="supplementary-material">Supplementary Discussion</xref>), nicks
+positioned 3’ of the edit ~40-90 bp from the pegRNA-induced nick
+generally increased editing efficiency (averaging 41%) without excess indel
+formation (6.8% average indels for the sgRNA resulting in the highest editing
+efficiency) (<xref rid="F3" ref-type="fig">Fig. 3b</xref>). We recommend
+starting with non-edited strand nicks ~50 bp from the pegRNA-mediated
+nick, and testing alternative nick locations if indel frequencies exceed
+acceptable levels.</p><p id="P24">Nicking the non-edited strand only <italic toggle="yes">after</italic> edited strand
+flap resolution should minimize the presence of concurrent nicks, minimizing DSB
+and indel formation. To achieve this goal, we designed sgRNAs with spacers that
+match the edited strand, but not the original allele. Using this
+“PE3b” strategy, mismatches between the spacer and the unedited
+allele should disfavor sgRNA nicking until after editing of the PAM strand takes
+place. PE3b resulted in 13-fold lower average indels (0.74%) compared to PE3,
+without any evident decrease in editing efficiency (<xref rid="F3" ref-type="fig">Fig. 3c</xref>). When the edit lies within a second
+protospacer, we recommend the PE3b approach.</p><p id="P25">Together, these findings establish that PE3 systems improve editing
+efficiencies ~3-fold compared with PE2, albeit with a higher range of
+indels than PE2. When it is possible to nick the non-edited strand with an sgRNA
+that requires editing before nicking, the PE3b system offers PE3-like editing
+levels while greatly reducing indel formation.</p><p id="P26">To demonstrate the targeting scope and versatility of prime editing with
+PE3, we performed all 24 possible single-nucleotide substitutions across the +1
+to +8 positions (counting the first base 3’ of the pegRNA-induced nick as
+position +1) of the <italic toggle="yes">HEK3</italic> target site using PE3 and pegRNAs with
+10-nt RT templates (<xref rid="F4" ref-type="fig">Fig. 4a</xref>). These 24
+edits collectively cover all 12 possible transition and transversion mutations,
+and proceeded with editing efficiencies (containing no indels) averaging
+33±7.9%, with 7.5±1.8% average indels.</p><p id="P27">Importantly, long-distance RT templates can also give rise to efficient
+prime editing. Using PE3 with a 34-nt RT template, we installed point mutations
+at positions +12, +14, +17, +20, +23, +24, +26, +30, and +33 in the
+<italic toggle="yes">HEK3</italic> locus with 36±8.7% average efficiency and
+8.6±2.0% indels (<xref rid="F4" ref-type="fig">Fig. 4b</xref>). Other RT
+templates ≥30 nt at three other genomic sites also support prime editing
+(<xref rid="F10" ref-type="fig">Extended Data Fig. 5a</xref>–<xref rid="F10" ref-type="fig">c</xref>). Since an NGG PAM on either DNA strand
+occurs on average every ~8 bp, far less than edit-to-PAM distances that
+support efficient prime editing, prime editing is not substantially constrained
+by the availability of a nearby PAM sequence, in contrast to other precision
+editing methods<sup><xref rid="R11" ref-type="bibr">11</xref>,<xref rid="R15" ref-type="bibr">15</xref>,<xref rid="R16" ref-type="bibr">16</xref></sup>. Given the presumed relationship between RNA secondary
+structure and prime editing efficiency, when designing pegRNAs for long-range
+edits we recommend testing RT templates of various lengths and, if necessary,
+sequence compositions (<italic toggle="yes">e.g</italic>., using synonymous codons).</p><p id="P28">To further test the scope and limitations of PE3 for introducing point
+mutations, we tested 72 additional edits covering all possible types of point
+mutations across six additional genomic target sites (<xref rid="F4" ref-type="fig">Fig. 4c</xref>–<xref rid="F4" ref-type="fig">e</xref>,
+<xref rid="F10" ref-type="fig">Extended Data Fig. 5d</xref>–<xref rid="F10" ref-type="fig">f</xref>). Editing efficiency averaged
+25±14%, while indel formation averaged 8.3±7.5%. Since the pegRNA
+RT template includes the PAM sequence, prime editing can induce PAM sequence
+changes. In these cases, we observed higher editing efficiency (averaging
+39±9.7%) and lower indel generation (averaging 5.0±2.9%) (<xref rid="F4" ref-type="fig">Fig. 4</xref>, mutations at +5 or +6), potentially
+due to the inability of Cas9 nickase to re-bind and nick the edited strand prior
+to the repair of the complementary strand. We recommend editing the PAM, in
+addition to other desired changes, whenever possible.</p><p id="P29">Next, we performed 28 targeted small insertions and small deletions at
+seven genomic sites using PE3 (<xref rid="F4" ref-type="fig">Fig. 4f</xref>).
+Targeted 1-bp and 3-bp insertions proceeded with an average efficiency of
+32±9.8% and 39±16%, respectively. Targeted 1-bp and 3-bp deletions
+were also efficient, averaging 29±14% and 32±11% editing,
+respectively. Indel generation (beyond the target insertion or deletion)
+averaged 6.8±5.4%. Since insertions and deletions between positions +1
+and +6 alter PAM location or structure, we speculate that insertions or
+deletions at these positions are more efficient by preventing re-engagement of
+the edited strand.</p><p id="P30">We also tested PE3 for its ability to mediate larger precise deletions
+of 5 bp to 80 bp at the <italic toggle="yes">HEK3</italic> site (<xref rid="F4" ref-type="fig">Fig. 4g</xref>). We observed very high editing efficiencies
+(52-78%) for precise 5-, 10-, 15-, 25-, and 80-bp deletions, with indels
+averaging 11±4.8%. Finally, we tested the ability of PE3 to mediate 12
+combinations of insertions, deletions, and/or point mutations across three
+genomic sites. These combination edits were also very efficient, averaging 55%
+editing with 6.4% indels (<xref rid="F4" ref-type="fig">Fig. 4h</xref>).
+Together, the 156 distinct edits in <xref rid="F4" ref-type="fig">Fig. 4</xref>
+and <xref rid="F10" ref-type="fig">Extended Data Fig. 5d</xref>–<xref rid="F10" ref-type="fig">f</xref> establish the versatility, precision, and
+targeting flexibility of PE3 systems.</p></sec><sec id="S8"><title>Prime editing compared with base editing</title><p id="P31">Cytidine base editors (CBEs) and adenine base editors (ABEs) can install
+transition mutations efficiently and with few indels<sup><xref rid="R16" ref-type="bibr">16</xref>–<xref rid="R18" ref-type="bibr">18</xref></sup>. The application of base editing can be limited by
+unwanted bystander edits from the presence of multiple cytidine or adenine bases
+within the base editing activity window<sup><xref rid="R16" ref-type="bibr">16</xref>–<xref rid="R18" ref-type="bibr">18</xref>,<xref rid="R29" ref-type="bibr">29</xref></sup>, or by the absence of a PAM
+positioned ~15±2 nt from the target nucleotide<sup><xref rid="R16" ref-type="bibr">16</xref>,<xref rid="R30" ref-type="bibr">30</xref></sup>. We anticipated that prime editing could complement base
+editing when bystander edits are unacceptable, or when the target site lacks a
+suitably positioned PAM.</p><p id="P32">We compared PEs and CBEs at three genomic loci that contain multiple
+target cytosines in the canonical base editing window (protospacer positions
+4-8, counting the PAM as positions 21-23) using current-generation
+CBEs<sup><xref rid="R31" ref-type="bibr">31</xref></sup> without or with
+nickase activity (BE2max and BE4max, respectively), or using analogous PE2 and
+PE3 prime editing systems. Among the nine total cytosines within the base
+editing windows of the three sites, BE4max yielded 2.2-fold higher average total
+C•G-to-T•A conversion than PE3 for bases in the center of the base
+editing window (protospacer positions 5-7, <xref rid="F11" ref-type="fig">Extended Data Fig. 6a</xref>). However, PE3 outperformed BE4max by 2.7-fold
+at cytosines positioned outside the center of the base editing window. Overall,
+indel frequencies for PE2 were very low (averaging 0.86±0.47%), and for
+PE3 were similar to or modestly higher than that of BE4max (PE3: 2.5-21%;
+BE4max: 2.5-14%) (<xref rid="F11" ref-type="fig">Extended Data Fig.
+6b</xref>).</p><p id="P33">For installation of <italic toggle="yes">precise</italic> edits (with no bystander
+editing), the efficiency of prime editing greatly exceeded that of base editing
+at the above sites, which like most genomic DNA sites contain multiple cytosines
+within the base editing window. BE4max generated few products containing only
+the single target base pair conversion with no bystander edits. In contrast,
+prime editing at this site could be used to selectively install a
+C•G-to-T•A edit at any position or combination of positions (<xref rid="F11" ref-type="fig">Extended Data Fig. 6c</xref>).</p><p id="P34">We also compared nicking and non-nicking adenine base editors (ABEs)
+with PE3 and PE2, with similar results (<xref rid="F11" ref-type="fig">Extended
+Data Fig. 6d</xref>–<xref rid="F11" ref-type="fig">f</xref>, <xref rid="SD2" ref-type="supplementary-material">Supplementary
+Discussion</xref>). Collectively, these results indicate that base editing and
+prime editing offer complementary strengths and weaknesses for making targeted
+transition mutations. When a single target nucleotide is present within the base
+editing window, or when bystander edits are acceptable, current base editors are
+typically more efficient and generate fewer indels than prime editors. When
+multiple cytosines or adenines are present and bystander edits are undesirable,
+or when PAMs that position target nucleotides for base editing are not
+available, prime editors offer substantial advantages.</p></sec><sec id="S9"><title>Off-target prime editing</title><p id="P35">Prime editing requires target DNA:pegRNA spacer complementary for the
+Cas9 domain to bind, target DNA:pegRNA PBS complementarity to initiate
+pegRNA-templated reverse transcription, and target DNA:RT product
+complementarity for flap resolution. To test if these three distinct DNA
+hybridization steps reduce off-target prime editing compared to editing methods
+that only require target:guide RNA complementarity, we treated HEK293T cells
+with PE3 or PE2 and 16 total pegRNAs that target four genomic loci, each of
+which have at least four well-characterized Cas9 off-target sites<sup><xref rid="R32" ref-type="bibr">32</xref>,<xref rid="R33" ref-type="bibr">33</xref></sup>. We also treated cells with Cas9 nuclease and the same
+16 pegRNAs, or with Cas9 and four sgRNAs targeting the same four protospacers
+(<xref rid="SD2" ref-type="supplementary-material">Supplementary Table
+1</xref>).</p><p id="P36">Consistent with previous studies<sup><xref rid="R32" ref-type="bibr">32</xref></sup>, Cas9 and sgRNAs targeting <italic toggle="yes">HEK3</italic>,
+<italic toggle="yes">HEK4</italic>, <italic toggle="yes">EMX1</italic>, and <italic toggle="yes">FANCF</italic>
+modified the top four known Cas9 off-target loci for each sgRNA with an average
+frequency of 16±16%, 60±26%, 48±28%, and 4.3±5.6%,
+respectively (<xref rid="F11" ref-type="fig">Extended Data Fig. 6g</xref>). Cas9
+with pegRNAs modified on-target sites with similar efficiency as Cas9+sgRNAs,
+while Cas9+pegRNAs modified off-target sites at 4.4-fold lower average
+efficiency than Cas9+sgRNAs.</p><p id="P37">Strikingly, PE3 or PE2 with the same 16 pegRNAs containing these four
+target spacers resulted in detectable off-target editing at only 3/16 off-target
+sites, with only 1/16 showing off-target editing efficiency ≥1% (<xref rid="F11" ref-type="fig">Extended Data Fig. 6h</xref>). Average off-target
+prime editing for pegRNAs targeting <italic toggle="yes">HEK3</italic>,
+<italic toggle="yes">HEK4</italic>, <italic toggle="yes">EMX1</italic>, and <italic toggle="yes">FANCF</italic> at the
+top four known Cas9 off-target sites for each protospacer was &lt;0.1%,
+&lt;2.2±5.2%, &lt;0.1%, and &lt;0.13±0.11%,
+respectively (<xref rid="F11" ref-type="fig">Extended Data Fig. 6h</xref>).
+Notably, at the <italic toggle="yes">HEK4</italic> off-target 3 site that Cas9+pegRNA1 edits
+with 97% efficiency, PE2+pegRNA1 results in only 0.2% off-target editing despite
+sharing the same pegRNA, demonstrating how the two additional hybridization
+events required for prime editing can greatly reduce off-target modification.
+Taken together, these results suggest that prime editing induces much lower
+off-target editing than Cas9 at known Cas9 off-target sites.</p><p id="P38">Reverse transcription of 3’-extended pegRNAs in principle can
+proceed into the guide RNA scaffold, resulting in scaffold sequence insertion
+that contributes to indels at the target locus. We analyzed 66 PE3 editing
+experiments at four loci in HEK293T cells and observed 1.7±1.5% average
+total insertion of any number of pegRNA scaffold nucleotides (<xref rid="F12" ref-type="fig">Extended Data Fig. 7</xref>). We speculate that
+inaccessibility of the guide RNA scaffold to reverse transcription due to Cas9
+domain binding, and cellular excision of the mismatched 3’ end of
+3’ flaps that extend into the pegRNA scaffold, minimize products that
+incorporate pegRNA scaffold nucleotides.</p><p id="P39">The presence of endogenous human reverse transcriptases from
+retroelements<sup><xref rid="R34" ref-type="bibr">34</xref></sup> and
+telomerase suggests RT activity is not inherently toxic to human cells. Indeed,
+we observed no differences in HEK293T cell viability expressing dCas9, Cas9
+H840A nickase, PE2, or PE2 with R110S+K103L mutations (PE2-dRT) that inactivate
+RT and abolish prime editing<sup><xref rid="R35" ref-type="bibr">35</xref></sup>
+(<xref rid="F13" ref-type="fig">Extended Data Fig. 8a</xref>,<xref rid="F13" ref-type="fig">b</xref>). To evaluate cellular transcriptome changes from
+prime editing, we performed RNA-seq on HEK293T cells expressing PE2, PE2-dRT, or
+Cas9 H840A nickase together with a <italic toggle="yes">PRNP</italic>-targeting or
+<italic toggle="yes">HEXA</italic>-targeting pegRNA (<xref rid="F13" ref-type="fig">Extended Data Fig. 8c</xref>–<xref rid="F13" ref-type="fig">k</xref>), and observed that active PE2 minimally perturbs the transcriptome
+relative to Cas9 nickase or a control lacking active RT (<xref rid="SD2" ref-type="supplementary-material">Supplementary Discussion</xref>).</p></sec><sec id="S10"><title>Prime editing pathogenic mutations</title><p id="P40">We tested the ability of PE3 to directly install or correct in human
+cells transversion, insertion, and deletion mutations that cause genetic
+diseases. Sickle cell disease is caused by a A•T-to-T•A
+transversion mutation in <italic toggle="yes">HBB</italic>, resulting in an E6V mutation in
+beta-globin (<xref rid="SD2" ref-type="supplementary-material">Supplementary
+Discussion</xref>). We used PE3 to install the <italic toggle="yes">HBB</italic> E6V
+mutation in HEK293T cells with 44% efficiency and 4.8% indels (<xref rid="F5" ref-type="fig">Fig. 5a</xref>) and isolated from a single prime editing
+experiment six HEK293T cell lines that are homozygous (triploid) for the
+<italic toggle="yes">HBB</italic> E6V allele (<xref rid="SD2" ref-type="supplementary-material">Supplementary Note 1</xref>). To correct
+the <italic toggle="yes">HBB</italic> E6V allele to wild-type <italic toggle="yes">HBB</italic>, we
+treated homozygous <italic toggle="yes">HBB</italic> E6V HEK293T cells with PE3 and a pegRNA
+programmed to directly revert the <italic toggle="yes">HBB</italic> E6V mutation to wild-type
+<italic toggle="yes">HBB</italic>. All 14 tested pegRNAs mediated efficient correction of
+<italic toggle="yes">HBB</italic> E6V to wild-type <italic toggle="yes">HBB</italic> (26-52%
+efficiency), and indel levels averaging 2.8±0.70% (<xref rid="F14" ref-type="fig">Extended Data Fig. 9a</xref>). Introduction of a
+PAM-modifying silent mutation improved editing efficiency and product purity to
+58% correction with 1.4% indels (<xref rid="F5" ref-type="fig">Fig.
+5a</xref>).</p><p id="P41">The most common mutation that causes Tay-Sachs disease is a 4-bp
+insertion in <italic toggle="yes">HEXA</italic> (<italic toggle="yes">HEXA 1278+TATC</italic>). We used
+PE3 to install this 4-bp insertion into <italic toggle="yes">HEXA</italic> with 31%
+efficiency and 0.8% indels (<xref rid="F5" ref-type="fig">Fig. 5b</xref>), and
+isolated two HEK293T cell lines that are homozygous for <italic toggle="yes">HEXA
+1278+TATC</italic> (<xref rid="SD2" ref-type="supplementary-material">Supplementary Note 1</xref>). We used these cells to test 43 pegRNAs and
+three nicking sgRNAs with PE3 or PE3b systems for correction of the pathogenic
+insertion in <italic toggle="yes">HEXA</italic> (<xref rid="F14" ref-type="fig">Extended Data
+Fig. 9b</xref>). Nineteen of the 43 pegRNAs tested resulted in ≥20%
+editing. Correction to wild-type <italic toggle="yes">HEXA</italic> with the best pegRNA
+proceeded with 33% efficiency with 0.32% indels using PE3b (<xref rid="F5" ref-type="fig">Fig. 5b</xref> and <xref rid="F14" ref-type="fig">Extended
+Data Fig. 9b</xref>).</p><p id="P42">Finally, we used PE3 to install a protective G•C-to-T•A
+transversion (G127V) into <italic toggle="yes">PRNP</italic> in HEK293T cells, introducing a
+G127V mutant allele that confers resistance to prion disease in humans<sup><xref rid="R36" ref-type="bibr">36</xref></sup> and mice<sup><xref rid="R37" ref-type="bibr">37</xref></sup> (<xref rid="SD2" ref-type="supplementary-material">Supplementary Discussion</xref>). We
+evaluated four pegRNAs and three nicking sgRNAs. The most effective pegRNA with
+PE3 resulted in 53% installation of G127V, with 1.7% indels (<xref rid="F5" ref-type="fig">Fig. 5c</xref>). Taken together, these results establish the
+ability of prime editing in human cells to install or correct transversion,
+insertion, or deletion mutations that cause or confer resistance to disease
+efficiently, and with few byproducts.</p></sec><sec id="S11"><title>Other cell lines and primary neurons</title><p id="P43">Next, we tested prime editing at endogenous sites in three additional
+human cell lines (<xref rid="F15" ref-type="fig">Extended Data Fig. 10a</xref>,
+<xref rid="SD2" ref-type="supplementary-material">Supplementary
+Discussion</xref>). In K562 cells, PE3 achieved three transversion edits and
+a 6xHis tag insertion with 15-30% editing efficiency and 0.85-2.2% indels (<xref rid="F15" ref-type="fig">Extended Data Fig. 10a</xref>). In U2OS cells, we
+installed transversion mutations, as well as a 3-bp insertion and 6xHis tag
+insertion, with 7.9-22% editing efficiency and 0.13-2.2% indels (<xref rid="F15" ref-type="fig">Extended Data Fig. 10a</xref>). Finally, in HeLa cells we
+performed a 3-bp insertion with 12% average efficiency and 1.3% indels (<xref rid="F15" ref-type="fig">Extended Data Fig. 10a</xref>). Collectively, these
+data indicate that cell lines beyond HEK293T support prime editing, although
+editing efficiencies vary by cell type and are generally less efficient than in
+HEK293T cells. Editing:indel ratios remained favorable in all tested human cell
+lines.</p><p id="P44">To determine if prime editing is possible in post-mitotic, terminally
+differentiated primary cells, we transduced primary cortical neurons from E18.5
+mice with a PE3 lentiviral delivery system in which PE2 protein components are
+expressed from the neuron-specific synapsin promoter<sup><xref rid="R38" ref-type="bibr">38</xref></sup> along with a GFP marker (<xref rid="S15" ref-type="sec">Methods</xref>). Nuclei were isolated two weeks after
+transduction and sequenced directly, or sorted for GFP expression before
+sequencing. We observed 7.1% average prime editing of <italic toggle="yes">DNMT1</italic>
+with 0.58% average indels in sorted cortical neuron nuclei (<xref rid="F5" ref-type="fig">Fig. 5d</xref>). Cas9 nuclease in the same lentivirus system
+resulted in 31% average indels among sorted nuclei (<xref rid="F5" ref-type="fig">Fig. 5d</xref>). These data indicate that post-mitotic,
+terminally differentiated primary cells can support prime editing.</p></sec><sec id="S12"><title>Prime editing compared with HDR</title><p id="P45">Finally, we compared the performance of PE3 with that of optimized
+Cas9-initiated HDR<sup><xref rid="R11" ref-type="bibr">11</xref>,<xref rid="R14" ref-type="bibr">14</xref></sup> in mitotic cell lines that support
+HDR<sup><xref rid="R14" ref-type="bibr">14</xref></sup>. We treated
+HEK293T, HeLa, K562 and U2OS cells with Cas9 nuclease, an sgRNA, and a ssDNA
+donor template designed to install a variety of transversion and insertion edits
+(<xref rid="F5" ref-type="fig">Fig. 5e</xref>,<xref rid="F5" ref-type="fig">f</xref>, <xref rid="F15" ref-type="fig">Extended Data Fig. 10</xref>).
+Cas9-initiated HDR in all cases successfully installed the desired edit, but
+with far higher levels of indel byproducts than with PE3, as expected given that
+Cas9 induces DSBs. In HEK293T cells, the ratio of editing:indels for
+<italic toggle="yes">HBB</italic> E6V installation, <italic toggle="yes">HBB</italic> E6V correction,
+and <italic toggle="yes">PRNP</italic> G127V installation on average was 270-fold higher for
+PE3 than for Cas9-initiated HDR.</p><p id="P46">Comparisons between PE3 and HDR in human cell lines other than HEK293T
+showed similar results, although with lower PE3 editing efficiencies (<xref rid="F5" ref-type="fig">Fig. 5e</xref>,<xref rid="F5" ref-type="fig">f</xref>, <xref rid="SD2" ref-type="supplementary-material">Supplementary
+Discussion</xref>). Collectively, these data indicate that HDR typically
+results in similar or lower editing efficiencies with far higher indels than PE3
+in four cell lines (<xref rid="F15" ref-type="fig">Extended Data Fig.
+10</xref>).</p></sec><sec id="S13"><title>Discussion and future directions</title><p id="P47">The ability to insert arbitrary DNA sequences with single-nucleotide
+precision is an especially enabling prime editing capability. For example, we
+used PE3 in HEK293T cells to precisely insert into <italic toggle="yes">HEK3</italic> a
+His<sub>6</sub> tag (18 bp, 65% efficiency), a FLAG epitope tag (24 bp, 18%
+efficiency), and an extended Cre recombinase <italic toggle="yes">LoxP</italic> site (44 bp,
+23% efficiency) with 3.0-5.9% indels (<xref rid="F5" ref-type="fig">Fig.
+5g</xref>). We anticipate many biotechnological and therapeutic applications
+will be enabled by the ability to efficiently and precisely insert new DNA
+sequences into target sites in living cells.</p><p id="P48">Collectively the prime editing experiments described in this study
+performed 19 insertions up to 44 bp, 23 deletions up to 80 bp, 119 point
+mutations including 83 transversions, and 18 combination edits at 12 endogenous
+loci in the human and mouse genomes at locations ranging from 3 bp upstream to
+29 bp downstream of a PAM without making explicit DSBs. These results establish
+prime editing as a remarkably versatile genome editing method. Because 85-99% of
+insertions, deletions, indels, and duplications in ClinVar are ≤30 bp in
+length (<xref rid="F16" ref-type="fig">Extended Data Fig. 11</xref>), in
+principle prime editing can correct up to ~89% of the 75,122 pathogenic
+human genetic variants in ClinVar (<xref rid="F1" ref-type="fig">Fig.
+1a</xref>).</p><p id="P49">Prime editing offers many possible choices of pegRNA-induced nick
+locations, sgRNA-induced second nick locations, PBS lengths, RT template
+lengths, and which strand to edit first. This flexibility, which contrasts with
+more limited options typically available for other precision editing
+methods<sup><xref rid="R11" ref-type="bibr">11</xref>,<xref rid="R15" ref-type="bibr">15</xref>,<xref rid="R16" ref-type="bibr">16</xref></sup>, allows editing efficiency, product purity, DNA
+specificity, and other parameters to be optimized to suit a given application
+(<xref rid="F14" ref-type="fig">Extended Data Fig. 9</xref>).</p><p id="P50">Much additional research is needed to further understand and improve
+prime editing in a broad range of cell types and organisms, to assess off-target
+prime editing in a genome-wide manner, and to further characterize the extent to
+which prime editors might affect cells. Interfacing prime editing with
+additional <italic toggle="yes">in vitro</italic> and <italic toggle="yes">in vivo</italic> delivery
+strategies is critical to explore the potential of prime editing to enable
+applications including the study and treatment of genetic diseases. By enabling
+precise targeted transitions, transversions, insertions, and deletions in the
+genomes of mammalian cells without requiring DSBs, donor DNA templates, or HDR,
+however, prime editing provides a new “search-and-replace”
+capability that substantially expands the scope of genome editing.</p></sec></sec><sec id="S14"><title>Online Content</title><p id="P51">Methods, along with any additional Extended Data display items, are
+available in the online version of the paper; references unique to these sections
+appear only in the online paper.</p></sec><sec id="S15"><title>Methods</title><sec id="S16"><title>General methods.</title><p id="P52">DNA amplification was conducted by PCR using Phusion U Green Multiplex
+PCR Master Mix (ThermoFisher Scientific) or Q5 Hot Start High-Fidelity 2x Master
+Mix (New England BioLabs) unless otherwise noted. DNA oligonucleotides,
+including Cy5-labeled DNA oligonucleotides, dCas9 protein, and Cas9 H840A
+protein were obtained from Integrated DNA Technologies. Yeast reporter plasmids
+were derived from previously described plasmids<sup><xref rid="R39" ref-type="bibr">39</xref></sup> and cloned by the Gibson assembly
+method. All mammalian editor plasmids used in this work were assembled using the
+USER cloning method as previously described<sup><xref rid="R40" ref-type="bibr">40</xref></sup>. Plasmids expressing sgRNAs were constructed by
+ligation of annealed oligonucleotides into <italic toggle="yes">Bsm</italic>BI-digested
+acceptor vector (Addgene plasmid #65777). Plasmids expressing pegRNAs were
+constructed by Gibson assembly or Golden Gate assembly using a custom acceptor
+plasmid (see <xref rid="SD2" ref-type="supplementary-material">Supplementary
+Note 3</xref>). Sequences of sgRNA and pegRNA constructs used in this work
+are listed in <xref rid="SD2" ref-type="supplementary-material">Supplementary
+Tables 2</xref> and <xref rid="SD2" ref-type="supplementary-material">3</xref>. All vectors for mammalian cell experiments were purified using
+Plasmid Plus Midiprep kits (Qiagen) or PureYield plasmid miniprep kits
+(Promega), which include endotoxin removal steps. All experiments using live
+animals were approved by the Broad Institute Institutional and Animal Care and
+Use Committees. Wild-type C57BL/6 mice were obtained from Charles River
+(#027).</p></sec><sec id="S17"><title><italic toggle="yes">In vitro</italic> biochemical assays.</title><p id="P53">pegRNAs and sgRNAs were transcribed <italic toggle="yes">in vitro</italic> using the
+HiScribe T7 <italic toggle="yes">in vitro</italic> transcription kit (New England Biolabs)
+from PCR-amplified templates containing a T7 promoter sequence. RNA was purified
+by denaturing urea PAGE and quality-confirmed by an analytical gel prior to use.
+5’-Cy5-labeled DNA duplex substrates were annealed using two
+oligonucleotides (Cy5-AVA024 and AVA025; 1:1.1 ratio) for the non-nicked
+substrate or three oligonucleotides (Cy5-AVA023, AVA025 and AVA026; 1:1.1:1.1)
+for the pre-nicked substrate by heating to 95 °C for 3 minutes followed
+by slowly cooling to room temperature (<xref rid="SD2" ref-type="supplementary-material">Supplementary Table 2</xref>). Cas9
+cleavage and reverse transcription reactions were carried out in 1×
+cleavage buffer<sup><xref rid="R41" ref-type="bibr">41</xref></sup> supplemented
+with dNTPs (20 mM HEPES-K, pH 7.5; 100 mM KCl; 5% glycerol; 0.2 mM EDTA, pH 8.0;
+3 mM MgCl<sub>2</sub>; 0.5 mM dNTP mix; 5 mM DTT). dCas9 or Cas9 H840A (5
+μM final) and the sgRNA or pegRNA (5 μM final) were pre-incubated
+at room temperature in a 5 μL reaction mixture for 10 minutes prior to
+the addition of duplex DNA substrate (400 nM final), followed by the addition of
+Superscript III reverse transcriptase (ThermoFisher Scientific), an undisclosed
+M-MLV RT variant, when applicable. Reactions were carried out at 37 °C
+for 1 hour, then diluted to a volume of 10 μL with water, treated with
+0.2 μL of proteinase K solution (20 mg/mL, ThermoFisher Scientific), and
+incubated at room temperature for 30 minutes. Following heat inactivation at 95
+°C for 10 minutes, reaction products were combined with 2x formamide gel
+loading buffer (90% formamide; 10% glycerol; 0.01% bromophenol blue), denatured
+at 95 °C for 5 minutes, and separated by denaturing urea-PAGE gel (15%
+TBE-urea, 55 °C, 200V). DNA products were visualized by Cy5 fluorescence
+signal using a Typhoon FLA 7000 biomolecular imager.</p><p id="P54">Electrophoretic mobility shift assays were carried out in 1×
+binding buffer (1× cleavage buffer + 10 μg/mL heparin) using
+pre-incubated dCas9:sgRNA or dCas9:pegRNA complexes (concentration range between
+5 nM and 1 μM final) and Cy5-labeled duplex DNA (Cy5-AVA024 and AVA025;
+20 nM final). After 15 minutes of incubation at 37 °C, the samples were
+analyzed by native PAGE gel (10% TBE) and imaged for Cy5 fluorescence.</p><p id="P55">For DNA sequencing of reverse transcription products, fluorescent bands
+were excised and purified from urea-PAGE gels, then 3’ tailed with
+terminal transferase (TdT; New England Biolabs) in the presence of dGTP or dATP
+according to the manufacturer’s protocol. Tailed DNA products were
+diluted 10-fold with binding buffer (40% saturated aqueous guanidinium chloride
++ 60% isopropanol) and purified by QIAquick spin column (Qiagen), then used as
+templates for primer extension by Klenow fragment (New England Biolabs) using
+primer AVA134 (A-tailed products) or AVA135 (G-tailed products) (<xref rid="SD2" ref-type="supplementary-material">Supplementary Table 2</xref>). Extensions
+were amplified by PCR for 10 cycles using primers AVA110 and AVA122, then
+sequenced with AVA037 using the Sanger method (<xref rid="SD2" ref-type="supplementary-material">Supplementary Table 2</xref>).</p></sec><sec id="S18"><title>Yeast fluorescent reporter assays.</title><p id="P56">Dual fluorescent reporter plasmids containing an in-frame stop codon, a
++1 frameshift, or a −1 frameshift were subjected to 5’-extended
+pegRNA or 3’-extended pegRNA prime editing reactions <italic toggle="yes">in
+vitro</italic> as described above. Following incubation at 37 °C for
+1 hour, the reactions were diluted with water and plasmid DNA was precipitated
+with 0.3 M sodium acetate and 70% ethanol. Resuspended DNA was transformed into
+<italic toggle="yes">S. cerevisiae</italic> by electroporation as previously
+described<sup><xref rid="R42" ref-type="bibr">42</xref></sup> and plated
+on synthetic complete media without leucine (SC(glucose), L-). GFP and mCherry
+fluorescence signals were visualized from colonies with the Typhoon FLA 7000
+biomolecular imager.</p></sec><sec id="S19"><title>General mammalian cell culture conditions.</title><p id="P57">HEK293T (ATCC CRL-3216), U2OS (ATTC HTB-96), K562 (CCL-243), and HeLa
+(CCL-2) cells were purchased from ATCC and cultured and passaged in
+Dulbecco’s Modified Eagle’s Medium (DMEM) plus GlutaMAX
+(ThermoFisher Scientific), McCoy’s 5A Medium (Gibco), RPMI Medium 1640
+plus GlutaMAX (Gibco), or Eagle’s Minimal Essential Medium (EMEM, ATCC),
+respectively, each supplemented with 10% (v/v) fetal bovine serum (Gibco,
+qualified) and 1× Penicillin Streptomycin (Corning). All cell types were
+incubated, maintained, and cultured at 37 °C with 5% CO<sub>2</sub>. Cell
+lines were authenticated by their respective suppliers and tested negative for
+mycoplasma.</p></sec><sec id="S20"><title>HEK293T tissue culture transfection protocol and genomic DNA
+preparation.</title><p id="P58">HEK293T cells were seeded on 48-well poly-D-lysine coated plates
+(Corning). 16-24 h post-seeding, cells were transfected at approximately 60%
+confluency with 1 μL of Lipofectamine 2000 (Thermo Fisher Scientific)
+according to the manufacturer’s protocols and 750 ng of PE plasmid, 250
+ng of pegRNA plasmid, and 83 ng of sgRNA plasmid (for PE3 and PE3b). Unless
+otherwise stated, cells were cultured 3 days following transfection, after which
+the media was removed, the cells were washed with 1× PBS solution (Thermo
+Fisher Scientific), and genomic DNA was extracted by the addition of 150
+μL of freshly prepared lysis buffer (10 mM Tris-HCl, pH 7.5; 0.05% SDS;
+25 μg/mL Proteinase K (ThermoFisher Scientific)) directly into each well
+of the tissue culture plate. The genomic DNA mixture was incubated at 37
+°C for 1-2 hrs, followed by an 80 °C enzyme inactivation step for
+30 min. Primers used for mammalian cell genomic DNA amplification are listed in
+<xref rid="SD2" ref-type="supplementary-material">Supplementary Table
+4</xref>. For HDR experiments in HEK293T cells, 231 ng of
+nuclease-expression plasmid, 69 ng of sgRNA expression plasmid, 50 ng (1.51
+pmol) 100-nt ssDNA donor template (PAGE-purified; Integrated DNA Technologies)
+was lipofected using 1.4 μL Lipofectamine 2000 (ThermoFisher) per well.
+Genomic DNA from all HDR experiments was purified using the Agencourt DNAdvance
+Kit (Beckman Coulter), according to the manufacturer’s protocol.</p></sec><sec id="S21"><title>High-throughput DNA sequencing of genomic DNA samples.</title><p id="P59">Genomic sites of interest were amplified from genomic DNA samples and
+sequenced on an Illumina MiSeq as previously described with the following
+modifications<sup><xref rid="R17" ref-type="bibr">17</xref>,<xref rid="R18" ref-type="bibr">18</xref></sup>. Briefly, amplification
+primers containing Illumina forward and reverse adapters (<xref rid="SD2" ref-type="supplementary-material">Supplementary Table 4</xref>) were used
+for a first round of PCR (PCR 1) amplifying the genomic region of interest.
+25-μL PCR 1 reactions were performed with 0.5 μM of each forward
+and reverse primer, 1 μL of genomic DNA extract and 12.5 μL of
+Phusion U Green Multiplex PCR Master Mix. PCR reactions were carried out as
+follows: 98 °C for 2 min, then 30 cycles of [98 °C for 10 s, 61
+°C for 20 s, and 72 °C for 30 s], followed by a final 72 °C
+extension for 2 min. Unique Illumina barcoding primer pairs were added to each
+sample in a secondary PCR reaction (PCR 2). Specifically, 25 μL of a
+given PCR 2 reaction contained 0.5 μM of each unique forward and reverse
+Illumina barcoding primer pair, 1 μL of unpurified PCR 1 reaction
+mixture, and 12.5 μL of Phusion U Green Multiplex PCR 2x Master Mix. The
+barcoding PCR 2 reactions were carried out as follows: 98 °C for 2 min,
+then 12 cycles of [98 °C for 10 s, 61 °C for 20 s, and 72
+°C for 30 s], followed by a final 72 °C extension for 2 min. PCR
+products were evaluated analytically by electrophoresis in a 1.5% agarose gel.
+PCR 2 products (pooled by common amplicons) were purified by electrophoresis
+with a 1.5% agarose gel using a QIAquick Gel Extraction Kit (Qiagen), eluting
+with 40 μL of water. DNA concentration was measured by fluorometric
+quantification (Qubit, ThermoFisher Scientific) or qPCR (KAPA Library
+Quantification Kit-Illumina, KAPA Biosystems) and sequenced on an Illumina MiSeq
+instrument according to the manufacturer’s protocols.</p><p id="P60">Sequencing reads were demultiplexed using MiSeq Reporter (Illumina).
+Alignment of amplicon sequences to a reference sequence was performed using
+CRISPResso2<sup><xref rid="R43" ref-type="bibr">43</xref></sup>. For all
+prime editing yield quantification, prime editing efficiency was calculated as:
+% of [# of reads with the desired edit that do not contain indels] ÷ [#
+of total reads]. For quantification of point mutation editing, CRISPResso2 was
+run in standard mode with “discard_indel_reads” on. Prime editing
+for installation of point mutations was then explicitly calculated as:
+[frequency of specified point mutation in non-discarded reads] × [# of
+non-discarded reads] ÷ [total reads]. For insertion or deletion edits,
+CRISPResso2 was run in HDR mode using the desired allele as the expected allele
+(e flag), and with “discard_indel_reads” on. Editing yield was
+calculated as: [# of HDR aligned reads] ÷ [total reads]. For all
+experiments, indel yields were calculated as: [# of indel-containing reads]
+÷ [total reads].</p></sec><sec id="S22"><title>Nucleofection of U2OS, K562, and HeLa cells.</title><p id="P61">Nucleofection was performed in all experiments using K562, HeLa, and
+U2OS cells. For PE conditions in these cell types, 800ng prime editor-expression
+plasmid, 200ng PEgRNA-expression plasmid, and 83ng nicking plasmid was
+nucleofected in a final volume of 20uL in a 16-well nucleocuvette strip (Lonza).
+For HDR conditions in these three cell types, 350 ng nuclease-expression
+plasmid, 150 ng sgRNA-expression plasmid and 200 pmol (6.6 μg) 100-nt
+ssDNA donor template (PAGE-purified; Integrated DNA Technologies) was
+nucleofected in a final volume of 20 μL per sample in a 16-well
+Nucleocuvette strip (Lonza). K562 cells were nucleofected using the SF Cell Line
+4D-Nucleofector X Kit (Lonza) with 5 × 10<sup>5</sup> cells per sample
+(program FF-120), according to the manufacturer’s protocol. U2OS cells
+were nucleofected using the SE Cell Line 4D-Nucleofector X Kit (Lonza) with
+3—4 × 10<sup>5</sup> cells per sample (program DN-100), according
+to the manufacturer’s protocol. HeLa cells were nucleofected using the SE
+Cell Line 4D-Nucleofector X Kit (Lonza) with 2 × 10<sup>5</sup> cells per
+sample (program CN-114), according to the manufacturer’s protocol. Cells
+were harvested 72 hours after nucleofection for genomic DNA extraction.</p></sec><sec id="S23"><title>Genomic DNA extraction for HDR experiments.</title><p id="P62">Genomic DNA from all HDR comparison experiments in HEK293T, HEK293T
+<italic toggle="yes">HBB</italic> E6V, K562, U2OS, and HeLa cells was purified using the
+Agencourt DNAdvance Kit (Beckman Coulter), according to the
+manufacturer’s protocol.</p></sec><sec id="S24"><title>Comparison between PE2, PE3, BE2, BE4max, ABEdmax, and ABEmax.</title><p id="P63">HEK293T cells were seeded on 48-well poly-D-lysine coated plates
+(Corning). After 16-24 h, cells were transfected at approximately 60%
+confluency. For base editing with CBE or ABE constructs, cells were transfected
+with 750 ng of base editor plasmid, 250 ng of sgRNA expression plasmid, and 1
+μL of Lipofectamine 2000 (Thermo Fisher Scientific). PE transfections
+were performed as described above. Genomic DNA extraction for PE and BE was
+performed as described above.</p></sec><sec id="S25"><title>Determination of PE3 activity at known Cas9 off-target sites.</title><p id="P64">To evaluate PE3 off-target editing activity at known Cas9 off-target
+sites, genomic DNA extracted from HEK293T cells 3 days after transfection with
+PE3 was used as template for PCR amplification of 16 previously reported Cas9
+off-target genomic sites<sup><xref rid="R32" ref-type="bibr">32</xref>,<xref rid="R33" ref-type="bibr">33</xref></sup> (the top four off-target sites
+each for the <italic toggle="yes">HEK3</italic>, <italic toggle="yes">EMX1</italic>,
+<italic toggle="yes">FANCF</italic>, and <italic toggle="yes">HEK4</italic> spacers; primer sequences
+are listed in <xref rid="SD2" ref-type="supplementary-material">Supplementary
+Table 4</xref>). These genomic DNA samples were identical to those used for
+quantifying on-target PE3 editing activities shown in <xref rid="F4" ref-type="fig">Fig. 4</xref> or <xref rid="F10" ref-type="fig">Extended Data
+Fig. 5d</xref>–<xref rid="F10" ref-type="fig">e</xref>; pegRNA and
+nicking sgRNA sequences are listed in <xref rid="SD2" ref-type="supplementary-material">Supplementary Table 3</xref>. Following
+PCR amplification of off-target sites, amplicons were sequenced on the Illumina
+MiSeq platform as described above (see <xref rid="S21" ref-type="sec">High-throughput DNA sequencing of genomic DNA samples</xref>). For
+determining Cas9 nuclease, Cas9 H840A nickase, dCas9, and PE2-dRT on-target and
+off-target editing activity, HEK293T cells were transfected with 750 ng of
+editor plasmid (Cas9 nuclease, Cas9 H840A nickase, dCas9, or PE2-dRT), 250 ng of
+pegRNA or sgRNA plasmid, and 1 μL of Lipofectamine 2000. Genomic DNA was
+isolated from cells 3 days after transfection as described above. On-target and
+off-target genomic loci were amplified by PCR using primer sequences in <xref rid="SD2" ref-type="supplementary-material">Supplementary Table 4</xref> and
+sequenced on an Illumina MiSeq.</p><p id="P65">HTS data analysis was performed using CRISPResso2<sup><xref rid="R43" ref-type="bibr">43</xref></sup>. The editing efficiencies of Cas9
+nuclease, Cas9 H840A nickase, and dCas9 were quantified as the percent of total
+sequencing reads containing indels. For quantification of PE3 and PE3-dRT
+off-targets, aligned sequencing reads were examined for point mutations,
+insertions, or deletions that were consistent with the anticipated product of
+pegRNA reverse transcription initiated at the Cas9 nick site. Single nucleotide
+variations occurring at &lt;0.1% overall frequency among total reads within
+a sample were excluded from analysis. For reads containing single nucleotide
+variations that both occurred at frequencies ≥ 0.1% and were partially
+consistent with the pegRNA-encoded edit, t-tests (unpaired, one-tailed, α
+= 0.5) were used to determine if the variants occurred at significantly higher
+levels compared to samples treated with pegRNAs that contained the same spacer
+but encoded different edits. To avoid differences in sequencing errors,
+comparisons were made between samples that were sequenced simultaneously within
+the same MiSeq run. Variants that did not meet the criteria of p-value &gt;
+0.05 were excluded. Off-target PE3 editing activity was then calculated as the
+percentage of total sequencing reads that met the above criteria.</p></sec><sec id="S26"><title>Generation of a HEK293T cell line containing the <italic toggle="yes">HBB</italic> E6V
+mutation using Cas9-initiated HDR.</title><p id="P66">HEK293T cells were seeded in a 48-well plate and transfected at
+approximately 60% confluency with 1.5 μL of Lipofectamine 2000, 300 ng of
+Cas9 D10A nickase plasmid, 100 ng of sgRNA plasmid, and 200 ng of 100-mer ssDNA
+donor template (<xref rid="SD2" ref-type="supplementary-material">Supplementary
+Table 5</xref>). Three days after transfection, media was exchanged for
+fresh media. Four days after transfection, cells were dissociated using 30
+μL of TrypLE solution and suspended in 1.5 mL of media. Single cells were
+isolated into individual wells of two 96-well plates by fluorescence-activated
+cell sorting (FACS) (Beckman-Coulter Astrios). See <xref rid="SD2" ref-type="supplementary-material">Supplementary Note 1</xref> for
+representative FACS sorting examples. Cells were expanded for 14 days prior to
+genomic DNA sequencing as described above. Of the isolated clonal populations,
+none was found to be homozygous for the <italic toggle="yes">HBB</italic> E6V mutation, so a
+second round of editing by lipofection, sorting, and outgrowth was repeated in a
+partially edited cell line to yield a cell line homozygous for the E6V
+allele.</p></sec><sec id="S27"><title>Generation of a HEK293T cell line containing the <italic toggle="yes">HBB</italic> E6V
+mutation using PE3.</title><p id="P67">2.5 × 10<sup>4</sup> HEK293T cells were seeded on 48-well
+poly-D-lysine coated plates (Corning). 16-24 h post-seeding, cells were
+transfected at approximately 70% confluency with 1 μL of Lipofectamine
+2000 (Thermo Fisher Scientific) according to the manufacturer’s protocols
+and 750 ng of PE2-P2A-GFP plasmid, 250 ng of pegRNA plasmid, and 83 ng of sgRNA
+plasmid. After 3 days, cells were washed with 1× PBS (Gibco) and
+dissociated using TrypLE Express (Gibco). Cells were then diluted with DMEM plus
+GlutaMax (Thermo Fisher Scientific) supplemented with 10% (v/v) FBS (Gibco) and
+passed through a 35-μm cell strainer (Corning) prior to sorting. Flow
+cytometry was carried out on a LE-MA900 cell sorter (Sony). Cells were treated
+with 3 nM DAPI (BioLegend) 15 minutes prior to sorting. After gating for doublet
+exclusion, single DAPI-negative cells with GFP fluorescence above that of a
+GFP-negative control cell population were sorted into 96-well flat-bottom cell
+culture plates (Corning) filled with pre-chilled DMEM with GlutaMax supplemented
+with 10% FBS. See <xref rid="SD2" ref-type="supplementary-material">Supplementary Note 1</xref> for representative FACS sorting examples and
+allele tables. Cells were cultured for 10 days prior to genomic DNA extraction
+and characterization by HTS, as described above. A total of six clonal cell
+lines were identified that are homozygous for the E6V mutation in
+<italic toggle="yes">HBB</italic>.</p></sec><sec id="S28"><title>Generation of a HEK293T cell line containing the <italic toggle="yes">HEXA</italic>
+1278+TATC insertion using PE3.</title><p id="P68">HEK293T cells containing the HEXA 1278+TATC allele were generated
+following the protocol described above for creation of the <italic toggle="yes">HBB</italic>
+E6V cell line; pegRNA and sgRNA sequences are listed in <xref rid="SD2" ref-type="supplementary-material">Supplementary Table 3</xref> under the
+<xref rid="F5" ref-type="fig">Figure 5</xref> subheading. After transfection
+and sorting, cells were cultured for 10 days prior to genomic DNA extraction and
+characterization by HTS, as described above. Two heterozygous cell lines were
+isolated that contained 50% <italic toggle="yes">HEXA</italic> 1278+TATC alleles, and two
+homozygous cell lines containing 100% <italic toggle="yes">HEXA</italic> 1278+TATC alleles
+were recovered.</p></sec><sec id="S29"><title>Cell viability assays.</title><p id="P69">HEK293T cells were seeded in 48-well plates and transfected at
+approximately 70% confluency with 750 ng of editor plasmid (PE3, PE3 R110S
+K103L, Cas9 H840A nickase, or dCas9), 250 ng of HEK3-targeting pegRNA plasmid,
+and 1 μL of Lipofectamine 2000, as described above. Cell viability was
+measured every 24 hours post-transfection for 3 days using the CellTiter-Glo 2.0
+assay (Promega) according to the manufacturer’s protocol. Luminescence
+was measured in 96-well flat-bottomed polystyrene microplates (Corning) using a
+M1000 Pro microplate reader (Tecan) with a 1-second integration time.</p></sec><sec id="S30"><title>Lentivirus production.</title><p id="P70">Lentivirus was produced as previously described<sup><xref rid="R44" ref-type="bibr">44</xref></sup>. T-75 flasks of rapidly dividing HEK293T
+cells (ATCC; Manassas, VA, USA) were transfected with lentivirus production
+helper plasmids pVSV-G and psPAX2 in combination with modified lentiCRISPRv2
+genomes carrying intein-split PE2 editor using FuGENE HD (Promega, Madison, WI,
+USA) according to the manufacturer's protocol. Four split-intein editor
+constructs were designed: 1) a viral genome encoding a U6-pegRNA expression
+cassette and the N-terminal portion (1-573) of Cas9 H840A nickase fused to the
+Npu N-intein, a self-cleaving P2A peptide, and GFP-KASH; 2) a viral genome
+encoding the Npu C-intein fused to the C-terminal remainder of PE2; 3) a viral
+genome encoding the Npu C-intein fused to the C-terminal remainder of Cas9 for
+the Cas9 control; and 4) a nicking sgRNA for <italic toggle="yes">DNMT1</italic> (derived
+from Addgene plasmid #52963). The split-intein<sup><xref rid="R45" ref-type="bibr">45</xref></sup> mediates trans splicing to join the two
+halves of PE2 or Cas9, while the P2A GFP-KASH enables co-translational
+production of a nuclear membrane-localized GFP. After 48 h, supernatant was
+collected, centrifuged at 500 g for 5 minutes to remove cellular debris, and
+filtered using a 0.45 μm filter. Filtered supernatant was concentrated
+using the PEG-it Virus Precipitation Solution (System Biosciences, Palo Alto,
+CA, USA) according to the manufacturer's directions. The resulting pellet
+was resuspended in Opti-MEM (Thermo Fisher Scientific, Waltham, MA, USA) using
+1% of the original media volume. Resuspended pellet was flash-frozen and stored
+at −80°C until use.</p></sec><sec id="S31"><title>Mouse primary cortical neuron dissection and culture.</title><p id="P71">E18.5 dissociated cortical cultures were harvested from timed-pregnant
+C57BL/6 mice (Charles River). Embryos were harvested from pregnant mice after
+euthanasia by CO<sub>2</sub> followed by decapitation. Cortical caps were
+dissected in ice-cold Hibernate-E supplemented with penicillin/streptomycin
+(Life Technologies). Following a rinse with ice-cold Hibernate-E, tissue was
+digested at 37 °C for 8 minutes in papain/DNase (Worthington/Sigma).
+Tissue was triturated in NBActiv4 (BrainBits) supplemented with DNase. Cells
+were counted and plated in 24-well plates at 100,000 cells per well. Half of the
+media was changed twice per week.</p></sec><sec id="S32"><title>Prime editing in primary neurons and nuclei isolation.</title><p id="P72">At DIV 1, 15 μL of lentivirus was added at 10:10:1 ratio of
+N-terminal:C-terminal:nicking sgRNA. At DIV 14, neuronal nuclei were isolated
+using the EZ-PREP buffer (Sigma D8938) following the manufacturer’s
+protocol. All steps were performed on ice or at 4 °C. Media was removed
+from dissociated cultures, and cultures were washed with ice-cold PBS. PBS was
+aspirated and replaced with 200 μL EZ-PREP solution. Following a 5-minute
+incubation on ice, EZ-PREP was pipetted across the surface of the well to
+dislodge remaining cells. The sample was centrifuged at 500 g for 5 minutes, and
+the supernatant removed. Samples were washed with 200 μL EZ-PREP and
+centrifuged again at 500 g for 5 minutes. Samples were resuspended with gentle
+pipetting in 200 μL ice-cold Nuclei Suspension Buffer (NSB) consisting of
+100 μg/mL BSA and 3.33 μM Vybrant DyeCycle Ruby (Thermo Fisher) in
+1×PBS, then centrifuged at 500 g for 5 minutes. The supernatant was
+removed and nuclei were resuspended in 100 μL NSB and sorted into 100
+μL Agencourt DNAdvance lysis buffer using a MoFlo Astrios (Beckman
+Coulter) at the Broad Institute flow cytometry facility. Genomic DNA was
+purified according to the manufacturer’s Agencourt DNAdvance
+instructions.</p></sec><sec id="S33"><title>RNA-sequencing and data analysis.</title><p id="P73">HEK293T cells were co-transfected with <italic toggle="yes">PRNP</italic>-targeting
+or <italic toggle="yes">HEXA</italic>-targeting pegRNAs and PE2, PE2-dRT, or Cas9 H840A
+nickase. 72 h following transfection, total RNA was harvested from cells using
+TRIzol reagent (Thermo Fisher) and purified with RNeasy Mini kit (Qiagen)
+including on-column DNaseI treatment. Ribosomes were depleted from total RNA
+using the rRNA removal protocol of the TruSeq Stranded Total RNA library prep
+kit (Illumina) and subsequently washed with RNAClean XP beads (Beckman Coulter).
+Sequencing libraries were prepared using ribo-depleted RNA on a SMARTer PrepX
+Apollo NGS library prep system (Takara) following the manufacturer’s
+protocol. Resulting libraries were visualized on a 2200 TapeStation (Agilent
+Technologies), normalized using a Qubit dsDNA HS assay (Thermo Fisher), and
+sequenced on a NextSeq 550 using high output v2 flow cell (Illumina) as 75-bp
+paired-end reads. Fastq files were generated with bcl2fastq2 version 2.20 and
+trimmed using TrimGalore version 0.6.2 (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/FelixKrueger/TrimGalore" ext-link-type="uri">https://github.com/FelixKrueger/TrimGalore</ext-link>) to remove
+low-quality bases, unpaired sequences, and adaptor sequences. Trimmed reads were
+aligned to a <italic toggle="yes">Homo sapiens</italic> genome assembly GRCh38 with a custom
+Cas9 H840A gene entry using RSEM version 1.3.1<sup><xref rid="R46" ref-type="bibr">46</xref></sup>. The limma-voom<sup><xref rid="R47" ref-type="bibr">47</xref></sup> package was used to normalize gene
+expression levels and perform differential expression analysis with batch effect
+correction. Differentially expressed genes were called with FDR-corrected
+<italic toggle="yes">p</italic>-value &lt; 0.05 and fold-change &gt; 2 cutoffs,
+and results were visualized in R.</p></sec><sec id="S34"><title>ClinVar analysis.</title><p id="P74">The ClinVar variant summary was downloaded from NCBI (accessed July 15,
+2019), and the information contained therein was used for all downstream
+analysis. The list of all reported variants was filtered by allele ID in order
+to remove duplicates and by clinical significance in order to restrict the
+analysis to pathogenic variants. The list of pathogenic variants was filtered
+sequentially by variant type in order to calculate the fraction of pathogenic
+variants that are insertions, deletions, etc. Single nucleotide variants (SNVs)
+were separated into two categories (transitions and transversions) based on the
+reported reference and alternate alleles. SNVs that did not report reference or
+alternate alleles were excluded from the analysis.</p><p id="P75">The lengths of reported insertions, deletions, and duplications were
+calculated using reference/alternate alleles, variant start/stop positions, or
+appropriate identifying information in the variant name. Variants that did not
+report any of the above information were excluded from the analysis. The lengths
+of reported indels (single variants that include both insertions and deletions
+relative to the reference genome) were calculated by determining the number of
+mismatches or gaps in the best pairwise alignment between the reference and
+alternate alleles. Frequency distributions of variant lengths were calculated
+using GraphPad Prism 8.</p></sec><sec id="S35"><title>Data availability.</title><p id="P76">High-throughput sequencing data have been deposited to the NCBI Sequence
+Read Archive database PRJNA565979. Plasmids encoding PE1, PE2/PE3, and pegRNA
+expression vectors have been deposited to Addgene for distribution.</p></sec><sec id="S36"><title>Code availability.</title><p id="P77">The script used to quantify pegRNA scaffold insertion is provided as
+<xref rid="SD2" ref-type="supplementary-material">Supplementary Note
+4</xref>.</p></sec></sec><sec sec-type="extended-data" id="S37"><title>Extended Data</title><fig position="anchor" id="F6" orientation="portrait"><label>Extended Data Figure 1.</label><caption><title><italic toggle="yes">In vitro</italic> prime editing validation studies with
+fluorescently labeled DNA substrates.</title><p id="P78">(<bold>a</bold>) Electrophoretic mobility shift assays with dCas9,
+5’-extended pegRNAs and 5’-Cy5-labeled DNA substrates. pegRNAs
+1 through 5 contain a 15-nt linker sequence (linker A for pegRNA 1, linker B
+for pegRNAs 2 through 5) between the spacer and the PBS, a 5-nt PBS
+sequence, and RT templates of 7 nt (pegRNAs 1 and 2), 8 nt (pegRNA 3), 15 nt
+(pegRNA 4), and 22 nt (pegRNA 5). pegRNAs are those used in (e) and (f);
+full sequences are listed in <xref rid="SD2" ref-type="supplementary-material">Supplementary Table 2</xref>.
+(<bold>b</bold>) <italic toggle="yes">In vitro</italic> nicking assays of Cas9 H840A
+using 5’-extended and 3’-extended pegRNAs. Data in (a-b) are
+representative of n=2 independent replicates. (<bold>c</bold>) Cas9-mediated
+indel formation in HEK293T cells at <italic toggle="yes">HEK3</italic> using
+5’-extended and 3’-extended pegRNAs. Values and error bars
+reflect mean±s.d. of n=3 independent biological replicates.
+(<bold>d</bold>) Overview of prime editing <italic toggle="yes">in vitro</italic>
+biochemical assays. 5’-Cy5-labeled pre-nicked and non-nicked dsDNA
+substrates were tested. sgRNAs, 5’-extended pegRNAs, or
+3’-extended pegRNAs were pre-complexed with dCas9 or Cas9 H840A
+nickase, then combined with dsDNA substrate, Superscript III M-MLV RT, and
+dNTPs. Reactions were allowed to proceed at 37 °C for 1 hour prior to
+separation by denaturing urea PAGE and visualization by Cy5 fluorescence.
+(<bold>e</bold>) Primer extension reactions using 5’-extended
+pegRNAs, pre-nicked DNA substrates, and dCas9 lead to significant conversion
+to RT products. (<bold>f</bold>) Primer extension reactions using
+5’-extended pegRNAs as in (b), with non-nicked DNA substrate and Cas9
+H840A nickase. Product yields are greatly reduced by comparison to
+pre-nicked substrate. (<bold>g</bold>) An <italic toggle="yes">in vitro</italic> primer
+extension reaction using a 3’-pegRNA generates a single apparent
+product by denaturing urea PAGE. The RT product band was excised, eluted
+from the gel, then subjected to homopolymer tailing with terminal
+transferase (TdT) using either dGTP or dATP. Tailed products were extended
+by poly-T or poly-C primers, and the resulting DNA was sequenced. Sanger
+traces indicate that three nucleotides derived from the pegRNA scaffold were
+reverse transcribed (added as the final 3’ nucleotides to the DNA
+product). Note that in mammalian cell prime editing experiments, pegRNA
+scaffold insertion is much rarer than <italic toggle="yes">in vitro</italic> (<xref rid="F11" ref-type="fig">Extended Data Fig. 6</xref>), potentially due
+to the inability of the tethered reverse transcriptase to access the
+Cas9-bound guide RNA scaffold, and/or cellular excision of mismatched
+3’ ends of 3’ flaps containing pegRNA scaffold sequences. Data
+in (e-g) are representative of n=2 independent replicates. For gel source
+data, see <xref rid="SD2" ref-type="supplementary-material">Supplementary
+Figure 1</xref>.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0006.jpg"><?image-name nihms-1541141-f0006.jpg?><?image-size 326436?><?image-md5 64b0650834a8b505689b77a38d7d833b?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1387?><?image-original-width 1250?><?image-scaled-height 693?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/64b0650834a8/nihms-1541141-f0006.jpg?><?thumb-name nihms-1541141-f0006.gif?><?thumb-size 3322?><?thumb-md5 562bf1b8c7a279fbe7871fbabbfc6c1d?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 110?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/562bf1b8c7a2/nihms-1541141-f0006.gif?></graphic></fig><fig position="anchor" id="F7" orientation="portrait"><label>Extended Data Figure 2.</label><caption><title>Cellular repair in yeast of 3’ DNA flaps from <italic toggle="yes">in
+vitro</italic> prime editing reactions.</title><p id="P79">(<bold>a</bold>) Dual fluorescent protein reporter plasmids contain
+GFP and mCherry open reading frames separated by a target site encoding an
+in-frame stop codon, a +1 frameshift, or a −1 frameshift. Prime
+editing reactions were carried out <italic toggle="yes">in vitro</italic> with Cas9 H840A
+nickase, pegRNA, dNTPs, and M-MLV reverse transcriptase, then transformed
+into yeast. Colonies that contain unedited plasmids produce GFP but not
+mCherry. Yeast colonies containing edited plasmids produce both GFP and
+mCherry as a fusion protein. (<bold>b</bold>) Overlay of GFP and mCherry
+fluorescence for yeast colonies transformed with reporter plasmids
+containing a stop codon between GFP and mCherry (unedited negative control,
+top), or containing no stop codon or frameshift between GFP and mCherry
+(pre-edited positive control, bottom). (<bold>c-f</bold>) Visualization of
+mCherry and GFP fluorescence from yeast colonies transformed with <italic toggle="yes">in
+vitro</italic> prime editing reaction products. (<bold>c</bold>) Stop
+codon correction via T•A-to-A•T transversion using a
+3’-extended pegRNA or (<bold>d</bold>) a 5’-extended pegRNA.
+(<bold>e</bold>) +1 frameshift correction via a 1-bp deletion using a
+3’-extended pegRNA. (<bold>f</bold>) −1 frameshift correction
+via a 1-bp insertion using a 3’-extended pegRNA. (<bold>g</bold>)
+Sanger DNA sequencing traces from plasmids isolated from GFP-only colonies
+in (b) and GFP and mCherry double-positive colonies in (c). Data in (b-g)
+are representative of n=2 independent replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0007.jpg"><?image-name nihms-1541141-f0007.jpg?><?image-size 453305?><?image-md5 872f1ef4eac77d28e3b0552a757826fe?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1411?><?image-original-width 1250?><?image-scaled-height 705?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/872f1ef4eac7/nihms-1541141-f0007.jpg?><?thumb-name nihms-1541141-f0007.gif?><?thumb-size 4204?><?thumb-md5 657cb302dfb76415de12767841216ea5?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 112?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/657cb302dfb7/nihms-1541141-f0007.gif?></graphic></fig><fig position="anchor" id="F8" orientation="portrait"><label>Extended Data Figure 3.</label><caption><title>Prime editing of genomic DNA in human cells by PE1.</title><p id="P80">(<bold>a</bold>) pegRNAs contain a spacer sequence, an sgRNA
+scaffold, and a 3’ extension containing a reverse transcription (RT)
+template (purple), which contains the edited base(s) (red), and a
+primer-binding site (PBS, green). The primer-binding site hybridizes to the
+nicked target DNA strand. The RT template is homologous to the DNA sequence
+downstream of the nick, with the exception of the encoded edited base(s).
+(<bold>b</bold>) Installation of a T•A-to-A•T transversion
+at the <italic toggle="yes">HEK3</italic> site in HEK293T cells using Cas9 H840A nickase
+fused to wild-type M-MLV reverse transcriptase (PE1) and pegRNAs with
+varying PBS lengths. (<bold>c</bold>) T•A-to-A•T transversion
+editing efficiency and indel generation by PE1 at the +1 position of
+<italic toggle="yes">HEK3</italic> using pegRNAs containing 10-nt RT templates and a
+PBS sequences ranging from 8-17 nt. (<bold>d</bold>)
+G•C-to-T•A transversion editing efficiency and indel
+generation by PE1 at the +5 position of <italic toggle="yes">EMX1</italic> using pegRNAs
+containing 13-nt Rt templates and a PBS sequences ranging from 9-17 nt.
+(<bold>e</bold>) G•C-to-T•A transversion editing
+efficiency and indel generation by PE1 at the +5 position of
+<italic toggle="yes">FANCF</italic> using pegRNAs containing 17-nt RT templates and a
+pBs sequences ranging from 8-17 nt. (<bold>f</bold>)
+C•G-to-A•T transversion editing efficiency and indel
+generation by PE1 at the +1 position of <italic toggle="yes">RNF2</italic> using pegRNAs
+containing 11 -nt RT templates and a PBS sequences ranging from 9-17 nt.
+(<bold>g</bold>) G•C-to-T•A transversion editing
+efficiency and indel generation by PE1 at the +2 position of
+<italic toggle="yes">HEK4</italic> using pegRNAs containing 13-nt RT templates and a
+PBS sequences ranging from 7-15 nt. (<bold>h</bold>) PE1-mediated +1 T
+deletion, +1 A insertion, and +1 CTT insertion at the <italic toggle="yes">HEK3</italic>
+site using a 13-nt PBS and 10-nt RT template. Sequences of pegRNAs are those
+used in <xref rid="F2" ref-type="fig">Fig. 2a</xref> (see <xref rid="SD2" ref-type="supplementary-material">Supplementary Table 3</xref>). Editing
+efficiencies reflect sequencing reads that contain the intended edit and do
+not contain indels among all treated cells, with no sorting. Values and
+error bars reflect mean±s.d. of n=3 independent biological
+replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0008.jpg"><?image-name nihms-1541141-f0008.jpg?><?image-size 266403?><?image-md5 f75a25f6371a7540e488269e3e6eeb0c?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1137?><?image-original-width 1250?><?image-scaled-height 568?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/f75a25f6371a/nihms-1541141-f0008.jpg?><?thumb-name nihms-1541141-f0008.gif?><?thumb-size 3198?><?thumb-md5 89411130b44ddd57055c76e11386c444?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 90?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/89411130b44d/nihms-1541141-f0008.gif?></graphic></fig><fig position="anchor" id="F9" orientation="portrait"><label>Extended Data Figure 4.</label><caption><title>Evaluation of M-MLV RT variants for prime editing.</title><p id="P81">(<bold>a</bold>) Abbreviations for prime editor variants used in
+this figure. (<bold>b</bold>) Targeted insertion and deletion edits with PE1
+at the <italic toggle="yes">HEK3</italic> locus. (<bold>c-h</bold>) Comparison of 18
+prime editor constructs containing M-MLV RT variants for their ability to
+install (<bold>c</bold>) a +2 G•C-to-C•G transversion edit at
+<italic toggle="yes">HEK3</italic>, (<bold>d</bold>) a 24-bp FLAG insertion at the +1
+position of <italic toggle="yes">HEK3</italic>, (<bold>e</bold>) a +1
+C•G-to-A•T transversion edit at <italic toggle="yes">RNF2</italic>,
+(<bold>f</bold>) a +1 G•C-to-C•G transversion edit at
+<italic toggle="yes">EMX1</italic>, (<bold>g</bold>) a +2 T•A-to-A•T
+transversion edit at <italic toggle="yes">HBB</italic>, and (<bold>h</bold>) a +1
+G•C-to-C•G transversion edit at <italic toggle="yes">FANCF</italic>.
+(<bold>i-n</bold>) Comparison of four prime editor constructs containing
+M-MLV variants for their ability to install the edits shown in (c-h) in a
+second round of independent experiments. (<bold>o-s</bold>) PE2 editing
+efficiency at five genomic loci with varying PBS lengths. (<bold>o</bold>)
++1 T•A-to-A•T at <italic toggle="yes">HEK3</italic>. (<bold>p</bold>) +5
+G•C-to-T•A at <italic toggle="yes">EMX1</italic>. (<bold>q</bold>) +5
+G•C-to-T•A at <italic toggle="yes">FANCF</italic>. (<bold>r</bold>) +1
+C•G-to-A•T at <italic toggle="yes">RNF2</italic>. (<bold>s</bold>) +2
+G•C-to-T•A at <italic toggle="yes">HEK4</italic>. Editing efficiencies
+reflect sequencing reads that contain the intended edit and do not contain
+indels among all treated cells, with no sorting. Values and error bars
+reflect mean±s.d. of n=3 independent biological replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0009.jpg"><?image-name nihms-1541141-f0009.jpg?><?image-size 324798?><?image-md5 322275dd03e93afd7cf4d687e4f3d167?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1252?><?image-original-width 1250?><?image-scaled-height 625?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/322275dd03e9/nihms-1541141-f0009.jpg?><?thumb-name nihms-1541141-f0009.gif?><?thumb-size 4337?><?thumb-md5 7a5812ec83830d47fc8e2dea78a358ae?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 100?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/7a5812ec8383/nihms-1541141-f0009.gif?></graphic></fig><fig position="anchor" id="F10" orientation="portrait"><label>Extended Data Figure 5.</label><caption><title>Design features of pegRNA PBS and RT template sequences, and additional
+editing examples with PE3.</title><p id="P82">(<bold>a</bold>) PE2-mediated +5 G•C-to-T•A
+transversion editing efficiency (blue line) at <italic toggle="yes">VEGFA</italic> in
+HEK293T cells as a function of RT template length. Indels (gray line) are
+plotted for comparison. The sequence below the graph shows the last
+nucleotide templated for synthesis by the pegRNA. G nucleotides (templated
+by a C in the pegRNA) are highlighted in red; RT templates that end in C
+should be avoided during pegRNA design to maximize prime editing
+efficiencies. (<bold>b</bold>) +5 G•C-to-T•A transversion
+editing and indels for <italic toggle="yes">DNMT1</italic> as in (a). (<bold>c</bold>) +5
+G•C-to-T•A transversion editing and indels for
+<italic toggle="yes">RUNX1</italic> as in (a). PE3-mediated transition and
+transversion edits at the specified positions for (<bold>d</bold>)
+<italic toggle="yes">FANCF</italic>, (<bold>e</bold>) <italic toggle="yes">EMX1</italic>, and
+(<bold>f</bold>) <italic toggle="yes">DNMT1</italic>. Values and error bars reflect
+mean±s.d. of n=3 independent biological replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0010.jpg"><?image-name nihms-1541141-f0010.jpg?><?image-size 252379?><?image-md5 883fc8df39dc7dbae97d482f17ecc516?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1192?><?image-original-width 1250?><?image-scaled-height 596?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/883fc8df39dc/nihms-1541141-f0010.jpg?><?thumb-name nihms-1541141-f0010.gif?><?thumb-size 2607?><?thumb-md5 de4da95e7ed079bca36b7601f6667911?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 95?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/de4da95e7ed0/nihms-1541141-f0010.gif?></graphic></fig><fig position="anchor" id="F11" orientation="portrait"><label>Extended Data Figure 6.</label><caption><title>Comparison of prime editing and base editing, and off-target editing by
+Cas9 and prime editors at known Cas9 off-target sites.</title><p id="P83">(<bold>a</bold>) C•G-to-T•A editing efficiency at the
+same target nucleotides for PE2, PE3, BE2max, and BE4max at endogenous
+<italic toggle="yes">HEK3</italic>, <italic toggle="yes">FANCF</italic>, and <italic toggle="yes">EMX1</italic>
+sites in HEK293T cells. (<bold>b</bold>) Indel frequency from treatments in
+(a). (<bold>c</bold>) Editing efficiency of precise C•G-to-T•A
+edits (without bystander edits or indels) at <italic toggle="yes">HEK3</italic>,
+<italic toggle="yes">FANCF</italic>, and <italic toggle="yes">EMX1</italic>. (<bold>d</bold>)
+Total A•T-to-G•C editing efficiency for PE2, PE3, ABEdmax, and
+ABEmax at <italic toggle="yes">HEK3</italic> and <italic toggle="yes">FANCF</italic>. (<bold>e</bold>)
+Precise A•T-to-G•C editing efficiency without bystander edits
+or indels at <italic toggle="yes">HEK3</italic> and <italic toggle="yes">FANCF</italic>.
+(<bold>f</bold>) Indel frequency from treatments in (d).
+(<bold>g</bold>) Average triplicate Cas9 nuclease editing efficiencies
+(indel frequencies) in HEK293T cells at four endogenous on-target sites and
+their 16 known top off-target sites<sup><xref rid="R32" ref-type="bibr">32</xref>,<xref rid="R33" ref-type="bibr">33</xref></sup>. For each
+on-target site, Cas9 was paired with an sgRNA or with each of four pegRNAs
+that recognize the same protospacer. (<bold>h</bold>) Average triplicate
+on-target and off-target editing efficiencies and indel efficiencies (below
+in parentheses) in HEK293T cells for PE2 or PE3 paired with each pegRNA in
+(g). Editing efficiencies reflect sequencing reads that contain the intended
+edit and do not contain indels among all treated cells, with no sorting.
+Off-target editing efficiencies in (h) reflect off-target locus modification
+consistent with prime editing. Values and error bars reflect
+mean±s.d. of n=3 independent biological replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0011.jpg"><?image-name nihms-1541141-f0011.jpg?><?image-size 460940?><?image-md5 2f983fa2662b8aa2500819ef19bc0329?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1359?><?image-original-width 1250?><?image-scaled-height 679?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/2f983fa2662b/nihms-1541141-f0011.jpg?><?thumb-name nihms-1541141-f0011.gif?><?thumb-size 5343?><?thumb-md5 c0727023f8d31797f98ac7bc609731a6?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 108?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/c0727023f8d3/nihms-1541141-f0011.gif?></graphic></fig><fig position="anchor" id="F12" orientation="portrait"><label>Extended Data Figure 7.</label><caption><title>Incorporation of pegRNA scaffold sequence into target loci.</title><p id="P84"> HTS data were analyzed for pegRNA scaffold sequence insertion as
+described in <xref rid="SD2" ref-type="supplementary-material">Supplementary
+Note 4</xref>. (<bold>a</bold>) Analysis for the <italic toggle="yes">EMX1</italic>
+locus. Shown is the % of total sequencing reads containing one or more
+pegRNA scaffold sequence nucleotides within an insertion adjacent to the RT
+template (left); the percentage of total sequencing reads containing a
+pegRNA scaffold sequence insertion of the specified length (middle); and the
+cumulative total percentage of pegRNA insertion up to and including the
+length specified on the X axis. (<bold>b</bold>) As in (a) for
+<italic toggle="yes">FANCF</italic>. (<bold>c</bold>) As in (a) for
+<italic toggle="yes">HEK3</italic>. (<bold>d</bold>) As in (a) for
+<italic toggle="yes">RNF2</italic>. Values and error bars reflect mean±s.d. of
+n=3 independent biological replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0012.jpg"><?image-name nihms-1541141-f0012.jpg?><?image-size 313842?><?image-md5 3cfa9eb32d01ccb63b00a878e70e86e2?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1113?><?image-original-width 1250?><?image-scaled-height 556?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/3cfa9eb32d01/nihms-1541141-f0012.jpg?><?thumb-name nihms-1541141-f0012.gif?><?thumb-size 3192?><?thumb-md5 8691432412525165940e11508a1ff574?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 88?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/869143241252/nihms-1541141-f0012.gif?></graphic></fig><fig position="anchor" id="F13" orientation="portrait"><label>Extended Data Figure 8.</label><caption><title>Effects of PE2, PE2-dRT, Cas9 H840A nickase, and dCas9 on cell viability
+and on transcriptome-wide RNA abundance.</title><p id="P85">HEK293T cells were transiently transfected with plasmids encoding
+PE2, PE2 R110S K103L, Cas9 H840A nickase, or dCas9, together with a
+<italic toggle="yes">HEK3</italic>-targeting pegRNA plasmid. Cell viability was
+measured for the bulk cellular population every 24 hours post-transfection
+for 3 days using the CellTiter-Glo 2.0 assay (Promega). (<bold>a</bold>)
+Viability, as measured by luminescence, at 1, 2, or 3 days
+post-transfection. Values and error bars reflect mean±s.e.m. of n=3
+independent biological replicates, each performed in technical triplicate.
+(<bold>b</bold>) Percent editing and indels for PE2, PE2 R110S K103L,
+Cas9 H840A nickase, or dCas9, together with a
+<italic toggle="yes">HEK3</italic>-targeting pegRNA plasmid that encodes a +5 G to A
+edit. Editing efficiencies were measured on day 3 post-transfection from
+cells treated alongside of those used for assaying viability in (a). Values
+and error bars reflect mean±s.d. of n=3 independent biological
+replicates. (<bold>c-k</bold>) Analysis of cellular RNA, depleted for
+ribosomal RNA, isolated from HEK293T cells expressing PE2, PE2-dRT, or Cas9
+H840A nickase and a <italic toggle="yes">PRNP</italic>-targeting or
+<italic toggle="yes">HEXA</italic>-targeting pegRNA. RNAs corresponding to 14,410 genes
+and 14,368 genes were detected in <italic toggle="yes">PRNP</italic> and
+<italic toggle="yes">HEXA</italic> samples, respectively. (<bold>c-h</bold>) Volcano
+plot displaying the −log<sub>10</sub> FDR-adjusted p-value vs.
+log<sub>2</sub>-fold change in transcript abundance for each RNA,
+comparing (<bold>c</bold>) PE2 vs. pE2-dRT with
+<italic toggle="yes">PRNP</italic>-targeting pegRNA, (<bold>d</bold>) PE2 vs. Cas9 H840A
+with <italic toggle="yes">PRNP</italic>-targeting pegRNA, (<bold>e</bold>) PE2-dRT vs.
+Cas9 H840A with <italic toggle="yes">PRNP</italic>-targeting pegRNA, (<bold>f</bold>) PE2
+vs. PE2-dRT with <italic toggle="yes">HeXa</italic>-targeting pegRNA, (<bold>g</bold>)
+PE2 vs. Cas9 H840A with <italic toggle="yes">HEXA</italic>-targeting pegRNA,
+(<bold>h</bold>) PE2-dRT vs. Cas9 H840A with
+<italic toggle="yes">HEXA</italic>-targeting pegRNA. Red dots indicate genes that show
+≥2-fold change in relative abundance that are statistically
+significant (FDR-adjusted <italic toggle="yes">p</italic> &lt; 0.05).
+(<bold>i-k</bold>) Venn diagrams of upregulated and downregulated
+transcripts (≥2-fold change) comparing <italic toggle="yes">PRNP</italic> and
+<italic toggle="yes">HEXA</italic> samples for (<bold>i</bold>) PE2 vs PE2-dRT,
+(<bold>j</bold>) PE2 vs. Cas9 H840A, and (<bold>k</bold>) PE2-dRT vs.
+Cas9 H840A. Values for each RNA-seq condition reflect the mean n=5
+biological replicates. Differential expression was assessed using a
+two-sided t-test with empirical Bayesian variance estimation.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0013.jpg"><?image-name nihms-1541141-f0013.jpg?><?image-size 284823?><?image-md5 e68f99674f65fcbc22d834052274b0d1?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1610?><?image-original-width 1250?><?image-scaled-height 804?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/e68f99674f65/nihms-1541141-f0013.jpg?><?thumb-name nihms-1541141-f0013.gif?><?thumb-size 3639?><?thumb-md5 4cf8d405e34a8bb39d6f7f51c1e43a87?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 128?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/4cf8d405e34a/nihms-1541141-f0013.gif?></graphic></fig><fig position="anchor" id="F14" orientation="portrait"><label>Extended Data Figure 9.</label><caption><title>PE3-mediated <italic toggle="yes">HBB</italic> E6V correction and
+<italic toggle="yes">HEXA</italic> 1278+TATC correction by various pegRNAs.</title><p id="P86">(<bold>a</bold>) Screen of 14 pegRNAs for correction of the
+<italic toggle="yes">HBB</italic> E6V allele in HEK293T cells with PE3. All pegRNAs
+evaluated convert the <italic toggle="yes">HBB</italic> E6V allele back to wild-type
+<italic toggle="yes">HBB</italic> without the introduction of any silent PAM
+mutation. (<bold>b</bold>) Screen of 41 pegRNAs for correction of the
+<italic toggle="yes">HEXA</italic> 1278+TATC allele in HEK293T cells with pE3 or
+PE3b. Those pegRNAs labeled HEXAs correct the pathogenic allele by a shifted
+4-bp deletion that disrupts the PAM and leaves a silent mutation. Those
+pegRNAs labeled HEXA correct the pathogenic allele back to wild-type.
+Entries ending in “b” use an edit-specific nicking sgRNA in
+combination with the pegRNA (the PE3b system). Values and error bars reflect
+mean±s.d. of n=3 independent biological replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0014.jpg"><?image-name nihms-1541141-f0014.jpg?><?image-size 203978?><?image-md5 fb4e9a3b58b068064d189836eb541911?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 900?><?image-original-width 1250?><?image-scaled-height 450?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/fb4e9a3b58b0/nihms-1541141-f0014.jpg?><?thumb-name nihms-1541141-f0014.gif?><?thumb-size 2653?><?thumb-md5 9f98b39082ba9b490a217c6a564b115a?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 72?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/9f98b39082ba/nihms-1541141-f0014.gif?></graphic></fig><fig position="anchor" id="F15" orientation="portrait"><label>Extended Data Figure 10.</label><caption><title>PE3 activity in human cell lines and comparison of PE3 and Cas9-initiated
+HDR.</title><p id="P87">(<bold>a</bold>) Prime editing in K562 (leukemic bone marrow), U2OS
+(osteosarcoma), and HeLa (cervical cancer) cells. Efficiency of generating
+the correct edit (without indels) and indel frequency for PE3 and
+Cas9-initiated HDR in (<bold>b</bold>) HEK293T cells, (<bold>c</bold>) K562
+cells, (<bold>d</bold>) U2OS cells, and (<bold>e</bold>) HeLa cells. Each
+bracketed editing comparison installs identical edits with PE3 and
+Cas9-initiated HDR. Non-targeting controls are PE3 and a pegRNA that targets
+a non-target locus. (<bold>f</bold>) Control experiments with non-targeting
+pegRNA+PE3, and with dCas9+sgRNA, compared with wild-type Cas9 HDR
+experiments confirming that ssDNA donor HDR template, a common contaminant
+that artificially elevates apparent HDR efficiencies, does not contribute to
+the HDR measurements in (a-d). (<bold>g</bold>) Example
+<italic toggle="yes">HEK3</italic> site allele tables from genomic DNA samples
+isolated from K562 cells after editing with PE3 or with Cas9-initiated HDR.
+Alleles were sequenced on an Illumina MiSeq and analyzed with
+CRISPResso2<sup><xref rid="R43" ref-type="bibr">43</xref></sup>. The
+reference <italic toggle="yes">HEK3</italic> sequence from this region is at the top.
+Allele tables are shown for a non-targeting pegRNA negative control, a +1
+CTT insertion at <italic toggle="yes">HEK3</italic> using PE3, and a +1 CTT insertion at
+<italic toggle="yes">HeK3</italic> using Cas9-initiated HDR. Allele frequencies and
+corresponding Illumina sequencing read counts are shown for each allele. All
+alleles observed with frequency ≥0.20% are shown. Values and error
+bars reflect mean±s.d. of n=3 independent biological replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0015.jpg"><?image-name nihms-1541141-f0015.jpg?><?image-size 561885?><?image-md5 8fb0daa2fd1ae4d7918cb4c0845297ed?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1843?><?image-original-width 1250?><?image-scaled-height 921?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/8fb0daa2fd1a/nihms-1541141-f0015.jpg?><?thumb-name nihms-1541141-f0015.gif?><?thumb-size 5827?><?thumb-md5 37ba3c220c02cae440798a53ab35d263?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 147?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/37ba3c220c02/nihms-1541141-f0015.gif?></graphic></fig><fig position="anchor" id="F16" orientation="portrait"><label>Extended Data Figure 11∣</label><caption><title>Distribution by length of pathogenic insertions, duplications, deletions,
+and indels in the ClinVar database.</title><p id="P88">The ClinVar variant summary was downloaded from NCBI July 15, 2019.
+The lengths of reported insertions, deletions, and duplications were
+calculated using reference and alternate alleles, variant start and stop
+positions, or appropriate identifying information in the variant name.
+Variants that did not report any of the above information were excluded from
+the analysis. The lengths of reported indels (single variants that include
+both insertions and deletions relative to the reference genome) were
+calculated by determining the number of mismatches or gaps in the best
+pairwise alignment between the reference and alternate alleles.
+(<bold>a</bold>) Length distribution of insertions. (<bold>b</bold>)
+Length distribution of duplications. (<bold>c</bold>) Length distribution of
+deletions. (<bold>d</bold>) Length distribution of indels.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0016.jpg"><?image-name nihms-1541141-f0016.jpg?><?image-size 212049?><?image-md5 8222ae4f791f7884317fa8dda91da6ea?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 827?><?image-original-width 1250?><?image-scaled-height 413?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/8222ae4f791f/nihms-1541141-f0016.jpg?><?thumb-name nihms-1541141-f0016.gif?><?thumb-size 2121?><?thumb-md5 097f29ca743343f3e449249fef3c0e92?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 66?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/097f29ca7433/nihms-1541141-f0016.gif?></graphic></fig></sec><sec sec-type="supplementary-material" id="SM1"><title>Supplementary Material</title><supplementary-material id="SD1" position="float" content-type="local-data" orientation="portrait"><label>2</label><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="NIHMS1541141-supplement-2.pdf" id="d64e1772" position="anchor" orientation="portrait"><?suppdata-name NIHMS1541141-supplement-2.pdf?><?suppdata-size 26586?><?suppdata-md5 502505b956186ea35d8acefab73f6044?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:f6c6/6907074/502505b95618/NIHMS1541141-supplement-2.pdf?></media></supplementary-material><supplementary-material id="SD2" position="float" content-type="local-data" orientation="portrait"><label>Sup_info</label><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="NIHMS1541141-supplement-Sup_info.pdf" id="d64e1775" position="anchor" orientation="portrait"><?suppdata-name NIHMS1541141-supplement-Sup_info.pdf?><?suppdata-size 5410945?><?suppdata-md5 022ffa4247180fc6cb2b5aead423b432?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:f6c6/6907074/022ffa424718/NIHMS1541141-supplement-Sup_info.pdf?></media></supplementary-material></sec></body><back><ack id="S38"><title>Acknowledgements</title><p id="P89">We thank J.M. Madison for neuron cell culture advice. This work was
+supported by the Merkin Institute of Transformative Technologies in Healthcare, U.S.
+NIH U01AI142756, RM1HG009490, R01EB022376, and R35GM118062, and HHMI. A.V.A.
+acknowledges a Jane Coffin Childs postdoctoral fellowship. P.B.R. and A.R.
+acknowledge NIH T32 GM095450. A.A.S. acknowledges NIH T32 GM007726. P.J.C. and A.R.
+acknowledge an NSF graduate fellowships. C.W. acknowledges a Damon Runyon Cancer
+Research Foundation fellowship (DRG-2343-18). G.A.N acknowledges a Helen Hay Whitney
+postdoctoral fellowship.</p></ack><fn-group><fn id="FN2"><p id="P90"><bold>Supplementary Information</bold> is available in the online
+version of the paper.</p></fn><fn id="FN3"><p id="P91">The authors declare competing financial interests: authors through the
+Broad Institute have filed patent applications on prime editing. D.R.L. is a
+consultant and co-founder of Prime Medicine, Beam Therapeutics, Pairwise Plants,
+and Editas Medicine, companies that use genome editing.</p></fn></fn-group><ref-list><title>References</title><ref id="R1"><label>1.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Landrum</surname><given-names>MJ</given-names></name>
+<etal/>
+<article-title>ClinVar: public archive of interpretations of clinically relevant
+variants</article-title>. <source>Nucleic Acids Res</source>.
+<volume>44</volume>, <fpage>D862</fpage>–<lpage>D868</lpage>
+(<year>2016</year>).<pub-id pub-id-type="pmid">26582918</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gkv1222</pub-id><pub-id pub-id-type="pmcid">PMC4702865</pub-id></mixed-citation></ref><ref id="R2"><label>2.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Jinek</surname><given-names>M</given-names></name>
+<etal/>
+<article-title>A Programmable Dual-RNA–Guided DNA Endonuclease in
+Adaptive Bacterial Immunity</article-title>. <source>Science</source>
+<volume>337</volume>, <fpage>816</fpage>–<lpage>821</lpage>
+(<year>2012</year>).<pub-id pub-id-type="pmid">22745249</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1225829</pub-id><pub-id pub-id-type="pmcid">PMC6286148</pub-id></mixed-citation></ref><ref id="R3"><label>3.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Cong</surname><given-names>L</given-names></name>
+<etal/>
+<article-title>Multiplex Genome Engineering Using CRISPR/Cas
+Systems</article-title>. <source>Science</source>
+<volume>339</volume>, <fpage>819</fpage>–<lpage>823</lpage>
+(<year>2013</year>).<pub-id pub-id-type="pmid">23287718</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1231143</pub-id><pub-id pub-id-type="pmcid">PMC3795411</pub-id></mixed-citation></ref><ref id="R4"><label>4.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Mali</surname><given-names>P</given-names></name>
+<etal/>
+<article-title>RNA-Guided Human Genome Engineering via Cas9</article-title>.
+<source>Science</source>
+<volume>339</volume>, <fpage>823</fpage>–<lpage>826</lpage>
+(<year>2013</year>).<pub-id pub-id-type="pmid">23287722</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1232033</pub-id><pub-id pub-id-type="pmcid">PMC3712628</pub-id></mixed-citation></ref><ref id="R5"><label>5.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Kosicki</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Tomberg</surname><given-names>K</given-names></name> &amp; <name name-style="western"><surname>Bradley</surname><given-names>A</given-names></name>
+<article-title>Repair of double-strand breaks induced by CRISPR–Cas9
+leads to large deletions and complex rearrangements</article-title>.
+<source>Nat. Biotechnol</source>
+<volume>36</volume>, <fpage>765</fpage>–<lpage>771</lpage>
+(<year>2018</year>).<pub-id pub-id-type="pmid">30010673</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nbt.4192</pub-id><pub-id pub-id-type="pmcid">PMC6390938</pub-id></mixed-citation></ref><ref id="R6"><label>6.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Haapaniemi</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Botla</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Persson</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Schmierer</surname><given-names>B</given-names></name> &amp; <name name-style="western"><surname>Taipale</surname><given-names>J</given-names></name>
+<article-title>CRISPR–Cas9 genome editing induces a p53-mediated DNA
+damage response</article-title>. <source>Nat. Med</source>
+<volume>24</volume>, <fpage>927</fpage>–<lpage>930</lpage>
+(<year>2018</year>).<pub-id pub-id-type="pmid">29892067</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41591-018-0049-z</pub-id></mixed-citation></ref><ref id="R7"><label>7.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Ihry</surname><given-names>RJ</given-names></name>
+<etal/>
+<article-title>p53 inhibits CRISPR–Cas9 engineering in human pluripotent
+stem cells</article-title>. <source>Nat. Med</source>
+<volume>24</volume>, <fpage>939</fpage>–<lpage>946</lpage>
+(<year>2018</year>).<pub-id pub-id-type="pmid">29892062</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41591-018-0050-6</pub-id></mixed-citation></ref><ref id="R8"><label>8.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Rouet</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Smih</surname><given-names>F</given-names></name> &amp; <name name-style="western"><surname>Jasin</surname><given-names>M</given-names></name>
+<article-title>Expression of a site-specific endonuclease stimulates homologous
+recombination in mammalian cells</article-title>. <source>Proc. Natl. Acad. Sci</source>
+<volume>91</volume>, <fpage>6064</fpage>–<lpage>6068</lpage>
+(<year>1994</year>).<pub-id pub-id-type="pmid">8016116</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.91.13.6064</pub-id><pub-id pub-id-type="pmcid">PMC44138</pub-id></mixed-citation></ref><ref id="R9"><label>9.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Chapman</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Taylor</surname><given-names>MRG</given-names></name> &amp; <name name-style="western"><surname>Boulton</surname><given-names>SJ</given-names></name>
+<article-title>Playing the end game: DNA double-strand break repair pathway
+choice</article-title>. <source>Mol. Cell</source>
+<volume>47</volume>, <fpage>497</fpage>–<lpage>510</lpage>
+(<year>2012</year>).<pub-id pub-id-type="pmid">22920291</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.molcel.2012.07.029</pub-id></mixed-citation></ref><ref id="R10"><label>10.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Cox</surname><given-names>DBT</given-names></name>, <name name-style="western"><surname>Platt</surname><given-names>RJ</given-names></name> &amp; <name name-style="western"><surname>Zhang</surname><given-names>F</given-names></name>
+<article-title>Therapeutic genome editing: prospects and
+challenges</article-title>. <source>Nat. Med</source>
+<volume>21</volume>, <fpage>121</fpage>–<lpage>131</lpage>
+(<year>2015</year>).<pub-id pub-id-type="pmid">25654603</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nm.3793</pub-id><pub-id pub-id-type="pmcid">PMC4492683</pub-id></mixed-citation></ref><ref id="R11"><label>11.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Paquet</surname><given-names>D</given-names></name>
+<etal/>
+<article-title>Efficient introduction of specific homozygous and heterozygous
+mutations using CRISPR/Cas9</article-title>. <source>Nature</source>
+<volume>533</volume>, <fpage>125</fpage>–<lpage>129</lpage>
+(<year>2016</year>).<pub-id pub-id-type="pmid">27120160</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature17664</pub-id></mixed-citation></ref><ref id="R12"><label>12.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Chu</surname><given-names>VT</given-names></name>
+<etal/>
+<article-title>Increasing the efficiency of homology-directed repair for
+CRISPR-Cas9-induced precise gene editing in mammalian cells</article-title>.
+<source>Nat. Biotechnol</source>
+<volume>33</volume>, <fpage>543</fpage>–<lpage>548</lpage>
+(<year>2015</year>).<pub-id pub-id-type="pmid">25803306</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nbt.3198</pub-id></mixed-citation></ref><ref id="R13"><label>13.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Maruyama</surname><given-names>T</given-names></name>
+<etal/>
+<article-title>Increasing the efficiency of precise genome editing with
+CRISPR-Cas9 by inhibition of nonhomologous end joining</article-title>.
+<source>Nat. Biotechnol</source>
+<volume>33</volume>, <fpage>538</fpage>–<lpage>542</lpage>
+(<year>2015</year>).<pub-id pub-id-type="pmid">25798939</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nbt.3190</pub-id><pub-id pub-id-type="pmcid">PMC4618510</pub-id></mixed-citation></ref><ref id="R14"><label>14.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Rees</surname><given-names>HA</given-names></name>, <name name-style="western"><surname>Yeh</surname><given-names>W-H</given-names></name> &amp; <name name-style="western"><surname>Liu</surname><given-names>DR</given-names></name>
+<article-title>Development of hRad51–Cas9 nickase fusions that mediate
+HDR without double-stranded breaks</article-title>. <source>Nat. Commun</source>
+<volume>10</volume>, <fpage>1</fpage>–<lpage>12</lpage>
+(<year>2019</year>).<pub-id pub-id-type="pmid">31101808</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41467-019-09983-4</pub-id><pub-id pub-id-type="pmcid">PMC6525190</pub-id></mixed-citation></ref><ref id="R15"><label>15.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Shen</surname><given-names>MW</given-names></name>
+<etal/>
+<article-title>Predictable and precise template-free CRISPR editing of
+pathogenic variants</article-title>. <source>Nature</source>
+<volume>563</volume>, <fpage>646</fpage>–<lpage>651</lpage>
+(<year>2018</year>).<pub-id pub-id-type="pmid">30405244</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41586-018-0686-x</pub-id><pub-id pub-id-type="pmcid">PMC6517069</pub-id></mixed-citation></ref><ref id="R16"><label>16.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Rees</surname><given-names>HA</given-names></name> &amp; <name name-style="western"><surname>Liu</surname><given-names>DR</given-names></name>
+<article-title>Base editing: precision chemistry on the genome and transcriptome
+of living cells</article-title>. <source>Nat. Rev. Genet</source>
+<volume>19</volume>, <fpage>770</fpage> (<year>2018</year>).<pub-id pub-id-type="pmid">30341440</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41576-018-0068-0</pub-id></mixed-citation></ref><ref id="R17"><label>17.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Komor</surname><given-names>AC</given-names></name>, <name name-style="western"><surname>Kim</surname><given-names>YB</given-names></name>, <name name-style="western"><surname>Packer</surname><given-names>MS</given-names></name>, <name name-style="western"><surname>Zuris</surname><given-names>JA</given-names></name> &amp; <name name-style="western"><surname>Liu</surname><given-names>DR</given-names></name>
+<article-title>Programmable editing of a target base in genomic DNA without
+double-stranded DNA cleavage</article-title>. <source>Nature</source>
+<volume>533</volume>, <fpage>420</fpage>–<lpage>424</lpage>
+(<year>2016</year>).<pub-id pub-id-type="pmid">27096365</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature17946</pub-id><pub-id pub-id-type="pmcid">PMC4873371</pub-id></mixed-citation></ref><ref id="R18"><label>18.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Gaudelli</surname><given-names>NM</given-names></name>
+<etal/>
+<article-title>Programmable base editing of A•T to G•C in genomic
+DNA without DNA cleavage</article-title>. <source>Nature</source>
+<volume>551</volume>, <fpage>464</fpage>–<lpage>471</lpage>
+(<year>2017</year>).<pub-id pub-id-type="pmid">29160308</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature24644</pub-id><pub-id pub-id-type="pmcid">PMC5726555</pub-id></mixed-citation></ref><ref id="R19"><label>19.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Gao</surname><given-names>X</given-names></name>
+<etal/>
+<article-title>Treatment of autosomal dominant hearing loss by in vivo delivery
+of genome editing agents</article-title>. <source>Nature</source>
+<volume>553</volume>, <fpage>217</fpage>–<lpage>221</lpage>
+(<year>2018</year>).<pub-id pub-id-type="pmid">29258297</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature25164</pub-id><pub-id pub-id-type="pmcid">PMC5784267</pub-id></mixed-citation></ref><ref id="R20"><label>20.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Marraffini</surname><given-names>LA</given-names></name> &amp; <name name-style="western"><surname>Sontheimer</surname><given-names>EJ</given-names></name>
+<article-title>CRISPR interference limits horizontal gene transfer in
+staphylococci by targeting DNA</article-title>. <source>Science</source>
+<volume>322</volume>, <fpage>1843</fpage>–<lpage>1845</lpage>
+(<year>2008</year>).<pub-id pub-id-type="pmid">19095942</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1165771</pub-id><pub-id pub-id-type="pmcid">PMC2695655</pub-id></mixed-citation></ref><ref id="R21"><label>21.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Barrangou</surname><given-names>R</given-names></name>
+<etal/>
+<article-title>CRISPR provides acquired resistance against viruses in
+prokaryotes</article-title>. <source>Science</source>
+<volume>315</volume>, <fpage>1709</fpage>–<lpage>1712</lpage>
+(<year>2007</year>).<pub-id pub-id-type="pmid">17379808</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1138140</pub-id></mixed-citation></ref><ref id="R22"><label>22.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Liu</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Kao</surname><given-names>H-I</given-names></name> &amp; <name name-style="western"><surname>Bambara</surname><given-names>RA</given-names></name>
+<article-title>Flap endonuclease 1: a central component of DNA
+metabolism</article-title>. <source>Annu. Rev. Biochem</source>
+<volume>73</volume>, <fpage>589</fpage>–<lpage>615</lpage>
+(<year>2004</year>).<pub-id pub-id-type="pmid">15189154</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1146/annurev.biochem.73.012803.092453</pub-id></mixed-citation></ref><ref id="R23"><label>23.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Keijzers</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Bohr</surname><given-names>VA</given-names></name> &amp; <name name-style="western"><surname>Rasmussen</surname><given-names>LJ</given-names></name>
+<article-title>Human exonuclease 1 (EXO1) activity characterization and its
+function on flap structures</article-title>. <source>Biosci. Rep</source>
+<volume>35</volume>, (<year>2015</year>).<pub-id pub-id-type="doi" assigning-authority="pmc">10.1042/BSR20150058</pub-id><pub-id pub-id-type="pmcid">PMC4613700</pub-id><pub-id pub-id-type="pmid">26182368</pub-id></mixed-citation></ref><ref id="R24"><label>24.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Baranauskas</surname><given-names>A</given-names></name>
+<etal/>
+<article-title>Generation and characterization of new highly thermostable and
+processive M-MuLV reverse transcriptase variants</article-title>.
+<source>Protein Eng. Des. Sel</source>
+<volume>25</volume>, <fpage>657</fpage>–<lpage>668</lpage>
+(<year>2012</year>).<pub-id pub-id-type="pmid">22691702</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/protein/gzs034</pub-id></mixed-citation></ref><ref id="R25"><label>25.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Gerard</surname><given-names>GF</given-names></name>
+<etal/>
+<article-title>The role of template-primer in protection of reverse
+transcriptase from thermal inactivation</article-title>. <source>Nucleic Acids Res</source>. <volume>30</volume>,
+<fpage>3118</fpage>–<lpage>3129</lpage>
+(<year>2002</year>).<pub-id pub-id-type="pmid">12136094</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gkf417</pub-id><pub-id pub-id-type="pmcid">PMC135738</pub-id></mixed-citation></ref><ref id="R26"><label>26.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Arezi</surname><given-names>B</given-names></name> &amp; <name name-style="western"><surname>Hogrefe</surname><given-names>H</given-names></name>
+<article-title>Novel mutations in Moloney Murine Leukemia Virus reverse
+transcriptase increase thermostability through tighter binding to
+template-primer</article-title>. <source>Nucleic Acids Res</source>.
+<volume>37</volume>, <fpage>473</fpage>–<lpage>481</lpage>
+(<year>2009</year>).<pub-id pub-id-type="pmid">19056821</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gkn952</pub-id><pub-id pub-id-type="pmcid">PMC2632894</pub-id></mixed-citation></ref><ref id="R27"><label>27.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Kotewicz</surname><given-names>ML</given-names></name>, <name name-style="western"><surname>Sampson</surname><given-names>CM</given-names></name>, <name name-style="western"><surname>D’Alessio</surname><given-names>JM</given-names></name> &amp; <name name-style="western"><surname>Gerard</surname><given-names>GF</given-names></name>
+<article-title>Isolation of cloned Moloney murine leukemia virus reverse
+transcriptase lacking ribonuclease H activity</article-title>.
+<source>Nucleic Acids Res</source>. <volume>16</volume>,
+<fpage>265</fpage>–<lpage>277</lpage>
+(<year>1988</year>).<pub-id pub-id-type="pmid">2448747</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/16.1.265</pub-id><pub-id pub-id-type="pmcid">PMC334625</pub-id></mixed-citation></ref><ref id="R28"><label>28.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Nishimasu</surname><given-names>H</given-names></name>
+<etal/>
+<article-title>Crystal Structure of Cas9 in Complex with Guide RNA and Target
+DNA</article-title>. <source>Cell</source>
+<volume>156</volume>, <fpage>935</fpage>–<lpage>949</lpage>
+(<year>2014</year>).<pub-id pub-id-type="pmid">24529477</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cell.2014.02.001</pub-id><pub-id pub-id-type="pmcid">PMC4139937</pub-id></mixed-citation></ref><ref id="R29"><label>29.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Thuronyi</surname><given-names>BW</given-names></name>
+<etal/>
+<article-title>Continuous evolution of base editors with expanded target
+compatibility and improved activity</article-title>. <source>Nat. Biotechnol</source> (<year>2019</year>) doi:<pub-id pub-id-type="doi">10.1038/s41587-019-0193-0</pub-id>.<pub-id pub-id-type="pmcid">PMC6728210</pub-id><pub-id pub-id-type="pmid">31332326</pub-id></mixed-citation></ref><ref id="R30"><label>30.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Kim</surname><given-names>YB</given-names></name>
+<etal/>
+<article-title>Increasing the genome-targeting scope and precision of base
+editing with engineered Cas9-cytidine deaminase fusions</article-title>.
+<source>Nat. Biotechnol</source>
+<volume>35</volume>, <fpage>371</fpage>–<lpage>376</lpage>
+(<year>2017</year>).<pub-id pub-id-type="pmid">28191901</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nbt.3803</pub-id><pub-id pub-id-type="pmcid">PMC5388574</pub-id></mixed-citation></ref><ref id="R31"><label>31.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Koblan</surname><given-names>LW</given-names></name>
+<etal/>
+<article-title>Improving cytidine and adenine base editors by expression
+optimization and ancestral reconstruction</article-title>. <source>Nat. Biotechnol</source> (<year>2018</year>) doi:<pub-id pub-id-type="doi">10.1038/nbt.4172</pub-id>.<pub-id pub-id-type="pmcid">PMC6126947</pub-id><pub-id pub-id-type="pmid">29813047</pub-id></mixed-citation></ref><ref id="R32"><label>32.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Tsai</surname><given-names>SQ</given-names></name>
+<etal/>
+<article-title>GUIDE-seq enables genome-wide profiling of off-target cleavage by
+CRISPR-Cas nucleases</article-title>. <source>Nat. Biotechnol</source>
+<volume>33</volume>, <fpage>187</fpage>–<lpage>197</lpage>
+(<year>2015</year>).<pub-id pub-id-type="pmid">25513782</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nbt.3117</pub-id><pub-id pub-id-type="pmcid">PMC4320685</pub-id></mixed-citation></ref><ref id="R33"><label>33.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Kleinstiver</surname><given-names>BP</given-names></name>
+<etal/>
+<article-title>High-fidelity CRISPR–Cas9 nucleases with no detectable
+genome-wide off-target effects</article-title>. <source>Nature</source>
+<volume>529</volume>, <fpage>490</fpage>–<lpage>495</lpage>
+(<year>2016</year>).<pub-id pub-id-type="pmid">26735016</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature16526</pub-id><pub-id pub-id-type="pmcid">PMC4851738</pub-id></mixed-citation></ref><ref id="R34"><label>34.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Bannert</surname><given-names>N</given-names></name> &amp; <name name-style="western"><surname>Kurth</surname><given-names>R</given-names></name>
+<article-title>Retroelements and the human genome: New perspectives on an old
+relation</article-title>. <source>Proc. Natl. Acad. Sci</source>
+<volume>101</volume>, <fpage>14572</fpage>–<lpage>14579</lpage>
+(<year>2004</year>).<pub-id pub-id-type="pmid">15310846</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.0404838101</pub-id><pub-id pub-id-type="pmcid">PMC521986</pub-id></mixed-citation></ref><ref id="R35"><label>35.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Halvas</surname><given-names>EK</given-names></name>, <name name-style="western"><surname>Svarovskaia</surname><given-names>ES</given-names></name> &amp; <name name-style="western"><surname>Pathak</surname><given-names>VK</given-names></name>
+<article-title>Role of Murine Leukemia Virus Reverse Transcriptase
+Deoxyribonucleoside Triphosphate-Binding Site in Retroviral Replication and
+In Vivo Fidelity</article-title>. <source>J. Virol</source>
+<volume>74</volume>, <fpage>10349</fpage>–<lpage>10358</lpage>
+(<year>2000</year>).<pub-id pub-id-type="pmid">11044079</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1128/jvi.74.22.10349-10358.2000</pub-id><pub-id pub-id-type="pmcid">PMC110909</pub-id></mixed-citation></ref><ref id="R36"><label>36.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Mead</surname><given-names>S</given-names></name>
+<etal/>
+<article-title>A Novel Protective Prion Protein Variant that Colocalizes with
+Kuru Exposure</article-title>. <source>N. Engl. J. Med</source>
+<volume>361</volume>, <fpage>2056</fpage>–<lpage>2065</lpage>
+(<year>2009</year>).<pub-id pub-id-type="pmid">19923577</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa0809716</pub-id></mixed-citation></ref><ref id="R37"><label>37.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Asante</surname><given-names>EA</given-names></name>
+<etal/>
+<article-title>A naturally occurring variant of the human prion protein
+completely prevents prion disease</article-title>. <source>Nature</source>
+<volume>522</volume>, <fpage>478</fpage>–<lpage>481</lpage>
+(<year>2015</year>).<pub-id pub-id-type="pmid">26061765</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature14510</pub-id><pub-id pub-id-type="pmcid">PMC4486072</pub-id></mixed-citation></ref><ref id="R38"><label>38.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Kügler</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Kilic</surname><given-names>E</given-names></name> &amp; <name name-style="western"><surname>Bähr</surname><given-names>M</given-names></name>
+<article-title>Human synapsin 1 gene promoter confers highly neuron-specific
+long-term transgene expression from an adenoviral vector in the adult rat
+brain depending on the transduced area</article-title>. <source>Gene Ther</source>. <volume>10</volume>,
+<fpage>337</fpage>–<lpage>347</lpage>
+(<year>2003</year>).<pub-id pub-id-type="pmid">12595892</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/sj.gt.3301905</pub-id></mixed-citation></ref></ref-list><ref-list><title>Methods References</title><ref id="R39"><label>39.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Anzalone</surname><given-names>AV</given-names></name>, <name name-style="western"><surname>Lin</surname><given-names>AJ</given-names></name>, <name name-style="western"><surname>Zairis</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Rabadan</surname><given-names>R</given-names></name> &amp; <name name-style="western"><surname>Cornish</surname><given-names>VW</given-names></name>
+<article-title>Reprogramming eukaryotic translation with ligand-responsive
+synthetic RNA switches</article-title>. <source>Nat. Methods</source>
+<volume>13</volume>, <fpage>453</fpage>–<lpage>458</lpage>
+(<year>2016</year>).<pub-id pub-id-type="pmid">26999002</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nmeth.3807</pub-id><pub-id pub-id-type="pmcid">PMC4850110</pub-id></mixed-citation></ref><ref id="R40"><label>40.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Badran</surname><given-names>AH</given-names></name>
+<etal/>
+<article-title>Continuous evolution of Bacillus thuringiensis toxins overcomes
+insect resistance</article-title>. <source>Nature</source>
+<volume>533</volume>, <fpage>58</fpage>–<lpage>63</lpage>
+(<year>2016</year>).<pub-id pub-id-type="pmid">27120167</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature17938</pub-id><pub-id pub-id-type="pmcid">PMC4865400</pub-id></mixed-citation></ref><ref id="R41"><label>41.</label><mixed-citation publication-type="book"><name name-style="western"><surname>Anders</surname><given-names>C</given-names></name> &amp; <name name-style="western"><surname>Jinek</surname><given-names>M</given-names></name>
+<part-title>Chapter One - In Vitro Enzymology of Cas9</part-title>. in
+<source>Methods in Enzymology</source> (eds. <name name-style="western"><surname>Doudna</surname><given-names>JA</given-names></name> &amp; <name name-style="western"><surname>Sontheimer</surname><given-names>EJ</given-names></name>) vol. <volume>546</volume>
+<fpage>1</fpage>–<lpage>20</lpage> (<publisher-name>Academic
+Press</publisher-name>, <year>2014</year>).<pub-id pub-id-type="pmid">25398333</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/B978-0-12-801185-0.00001-5</pub-id><pub-id pub-id-type="pmcid">PMC5074358</pub-id></mixed-citation></ref><ref id="R42"><label>42.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Pirakitikulr</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Ostrov</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Peralta-Yahya</surname><given-names>P</given-names></name> &amp; <name name-style="western"><surname>Cornish</surname><given-names>VW</given-names></name>
+<article-title>PCRless library mutagenesis via oligonucleotide recombination in
+yeast</article-title>. <source>Protein Sci. Publ. Protein Soc</source>
+<volume>19</volume>, <fpage>2336</fpage>–<lpage>2346</lpage>
+(<year>2010</year>).<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/pro.513</pub-id><pub-id pub-id-type="pmcid">PMC3009401</pub-id><pub-id pub-id-type="pmid">20936671</pub-id></mixed-citation></ref><ref id="R43"><label>43.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Clement</surname><given-names>K</given-names></name>
+<etal/>
+<article-title>CRISPResso2 provides accurate and rapid genome editing sequence
+analysis</article-title>. <source>Nat. Biotechnol</source>
+<volume>37</volume>, <fpage>224</fpage>–<lpage>226</lpage>
+(<year>2019</year>).<pub-id pub-id-type="pmid">30809026</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41587-019-0032-3</pub-id><pub-id pub-id-type="pmcid">PMC6533916</pub-id></mixed-citation></ref><ref id="R44"><label>44.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Levy</surname><given-names>JM</given-names></name> &amp; <name name-style="western"><surname>Nicoll</surname><given-names>RA</given-names></name>
+<article-title>Membrane-associated guanylate kinase dynamics reveal regional and
+developmental specificity of synapse stability</article-title>. <source>J. Physiol</source>
+<volume>595</volume>, <fpage>1699</fpage>–<lpage>1709</lpage>
+(<year>2017</year>).<pub-id pub-id-type="pmid">27861918</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1113/JP273147</pub-id><pub-id pub-id-type="pmcid">PMC5330878</pub-id></mixed-citation></ref><ref id="R45"><label>45.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Zettler</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Schütz</surname><given-names>V</given-names></name> &amp; <name name-style="western"><surname>Mootz</surname><given-names>HD</given-names></name>
+<article-title>The naturally split Npu DnaE intein exhibits an extraordinarily
+high rate in the protein trans-splicing reaction</article-title>.
+<source>FEBS Lett</source>. <volume>583</volume>,
+<fpage>909</fpage>–<lpage>914</lpage>
+(<year>2009</year>).<pub-id pub-id-type="pmid">19302791</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.febslet.2009.02.003</pub-id></mixed-citation></ref><ref id="R46"><label>46.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Li</surname><given-names>B</given-names></name> &amp; <name name-style="western"><surname>Dewey</surname><given-names>CN</given-names></name>
+<article-title>RSEM: accurate transcript quantification from RNA-Seq data with
+or without a reference genome</article-title>. <source>BMC Bioinformatics</source>
+<volume>12</volume>, <fpage>323</fpage> (<year>2011</year>).<pub-id pub-id-type="pmid">21816040</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1471-2105-12-323</pub-id><pub-id pub-id-type="pmcid">PMC3163565</pub-id></mixed-citation></ref><ref id="R47"><label>47.</label><mixed-citation publication-type="journal"><name name-style="western"><surname>Ritchie</surname><given-names>ME</given-names></name>
+<etal/>
+<article-title>limma powers differential expression analyses for RNA-sequencing
+and microarray studies</article-title>. <source>Nucleic Acids Res</source>.
+<volume>43</volume>, <fpage>e47</fpage>–<lpage>e47</lpage>
+(<year>2015</year>).<pub-id pub-id-type="pmid">25605792</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gkv007</pub-id><pub-id pub-id-type="pmcid">PMC4402510</pub-id></mixed-citation></ref></ref-list></back><floats-group><fig position="float" id="F1" orientation="portrait"><label>Figure 1.</label><caption><title>Overview of prime editing and feasibility studies <italic toggle="yes">in vitro</italic>
+and in yeast cells.</title><p id="P92">(<bold>a</bold>) The 75,122 known pathogenic human genetic variants in
+ClinVar (accessed July, 2019), classified by type. (<bold>b</bold>) A prime
+editing complex consists of a prime editor (PE) protein containing an RNA-guided
+DNA-nicking domain, such as Cas9 nickase, fused to a reverse transcriptase
+domain and complexed with a prime editing guide RNA (pegRNA). The PE:pegRNA
+complex enables a variety of precise DNA edits at a wide range of positions.
+(<bold>c</bold>) The PE:pegRNA complex binds the target DNA and nicks the
+PAM-containing strand. The resulting 3’ end hybridizes to the
+primer-binding site, then primes reverse transcription of new DNA containing the
+desired edit using the RT template of the pegRNA. Equilibration between the
+edited 3’ flap and the unedited 5’ flap, cellular 5’ flap
+cleavage and ligation, and DNA repair results in stably edited DNA.
+(<bold>d</bold>) <italic toggle="yes">In vitro</italic> primer extension assays with
+5’-extended pegRNAs, pre-nicked dsDNA substrates containing 5’-Cy5
+labeled PAM strands, dCas9, and a commercial M-MLV RT variant (RT, Superscript
+III). dCas9 was complexed with pegRNAs, then added to DNA substrates along with
+the indicated components. After 1 hour, reactions were analyzed by denaturing
+PAGE, visualizing Cy5 fluorescence. (<bold>e</bold>) Primer extension assays
+performed as in (<bold>d</bold>) using 3’-extended pegRNAs pre-complexed
+with dCas9 or Cas9 H840A nickase, and pre-nicked or non-nicked dsDNA substrates.
+(<bold>f</bold>) Yeast colonies transformed with GFP–mCherry fusion
+reporter plasmids edited <italic toggle="yes">in vitro</italic> with pegRNAs, Cas9 nickase,
+and RT. Plasmids containing nonsense or frameshift mutations between GFP and
+mCherry were edited with pegRNAs that restore mCherry translation via
+transversion, 1-bp insertion, or 1-bp deletion. GFP and mCherry double-positive
+cells (yellow) reflect successful editing. Images in (d-f) are representative of
+n=2 independent replicates. For gel source data, see <xref rid="SD2" ref-type="supplementary-material">Supplementary Figure 1</xref>.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0001.jpg"><?image-name nihms-1541141-f0001.jpg?><?image-size 302272?><?image-md5 07533c3376cc84e248ee31f5bb6294cd?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1103?><?image-original-width 1250?><?image-scaled-height 551?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/07533c3376cc/nihms-1541141-f0001.jpg?><?thumb-name nihms-1541141-f0001.gif?><?thumb-size 3493?><?thumb-md5 3e9e743dd57cbcf9c7c4b867009a1aad?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 88?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/3e9e743dd57c/nihms-1541141-f0001.gif?></graphic></fig><fig position="float" id="F2" orientation="portrait"><label>Figure 2.</label><caption><title>Prime editing of genomic DNA in human cells by PE1 and PE2.</title><p id="P93">(<bold>a</bold>) Use of an engineered M-MLV reverse transcriptase
+(D200N, L603W, T306K, W313F, T330p) in PE2 substantially improves prime editing
+efficiencies at five genomic sites in HEK293T cells, and small insertion and
+small deletion edits at <italic toggle="yes">HEK3</italic>. (<bold>b</bold>) PE2 editing
+efficiencies with varying RT template lengths at five genomic sites in HEK293T
+cells. Editing efficiencies reflect sequencing reads that contain the intended
+edit and do not contain indels among all treated cells, with no sorting. Values
+and error bars reflect mean±s.d. of n=3 independent biological
+replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0002.jpg"><?image-name nihms-1541141-f0002.jpg?><?image-size 146890?><?image-md5 e816a07837e855fcf92f469345be3b0e?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 449?><?image-original-width 1250?><?image-scaled-height 224?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/e816a07837e8/nihms-1541141-f0002.jpg?><?thumb-name nihms-1541141-f0002.gif?><?thumb-size 2038?><?thumb-md5 0117562a3d73df7d1340382bdc707c05?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 35?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/0117562a3d73/nihms-1541141-f0002.gif?></graphic></fig><fig position="float" id="F3" orientation="portrait"><label>Figure 3.</label><caption><title>PE3 and PE3b systems nick the non-edited strand to increase prime editing
+efficiency.</title><p id="P94">(<bold>a</bold>) Overview of prime editing by PE3. After initial
+synthesis of the edited strand, 5’ flap excision leaves behind a DNA
+heteroduplex containing one edited strand and one non-edited strand. Mismatch
+repair resolves the heteroduplex to give either edited or non-edited products.
+Nicking the non-edited strand favors repair of that strand, resulting in
+preferential generation of duplex DNA containing the desired edit.
+(<bold>b</bold>) The effect of complementary strand nicking on prime editing
+efficiency and indel formation. “None” refers to PE2 controls,
+which do not nick the complementary strand. (<bold>c</bold>) Comparison of
+editing efficiencies with PE2, PE3, and PE3b (edit-specific complementary strand
+nick). Editing efficiencies reflect sequencing reads that contain the intended
+edit and do not contain indels among all treated cells, with no sorting. Values
+and error bars reflect mean±s.d. of n=3 independent biological
+replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0003.jpg"><?image-name nihms-1541141-f0003.jpg?><?image-size 161279?><?image-md5 7046b9f97f1884eb5f27e8cff5f315a0?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 617?><?image-original-width 1250?><?image-scaled-height 308?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/7046b9f97f18/nihms-1541141-f0003.jpg?><?thumb-name nihms-1541141-f0003.gif?><?thumb-size 2523?><?thumb-md5 5e9714495393137aa86b88afaf05b6ef?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 49?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/5e9714495393/nihms-1541141-f0003.gif?></graphic></fig><fig position="float" id="F4" orientation="portrait"><label>Figure 4.</label><caption><title>Targeted insertions, deletions, and all 12 types of point mutations with PE3
+at seven endogenous genomic loci in HEK293T cells.</title><p id="P95">(<bold>a</bold>) All 12 types of single-nucleotide edits from position
++1 to +8 of the <italic toggle="yes">HEK3</italic> site using a 10-nt RT template, counting
+the first nucleotide following the pegRNA-induced nick as position +1.
+(<bold>b</bold>) Long-range PE3 edits at <italic toggle="yes">HEK3</italic> using a 34-nt
+RT template. (<bold>c-e</bold>) PE3-mediated transition and transversion edits
+at the specified positions for (<bold>c</bold>) <italic toggle="yes">RNF2</italic>,
+(<bold>d</bold>) <italic toggle="yes">RUNX1</italic>, and (<bold>e</bold>)
+<italic toggle="yes">VEGFA</italic>. (<bold>f</bold>) Targeted 1- and 3-bp insertions,
+and 1- and 3-bp deletions with PE3 at seven endogenous genomic loci.
+(<bold>g</bold>) Targeted precise deletions of 5-80 bp at
+<italic toggle="yes">HEK3</italic>. (<bold>h</bold>) Combination edits at three
+endogenous genomic loci. Editing efficiencies reflect sequencing reads that
+contain the intended edit and do not contain indels among all treated cells,
+with no sorting. Values and error bars reflect mean±s.d. of n=3
+independent biological replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0004.jpg"><?image-name nihms-1541141-f0004.jpg?><?image-size 256870?><?image-md5 929007c950d54da54caa413ae5c6d12e?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 925?><?image-original-width 1250?><?image-scaled-height 462?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/929007c950d5/nihms-1541141-f0004.jpg?><?thumb-name nihms-1541141-f0004.gif?><?thumb-size 3610?><?thumb-md5 17b3aa33e10136e1701c9269a12fd28a?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 73?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/17b3aa33e101/nihms-1541141-f0004.gif?></graphic></fig><fig position="float" id="F5" orientation="portrait"><label>Figure 5.</label><caption><title>Prime editing of pathogenic mutations, prime editing in primary mouse
+cortical neurons, and comparison of prime editing and HDR in four human cell
+lines.</title><p id="P96">(<bold>a</bold>) Installation (via T•A-to-A•T
+transversion) and correction (via A•T-to-T•A transversion) of the
+pathogenic E6V mutation in <italic toggle="yes">HBB</italic> in HEK293T cells. Correction
+either to wild-type <italic toggle="yes">HBB</italic>, or to <italic toggle="yes">HBB</italic> containing
+a PAM-disrupting silent mutation, is shown. (<bold>b</bold>) Installation (via
+4-bp insertion) and correction (via 4-bp deletion) of the pathogenic
+<italic toggle="yes">HEXA</italic> 1278+TATC allele in HEK293T cells. Correction either
+to wild-type <italic toggle="yes">HEXA</italic>, or to <italic toggle="yes">HEXA</italic> containing a
+PAM-disrupting silent mutation, is shown. (<bold>c</bold>) Installation of the
+protective G127V variant in <italic toggle="yes">PRNP</italic> in HEK293T cells via
+G•C-to-T•A transversion. (<bold>d</bold>) Installation of a
+G•C-to-T•A transversion in <italic toggle="yes">DNMT1</italic> of mouse primary
+cortical neurons using a split-intein PE3 lentivirus system (see <xref rid="S15" ref-type="sec">Methods</xref>). Sorted values reflect editing or indels from
+GFP-positive nuclei, while unsorted values are from all nuclei. (<bold>e</bold>)
+PE3 editing and indels or (<bold>f</bold>) Cas9-initiated HDR editing and indels
+at endogenous genomic loci in HEK293T, K562, U2OS, and HeLa cells.
+(<bold>g</bold>) Targeted insertion of a His<sub>6</sub> tag (18 bp), FLAG
+epitope tag (24 bp), or extended <italic toggle="yes">LoxP</italic> site (44 bp) in HEK293T
+cells by PE3. Editing efficiencies reflect sequencing reads that contain the
+intended edit and do not contain indels among all treated cells, with no
+sorting, except where specified in (e). Values and error bars reflect
+mean±s.d. of n=3 independent biological replicates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms-1541141-f0005.jpg"><?image-name nihms-1541141-f0005.jpg?><?image-size 168978?><?image-md5 9a3c05e844b3c735598d44b1460338e1?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 682?><?image-original-width 1250?><?image-scaled-height 341?><?image-scaled-width 625?><?image-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/9a3c05e844b3/nihms-1541141-f0005.jpg?><?thumb-name nihms-1541141-f0005.gif?><?thumb-size 2819?><?thumb-md5 8c217ce117c4d76c6b08cb066b0af8e6?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 54?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/f6c6/6907074/8c217ce117c4/nihms-1541141-f0005.gif?></graphic></fig></floats-group></article>

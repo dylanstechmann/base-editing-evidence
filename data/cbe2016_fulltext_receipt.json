@@ -1,0 +1,11 @@
+{
+  "scope": "Exact primary full-text retrieval and focused review, not a systematic review",
+  "pmcid": "PMC4873371",
+  "pmid": "27096365",
+  "doi": "10.1038/nature17946",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4873371/fullTextXML",
+  "retrieved_utc": "2026-10-24T23:12:13.401717+00:00",
+  "response_sha256": "53d4e6b4a6691f69481fcb5c269c657424cbafeaf95a18a754053fe8d3c82865",
+  "response_path": "raw/PMC4873371.xml",
+  "limits": "Retained JATS XML response bytes are committed at raw/PMC4873371.xml and bound by response_sha256. The record is the PMC author manuscript; supplementary sequences and tables were not independently acquired. Figures were read from the retrieved XML text; no image files were independently acquired. Nothing here authenticates the publisher's version of record or the review's interpretation of it."
+}

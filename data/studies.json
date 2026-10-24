@@ -11,8 +11,8 @@
       "source_url": "https://www.nature.com/articles/nature17946",
       "source_report": "The source introduces programmable conversion of a DNA base without requiring a double-strand break or donor template.",
       "functional_scope": "Establishes editing chemistry and experimental cell outcomes; this entry makes no tissue-function claim.",
-      "limits": "Sequence conversion, targetability, intended-only products and tissue repair are different questions. Absence of a required double-strand break is not absence of adverse editing outcomes.",
-      "access_level": "Official indexed abstract and author-repository abstract"
+      "limits": "The reviewed full text reports permanent correction of about 15-75% of total cellular DNA across four transformed cell lines with indels typically at or below 1%, and an off-target profile over 2,500 cytosines/guanines surrounding 40 loci (14.7 million reads) that is a selected-loci readout rather than genome-wide sequencing. Sequence conversion, targetability, intended-only products and tissue repair remain different questions. Absence of a required double-strand break is not absence of adverse editing outcomes.",
+      "access_level": "Primary open-access full text (PMC author manuscript) retrieved via Europe PMC fullTextXML and reviewed in FOUNDATIONAL_METHODS_REVIEW.md; supplementary sequences and tables not independently acquired"
     },
     {
       "id": "abe-2017",
@@ -24,8 +24,8 @@
       "source_url": "https://www.nature.com/articles/nature24644",
       "source_report": "The source reports adenine base editors supporting A•T to G•C changes in genomic DNA and cell-level disease-relevant sequence changes.",
       "functional_scope": "The original cell experiments do not establish systemic age-damage repair or successful delivery to an arbitrary organ.",
-      "limits": "Efficiencies and byproducts are source-, site- and system-dependent; this catalog does not transfer a reported percentage to a new variant or tissue.",
-      "access_level": "Publisher abstract and article page"
+      "limits": "Efficiencies and byproducts are source-, site- and system-dependent. The reviewed full text reports mean±SD of three biological replicates per efficiency, a stated target-sequence-context preference, and a GUIDE-seq-anchored off-target comparison in which ABE variants modified fewer known Cas9 off-target sites at lower levels — an assumption-dependent, selected-site assessment, not genome-wide absence. This catalog does not transfer a reported percentage to a new variant or tissue.",
+      "access_level": "Primary open-access full text retrieved via Europe PMC fullTextXML and reviewed in FOUNDATIONAL_METHODS_REVIEW.md; supplementary tables not independently acquired"
     },
     {
       "id": "rna-offtargets-2019",
@@ -50,8 +50,8 @@
       "source_url": "https://www.nature.com/articles/s41586-019-1711-4",
       "source_report": "The source describes a complementary genome-editing approach for broader sequence changes.",
       "functional_scope": "Broader change classes do not establish repair efficiency or functional benefit for a newly declared lesion.",
-      "limits": "Outside classical ABE/CBE conversion classes does not mean biologically impossible. Prime editing has its own targetability, product, delivery and functional evidence requirements.",
-      "access_level": "Publisher abstract and article page"
+      "limits": "Broader change classes do not establish repair efficiency or functional benefit for a newly declared lesion. The reviewed full text states more than 175 cell edits, 1.6- to 5.1-fold PE2 improvements over PE1, off-target comparisons at known Cas9 off-target sites and an up-to-89% in-principle correctability estimate that is computed, not measured accessibility. Prime editing stays recorded separately from base editing in this catalog.",
+      "access_level": "Primary open-access full text retrieved via Europe PMC fullTextXML and reviewed in FOUNDATIONAL_METHODS_REVIEW.md; supplementary data not independently acquired"
     },
     {
       "id": "cps1-case-2025",

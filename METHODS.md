@@ -292,3 +292,20 @@ fullTextXML endpoint with retained raw bytes: PMC12948676
 The focused review lives in [CART_PIK3CD_REVIEW.md](CART_PIK3CD_REVIEW.md).
 Guide sequences, effector-to-target ratios and cell-dose values are
 omitted per charter; supplementary data were not independently acquired.
+
+## Foundational methods papers full-text retrieval — 2026-10-24
+
+Three further open-access full texts were retrieved live via the Europe
+PMC fullTextXML endpoint with retained raw bytes: PMC4873371
+(10.1038/nature17946, PMC author manuscript) at
+[data/raw/PMC4873371.xml](data/raw/PMC4873371.xml), PMC5726555
+(10.1038/nature24644) at [data/raw/PMC5726555.xml](data/raw/PMC5726555.xml)
+and PMC6907074 (10.1038/s41586-019-1711-4) at
+[data/raw/PMC6907074.xml](data/raw/PMC6907074.xml), each bound by
+`response_sha256` in [data/cbe2016_fulltext_receipt.json](data/cbe2016_fulltext_receipt.json),
+[data/abe2017_fulltext_receipt.json](data/abe2017_fulltext_receipt.json)
+and [data/prime2019_fulltext_receipt.json](data/prime2019_fulltext_receipt.json).
+The focused review lives in
+[FOUNDATIONAL_METHODS_REVIEW.md](FOUNDATIONAL_METHODS_REVIEW.md). Guide
+sequences and transfection/dose values are omitted per charter;
+supplementary files were not independently acquired.

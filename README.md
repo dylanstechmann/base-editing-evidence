@@ -25,6 +25,12 @@ somatic genome repair, stem-cell constructs and regenerative tissues.
    Cell-line RNA off-target findings illustrate why a DNA-only measurement has
    limited scope. [Primary RNA study](https://www.nature.com/articles/s41586-019-1161-z).
 
+The foundational methods papers are now full-text reviewed in
+[FOUNDATIONAL_METHODS_REVIEW.md](FOUNDATIONAL_METHODS_REVIEW.md), which retains
+their cell-line denominators and selected off-target readouts; the
+[methods-papers snapshot](examples/outcome-audit-methods-papers/report.json)
+is the current outcome snapshot, with earlier snapshots historical.
+
 The synthetic count example reaches 500 of 1,000 cells, records intended edits
 in 300, and intended-only products in 250. The conditional intended-edit rate
 is 60%; intended-only coverage of the whole population is 25%. These are
@@ -122,8 +128,8 @@ establishes tumor-lesion correction, tumor-selective delivery or durable
 safety in a person. The [CAR-adapted PIK3CD review](CART_PIK3CD_REVIEW.md)
 retains the screen design and the explicit xenograft group sizes from the
 accessed open-access full text, and the [CAR-T
-snapshot](examples/outcome-audit-cart-pik3cd/report.json) is the current
-outcome snapshot. The [cancer snapshot](examples/outcome-audit-cancer/report.json)
+snapshot](examples/outcome-audit-cart-pik3cd/report.json) remains a
+historical record of the catalog at that point. The [cancer snapshot](examples/outcome-audit-cancer/report.json)
 remains a historical record of the catalog at that point.
 
 The `audit-variant-batch` command classifies a declared batch of
