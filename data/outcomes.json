@@ -315,6 +315,38 @@
       "follow_up": "Sequencing of treated plants in the original study; not longitudinal follow-up",
       "limits": "Plant whole-genome findings are not a human somatic-tissue mutation estimate. The platform contrast is condition-specific to this rice study and does not extend to every editor, species or delivery context.",
       "signal_role": "harm"
+    },
+    {
+      "id": "cancer-sebe-inducible-screens",
+      "study_id": "cancer-be-screens-2026",
+      "domain": "molecular_function",
+      "status": "source_reports_signal",
+      "outcome": "Small-molecule-controllable split-engineered base editors were reported to reduce cellular toxicity and enable inducible in vivo functional-genomics screens, with guide libraries of about 11,000 in vitro and about 3,700 in vivo, and an Adar1 tiling screen identifying critical residues that elicit non-cell-autonomous cancer dependencies in vivo.",
+      "source_locator": "Official indexed abstract: results statements",
+      "comparison_design": "between_groups",
+      "comparison": "Split-engineered inducible base editors compared with intact-deaminase editors in the reported screens",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Screen; guide-library sizes are not independent biological units",
+      "n_independent_units": null,
+      "follow_up": "Screen endpoints in the original study; not longitudinal follow-up",
+      "limits": "Screen-scale findings identify residues in model contexts. Guide counts are library sizes, not biological replication, and the in vivo organism and denominators are not stated in the accessed abstract.",
+      "signal_role": "context"
+    },
+    {
+      "id": "car-t-pik3cd-context-mutations",
+      "study_id": "car-t-pik3cd-2026",
+      "domain": "tissue_function",
+      "status": "source_reports_signal",
+      "outcome": "In preclinical in vivo models, the activating PIK3CD E81K substitution enhanced proliferation, metabolic fitness, effector function and long-term functional persistence of 4-1BBz CAR T cells with enhanced therapeutic efficacy, while the attenuating L32P substitution improved memory formation and function of 28z CAR T cells.",
+      "source_locator": "Official indexed abstract: results statements",
+      "comparison_design": "between_groups",
+      "comparison": "Edited CAR T cells carrying distinct PIK3CD substitutions compared across 4-1BBz and 28z CAR contexts in preclinical models",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Preclinical in vivo experiment; animal and donor denominators are not stated in the accessed abstract",
+      "n_independent_units": null,
+      "follow_up": "Long-term functional persistence and in vivo efficacy reported in the original study; intervals not stated in the accessed abstract",
+      "limits": "These are preclinical engineered-cell potency findings. Base editing deliberately reprograms a signaling allele; it does not correct a tumor-driver mutation, and no human dosing, safety or clinical protocol follows from this row.",
+      "signal_role": "benefit"
     }
   ]
 }

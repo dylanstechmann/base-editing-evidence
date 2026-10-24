@@ -51,9 +51,9 @@ class AuditChecks(unittest.TestCase):
 
     def test_curated_sources_have_scopes_and_no_inherited_human_validation(self):
         report = study_report(ROOT / "data/studies.json")
-        self.assertEqual(len(report["studies"]), 12)
+        self.assertEqual(len(report["studies"]), 14)
         self.assertEqual(report["counts_by_stage"]["human_cells"], 6)
-        self.assertEqual(report["counts_by_stage"]["animal"], 3)
+        self.assertEqual(report["counts_by_stage"]["animal"], 5)
         self.assertEqual(report["counts_by_stage"]["human_case"], 1)
         self.assertEqual(report["counts_by_stage"]["plant"], 2)
         by_id = {study["id"]: study for study in report["studies"]}
@@ -61,6 +61,8 @@ class AuditChecks(unittest.TestCase):
         self.assertEqual(by_id["col7a1-rdeb-2022"]["stage"], "human_cells")
         self.assertEqual(by_id["plant-cbe-2017"]["stage"], "plant")
         self.assertEqual(by_id["plant-cbe-offtargets-2019"]["stage"], "plant")
+        self.assertEqual(by_id["cancer-be-screens-2026"]["stage"], "animal")
+        self.assertEqual(by_id["car-t-pik3cd-2026"]["stage"], "animal")
         studies = copy.deepcopy(report["studies"])
         studies[0]["functional_scope"] = ""
         with self.assertRaises(ValueError):

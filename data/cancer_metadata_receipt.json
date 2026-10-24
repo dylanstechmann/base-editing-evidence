@@ -1,0 +1,30 @@
+{
+  "retrieved_utc": "2026-10-24T21:11:12.122706+00:00",
+  "retrieval_method": "Europe PMC REST search API exact-EXT_ID queries accessed online on 2026-10-24; indexed metadata transcribed from the API responses",
+  "scope": "Exact-ID indexed metadata retrieval, not a systematic search or independent validation",
+  "queries": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41986696&format=json&resultType=core&pageSize=1",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41495526&format=json&resultType=core&pageSize=1"
+  ],
+  "records": [
+    {
+      "id": "41986696",
+      "source": "MED",
+      "pmid": "41986696",
+      "doi": "10.1038/s41587-026-03077-5",
+      "title": "Inducible, split base editors for in vivo cancer functional genomics.",
+      "firstPublicationDate": "2026-04-15"
+    },
+    {
+      "id": "41495526",
+      "source": "MED",
+      "pmid": "41495526",
+      "pmcid": "PMC12948676",
+      "doi": "10.1038/s43018-025-01099-7",
+      "title": "CAR-adapted PIK3CD base editing enhances T cell anti-tumor potency.",
+      "firstPublicationDate": "2026-02-10"
+    }
+  ],
+  "records_sha256": "a41e60956637d2966121c700027218ecb4aff96c7b26bcef4dd1e5a33b0481fb",
+  "limits": "Raw response bytes were not retained by the retrieval tooling; records_sha256 binds the committed record block, not an unretained response. Fields were transcribed from indexed API responses and not verified against publisher pages."
+}

@@ -124,3 +124,21 @@ tooling can pre-validate declared fields before submission. The export
 declares accepted values; it validates no document and interprets nothing.
 One new unit test asserts the export matches the module constants. All 30
 unit tests and Ruff pass.
+
+## Cancer-model source cards — 2026-10-24
+
+Added two abstract-level cancer-model cards: the 2026 Nature Biotechnology
+inducible split base-editor study (small-molecule-controllable split
+engineered base editors enabling in vivo cancer functional-genomics
+screens, with reduced cellular toxicity and an Adar1 tiling screen) and
+the 2026 Nature Cancer CAR-adapted PIK3CD study (E81K enhancing 4-1BBz CAR
+T-cell persistence and in vivo efficacy; L32P improving 28z CAR T-cell
+memory). Metadata was retrieved through exact-EXT_ID Europe PMC queries
+and is bound by a records-hash [receipt](data/cancer_metadata_receipt.json);
+full texts were not accessed. Two outcome rows keep screen-level mutagenesis
+findings (context) and preclinical engineered-cell potency (benefit) in
+separate domains, with unknown denominators where the accessed abstracts
+do not state them. The current outcome snapshot is
+`examples/outcome-audit-cancer/report.json`; earlier snapshots remain
+historical. All 30 unit tests and Ruff pass. No tumor-lesion-correction,
+dosing or clinical claim is added.

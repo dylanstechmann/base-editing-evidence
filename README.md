@@ -6,7 +6,7 @@ coding assistance. No owner laboratory work or source review is implied.
 
 The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[twelve source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+[fourteen source cards](data/studies.json) distinguish cell experiments, a genetic-disease
 mouse model, an initial single-patient clinical report and crop-plant editing studies. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
@@ -101,8 +101,16 @@ conversion in protoplasts and regenerated rice, wheat and maize plants; the
 and HF1-BE3, but not ABE, in whole-genome-sequenced rice, also without
 single-guide RNA. These are agricultural models; they transfer neither to
 human editing nor to agronomic performance. The [plants snapshot](examples/outcome-audit-plants/report.json)
-is the current outcome snapshot; the precision snapshot remains a historical
-record of the earlier catalog.
+remains a historical record of the catalog at that point.
+
+Two 2026 cancer-model cards record base editors used as research tools: an
+inducible split-editor in vivo functional-genomics screen with reduced
+cellular toxicity, and CAR-adapted PIK3CD allelic reprogramming of
+engineered T cells with preclinical in vivo efficacy. Both remain
+preclinical models that deliberately mutate or reprogram alleles; neither
+establishes tumor-lesion correction, tumor-selective delivery or durable
+safety in a person. The [cancer snapshot](examples/outcome-audit-cancer/report.json)
+is the current outcome snapshot; earlier snapshots stay historical.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

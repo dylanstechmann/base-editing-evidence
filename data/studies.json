@@ -156,6 +156,32 @@
       "functional_scope": "A DNA off-target outcome assessment in plants; no agronomic yield, ecological or human-safety measurement.",
       "limits": "Editor- and condition-specific plant findings; not a human somatic-tissue risk estimate and not a claim about every modern editor. The accessed abstract does not state per-group plant counts.",
       "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
+    },
+    {
+      "id": "cancer-be-screens-2026",
+      "title": "Inducible, split base editors for in vivo cancer functional genomics",
+      "stage": "animal",
+      "model": "Cell and in vivo cancer functional-genomics screens with split-engineered base editors; the in vivo organism is not specified in the accessed abstract",
+      "target_tissue": "Tumor models for functional genomics; no treated human tissue",
+      "intervention_class": "Small-molecule-inducible split base editors used as research mutators",
+      "source_url": "https://www.nature.com/articles/s41587-026-03077-5",
+      "source_report": "The source describes small-molecule-controllable split-engineered base editors that reduce cellular toxicity and enable inducible in vivo functional-genomics screens, reported with about 11,000 guide RNAs in vitro and about 3,700 in vivo, including an Adar1 tiling screen identifying critical residues with non-cell-autonomous cancer dependencies.",
+      "functional_scope": "Research-screen mutagenesis and toxicity reduction in cancer models; this entry makes no therapeutic, patient-editing or tumor-lesion-correction claim.",
+      "limits": "Screen-scale guide libraries identify residues in model contexts; they are not a human somatic editing protocol, a tumor-correction therapy or a safety demonstration. The in vivo organism and biological denominators are not stated in the accessed abstract.",
+      "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
+    },
+    {
+      "id": "car-t-pik3cd-2026",
+      "title": "CAR-adapted PIK3CD base editing enhances T cell anti-tumor potency",
+      "stage": "animal",
+      "model": "Human CAR T cells edited by base editing and assessed in preclinical in vivo tumor models",
+      "target_tissue": "Ex vivo engineered human T cells assayed in preclinical models; no treated patient",
+      "intervention_class": "CAR-adapted base editing of PIK3CD for allelic reprogramming of T-cell signaling",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12948676/",
+      "source_report": "The source reports a CAR-adapted base-editing screen of PIK3CD identifying context-dependent point mutations: the activating E81K substitution enhanced proliferation, metabolic fitness, effector function and long-term functional persistence of 4-1BBz CAR T cells with enhanced in vivo efficacy, while the attenuating L32P substitution improved memory formation and function of 28z CAR T cells.",
+      "functional_scope": "Ex vivo T-cell engineering with preclinical in vivo efficacy readouts; not a patient treatment or an approved-therapy claim.",
+      "limits": "Base editing is used here to deliberately reprogram a signaling allele in engineered immune cells, not to correct a tumor-driver lesion. Results are CAR-construct- and context-specific preclinical findings; no human dosing, safety or clinical protocol follows.",
+      "access_level": "Official indexed abstract via Europe PMC; open-access full text not separately reviewed"
     }
   ]
 }

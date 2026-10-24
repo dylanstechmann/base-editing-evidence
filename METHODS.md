@@ -113,3 +113,14 @@ and supplementary materials were not accessed, and abstract-level statements
 are not extended beyond the accessed text. Plant on-target conversion and
 genome-wide off-target findings remain separate outcome domains, and no
 agronomic, ecological or human claim is derived.
+
+On 2026-10-24, the catalog added two abstract-level cancer-model cards:
+the 2026 inducible split base-editor functional-genomics study and the
+2026 CAR-adapted PIK3CD allelic-reprogramming study. The assistant accessed
+exact EXT_ID Europe PMC REST responses online and transcribed indexed
+metadata; raw response bytes were not retained, so the
+[receipt](data/cancer_metadata_receipt.json) binds the committed record
+block with a records SHA-256. Full texts were not accessed, and
+abstract-level statements are not extended. Both cards record base editors
+used as research tools on tumor models or engineered immune cells; neither
+supports a tumor-lesion-correction, dosing or clinical claim.

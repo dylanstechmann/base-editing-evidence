@@ -35,10 +35,13 @@ Cancer is typically multi-lesional and heterogeneous within one tumor. A
 classified correction direction for one driver allele is not a therapeutic
 program: no card in this catalog establishes editing of a somatic tumor
 lesion, tumor-selective delivery, clonal-response dynamics or durable safety
-in a person. The repository's disease-correction precedents
-(COL7A1/RDEB, KCNJ13, ABE8e-Y149V/HTI, CPS1) are monogenic or
-bypass-strategy models, not cancer models. Cancer-relevant editing evidence
-would require its own cards with those comparators and denominators.
+in a person. Two cancer-model cards now exist in this catalog: the 2026
+inducible split-editor functional-genomics screens and the 2026 CAR-adapted
+PIK3CD allelic-reprogramming study. Both use base editors as research tools
+on tumor models or engineered immune cells; neither is a tumor-lesion
+correction in a person. The repository's disease-correction precedents
+(COL7A1/RDEB, KCNJ13, ABE8e-Y149V/HTI, CPS1) remain monogenic or
+bypass-strategy models.
 
 ## Aging
 
@@ -81,7 +84,7 @@ established by any card in this repository.
 | Stage | Cards in this catalog | Not established |
 |---|---|---|
 | Cultured human cells | CBE 2016, ABE 2017, RNA off-target 2019, prime editing 2019, CBE fidelity 2020, COL7A1 2022 | Tissue function in a person; whole-genome safety |
-| Animal disease models | Progeria 2021, KCNJ13 2023, ABE8e-Y149V 2026 | Ordinary aging; human clinical validation |
+| Animal models | Progeria 2021, KCNJ13 2023, ABE8e-Y149V 2026, cancer BE screens 2026, CAR-T PIK3CD 2026 | Ordinary aging; human clinical validation; tumor-lesion correction in a person |
 | Single human case | CPS1 2025 | Comparative safety, durability, enhancement |
 | Plants | Zong 2017 CBE crops; Jin 2019 rice off-targets | Human editing; agronomic or ecological outcomes; long-term field behavior |
 
