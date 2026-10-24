@@ -288,3 +288,19 @@ was not accessed. An unplanned open-label interim analysis with mean
 long-term-safety demonstration. The current outcome snapshot is
 `examples/outcome-audit-beacon/report.json`; earlier snapshots remain
 historical. All 37 unit tests and Ruff pass.
+
+## Receipt tooling release — 2026-10-24 (v0.3.0)
+
+Added the `baseevidence fetch-receipt` subcommand: a live exact-EXT_ID Europe
+PMC core-metadata retrieval that retains the raw response bytes under
+`data/raw/`, binds them with `response_sha256`, transcribes the indexed record
+fields into `records`, and binds that block with `records_sha256`.
+`verify-receipts` now also re-checks retained response bytes by local hash; it
+still never re-retrieves or authenticates, and the ten pre-existing
+records-hash receipts pass unchanged. Receipts and retained responses are
+append-only — the tool refuses to overwrite an existing receipt or response.
+Validated by a live re-retrieval of PMID 41931046 on 2026-10-24, committed as
+[data/beacon_response_receipt.json](data/beacon_response_receipt.json) with
+the response retained at `data/raw/41931046.json`. Tests are mocked and never
+touch the network; the suite is now 41 unit tests, Ruff clean, 11 receipts
+verified with no failures.

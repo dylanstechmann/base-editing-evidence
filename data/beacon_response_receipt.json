@@ -1,0 +1,22 @@
+{
+  "retrieved_utc": "2026-10-24T22:32:33.687890+00:00",
+  "retrieval_method": "Europe PMC REST search API exact-EXT_ID query accessed online on 2026-10-24; raw response bytes retained at raw/41931046.json and bound by response_sha256; indexed metadata and abstract text transcribed from the API response",
+  "scope": "Exact-ID indexed metadata and abstract retrieval, not a systematic search or independent validation",
+  "queries": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41931046&format=json&resultType=core&pageSize=1"
+  ],
+  "response_path": "raw/41931046.json",
+  "response_sha256": "837aae39c72bb49f587fbcb25181601246410c973576d933e6dfcc0c0c0066b8",
+  "records": [
+    {
+      "id": "41931046",
+      "source": "MED",
+      "pmid": "41931046",
+      "doi": "10.1056/nejmoa2504835",
+      "title": "Base Editing of &lt;i&gt;HBG1&lt;/i&gt; and &lt;i&gt;HBG2&lt;/i&gt; Promoters for Sickle Cell Disease.",
+      "firstPublicationDate": "2026-04-01"
+    }
+  ],
+  "records_sha256": "9e8efb4c0dae64ffee86df0b714f42954ecf74e1b80207e5810f049faca80640",
+  "limits": "Raw response bytes are retained at raw/41931046.json and bound by response_sha256. Fields and abstract text were transcribed from the indexed API response and not verified against publisher pages. The subscription full text was not accessed."
+}

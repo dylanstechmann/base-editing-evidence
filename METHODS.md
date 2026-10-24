@@ -217,3 +217,17 @@ Cell-dose values are omitted to avoid reproducing a dosing protocol, and
 myeloablative conditioning is described qualitatively only. An unplanned
 interim analysis with mean 6.6-month follow-up is not a 12-month
 primary-end-point, curative or long-term-safety demonstration.
+
+On 2026-10-24 (v0.3.0), retrieval tooling joined the catalog: the
+`fetch-receipt` CLI subcommand issues the exact-EXT_ID Europe PMC core query
+live, retains the raw response bytes under `data/raw/`, binds those bytes
+with `response_sha256`, transcribes the indexed record fields, and binds that
+block with `records_sha256`. `verify-receipts` now re-checks retained response
+bytes by local hash — still no re-retrieval and no authentication. The tool
+was validated by a live re-retrieval of PMID 41931046 on 2026-10-24, written
+as [data/beacon_response_receipt.json](data/beacon_response_receipt.json)
+with the response retained at `data/raw/41931046.json`; the earlier
+hand-written receipt stays as the record of the first retrieval. Receipts
+and retained responses are append-only: the tool refuses to overwrite either.
+The tool adds no interpretation; transcribed fields come mechanically from
+the indexed response, and the subscription full text remains unaccessed.

@@ -11,15 +11,23 @@ undocumented, never zero.
 1. **Select a real source.** A paper or report with an indexed identifier
    (PMID, PMCID or DOI). Do not add a citation that was not retrieved. Do not
    transcribe claims from memory.
-2. **Acquire metadata through Europe PMC.** Use an exact-ID or exact-DOI REST
-   query (`resultType=core`), not a serendipitous search. Record the exact
-   query URL, UTC timestamp and a hash in a receipt file under `data/`.
-3. **Write an honest receipt.** Record what was accessed (indexed metadata,
-   abstract, full text) and what was *not* (supplementary files, datasets).
-   A response hash proves which response was retrieved, not that the
-   interpretation drawn from it is correct. Where raw response bytes are not
-   retained by the retrieval tooling, hash the committed record block
-   (`records_sha256`) and say so in `scope`.
+2. **Acquire metadata through Europe PMC.** Use the packaged retrieval tool,
+   not an ad-hoc script: `PYTHONPATH=src python -m baseevidence.cli
+   fetch-receipt <EXT_ID> --out data/<tranche>_receipt.json --raw-dir data/raw`.
+   It issues the exact-EXT_ID core query live, retains the raw response bytes
+   under `data/raw/`, binds them with `response_sha256`, transcribes the
+   indexed record fields into `records`, and binds that block with
+   `records_sha256`. `verify-receipts` re-checks retained bytes by local hash;
+   it never re-retrieves. Receipts and retained responses are append-only:
+   the tool refuses to overwrite either.
+3. **Write an honest receipt.** Review the tool-written receipt before
+   committing: transcribed fields are mechanical, but the scope and access
+   statements are yours to keep honest. Record what was accessed (indexed
+   metadata, abstract, full text) and what was *not* (supplementary files,
+   datasets, subscription full texts). A response hash proves which response
+   was retrieved, not that the interpretation drawn from it is correct. Where
+   raw response bytes are not retained by the retrieval tooling, hash the
+   committed record block (`records_sha256`) and say so in `scope`.
 
 ## Study cards (`data/studies.json`)
 

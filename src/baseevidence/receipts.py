@@ -22,11 +22,13 @@ def _retrieval_urls(receipt, name):
     return urls
 
 
-def validate_receipt(receipt, name):
+def validate_receipt(receipt, name, base_dir=None):
     """Structural checks on one provenance receipt; never re-retrieval.
 
     A hash proves which response was retrieved, not that any interpretation of
-    it is correct. Record-to-card binding and source truth are not authenticated.
+    it is correct. Record-to-card binding and source truth are not
+    authenticated. Receipts that retain response bytes are bound by a local
+    hash check against response_path; no network retrieval occurs here.
     """
     if not isinstance(receipt, dict):
         raise ValueError(f"{name}: receipt must be an object")  # noqa: TRY004 -- malformed external data is a CLI validation error
@@ -34,6 +36,19 @@ def validate_receipt(receipt, name):
     digest = receipt.get("response_sha256") or receipt.get("records_sha256")
     if not isinstance(digest, str) or not HEX64.match(digest):
         raise ValueError(f"{name}: needs a 64-hex response or records SHA-256")
+    response_path = receipt.get("response_path")
+    if response_path is not None:
+        if not isinstance(response_path, str) or not response_path.strip():
+            raise ValueError(f"{name}: response_path must be a nonempty relative path")
+        if not isinstance(receipt.get("response_sha256"), str) or not HEX64.match(receipt["response_sha256"]):
+            raise ValueError(f"{name}: response_path receipts need a 64-hex response_sha256")
+        if base_dir is None:
+            raise ValueError(f"{name}: response_path needs the receipt directory for local verification")
+        retained = Path(base_dir) / response_path
+        if not retained.is_file():
+            raise ValueError(f"{name}: retained response bytes not found at {response_path}")
+        if hashlib.sha256(retained.read_bytes()).hexdigest() != receipt["response_sha256"]:
+            raise ValueError(f"{name}: response_sha256 does not bind the retained response bytes")
     scope = receipt.get("scope")
     if not isinstance(scope, str) or not scope.strip():
         raise ValueError(f"{name}: needs a scope statement")
@@ -64,7 +79,7 @@ def verify_receipts(paths):
         name = Path(path).name
         try:
             receipt = json.loads(Path(path).read_bytes().decode("utf-8-sig"))
-            validate_receipt(receipt, name)
+            validate_receipt(receipt, name, base_dir=Path(path).parent)
             results[name] = "verified"
         except (ValueError, OSError) as error:
             results[name] = str(error)

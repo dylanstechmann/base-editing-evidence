@@ -14,8 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 class ReceiptChecks(unittest.TestCase):
     """Structural provenance-receipt validation, not re-retrieval.
 
-    Response bodies and full texts stay in ignored workbench provenance storage
-    and cannot be re-fetched offline, so a hash proves which response was
+    Response bytes retained by fetch-receipt are committed under data/raw/ and
+    re-checked locally by hash; earlier receipts record only a records hash.
+    No test re-fetches anything, so a hash proves which response was
     retrieved, never that an interpretation of it is correct. Receipt records
     use Europe PMC identifiers while study cards cite publisher or PMC pages,
     so record-to-card binding is not mechanically asserted here.
@@ -27,8 +28,9 @@ class ReceiptChecks(unittest.TestCase):
         return {path.name: json.loads(path.read_bytes().decode("utf-8-sig")) for path in paths}
 
     def test_every_committed_receipt_passes_structural_validation(self):
-        for name, receipt in self.receipts().items():
-            validate_receipt(receipt, name)
+        for path in sorted((ROOT / "data").glob("*receipt*.json")):
+            receipt = json.loads(path.read_bytes().decode("utf-8-sig"))
+            validate_receipt(receipt, path.name, base_dir=path.parent)
 
     def test_malformed_receipts_fail_structural_validation(self):
         receipt = next(iter(self.receipts().values()))

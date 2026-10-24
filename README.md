@@ -40,6 +40,7 @@ baseevidence change-class A G --coordinate-system reference_forward_strand
 baseevidence correction-class --pathogenic G --corrected A --coordinate-system reference_forward_strand
 baseevidence schema
 baseevidence verify-receipts
+baseevidence fetch-receipt 41931046 --out data/beacon_response_receipt.json --raw-dir data/raw
 baseevidence audit-variant-batch examples/variant_batch.json --out artifacts/variant-demo
 baseevidence audit-studies data/studies.json --out artifacts/source-audit
 baseevidence audit-coverage examples/coverage.json --out artifacts/count-demo

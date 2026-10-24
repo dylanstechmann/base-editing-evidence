@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "base-editing-evidence"
-version = "0.2.0"
+version = "0.3.0"
 description = "Inspectable sequence-change classes, cell-count denominators and functional-evidence gaps."
 readme = "README.md"
 requires-python = ">=3.11"

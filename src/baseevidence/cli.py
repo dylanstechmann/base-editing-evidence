@@ -1,4 +1,4 @@
-"""Console audit outputs to a new directory; no network or editing execution."""
+"""Console audit and provenance tools; only fetch-receipt retrieves over the network."""
 
 import argparse
 import json
@@ -6,6 +6,7 @@ from pathlib import Path
 
 from baseevidence.audit import STAGES, coverage, load, study_report, substitution
 from baseevidence.correction import correction
+from baseevidence.fetch import write_receipt
 from baseevidence.outcomes import DESIGNS, DOMAINS, HIERARCHIES, SIGNAL_ROLES, STATUSES, outcome_report
 from baseevidence.receipts import verify_receipts
 from baseevidence.variants import variant_batch_report
@@ -28,6 +29,10 @@ def main(argv=None):
     variants.add_argument("--out", required=True)
     receipts = actions.add_parser("verify-receipts", help="Structural receipt integrity, not re-retrieval or authentication")
     receipts.add_argument("paths", nargs="*", help="Receipt files; defaults to data/*receipt*.json")
+    fetch = actions.add_parser("fetch-receipt", help="Live exact-EXT_ID Europe PMC retrieval; retains raw response bytes, adds no interpretation")
+    fetch.add_argument("ext_id")
+    fetch.add_argument("--out", required=True)
+    fetch.add_argument("--raw-dir", default="data/raw")
     for command in ("audit-studies", "audit-coverage"):
         action = actions.add_parser(command)
         action.add_argument("input")
@@ -59,6 +64,10 @@ def main(argv=None):
             report = verify_receipts(paths)
             print(json.dumps(report, indent=2, allow_nan=False))
             return 0 if not report["failures"] else 1
+        if args.command == "fetch-receipt":
+            receipt = write_receipt(args.ext_id, Path(args.out), Path(args.raw_dir))
+            print(json.dumps(receipt, indent=2, allow_nan=False))
+            return 0
         if args.command == "audit-studies":
             report = study_report(args.input)
         elif args.command == "audit-outcomes":
