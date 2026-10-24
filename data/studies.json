@@ -208,6 +208,32 @@
       "functional_scope": "Descriptive mutation-rate and spectra measurements in normal human adult stem cells; no editing, treatment or lifespan claim.",
       "limits": "Mutation accumulation rates describe distributed age-acquired damage; they are not a targetable lesion list and imply no editing strategy. Donor counts and per-tissue denominators are not stated in the accessed abstract. No reversal, repair or rejuvenation result appears in this source.",
       "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
+    },
+    {
+      "id": "tyr-ipsc-correction-2025",
+      "title": "Genome editing of a low-penetrance albinism-associated variant in TYR in patient-derived pluripotent stem cells",
+      "stage": "human_cells",
+      "model": "An iPSC line generated from one affected individual homozygous for the TYR c.1205G>A (p.Arg402Gln) variant (UMANi255-A) and a CRISPR-Cas9-corrected derivative line (UMANi255-A-1)",
+      "target_tissue": "Patient-derived iPSCs in vitro; no treated tissue or person",
+      "intervention_class": "CRISPR-Cas9 correction of a declared low-penetrance albinism-associated TYR variant in patient-derived iPSCs",
+      "source_url": "https://doi.org/10.1016/j.scr.2025.103855",
+      "source_report": "The source reports generation of an iPSC line from an affected individual carrying a homozygous TYR c.1205G>A genotype, CRISPR-Cas9 correction of that variant in a derivative line, and multi-lineage differentiation capacity of the resulting lines as an in vitro model for studying pigmentation biology.",
+      "functional_scope": "In vitro disease-model line generation and correction; the accessed abstract reports no pigment phenotype measurement in a person and no treatment.",
+      "limits": "This is a single-donor iPSC model of a low-penetrance variant that is also associated with normal pigmentation trait variation; it is not an appearance-modification protocol, an efficiency or off-target claim, or a clinical intervention. Editing efficiency and genotype validation details are not stated in the accessed abstract.",
+      "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
+    },
+    {
+      "id": "rice-seedcoat-cbe-2021",
+      "title": "Single Base Editing Using Cytidine Deaminase to Change Grain Size and Seed Coat Color in Rice",
+      "stage": "plant",
+      "model": "Cytidine-deaminase base editing of point mutations controlling grain size and seed coat color in rice, presented as a methods chapter",
+      "target_tissue": "Rice grain and regenerated plants in an agricultural model; no human or animal tissue",
+      "intervention_class": "Cytosine base editing applied to rice appearance and agronomic trait loci",
+      "source_url": "https://doi.org/10.1007/978-1-0716-1068-8_9",
+      "source_report": "The chapter presents a cytidine deaminase base editing method for editing the point mutations that control grain size and seed coat color in rice, motivated by demand for precise tools introducing functional SNPs in breeding programs.",
+      "functional_scope": "Protocol description for plant trait modification; the accessed abstract reports no editing frequency, off-target assessment, yield or field-performance outcome.",
+      "limits": "A methods chapter, not a reported quantitative experiment in this entry. Plant color-trait modification is not a human appearance protocol. No guide design, efficiency or deployment guidance is provided here.",
+      "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
     }
   ]
 }

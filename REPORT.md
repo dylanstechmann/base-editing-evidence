@@ -176,3 +176,26 @@ age-acquired damage; they are not editing precedents, targetable lesion
 lists or rejuvenation results. The current outcome snapshot is
 `examples/outcome-audit-aging/report.json`; earlier snapshots remain
 historical. All 34 unit tests and Ruff pass.
+
+## Appearance-trait editing precedents — 2026-10-24
+
+Added two abstract-level appearance-trait editing cards plus a receipt that
+also binds the two pigmentation-genetics review citations of the
+correction-direction scope note: the 2025 Stem Cell Research study
+correcting the low-penetrance albinism-associated TYR c.1205G>A variant
+with CRISPR-Cas9 in a patient-derived iPSC line (human cells; the declared
+correction direction, variant A to reference G on the forward strand, falls
+in this catalog's classical ABE conversion class, though the source used
+CRISPR-Cas9) and the 2021 Methods in Molecular Biology rice
+cytidine-deaminase base-editing methods chapter for grain-size and
+seed-coat-color trait loci (plant). Metadata was retrieved through
+exact-EXT_ID Europe PMC queries and is bound by a records-hash
+[receipt](data/pigmentation_metadata_receipt.json); full texts were not
+accessed. Three outcome rows keep the TYR correction (dna_product),
+multi-lineage differentiation capacity (molecular_function) and the rice
+protocol presentation (dna_product) in separate domains, all as context,
+with unknown denominators where the accessed abstracts do not state them.
+Neither card supports appearance modification in a healthy adult; the
+catalog is now eighteen source cards. The current outcome snapshot is
+`examples/outcome-audit-pigmentation/report.json`; earlier snapshots
+remain historical. All 34 unit tests and Ruff pass.

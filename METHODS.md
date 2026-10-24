@@ -144,3 +144,16 @@ not accessed, and abstract-level statements are not extended. Hazard ratios
 and prevalence percentages are source statistics, not recalculated here.
 These cards describe distributed age-acquired damage; they provide no
 editing intervention, targetable lesion list or rejuvenation claim.
+
+On 2026-10-24, the catalog added two appearance-trait editing cards bound
+by the same [pigmentation metadata receipt](data/pigmentation_metadata_receipt.json)
+that now also binds the two pigmentation-genetics review citations of the
+correction-direction scope note: the 2025 patient-derived TYR iPSC
+correction study and the 2021 rice seed-coat-color cytidine base-editing
+methods chapter. The assistant accessed exact EXT_ID Europe PMC REST
+responses online and transcribed indexed metadata; raw response bytes were
+not retained, so the receipt binds the committed record block with a
+records SHA-256. Full texts were not accessed. The TYR source used
+CRISPR-Cas9 rather than a base editor, and its abstract reports no editing
+efficiency or pigment-phenotype outcome in a person. Neither card supports
+appearance modification in a healthy adult.

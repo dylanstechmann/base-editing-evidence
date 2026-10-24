@@ -6,8 +6,8 @@ coding assistance. No owner laboratory work or source review is implied.
 
 The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[sixteen source cards](data/studies.json) distinguish cell experiments, a genetic-disease
-mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts. It is a starting point for research on
+[eighteen source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts and appearance-trait editing precedents. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
 ## Three questions that stay separate
@@ -131,6 +131,17 @@ for what ordinary aging produces; neither is an editing precedent, a
 targetable lesion list or a rejuvenation result. The
 [aging snapshot](examples/outcome-audit-aging/report.json) is the current
 outcome snapshot; earlier snapshots stay historical.
+
+Two appearance-trait editing precedents close the catalog's pigmentation
+gap: a 2025 patient-derived iPSC study correcting the low-penetrance
+albinism-associated TYR c.1205G>A variant with CRISPR-Cas9, and a 2021
+rice cytidine base-editing methods chapter for seed-coat-color trait
+loci. Both stay in vitro or agricultural-model evidence — neither
+supports appearance modification in a healthy adult. The two
+pigmentation review citations and both cards are bound by one
+[receipt](data/pigmentation_metadata_receipt.json). The
+[pigmentation snapshot](examples/outcome-audit-pigmentation/report.json)
+is the current outcome snapshot; earlier snapshots stay historical.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

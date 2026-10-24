@@ -51,11 +51,11 @@ class AuditChecks(unittest.TestCase):
 
     def test_curated_sources_have_scopes_and_no_inherited_human_validation(self):
         report = study_report(ROOT / "data/studies.json")
-        self.assertEqual(len(report["studies"]), 16)
-        self.assertEqual(report["counts_by_stage"]["human_cells"], 6)
+        self.assertEqual(len(report["studies"]), 18)
+        self.assertEqual(report["counts_by_stage"]["human_cells"], 7)
         self.assertEqual(report["counts_by_stage"]["animal"], 5)
         self.assertEqual(report["counts_by_stage"]["human_case"], 1)
-        self.assertEqual(report["counts_by_stage"]["plant"], 2)
+        self.assertEqual(report["counts_by_stage"]["plant"], 3)
         self.assertEqual(report["counts_by_stage"]["human_cohort"], 2)
         by_id = {study["id"]: study for study in report["studies"]}
         self.assertEqual(by_id["kcnj13-retina-2023"]["stage"], "animal")
@@ -66,6 +66,8 @@ class AuditChecks(unittest.TestCase):
         self.assertEqual(by_id["car-t-pik3cd-2026"]["stage"], "animal")
         self.assertEqual(by_id["clonal-hematopoiesis-2014"]["stage"], "human_cohort")
         self.assertEqual(by_id["stemcell-mutation-accumulation-2016"]["stage"], "human_cohort")
+        self.assertEqual(by_id["tyr-ipsc-correction-2025"]["stage"], "human_cells")
+        self.assertEqual(by_id["rice-seedcoat-cbe-2021"]["stage"], "plant")
         studies = copy.deepcopy(report["studies"])
         studies[0]["functional_scope"] = ""
         with self.assertRaises(ValueError):

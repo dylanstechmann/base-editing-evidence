@@ -62,10 +62,24 @@ evidence would be the scope error this tooling is built to prevent.
 
 Trait pigmentation is predominantly polygenic. Two review references,
 verified through Europe PMC indexed metadata on 2026-10-24 with full texts
-not reviewed here, describe that architecture:
+not reviewed here, describe that architecture, and are bound by the
+[pigmentation metadata receipt](data/pigmentation_metadata_receipt.json):
 
 - [Manga & Loftus, 2025, Ann Hum Genet — Genetics of Skin, Hair, and Eye Color in Human Pigmentation Disorders](https://pmc.ncbi.nlm.nih.gov/articles/PMC12233148/)
 - [Bose et al., 2026, Front Genet — The genetic architecture of human skin pigmentation](https://pmc.ncbi.nlm.nih.gov/articles/PMC13446898/)
+
+Two appearance-trait editing precedents, bound by the same
+[receipt](data/pigmentation_metadata_receipt.json), keep the editing
+evidence in scope: a 2025 patient-derived iPSC study correcting the
+low-penetrance albinism-associated TYR c.1205G>A variant with CRISPR-Cas9
+(`tyr-ipsc-correction-2025`, human cells), and a 2021 rice cytidine
+base-editing methods chapter for grain-size and seed-coat-color trait loci
+(`rice-seedcoat-cbe-2021`, plant). The TYR correction direction (variant A
+to reference G on the forward strand) falls in the classical ABE conversion
+class of this catalog's `correction-class` classifier; the source used
+CRISPR-Cas9, and its abstract reports no pigment phenotype rescue in a
+person. Both entries are in vitro or agricultural-model evidence; neither
+supports appearance modification in a healthy adult.
 
 Because common trait variation aggregates many loci of small effect, there
 is no single "intended" edit whose product defines success, and allele
@@ -89,11 +103,11 @@ established by any card in this repository.
 
 | Stage | Cards in this catalog | Not established |
 |---|---|---|
-| Cultured human cells | CBE 2016, ABE 2017, RNA off-target 2019, prime editing 2019, CBE fidelity 2020, COL7A1 2022 | Tissue function in a person; whole-genome safety |
+| Cultured human cells | CBE 2016, ABE 2017, RNA off-target 2019, prime editing 2019, CBE fidelity 2020, COL7A1 2022, TYR iPSC 2025 | Tissue function in a person; whole-genome safety; appearance modification in a healthy adult |
 | Animal models | Progeria 2021, KCNJ13 2023, ABE8e-Y149V 2026, cancer BE screens 2026, CAR-T PIK3CD 2026 | Ordinary aging; human clinical validation; tumor-lesion correction in a person |
 | Single human case | CPS1 2025 | Comparative safety, durability, enhancement |
 | Observational human cohorts | Clonal hematopoiesis 2014; stem-cell mutation accumulation 2016 | Any editing intervention; causal outcome change; a targetable lesion list |
-| Plants | Zong 2017 CBE crops; Jin 2019 rice off-targets | Human editing; agronomic or ecological outcomes; long-term field behavior |
+| Plants | Zong 2017 CBE crops; Jin 2019 rice off-targets; Tra 2021 seed-coat color | Human editing; agronomic or ecological outcomes; long-term field behavior |
 
 The cell-culture and animal work the proposal anticipates is exactly the
 stage of most catalog evidence; the gap is between those stages and

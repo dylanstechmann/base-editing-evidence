@@ -411,6 +411,54 @@
       "follow_up": "Cross-sectional sequencing of clonal organoid cultures; not longitudinal follow-up",
       "limits": "Accumulation rates describe distributed age-acquired damage in normal stem cells; they are not a targetable lesion list and support no editing, repair or rejuvenation strategy. Donor denominators per tissue are not stated in the accessed abstract.",
       "signal_role": "context"
+    },
+    {
+      "id": "tyr-ipsc-cas9-correction",
+      "study_id": "tyr-ipsc-correction-2025",
+      "domain": "dna_product",
+      "status": "source_reports_signal",
+      "outcome": "CRISPR-Cas9 correction of the homozygous TYR c.1205G>A genotype was performed in a derivative iPSC line (UMANi255-A-1) of the patient-derived line UMANi255-A.",
+      "source_locator": "Official indexed abstract: results statements",
+      "comparison_design": "no_comparator",
+      "comparison": "Corrected derivative line versus its parental line; no randomized comparator stated in the accessed abstract",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Donor-derived iPSC line; one affected donor",
+      "n_independent_units": 1,
+      "follow_up": "In vitro line characterization; no longitudinal follow-up stated in the accessed abstract",
+      "limits": "A single-donor in vitro correction of a low-penetrance disease-associated variant is not a treatment, an efficiency estimate or an appearance-modification protocol. The declared correction direction (variant A to reference G on the forward strand) falls in the classical ABE conversion class of this catalog's classifier; the source used CRISPR-Cas9, not a base editor.",
+      "signal_role": "context"
+    },
+    {
+      "id": "tyr-ipsc-multilineage-capacity",
+      "study_id": "tyr-ipsc-correction-2025",
+      "domain": "molecular_function",
+      "status": "source_reports_signal",
+      "outcome": "The resulting iPSC lines were reported to demonstrate capacity for multi-lineage differentiation, providing an in vitro model for studying pigmentation biology.",
+      "source_locator": "Official indexed abstract: closing statement",
+      "comparison_design": "no_comparator",
+      "comparison": "Pluripotency characterization of the generated lines; no comparator group stated in the accessed abstract",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Donor-derived iPSC line; one affected donor",
+      "n_independent_units": 1,
+      "follow_up": "In vitro differentiation-capacity characterization; not longitudinal follow-up",
+      "limits": "Differentiation capacity is a line-quality property, not a pigmentation outcome or a functional rescue of melanin production. No pigment, ocular or tissue-function measurement in a person is reported in the accessed abstract.",
+      "signal_role": "context"
+    },
+    {
+      "id": "rice-seedcoat-cbe-method",
+      "study_id": "rice-seedcoat-cbe-2021",
+      "domain": "dna_product",
+      "status": "source_reports_signal",
+      "outcome": "The chapter presents a cytidine-deaminase base editing method for editing point mutations that control grain size and seed coat color in rice.",
+      "source_locator": "Official indexed abstract: chapter summary",
+      "comparison_design": "no_comparator",
+      "comparison": "Protocol presentation; no comparative experiment or measured outcome stated in the accessed abstract",
+      "endpoint_hierarchy": "not_stated",
+      "independent_unit": "Rice editing assay; no assay denominator stated in the accessed abstract",
+      "n_independent_units": null,
+      "follow_up": "None; a methods chapter without longitudinal follow-up",
+      "limits": "The accessed abstract describes a protocol, not a reported quantitative result; no editing frequency, off-target assessment or field performance is transcribed. Plant color-trait editing is not human appearance evidence.",
+      "signal_role": "context"
     }
   ]
 }

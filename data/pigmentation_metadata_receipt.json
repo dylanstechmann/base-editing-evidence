@@ -1,0 +1,49 @@
+{
+  "retrieved_utc": "2026-10-24T21:31:51.218974+00:00",
+  "retrieval_method": "Europe PMC REST search API exact-EXT_ID queries accessed online on 2026-10-24; indexed metadata transcribed from the API responses",
+  "scope": "Exact-ID indexed metadata retrieval binding the two pigmentation-genetics reviews cited by the correction-direction scope note and the two new appearance-trait editing cards; not a systematic search or independent validation",
+  "queries": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A40605698&format=json&resultType=core&pageSize=1",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A42565097&format=json&resultType=core&pageSize=1",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A33471329&format=json&resultType=core&pageSize=1",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41308567&format=json&resultType=core&pageSize=1"
+  ],
+  "records": [
+    {
+      "id": "40605698",
+      "source": "MED",
+      "pmid": "40605698",
+      "pmcid": "PMC12233148",
+      "doi": "10.1111/ahg.70003",
+      "title": "Genetics of Skin, Hair, and Eye Color in Human Pigmentation Disorders.",
+      "firstPublicationDate": "2025-07-03"
+    },
+    {
+      "id": "42565097",
+      "source": "MED",
+      "pmid": "42565097",
+      "pmcid": "PMC13446898",
+      "doi": "10.3389/fgene.2026.1870791",
+      "title": "The genetic architecture of human skin pigmentation: evolution and adaptation across global populations.",
+      "firstPublicationDate": "2026-07-24"
+    },
+    {
+      "id": "33471329",
+      "source": "MED",
+      "pmid": "33471329",
+      "doi": "10.1007/978-1-0716-1068-8_9",
+      "title": "Single Base Editing Using Cytidine Deaminase to Change Grain Size and Seed Coat Color in Rice.",
+      "firstPublicationDate": "2021-01-01"
+    },
+    {
+      "id": "41308567",
+      "source": "MED",
+      "pmid": "41308567",
+      "doi": "10.1016/j.scr.2025.103855",
+      "title": "Genome editing of a low-penetrance albinism-associated variant in TYR in patient-derived pluripotent stem cells.",
+      "firstPublicationDate": "2025-10-22"
+    }
+  ],
+  "records_sha256": "2f07ed905baa35a6db6e0093ab68b0ef4575867a551ca409356c0f3fd27ebe48",
+  "limits": "Raw response bytes were not retained by the retrieval tooling; records_sha256 binds the committed record block, not an unretained response. Fields were transcribed from indexed API responses and not verified against publisher pages."
+}
