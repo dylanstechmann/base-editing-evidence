@@ -304,3 +304,27 @@ Validated by a live re-retrieval of PMID 41931046 on 2026-10-24, committed as
 the response retained at `data/raw/41931046.json`. Tests are mocked and never
 touch the network; the suite is now 41 unit tests, Ruff clean, 11 receipts
 verified with no failures.
+
+## Macaque delivery/durability full-text review — 2026-10-24
+
+Upgraded the pcsk9-macaques-2021 card from abstract-level access to a
+reviewed primary open-access full text (CC BY), retrieved live via the
+Europe PMC fullTextXML endpoint with the raw JATS bytes retained under
+`data/raw/` and bound by `response_sha256` in a new full-text receipt that
+`verify-receipts` re-checks locally (12 receipts now, all passing). The
+[review](MACAQUE_REVIEW.md) retains the source's per-animal denominators
+(12 macaques in four groups of three; six liver biopsies per animal), the
+absent editing increase after repeat dosing, the detected SpCas9/TadA IgG
+in repeat-dose groups, spleen editing of 6.1-12.4% with below-1% editing
+in eight other examined organs, the mouse clonal whole-genome and
+tumor-sensitized observations, and the abstract-versus-Results biomarker
+aggregation difference — all as source statistics, without reconciliation
+and without dose values. The macaque outcome rows gained explicit
+`n_independent_units` and disjoint `cohort_counts`, plus a new
+organ-distribution observation row. A read-only accessibility probe of all
+23 cards also closed the NEJM re-review tranche: both NEJM records are
+present in Europe PMC but non-open, and live fullTextXML requests return
+HTTP 500, so those full texts are not accessible to this catalog's
+tooling. This tranche rotates the current outcome snapshot to
+`examples/outcome-audit-macaque-review/report.json`; earlier snapshots
+stay historical. All 41 unit tests and Ruff pass.

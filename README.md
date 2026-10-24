@@ -70,8 +70,9 @@ remain mouse genetic-disease evidence, separate from ordinary-aging repair.
 
 The [focused full-text follow-up](PROGERIA_REVIEW.md) now retains separate
 longevity cohorts, selected postmortem tumor findings and vector integration.
-The [current audit snapshot](examples/outcome-audit-fulltext/report.json) includes
-those observations and explicit disjoint cohort counts. Earlier snapshots
+The [full-text audit snapshot](examples/outcome-audit-fulltext/report.json) includes
+those observations and explicit disjoint cohort counts as a historical
+record. Earlier snapshots
 preserve their historical source scope. No pooled survival or causal tumor-risk
 estimate is generated.
 
@@ -152,7 +153,14 @@ about 60% reductions stable for at least eight months) and
 LNP-delivered adenine base editing in mouse and macaque livers (up to
 67% and 34% editing, rapid mRNA clearance, no detected genomic-DNA
 off-target mutations in the source's testing, and a re-dosing humoral
-immune observation). These are liver results for one route and disease
+immune observation). The [macaque full-text
+review](MACAQUE_REVIEW.md) retains the source's per-animal denominators
+(12 macaques in four groups of three, six liver biopsies per animal), the
+spleen-editing biodistribution finding and the repeat-dosing immune
+observation from the accessed open-access full text. The [macaque-review
+snapshot](examples/outcome-audit-macaque-review/report.json) is the current
+outcome snapshot; earlier snapshots stay historical. These are liver
+results for one route and disease
 context in nonhuman animals — not whole-body adult delivery, human
 safety or a dosing protocol. The [delivery
 snapshot](examples/outcome-audit-delivery/report.json) remains a
@@ -190,8 +198,8 @@ conditioning is a different modality from in vivo lipid-nanoparticle
 liver editing, and an unplanned interim analysis with mean 6.6-month
 follow-up is not a 12-month primary-end-point, curative or long-term
 safety demonstration. The [BEACON
-snapshot](examples/outcome-audit-beacon/report.json) is the current
-outcome snapshot; earlier snapshots stay historical.
+snapshot](examples/outcome-audit-beacon/report.json) remains a
+historical record of the catalog at that point.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

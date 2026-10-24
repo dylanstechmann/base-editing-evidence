@@ -231,3 +231,21 @@ hand-written receipt stays as the record of the first retrieval. Receipts
 and retained responses are append-only: the tool refuses to overwrite either.
 The tool adds no interpretation; transcribed fields come mechanically from
 the indexed response, and the subscription full text remains unaccessed.
+
+## Macaque full-text retrieval and review — 2026-10-24 (post-v0.3.0 tranche)
+
+A read-only accessibility probe (exact identifier queries against the
+Europe PMC core API, title-verified against each card) mapped all 23
+cards' full-text availability on 2026-10-24: ten cards have open-access
+PMC full texts; four records present in Europe PMC but non-open (including
+both NEJM cards) were tested live and are not servable (HTTP 500 from the
+fullTextXML endpoint); the remaining cards have no PMC full text. The
+pcsk9-macaques-2021 card was upgraded from abstract-level access by
+retrieving its primary open-access (CC BY) full text via the Europe PMC
+fullTextXML endpoint; the raw JATS XML bytes are retained at
+[data/raw/PMC8352781.xml](data/raw/PMC8352781.xml) and bound by
+response_sha256 in
+[data/macaque_fulltext_receipt.json](data/macaque_fulltext_receipt.json),
+which `verify-receipts` re-checks locally. The focused review lives in
+[MACAQUE_REVIEW.md](MACAQUE_REVIEW.md). Dose-level values are omitted per
+charter; supplementary files were not independently acquired.
