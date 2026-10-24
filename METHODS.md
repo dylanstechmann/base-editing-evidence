@@ -142,6 +142,20 @@ It does not authenticate record-to-card binding or source truth. Declared
 `published_source` batch rows now require an HTTPS, DOI or PMID
 `source_reference`; free-text citations are rejected as not locatable.
 
+On 2026-10-24, the catalog added two nonhuman-primate delivery and
+durability cards: the 2021 Nature single-dose lipid-nanoparticle PCSK9
+base-editing study in cynomolgus monkeys and the 2021 Nature Biotechnology
+ABE study in mouse and macaque livers reporting editing magnitudes, rapid
+mRNA clearance, no detected genomic-DNA off-target mutations in its
+testing, and a re-dosing humoral immune observation. The assistant accessed
+exact EXT_ID Europe PMC REST responses online and transcribed indexed
+metadata; raw response bytes were not retained, so the
+[receipt](data/delivery_metadata_receipt.json) binds the committed record
+block with a records SHA-256. Full texts were not accessed. Editing
+percentages and biomarker reductions are source statistics, not
+recalculated here; nonhuman-primate liver delivery for one route and
+disease context is not human validation or a dosing protocol.
+
 On 2026-10-24, the catalog added a `human_cohort` evidence stage with two
 abstract-level observational aging cards: the 2014 age-related clonal
 hematopoiesis cohort study and the 2016 tissue-specific adult-stem-cell

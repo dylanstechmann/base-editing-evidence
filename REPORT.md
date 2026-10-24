@@ -211,3 +211,25 @@ nonzero exit on failures, without re-retrieving anything. Declared
 PMID `source_reference`; free text is rejected as not a locatable citation.
 Tests cover malformed-receipt rejection, failure reporting and the CLI exit
 behavior. All unit tests and Ruff pass.
+
+## Nonhuman-primate delivery and durability cards — 2026-10-24
+
+Added two abstract-level nonhuman-primate cards covering the last
+undocumented outcome domains (delivery and durability): the 2021 Nature
+single-dose lipid-nanoparticle PCSK9 base-editing study in cynomolgus
+monkeys (near-complete liver PCSK9 knockdown after one infusion; blood
+PCSK9 about 90% and LDL about 60% reductions stable for at least eight
+months) and the 2021 Nature Biotechnology ABE study in mouse and macaque
+livers (up to 67% and 34% liver editing; plasma PCSK9/LDL reduced 95%/58%
+in mice and 32%/14% in macaques; rapid mRNA clearance; no off-target
+mutations found in the source's genomic-DNA testing; re-dosing did not
+increase editing, possibly owing to a detected humoral immune response).
+Metadata was retrieved through exact-EXT_ID Europe PMC queries and is
+bound by a records-hash [receipt](data/delivery_metadata_receipt.json);
+full texts were not accessed. Five outcome rows keep single-dose
+delivery, eight-month biomarker stability, editing magnitude, the
+no-detected-off-target statement and the re-dosing observation in
+separate domains. These are one-organ, one-route nonhuman results, not
+whole-body adult delivery, human safety or a dosing protocol. The current
+outcome snapshot is `examples/outcome-audit-delivery/report.json`; earlier
+snapshots remain historical. All unit tests and Ruff pass.

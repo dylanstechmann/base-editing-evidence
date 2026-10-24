@@ -6,8 +6,8 @@ coding assistance. No owner laboratory work or source review is implied.
 
 The tools provide an executable evidence-scope audit, a classical
 nucleotide-conversion classifier and a cell-count denominator audit. The
-[eighteen source cards](data/studies.json) distinguish cell experiments, a genetic-disease
-mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts and appearance-trait editing precedents. It is a starting point for research on
+[twenty source cards](data/studies.json) distinguish cell experiments, a genetic-disease
+mouse model, an initial single-patient clinical report, crop-plant editing studies and observational human aging cohorts, appearance-trait editing precedents and nonhuman-primate liver delivery. It is a starting point for research on
 somatic genome repair, stem-cell constructs and regenerative tissues.
 
 ## Three questions that stay separate
@@ -130,8 +130,8 @@ stroke) and tissue-specific adult-stem-cell mutation accumulation of about
 40 novel mutations per year across donors aged 3 to 87. Both are context
 for what ordinary aging produces; neither is an editing precedent, a
 targetable lesion list or a rejuvenation result. The
-[aging snapshot](examples/outcome-audit-aging/report.json) is the current
-outcome snapshot; earlier snapshots stay historical.
+[aging snapshot](examples/outcome-audit-aging/report.json) remains a
+historical record of the catalog at that point.
 
 Two appearance-trait editing precedents close the catalog's pigmentation
 gap: a 2025 patient-derived iPSC study correcting the low-penetrance
@@ -142,7 +142,20 @@ supports appearance modification in a healthy adult. The two
 pigmentation review citations and both cards are bound by one
 [receipt](data/pigmentation_metadata_receipt.json). The
 [pigmentation snapshot](examples/outcome-audit-pigmentation/report.json)
-is the current outcome snapshot; earlier snapshots stay historical.
+remains a historical record of the catalog at that point.
+
+Two 2021 nonhuman-primate cards close the delivery and durability domain
+gap: single-dose lipid-nanoparticle base editing of PCSK9 in cynomolgus
+monkeys (near-complete liver knockdown; blood PCSK9 about 90% and LDL
+about 60% reductions stable for at least eight months) and
+LNP-delivered adenine base editing in mouse and macaque livers (up to
+67% and 34% editing, rapid mRNA clearance, no detected genomic-DNA
+off-target mutations in the source's testing, and a re-dosing humoral
+immune observation). These are liver results for one route and disease
+context in nonhuman animals — not whole-body adult delivery, human
+safety or a dosing protocol. The [delivery
+snapshot](examples/outcome-audit-delivery/report.json) is the current
+outcome snapshot; earlier snapshots stay historical.
 
 For PowerShell source execution, set `$env:PYTHONPATH='src'` and run
 `python -m baseevidence.cli ...` with the same subcommand arguments.

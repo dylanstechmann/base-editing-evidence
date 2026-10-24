@@ -234,6 +234,32 @@
       "functional_scope": "Protocol description for plant trait modification; the accessed abstract reports no editing frequency, off-target assessment, yield or field-performance outcome.",
       "limits": "A methods chapter, not a reported quantitative experiment in this entry. Plant color-trait modification is not a human appearance protocol. No guide design, efficiency or deployment guidance is provided here.",
       "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
+    },
+    {
+      "id": "pcsk9-primates-2021",
+      "title": "In vivo CRISPR base editing of PCSK9 durably lowers cholesterol in primates",
+      "stage": "animal",
+      "model": "Single-infusion lipid-nanoparticle in vivo base editing of PCSK9 in living cynomolgus monkeys (Macaca fascicularis)",
+      "target_tissue": "Liver in nonhuman primates; no treated patient",
+      "intervention_class": "Lipid-nanoparticle-delivered in vivo CRISPR base editing of PCSK9",
+      "source_url": "https://www.nature.com/articles/s41586-021-03534-y",
+      "source_report": "The source reports that lipid-nanoparticle-delivered CRISPR base editors modified disease-related genes in living cynomolgus monkeys, with near-complete liver PCSK9 knockdown after a single infusion, blood PCSK9 reductions of approximately 90% and low-density lipoprotein cholesterol reductions of about 60%, all stable for at least 8 months after a single-dose treatment, and frames durable editing in nonhuman-primate target organs as a key step before in vivo administration to patients in clinical trials.",
+      "functional_scope": "In vivo liver editing with blood-biomarker durability in nonhuman primates; not a patient treatment or a human safety demonstration.",
+      "limits": "One organ, one delivery route and one disease context in nonhuman primates; 8-month biomarker stability is not multi-year human safety. Per-animal denominators are not stated in the accessed abstract, and no dosing protocol is derivable from this entry.",
+      "access_level": "Official indexed abstract via Europe PMC; full text not accessed"
+    },
+    {
+      "id": "pcsk9-macaques-2021",
+      "title": "In vivo adenine base editing of PCSK9 in macaques reduces LDL cholesterol levels",
+      "stage": "animal",
+      "model": "Lipid-nanoparticle delivery of adenine-base-editor mRNA and a single-guide RNA targeting PCSK9 in mouse and cynomolgus-macaque livers",
+      "target_tissue": "Liver in mice and cynomolgus macaques; no treated patient",
+      "intervention_class": "Lipid-nanoparticle in vivo adenine base editing of PCSK9 with efficacy and selected safety assessment",
+      "source_url": "https://www.nature.com/articles/s41587-021-00933-4",
+      "source_report": "The source reports PCSK9 editing of up to 67% (average 61%) in mice and up to 34% (average 26%) in macaques after lipid-nanoparticle delivery of ABE mRNA and guide RNA, plasma PCSK9 and LDL reductions of 95% and 58% in mice and 32% and 14% in macaques, rapid ABE mRNA clearance, no off-target mutations found in genomic DNA, and that re-dosing in macaques did not increase editing, possibly owing to a detected humoral immune response to ABE.",
+      "functional_scope": "In vivo editing magnitude, blood biomarkers and selected safety readouts in animal livers; not a patient treatment.",
+      "limits": "Editing percentages and biomarker reductions are species- and condition-specific source statistics, not universal editor properties. No detected off-target mutations reflects the source's genomic-DNA testing, not whole-genome absence across all conditions. The detected humoral immune response to re-dosing limits repeat-dosing durability generalization. Per-animal denominators are not stated in the accessed abstract.",
+      "access_level": "Official indexed abstract via Europe PMC; open-access full text not separately reviewed"
     }
   ]
 }

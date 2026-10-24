@@ -1,0 +1,30 @@
+{
+  "retrieved_utc": "2026-10-24T21:44:52.627401+00:00",
+  "retrieval_method": "Europe PMC REST search API exact-EXT_ID queries accessed online on 2026-10-24; indexed metadata transcribed from the API responses",
+  "scope": "Exact-ID indexed metadata retrieval, not a systematic search or independent validation",
+  "queries": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A34012082&format=json&resultType=core&pageSize=1",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A34012094&format=json&resultType=core&pageSize=1"
+  ],
+  "records": [
+    {
+      "id": "34012082",
+      "source": "MED",
+      "pmid": "34012082",
+      "doi": "10.1038/s41586-021-03534-y",
+      "title": "In vivo CRISPR base editing of PCSK9 durably lowers cholesterol in primates.",
+      "firstPublicationDate": "2021-05-19"
+    },
+    {
+      "id": "34012094",
+      "source": "MED",
+      "pmid": "34012094",
+      "pmcid": "PMC8352781",
+      "doi": "10.1038/s41587-021-00933-4",
+      "title": "In vivo adenine base editing of PCSK9 in macaques reduces LDL cholesterol levels.",
+      "firstPublicationDate": "2021-05-19"
+    }
+  ],
+  "records_sha256": "899401b62898cfa7258e61a9415c6faf70cf91a0dcbf4d8680993eccc7d7db51",
+  "limits": "Raw response bytes were not retained by the retrieval tooling; records_sha256 binds the committed record block, not an unretained response. Fields were transcribed from indexed API responses and not verified against publisher pages."
+}
