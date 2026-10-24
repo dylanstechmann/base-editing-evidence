@@ -180,6 +180,9 @@ keeps those outcome domains separate. Oxygen transport and cell identity are
 additional construct requirements, not substitutes for genetic or functional
 assessment.
 
+The recorded open-tranche list and standing access limits are kept in
+[NEXT.md](NEXT.md).
+
 See [METHODS.md](METHODS.md) for source access and reproducibility and
 [REPORT.md](REPORT.md) for the first software release. No editor, guide,
 clinical protocol or rejuvenation intervention is selected by this tool.

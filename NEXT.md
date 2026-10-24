@@ -1,0 +1,37 @@
+# Recorded open work and access limits — as of v0.2.0
+
+This file preserves the session-end state for future AI-assisted tranches.
+Working conventions and the tranche recipe live in AGENTS.md and
+EVIDENCE_INTAKE.md; this file records what remains open, not how to work.
+
+## Current state (2026-10-24, tag v0.2.0)
+
+- 20 source cards across 6 stages: human_cells 7, animal 7, plant 3,
+  human_cohort 2, human_case 1.
+- All 11 outcome domains have at least one source-reported observation,
+  including delivery and durability (PCSK9 nonhuman-primate cards).
+- 37 unit tests, Ruff clean, 8 provenance receipts all passing
+  `baseevidence verify-receipts`. Current snapshot:
+  examples/outcome-audit-delivery/report.json.
+
+## Open tranches, in rough value order
+
+1. Full-text deep reviews of existing cards (the PROGERIA_REVIEW.md
+   pattern): access primary full texts, refine limits and denominators.
+2. A `human_trial` stage card when a verified base-editing trial source
+   is retrieved; the stage already exists in STAGES and is unused.
+3. Receipt tooling that retains raw response bytes, so future receipts
+   can carry true response SHA-256 hashes instead of records_sha256.
+4. Re-review of the two NEJM/abstract-limited cards (CPS1, clonal
+   hematopoiesis) if full texts become accessible.
+
+## Standing access limits (not gaps in diligence)
+
+- Every card added on 2026-10-24 is abstract-level: full texts were not
+  accessed and cards say so in their access_level field.
+- Per-animal, per-donor and per-cohort denominators stay null wherever
+  the accessed abstracts do not state them.
+- The delivery/durability precedent is liver-targeted LNP editing in
+  nonhuman primates: one organ, one route, one disease context. No card
+  establishes whole-body adult delivery, durable human safety, or
+  enhancement use.
