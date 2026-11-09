@@ -85,9 +85,16 @@ def _unique(pairs):
     return obj
 
 
+def parse_json(raw):
+    """Parse UTF-8 JSON and reject duplicate object keys."""
+    if not isinstance(raw, (bytes, bytearray)):
+        raise ValueError("JSON input must be bytes")
+    return json.loads(bytes(raw).decode("utf-8-sig"), object_pairs_hook=_unique)
+
+
 def load(path):
     raw = Path(path).read_bytes()
-    document = json.loads(raw.decode("utf-8-sig"), object_pairs_hook=_unique)
+    document = parse_json(raw)
     if not isinstance(document, dict):
         raise ValueError("Input must be an object")  # noqa: TRY004 -- malformed external data is a CLI validation error
     return document, hashlib.sha256(raw).hexdigest()
