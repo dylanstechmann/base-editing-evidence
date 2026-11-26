@@ -15,6 +15,8 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
+from baseevidence.audit import parse_json
+
 SEARCH_URL = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 RECORD_FIELDS = ("id", "source", "pmid", "pmcid", "doi", "title", "firstPublicationDate")
 SCOPE = "Exact-ID indexed metadata and abstract retrieval, not a systematic search or independent validation"
@@ -72,7 +74,8 @@ def write_receipt(ext_id, out_path, raw_dir, timeout=60, now=None):
     if raw_path.exists():
         raise ValueError(f"retained response exists already; responses are append-only: {raw_path}")
     raw_bytes = fetch_bytes(url, timeout=timeout)
-    records = transcribe_records(json.loads(raw_bytes.decode("utf-8")))
+    payload = parse_json(raw_bytes)
+    records = transcribe_records(payload)
     retrieved_utc = now or datetime.now(timezone.utc).isoformat()
     response_path = Path(os.path.relpath(raw_path, out_path.parent)).as_posix()
     raw_dir.mkdir(parents=True, exist_ok=True)

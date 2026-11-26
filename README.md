@@ -28,7 +28,7 @@ somatic genome repair, stem-cell constructs and regenerative tissues.
 The foundational methods papers are now full-text reviewed in
 [FOUNDATIONAL_METHODS_REVIEW.md](FOUNDATIONAL_METHODS_REVIEW.md), which retains
 their cell-line denominators and selected off-target readouts; the
-[methods-papers snapshot](examples/outcome-audit-methods-papers/report.json)
+[domain-gaps snapshot](examples/outcome-audit-domain-gaps/report.json)
 is the current outcome snapshot, with earlier snapshots historical.
 
 The synthetic count example reaches 500 of 1,000 cells, records intended edits
@@ -58,6 +58,12 @@ Each output directory must be new. Reports retain the exact input-byte SHA-256.
 Duplicate JSON keys, inappropriate denominators, non-nested counts, ambiguous
 bases and unstated coordinate conventions fail. Unknown stages remain `null`;
 an undefined zero-denominator conditional rate is not reported as zero.
+
+`verify-receipts` and `fetch-receipt` reuse the audit strict JSON parser: exact
+bytes or bytearray input, optional UTF-8 BOM handling and recursive duplicate-key
+rejection. Receipt verification names malformed or duplicate JSON failures while
+continuing through other files. Fetch parsing precedes directory creation and
+writes; accepted response bytes are retained and hashed exactly as retrieved.
 
 The [outcome inventory](data/outcomes.json) links each observation to an existing
 source card and retains comparator design, endpoint hierarchy, independent unit,

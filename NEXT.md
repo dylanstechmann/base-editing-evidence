@@ -12,7 +12,7 @@ EVIDENCE_INTAKE.md; this file records what remains open, not how to work.
   including delivery and durability (PCSK9 nonhuman-primate cards).
 - 41 unit tests, Ruff clean, 20 provenance receipts all passing
   `baseevidence verify-receipts`. Current snapshot:
-  examples/outcome-audit-methods-papers/report.json.
+  examples/outcome-audit-domain-gaps/report.json.
 
 ## Open tranches, in rough value order
 

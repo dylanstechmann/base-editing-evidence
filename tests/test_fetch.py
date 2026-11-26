@@ -83,6 +83,21 @@ class FetchChecks(unittest.TestCase):
                 self.assertFalse((Path(directory) / "receipt.json").exists())
                 self.assertFalse((Path(directory) / "raw").exists())
 
+    def test_invalid_or_duplicate_json_writes_no_artifacts_or_directories(self):
+        nested_duplicate = self.payload_bytes()[:-1] + b',"meta":{"same":1,"same":1}}'
+        for raw in (b'{"resultList":', nested_duplicate):
+            with self.subTest(raw=raw[-40:]), tempfile.TemporaryDirectory() as directory:
+                out = Path(directory) / "missing" / "receipt.json"
+                raw_dir = Path(directory) / "other" / "raw"
+                with mock.patch("baseevidence.fetch.urlopen", return_value=FakeResponse(raw)) as retrieval:
+                    with self.assertRaises(ValueError):
+                        write_receipt("99900001", out, raw_dir)
+                retrieval.assert_called_once()
+                self.assertFalse(out.exists())
+                self.assertFalse(out.parent.exists())
+                self.assertFalse(raw_dir.exists())
+                self.assertFalse(raw_dir.parent.exists())
+
     def test_cli_fetch_writes_verifiable_receipt_and_refuses_overwrites(self):
         with tempfile.TemporaryDirectory() as directory:
             out, raw_dir = Path(directory) / "receipt.json", Path(directory) / "raw"

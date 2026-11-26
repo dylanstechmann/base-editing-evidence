@@ -142,6 +142,15 @@ It does not authenticate record-to-card binding or source truth. Declared
 `published_source` batch rows now require an HTTPS, DOI or PMID
 `source_reference`; free-text citations are rejected as not locatable.
 
+Both receipt paths reuse `baseevidence.audit.parse_json` on exact input bytes.
+The parser accepts bytes and bytearray UTF-8 JSON with an optional BOM, rejects
+non-bytes input and rejects duplicate keys at every object depth.
+`verify_receipts` collects JSON and structural failures by filename and continues
+through the remaining paths. `write_receipt` parses immediately after retrieval
+and append-only existence checks, before creating destination directories or
+writing either artifact. Parsing never canonicalizes retained bytes;
+`response_sha256` covers the original response bytes, including any BOM.
+
 On 2026-10-24, the catalog added two nonhuman-primate delivery and
 durability cards: the 2021 Nature single-dose lipid-nanoparticle PCSK9
 base-editing study in cynomolgus monkeys and the 2021 Nature Biotechnology

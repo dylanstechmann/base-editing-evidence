@@ -1,4 +1,5 @@
 import copy
+import hashlib
 import json
 import tempfile
 import unittest
@@ -7,6 +8,7 @@ from pathlib import Path
 from baseevidence.audit import (
     coverage,
     load,
+    parse_json,
     study_report,
     substitution,
     validate_studies,
@@ -85,6 +87,31 @@ class AuditChecks(unittest.TestCase):
             file.write_text('{"target_cells":100,"target_cells":10}')
             with self.assertRaisesRegex(ValueError, "Duplicate"):
                 load(file)
+
+    def test_nested_duplicate_json_keys_are_rejected(self):
+        with self.assertRaisesRegex(ValueError, "Duplicate JSON key: key"):
+            parse_json(b'{"outer":{"key":1,"key":2}}')
+
+    def test_bom_and_bytearray_json_input_are_accepted(self):
+        raw = bytearray(b"\xef\xbb\xbf" + b'{"outer":{"value":1}}')
+        self.assertEqual(parse_json(raw), {"outer": {"value": 1}})
+        self.assertEqual(parse_json(bytes(raw)), {"outer": {"value": 1}})
+
+    def test_nonbytes_json_input_has_exact_error(self):
+        for raw in ("{}", None, 1, memoryview(b"{}")):
+            with self.subTest(type=type(raw).__name__):
+                with self.assertRaises(ValueError) as caught:
+                    parse_json(raw)
+                self.assertEqual(str(caught.exception), "JSON input must be bytes")
+
+    def test_load_hashes_exact_bom_bytes(self):
+        raw = b"\xef\xbb\xbf" + b'{"target_cells":100}'
+        with tempfile.TemporaryDirectory() as directory:
+            file = Path(directory) / "input.json"
+            file.write_bytes(raw)
+            document, digest = load(file)
+            self.assertEqual(document, {"target_cells": 100})
+            self.assertEqual(digest, hashlib.sha256(raw).hexdigest())
 
     def test_existing_output_is_preserved(self):
         with tempfile.TemporaryDirectory() as directory:

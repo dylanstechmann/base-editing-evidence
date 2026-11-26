@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
+from baseevidence import __version__
 from baseevidence.audit import STAGES, coverage, load, study_report, substitution
 from baseevidence.correction import correction
 from baseevidence.fetch import write_receipt
@@ -14,6 +15,7 @@ from baseevidence.variants import variant_batch_report
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--version", action="version", version=f"baseevidence {__version__}")
     actions = parser.add_subparsers(dest="command", required=True)
     change = actions.add_parser("change-class", help="Classical nucleotide conversion only, not targetability")
     change.add_argument("ref")

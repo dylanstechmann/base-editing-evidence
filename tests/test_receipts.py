@@ -59,6 +59,39 @@ class ReceiptChecks(unittest.TestCase):
             self.assertIn("scope", report["receipts"]["bad.json"])
             self.assertEqual(report["status"], "receipt_integrity_reported_not_retrieved")
 
+    def test_strict_json_failures_are_named_and_valid_receipt_still_processed(self):
+        receipt = next(iter(self.receipts().values()))
+        with tempfile.TemporaryDirectory() as directory:
+            good = Path(directory) / "good.json"
+            good.write_bytes(json.dumps(receipt).encode("utf-8"))
+            response_path = receipt.get("response_path")
+            if response_path is not None:
+                retained = Path(directory) / response_path
+                retained.parent.mkdir(parents=True, exist_ok=True)
+                retained.write_bytes((ROOT / "data" / response_path).read_bytes())
+            malformed = Path(directory) / "malformed.json"
+            malformed.write_bytes(b'{"scope":')
+            encoded = json.dumps(receipt).encode("utf-8")
+            duplicate = Path(directory) / "duplicate.json"
+            duplicate.write_bytes(encoded[:-1] + b',"scope":' + json.dumps(receipt["scope"]).encode("utf-8") + b"}")
+            report = verify_receipts([good, malformed, duplicate])
+            self.assertEqual(report["receipts"]["good.json"], "verified")
+            self.assertEqual(report["failures"], ["duplicate.json", "malformed.json"])
+            self.assertIn("Duplicate JSON key: scope", report["receipts"]["duplicate.json"])
+            buffer = io.StringIO()
+            with redirect_stdout(buffer):
+                exit_code = main(["verify-receipts", str(good), str(malformed), str(duplicate)])
+            self.assertEqual(exit_code, 1)
+            self.assertEqual(json.loads(buffer.getvalue())["receipts"], report["receipts"])
+
+    def test_verify_receipts_processes_all_twenty_committed_receipts(self):
+        paths = sorted((ROOT / "data").glob("*receipt*.json"))
+        self.assertEqual(len(paths), 20)
+        report = verify_receipts(paths)
+        self.assertEqual(len(report["receipts"]), 20)
+        self.assertEqual(report["failures"], [])
+        self.assertEqual(set(report["receipts"].values()), {"verified"})
+
     def test_cli_verifies_default_receipts_and_failing_paths_exit_nonzero(self):
         with redirect_stdout(io.StringIO()):
             self.assertEqual(main(["verify-receipts"]), 0)

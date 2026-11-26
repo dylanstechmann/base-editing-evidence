@@ -7,6 +7,8 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
+from baseevidence.audit import parse_json
+
 HEX64 = re.compile(r"^[0-9a-f]{64}$")
 
 
@@ -78,7 +80,7 @@ def verify_receipts(paths):
     for path in paths:
         name = Path(path).name
         try:
-            receipt = json.loads(Path(path).read_bytes().decode("utf-8-sig"))
+            receipt = parse_json(Path(path).read_bytes())
             validate_receipt(receipt, name, base_dir=Path(path).parent)
             results[name] = "verified"
         except (ValueError, OSError) as error:

@@ -11,3 +11,5 @@ audits study scope and explicit count denominators; it does not identify a
 safe or effective editor. Unknown outcomes stay unknown, not zero. Preserve
 coordinate conventions, source links, source-access limits and negative findings.
 No doses, self-treatment instructions, private patient genomes or credentials.
+Sibling repositories are pattern sources only; see NEIGHBORS.md. Do not import
+their protocols, scores or rejuvenation claims as editing outcomes.

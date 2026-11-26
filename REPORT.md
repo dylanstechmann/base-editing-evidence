@@ -421,3 +421,23 @@ honest limits; prime editing stays recorded separately from base
 editing. This tranche rotates the current outcome snapshot to
 `examples/outcome-audit-methods-papers/report.json`; earlier snapshots
 stay historical. All 41 unit tests and Ruff pass.
+
+## Strict receipt JSON integration — 2026-11-16
+
+Reused the existing strict audit parser without changing it. Receipt verification
+now rejects malformed and recursively duplicate JSON by filename while processing
+all other valid receipts. Receipt writing parses raw response bytes immediately
+after retrieval and append-only existence checks, before directory creation or
+writes; original response bytes and their SHA-256 remain authoritative.
+
+Fresh offline Python 3.12.16 checks passed all 23 focused audit/receipt/fetch
+tests (12, 6 and 5 respectively), with no skips. Full discovery ran 48 tests:
+47 passed and one pre-existing error remained because the designated
+`examples/outcome-audit-domain-gaps/report.json` snapshot is absent; the
+standalone snapshot test reproduced that error. Ruff passed for `src` and `tests`
+and for the scoped files. Repository-wide Ruff separately reported the untouched
+pre-existing unused `sys` import in
+`.claude/skills/regen-guardrails/scripts/claims_scan.py`. Actual
+`verify-receipts` processed all 20 committed receipts with no failures, and
+`--version` printed `baseevidence 0.3.0`. Retrieval tests were mocked; this
+increment performed no live fetch or other network validation.
