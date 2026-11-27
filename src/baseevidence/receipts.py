@@ -3,6 +3,7 @@
 import hashlib
 import json
 import re
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
@@ -82,13 +83,15 @@ def validate_receipt(receipt, name, base_dir=None):
 
 
 def verify_receipts(paths):
-    """Validate receipt files structurally and report names, not source truth."""
+    """Identify receipts by basename unless multiple inputs share that name."""
+    paths = [Path(path) for path in paths]
+    name_counts = Counter(path.name for path in set(paths))
     results = {}
     for path in paths:
-        name = Path(path).name
+        name = str(path) if name_counts[path.name] > 1 else path.name
         try:
-            receipt = parse_json(Path(path).read_bytes())
-            validate_receipt(receipt, name, base_dir=Path(path).parent)
+            receipt = parse_json(path.read_bytes())
+            validate_receipt(receipt, name, base_dir=path.parent)
             results[name] = "verified"
         except (ValueError, OSError) as error:
             results[name] = str(error)

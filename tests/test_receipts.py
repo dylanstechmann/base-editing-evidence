@@ -99,6 +99,19 @@ class ReceiptChecks(unittest.TestCase):
                     self.assertIn("URL", report["receipts"][bad.name])
                     self.assertEqual(report["receipts"][good.name], "verified")
 
+    def test_equal_basenames_keep_the_failure_in_either_input_order(self):
+        good = ROOT / "data" / "abe2017_fulltext_receipt.json"
+        with tempfile.TemporaryDirectory() as directory:
+            bad = Path(directory) / good.name
+            bad.write_text("{}", encoding="utf-8")
+            for order in ((bad, good), (good, bad)):
+                with self.subTest(order=order):
+                    report = verify_receipts(iter(order))
+                    self.assertEqual(report["receipts"][str(good)], "verified")
+                    self.assertEqual(report["failures"], [str(bad)])
+                    with redirect_stdout(io.StringIO()):
+                        self.assertEqual(main(["verify-receipts", *map(str, order)]), 1)
+
     def test_verify_receipts_processes_all_twenty_committed_receipts(self):
         paths = sorted((ROOT / "data").glob("*receipt*.json"))
         self.assertEqual(len(paths), 20)
