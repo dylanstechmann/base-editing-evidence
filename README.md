@@ -73,6 +73,19 @@ case cannot gain independent patients from repeated visits. Missing domains
 mean undocumented in this catalog; the tool does not conclude that the paper
 omitted them, calculate an efficacy score or infer functional rescue.
 
+The [current outcome snapshot](examples/outcome-audit-reproducible/report.json)
+reproduces from the Git versions of the two catalogs. Both inputs use LF line
+endings on checkout. The [earlier snapshot](examples/outcome-audit-domain-gaps/report.json)
+records the same observations and different input hashes because its original
+input files used CRLF line endings.
+
+To inspect one domain across all catalogued studies, add `--domain adverse_events`
+to `audit-outcomes` and choose a fresh output directory. The resulting
+`domain_review` lists each study's stage, source link and observation IDs by
+status. Its coverage field distinguishes studies with no catalog row, those
+with only explicit review gaps, and those with a recorded finding, including
+a source reporting no signal. Mixed records retain their individual statuses.
+
 Signal roles now distinguish benefit, harm, context and unclear observations.
 A detected RNA off-target signal is not a benefit, and no detected serious
 adverse events is not zero risk. The [new comparison snapshot](examples/outcome-audit-progeria/report.json)

@@ -43,6 +43,8 @@ def main(argv=None):
     outcomes.add_argument("input")
     outcomes.add_argument("--studies", required=True)
     outcomes.add_argument("--out", required=True)
+    outcomes.add_argument("--domain", choices=sorted(DOMAINS),
+                          help="Show recorded observations and review gaps per study for one domain")
     args = parser.parse_args(argv)
     try:
         if args.command == "change-class":
@@ -73,7 +75,7 @@ def main(argv=None):
         if args.command == "audit-studies":
             report = study_report(args.input)
         elif args.command == "audit-outcomes":
-            report = outcome_report(args.input, args.studies)
+            report = outcome_report(args.input, args.studies, domain=args.domain)
         elif args.command == "audit-variant-batch":
             report = variant_batch_report(args.input)
         else:
@@ -84,7 +86,7 @@ def main(argv=None):
         encoded = json.dumps(report, indent=2, allow_nan=False) + "\n"
         output = Path(args.out)
         output.mkdir(parents=True, exist_ok=False)
-        (output / "report.json").write_text(encoded, encoding="utf-8")
+        (output / "report.json").write_bytes(encoded.encode("utf-8"))
         print(encoded)
         return 0
     except (ValueError, OSError) as error:
