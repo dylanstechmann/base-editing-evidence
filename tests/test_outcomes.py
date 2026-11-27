@@ -1,4 +1,6 @@
+import contextlib
 import copy
+import io
 import json
 import tempfile
 import unittest
@@ -23,6 +25,51 @@ class OutcomeTests(unittest.TestCase):
         self.assertIn("dna_product", report["undocumented_domains_in_catalog"]["cps1-case-2025"])
         self.assertFalse(report["functional_rescue_inferred"])
         self.assertEqual(len(report["study_catalog_sha256"]), 64)
+
+    def test_domain_review_distinguishes_missing_rows_review_gaps_and_negative_findings(self):
+        first, second, third = self.studies[:3]
+        template = self.document["observations"][0]
+        def observation(key, study, status):
+            return dict(template, id=key, study_id=study["id"], domain="adverse_events",
+                        status=status, n_independent_units=None)
+
+        self.document["observations"] = [
+            observation("negative", first, "source_reports_no_signal"),
+            observation("gap", second, "not_assessed_in_review"),
+            observation("other_gap", first, "not_assessed_in_review"),
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            input_file = Path(tmp) / "outcomes.json"
+            input_file.write_text(json.dumps(self.document), encoding="utf-8")
+            output = Path(tmp) / "report"
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(main(["audit-outcomes", str(input_file), "--studies",
+                                       str(ROOT / "data/studies.json"), "--domain", "adverse_events",
+                                       "--out", str(output)]), 0)
+            summary = json.loads((output / "report.json").read_bytes())["domain_review"]
+        self.assertEqual(summary["domain"], "adverse_events")
+        by_id = {r["study_id"]: r for r in summary["studies"]}
+        self.assertEqual(len(by_id), len(self.studies))
+        self.assertEqual(by_id[first["id"]]["catalog_coverage"], "source_outcome_recorded")
+        self.assertEqual(by_id[first["id"]]["observation_ids_by_status"],
+                         {"source_reports_no_signal": ["negative"], "not_assessed_in_review": ["other_gap"]})
+        self.assertEqual(by_id[second["id"]]["catalog_coverage"], "explicit_review_gap")
+        self.assertEqual(by_id[third["id"]]["catalog_coverage"], "no_catalog_row")
+        self.assertEqual(by_id[third["id"]]["observation_ids_by_status"], {})
+
+    def test_adverse_events_review_does_not_turn_sixteen_missing_rows_into_no_signal(self):
+        report = outcome_report(ROOT / "data/outcomes.json", ROOT / "data/studies.json",
+                                domain="adverse_events")
+        rows = report["domain_review"]["studies"]
+        missing = [row for row in rows if row["catalog_coverage"] == "no_catalog_row"]
+        recorded = [row for row in rows if row["catalog_coverage"] == "source_outcome_recorded"]
+        no_signal = [row for row in rows if "source_reports_no_signal" in row["observation_ids_by_status"]]
+        self.assertEqual(len(rows), 23)
+        self.assertEqual(len(missing), 16)
+        self.assertEqual(len(recorded), 7)
+        self.assertTrue(all(row["observation_ids_by_status"] == {} for row in missing))
+        self.assertEqual(len(no_signal), 3)
+        self.assertTrue(all(row["catalog_coverage"] == "source_outcome_recorded" for row in no_signal))
 
     def test_single_case_cannot_be_replicated_by_visits_or_assays(self):
         self.document["observations"][0]["n_independent_units"] = 7

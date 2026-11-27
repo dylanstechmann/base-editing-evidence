@@ -1,0 +1,4 @@
+# Byte-pinned inputs and current example generated from the Git object bytes.
+data/studies.json text eol=lf
+data/outcomes.json text eol=lf
+examples/outcome-audit-reproducible/report.json text eol=lf
