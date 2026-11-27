@@ -3,6 +3,7 @@
 import hashlib
 import json
 import re
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
@@ -13,13 +14,20 @@ HEX64 = re.compile(r"^[0-9a-f]{64}$")
 
 
 def _retrieval_urls(receipt, name):
-    listed = receipt.get("queries") or receipt.get("urls") or []
-    urls = ([receipt["url"]] if isinstance(receipt.get("url"), str) else []) + [u for u in listed if isinstance(u, str)]
+    urls = [receipt["url"]] if "url" in receipt else []
+    for field in ("queries", "urls"):
+        if field in receipt:
+            listed = receipt[field]
+            if not isinstance(listed, list):
+                raise ValueError(f"{name}: {field} must be a list of retrieval URLs")
+            urls.extend(listed)
     if not urls:
         raise ValueError(f"{name}: needs a retrieval URL")
     for url in urls:
+        if not isinstance(url, str) or url != url.strip():
+            raise ValueError(f"{name}: each retrieval URL must be a string without surrounding whitespace")
         parsed = urlparse(url)
-        if parsed.scheme != "https" or parsed.netloc != "www.ebi.ac.uk" or "/europepmc/webservices/rest/" not in parsed.path:
+        if parsed.scheme != "https" or parsed.netloc != "www.ebi.ac.uk" or not parsed.path.startswith("/europepmc/webservices/rest/"):
             raise ValueError(f"{name}: retrieval must be an HTTPS Europe PMC REST URL")
     return urls
 
@@ -75,13 +83,15 @@ def validate_receipt(receipt, name, base_dir=None):
 
 
 def verify_receipts(paths):
-    """Validate receipt files structurally and report names, not source truth."""
+    """Identify receipts by basename unless multiple inputs share that name."""
+    paths = [Path(path) for path in paths]
+    name_counts = Counter(path.name for path in set(paths))
     results = {}
     for path in paths:
-        name = Path(path).name
+        name = str(path) if name_counts[path.name] > 1 else path.name
         try:
-            receipt = parse_json(Path(path).read_bytes())
-            validate_receipt(receipt, name, base_dir=Path(path).parent)
+            receipt = parse_json(path.read_bytes())
+            validate_receipt(receipt, name, base_dir=path.parent)
             results[name] = "verified"
         except (ValueError, OSError) as error:
             results[name] = str(error)

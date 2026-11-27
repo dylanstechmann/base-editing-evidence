@@ -75,8 +75,30 @@ def audit_outcomes(document, studies):
                        "Molecular changes, organ function, clinical response and durable clonal outcomes stay distinct."]}
 
 
-def outcome_report(outcome_path, study_path):
+def outcome_report(outcome_path, study_path, *, domain=None):
     document, digest = load(outcome_path)
     catalog, source_digest = load(study_path)
-    return {**audit_outcomes(document, validate_studies(catalog)),
-            "outcomes_sha256": digest, "study_catalog_sha256": source_digest}
+    studies = validate_studies(catalog)
+    report = audit_outcomes(document, studies)
+    if domain is not None:
+        if domain not in DOMAINS:
+            raise ValueError("Unknown outcome domain")
+        observations_by_study = {study["id"]: {} for study in studies}
+        for row in report["observations"]:
+            if row["domain"] == domain:
+                statuses = observations_by_study[row["study_id"]]
+                statuses.setdefault(row["status"], []).append(row["id"])
+        entries = []
+        for study in studies:
+            statuses = observations_by_study[study["id"]]
+            if not statuses:
+                coverage = "no_catalog_row"
+            elif statuses.keys() == {"not_assessed_in_review"}:
+                coverage = "explicit_review_gap"
+            else:
+                coverage = "source_outcome_recorded"
+            entries.append({"study_id": study["id"], "stage": study["stage"],
+                            "source_url": study["source_url"], "catalog_coverage": coverage,
+                            "observation_ids_by_status": statuses})
+        report["domain_review"] = {"domain": domain, "studies": entries}
+    return {**report, "outcomes_sha256": digest, "study_catalog_sha256": source_digest}

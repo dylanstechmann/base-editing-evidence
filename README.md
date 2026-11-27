@@ -62,7 +62,10 @@ an undefined zero-denominator conditional rate is not reported as zero.
 `verify-receipts` and `fetch-receipt` reuse the audit strict JSON parser: exact
 bytes or bytearray input, optional UTF-8 BOM handling and recursive duplicate-key
 rejection. Receipt verification names malformed or duplicate JSON failures while
-continuing through other files. Fetch parsing precedes directory creation and
+continuing through other files. If receipts in different directories share a
+basename, the report uses their supplied paths so each result remains visible.
+Every URL included in `url`, `urls` or
+`queries` must identify the Europe PMC REST service. Fetch parsing precedes directory creation and
 writes; accepted response bytes are retained and hashed exactly as retrieved.
 
 The [outcome inventory](data/outcomes.json) links each observation to an existing
@@ -72,6 +75,19 @@ organ function, clinical response, adverse events and durability. A clinical
 case cannot gain independent patients from repeated visits. Missing domains
 mean undocumented in this catalog; the tool does not conclude that the paper
 omitted them, calculate an efficacy score or infer functional rescue.
+
+The [current outcome snapshot](examples/outcome-audit-reproducible/report.json)
+reproduces from the Git versions of the two catalogs. Both inputs use LF line
+endings on checkout. The [earlier snapshot](examples/outcome-audit-domain-gaps/report.json)
+records the same observations and different input hashes because its original
+input files used CRLF line endings.
+
+To inspect one domain across all catalogued studies, add `--domain adverse_events`
+to `audit-outcomes` and choose a fresh output directory. The resulting
+`domain_review` lists each study's stage, source link and observation IDs by
+status. Its coverage field distinguishes studies with no catalog row, those
+with only explicit review gaps, and those with a recorded finding, including
+a source reporting no signal. Mixed records retain their individual statuses.
 
 Signal roles now distinguish benefit, harm, context and unclear observations.
 A detected RNA off-target signal is not a benefit, and no detected serious
