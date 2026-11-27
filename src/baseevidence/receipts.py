@@ -13,13 +13,20 @@ HEX64 = re.compile(r"^[0-9a-f]{64}$")
 
 
 def _retrieval_urls(receipt, name):
-    listed = receipt.get("queries") or receipt.get("urls") or []
-    urls = ([receipt["url"]] if isinstance(receipt.get("url"), str) else []) + [u for u in listed if isinstance(u, str)]
+    urls = [receipt["url"]] if "url" in receipt else []
+    for field in ("queries", "urls"):
+        if field in receipt:
+            listed = receipt[field]
+            if not isinstance(listed, list):
+                raise ValueError(f"{name}: {field} must be a list of retrieval URLs")
+            urls.extend(listed)
     if not urls:
         raise ValueError(f"{name}: needs a retrieval URL")
     for url in urls:
+        if not isinstance(url, str) or url != url.strip():
+            raise ValueError(f"{name}: each retrieval URL must be a string without surrounding whitespace")
         parsed = urlparse(url)
-        if parsed.scheme != "https" or parsed.netloc != "www.ebi.ac.uk" or "/europepmc/webservices/rest/" not in parsed.path:
+        if parsed.scheme != "https" or parsed.netloc != "www.ebi.ac.uk" or not parsed.path.startswith("/europepmc/webservices/rest/"):
             raise ValueError(f"{name}: retrieval must be an HTTPS Europe PMC REST URL")
     return urls
 

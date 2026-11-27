@@ -62,7 +62,8 @@ an undefined zero-denominator conditional rate is not reported as zero.
 `verify-receipts` and `fetch-receipt` reuse the audit strict JSON parser: exact
 bytes or bytearray input, optional UTF-8 BOM handling and recursive duplicate-key
 rejection. Receipt verification names malformed or duplicate JSON failures while
-continuing through other files. Fetch parsing precedes directory creation and
+continuing through other files. Every URL included in `url`, `urls` or
+`queries` must identify the Europe PMC REST service. Fetch parsing precedes directory creation and
 writes; accepted response bytes are retained and hashed exactly as retrieved.
 
 The [outcome inventory](data/outcomes.json) links each observation to an existing

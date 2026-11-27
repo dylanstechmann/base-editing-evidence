@@ -84,6 +84,21 @@ class ReceiptChecks(unittest.TestCase):
             self.assertEqual(exit_code, 1)
             self.assertEqual(json.loads(buffer.getvalue())["receipts"], report["receipts"])
 
+    def test_every_supplied_url_is_validated_and_other_files_still_report(self):
+        receipt = self.receipts()["abe2017_fulltext_receipt.json"]
+        with tempfile.TemporaryDirectory() as tmp:
+            bad = Path(tmp) / "bad.json"
+            good = ROOT / "data" / "abe2017_fulltext_receipt.json"
+            for fields in ({"queries": 42}, {"urls": [None]}, {"url": None, "queries": [receipt["url"]]},
+                           {"queries": [receipt["url"]], "urls": ["https://example.invalid/paper"]},
+                           {"url": "https://www.ebi.ac.uk/archive/europepmc/webservices/rest/search"}):
+                with self.subTest(fields=fields):
+                    bad.write_text(json.dumps({**receipt, **fields}), encoding="utf-8")
+                    report = verify_receipts([bad, good])
+                    self.assertEqual(report["failures"], [bad.name])
+                    self.assertIn("URL", report["receipts"][bad.name])
+                    self.assertEqual(report["receipts"][good.name], "verified")
+
     def test_verify_receipts_processes_all_twenty_committed_receipts(self):
         paths = sorted((ROOT / "data").glob("*receipt*.json"))
         self.assertEqual(len(paths), 20)
